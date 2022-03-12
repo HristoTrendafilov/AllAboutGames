@@ -17,6 +17,8 @@ namespace AllAboutGames.Core
         {
             app.MapGet("/", this.HelloHandler.SayHello);
             app.MapPost("/", this.GameHandler.SaveGame);
+
+            app.MapGet("/game/get/{id}", this.GameHandler.GetGame);
         }
     }
 }

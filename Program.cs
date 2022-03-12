@@ -1,20 +1,18 @@
 using AllAboutGames.Core;
 using AllAboutGames.Data.DataContext;
-using AllAboutGames.Handlers;
-using AllAboutGames.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder();
-builder.Services.AddTransient<RoutesConfigurator>();
-builder.Services.AddTransient<GameHandler>();
-builder.Services.AddTransient<GameService>();
-builder.Services.AddTransient<HelloHandler>();
+DependencyManager.RegisterDependencies(builder);
 
 builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
 {
-    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnectionString"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnectionString"))
+    .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()))
+    .EnableSensitiveDataLogging();
 });
 
+builder.Services.AddAutoMapper(typeof(Program));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddEndpointsApiExplorer();

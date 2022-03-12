@@ -28,22 +28,21 @@ namespace AllAboutGames.Data.Models
         [Required]
         public string Image { get; set; }
 
-        public string Website { get; set; }
+        public string? Website { get; set; }
 
         [Required]
         public DateTime ReleaseDate { get; set; }
 
-        public int RatingsCount { get; set; }
+        public int? RatingsCount { get; set; }
 
-        public string TrailerUrl { get; set; }
+        public string? TrailerUrl { get; set; }
 
         public bool IsDeleted { get; set; }
 
         public DateTime? DeletedOn { get; set; }
 
-        [Required]
         [ForeignKey(nameof(Developer))]
-        public int DeveloperID { get; set; }
+        public int? DeveloperID { get; set; }
 
         public virtual Developer Developer { get; set; }
 
