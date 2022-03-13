@@ -9,10 +9,6 @@ namespace AllAboutGames.Data.Models
         [Key]
         public int GamePlatformID { get; set; }
 
-        public bool IsDeleted { get; set; }
-
-        public DateTime? DeletedOn { get; set; }
-
         [Required]
         [ForeignKey(nameof(Game))]
         public int GameID { get; set; }

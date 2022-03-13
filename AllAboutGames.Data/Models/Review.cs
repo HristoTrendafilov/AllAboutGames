@@ -14,10 +14,6 @@ namespace AllAboutGames.Data.Models
 
         public DateTime CreatedOn { get; set; }
 
-        public DateTime? DeletedOn { get; set; }
-
-        public bool IsDeleted { get; set; }
-
         [Required]
         [ForeignKey(nameof(Game))]
         public int GameID { get; set; }

@@ -3,6 +3,7 @@ using System;
 using AllAboutGames.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AllAboutGames.Data.Migrations
 {
     [DbContext(typeof(AllAboutGamesDataContext))]
-    partial class AllAboutGamesDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220313142457_applicationUser")]
+    partial class applicationUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -351,11 +353,17 @@ namespace AllAboutGames.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("GameGenreID"));
 
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<int>("GameID")
                         .HasColumnType("integer");
 
                     b.Property<int>("GenreID")
                         .HasColumnType("integer");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.HasKey("GameGenreID");
 
@@ -374,8 +382,14 @@ namespace AllAboutGames.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("GamePlatformID"));
 
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<int>("GameID")
                         .HasColumnType("integer");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<int>("PlatformID")
                         .HasColumnType("integer");
@@ -441,7 +455,7 @@ namespace AllAboutGames.Data.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<DateTime?>("ReleaseDate")
+                    b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("PlatformID");
@@ -488,8 +502,14 @@ namespace AllAboutGames.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("timestamp with time zone");
+
                     b.Property<int>("GameID")
                         .HasColumnType("integer");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("boolean");
 
                     b.Property<int>("RatingID")
                         .HasColumnType("integer");

@@ -18,7 +18,6 @@ namespace AllAboutGames.Core
 
             // Other
             builder.Services.AddTransient<BaseService>();
-
         }
     }
 }

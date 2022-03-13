@@ -14,13 +14,5 @@ namespace AllAboutGames.Services
             await this.Db.AddAsync(game);
             await this.Db.SaveChangesAsync();
         }
-
-        public Task<Game> GetGameAsync(int gameID)
-        {
-            return this.Db.Games
-                .Include(x => x.Developer)
-                .Where(x => x.GameID == gameID)
-                .FirstOrDefaultAsync();
-        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AllAboutGames.Data.Models.Forum;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 #nullable disable
@@ -24,7 +25,7 @@ namespace AllAboutGames.Data.Models
         [Required]
         public string Password { get; set; }
 
-        public string ProfilePicture { get; set; }
+        public string? ProfilePicture { get; set; }
 
         public DateTime CreatedOn { get; set; }
 

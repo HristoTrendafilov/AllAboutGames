@@ -23,8 +23,7 @@ namespace AllAboutGames.Data.Models
         [Required]
         public string Info { get; set; }
 
-        [Required]
-        public DateTime ReleaseDate { get; set; }
+        public DateTime? ReleaseDate { get; set; }
 
         public bool IsDeleted { get; set; }
 
