@@ -1,6 +1,5 @@
 using AllAboutGames.Core;
 using AllAboutGames.Data.DataContext;
-using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Exceptions;
@@ -16,7 +15,6 @@ Log.Logger = new LoggerConfiguration()
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog();
 
-Log.Information("Initilizing Application");
 DependencyManager.RegisterDependencies(builder);
 
 builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>

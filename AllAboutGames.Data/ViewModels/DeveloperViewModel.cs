@@ -1,4 +1,5 @@
-﻿namespace AllAboutGames.Data.ViewModels
+﻿#nullable disable
+namespace AllAboutGames.Data.ViewModels
 {
     public class DeveloperViewModel
     {

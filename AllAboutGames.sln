@@ -5,7 +5,12 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllAboutGames", "AllAboutGames.csproj", "{9F69E78B-3F35-4F70-A8E7-4EFD056602D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AllAboutGames.Data", "AllAboutGames.Data\AllAboutGames.Data.csproj", "{FCFCF8F7-21BC-4BC8-929E-59BA04F77EE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AllAboutGames.Data", "AllAboutGames.Data\AllAboutGames.Data.csproj", "{FCFCF8F7-21BC-4BC8-929E-59BA04F77EE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD20406D-6E2D-444C-8118-DEEAB6BDE4FD}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

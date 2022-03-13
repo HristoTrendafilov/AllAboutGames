@@ -1,5 +1,7 @@
 ﻿namespace AllAboutGames.Data.ViewModels
 {
+#nullable disable
+
     public class GameViewModel
     {
         public int GameID { get; set; }

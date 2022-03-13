@@ -1,6 +1,7 @@
 ﻿using AllAboutGames.Data.DataContext;
 using AllAboutGames.Data.Models;
 using Microsoft.EntityFrameworkCore;
+#nullable disable
 
 namespace AllAboutGames.Services
 {
