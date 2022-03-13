@@ -3,6 +3,7 @@ using System;
 using AllAboutGames.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AllAboutGames.Data.Migrations
 {
     [DbContext(typeof(AllAboutGamesDataContext))]
-    partial class AllAboutGamesDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220313111400_test")]
+    partial class test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -336,14 +338,9 @@ namespace AllAboutGames.Data.Migrations
                     b.Property<string>("Website")
                         .HasColumnType("text");
 
-                    b.Property<int>("XaxaID")
-                        .HasColumnType("integer");
-
                     b.HasKey("GameID");
 
                     b.HasIndex("DeveloperID");
-
-                    b.HasIndex("XaxaID");
 
                     b.ToTable("Games");
                 });
@@ -535,23 +532,6 @@ namespace AllAboutGames.Data.Migrations
                     b.ToTable("Reviews");
                 });
 
-            modelBuilder.Entity("AllAboutGames.Data.Models.Xaxa", b =>
-                {
-                    b.Property<int>("XaxaID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
-
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("XaxaID"));
-
-                    b.Property<string>("XaxaName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.HasKey("XaxaID");
-
-                    b.ToTable("Xaxas");
-                });
-
             modelBuilder.Entity("AllAboutGames.Data.Models.ApplicationUser", b =>
                 {
                     b.HasOne("AllAboutGames.Data.Models.City", "City")
@@ -650,15 +630,7 @@ namespace AllAboutGames.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("AllAboutGames.Data.Models.Xaxa", "Xaxa")
-                        .WithMany()
-                        .HasForeignKey("XaxaID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.Navigation("Developer");
-
-                    b.Navigation("Xaxa");
                 });
 
             modelBuilder.Entity("AllAboutGames.Data.Models.GameGenre", b =>

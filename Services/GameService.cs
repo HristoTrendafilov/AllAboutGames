@@ -5,14 +5,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AllAboutGames.Services
 {
-    public class GameService
+    public class GameService : BaseService
     {
-        private readonly AllAboutGamesDataContext Db;
-
-        public GameService(AllAboutGamesDataContext db)
-        {
-            this.Db = db;
-        }
+        public GameService(AllAboutGamesDataContext db) : base(db) { }
 
         public async Task SaveGameAsync(Game game)
         {
@@ -22,12 +17,10 @@ namespace AllAboutGames.Services
 
         public Task<Game> GetGameAsync(int gameID)
         {
-            var game = this.Db.Games
+            return this.Db.Games
                 .Include(x => x.Developer)
                 .Where(x => x.GameID == gameID)
                 .FirstOrDefaultAsync();
-
-            return game;
         }
     }
 }

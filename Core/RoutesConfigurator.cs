@@ -14,8 +14,9 @@ namespace AllAboutGames.Core
 
         public void Configure(WebApplication app)
         {
-            app.MapPost("/", this.GameHandler.SaveGameAsync);
-            app.MapGet("/game/get/{id}", this.GameHandler.GetGame);
+            // Games
+            app.MapPost("/Game/Save", this.GameHandler.SaveGameAsync);
+            app.MapGet("/Game/Get/{id}", this.GameHandler.GetGame);
         }
     }
 }

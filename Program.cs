@@ -20,8 +20,8 @@ DependencyManager.RegisterDependencies(builder);
 builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnectionString"))
-    .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()))
-    .EnableSensitiveDataLogging();
+    .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()));
+    //.EnableSensitiveDataLogging();
 });
 
 builder.Services.AddAutoMapper(typeof(Program));

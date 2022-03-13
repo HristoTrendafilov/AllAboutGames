@@ -2,6 +2,7 @@
 using AllAboutGames.Data.ViewModels;
 using AllAboutGames.Services;
 using AutoMapper;
+#nullable disable
 
 namespace AllAboutGames.Handlers
 {
@@ -18,15 +19,14 @@ namespace AllAboutGames.Handlers
 
         public async Task SaveGameAsync(Game game)
         {
+            
             await this.GameService.SaveGameAsync(game);
         }
 
         public async Task<GameViewModel> GetGame(int gameID)
         {
-            var game = await this.GameService.GetGameAsync(gameID);
-            var viewModel = this.Mapper.Map(game, new GameViewModel());
-
-            return viewModel;
+            var game = await this.GameService.GetEntityAsync<Game>(x => x.GameID == gameID);
+            return game == null ? null : this.Mapper.Map(game, new GameViewModel());
         }
     }
 }
