@@ -1,0 +1,595 @@
+[2022-03-13 03:10:09  DBG]  Hosting starting
+
+[2022-03-13 03:10:10  DBG]  Using development certificate: CN=localhost (Thumbprint: A60303DA9ECD1A8D00817F1C0B90969E60557975)
+
+[2022-03-13 03:10:10  INF]  Now listening on: https://localhost:6001
+
+[2022-03-13 03:10:10  INF]  Now listening on: http://localhost:6000
+
+[2022-03-13 03:10:10  DBG]  Loaded hosting startup assembly AllAboutGames
+
+[2022-03-13 03:10:10  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+
+[2022-03-13 03:10:10  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+
+[2022-03-13 03:10:10  INF]  Application started. Press Ctrl+C to shut down.
+
+[2022-03-13 03:10:10  INF]  Hosting environment: Development
+
+[2022-03-13 03:10:10  INF]  Content root path: D:\Projects\
+
+[2022-03-13 03:10:10  DBG]  Hosting started
+
+[2022-03-13 03:10:10  DBG]  Connection id "0HMG4HOS4DS2P" received FIN.
+
+[2022-03-13 03:10:10  DBG]  Connection id "0HMG4HOS4DS2P" accepted.
+
+[2022-03-13 03:10:10  DBG]  Connection id "0HMG4HOS4DS2P" started.
+
+[2022-03-13 03:10:10  DBG]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+
+[2022-03-13 03:10:10  DBG]  Connection id "0HMG4HOS4DS2P" stopped.
+
+[2022-03-13 03:10:10  DBG]  Connection id "0HMG4HOS4DS2P" sending FIN because: "The Socket transport's send loop completed gracefully."
+
+[2022-03-13 03:10:10  DBG]  Connection id "0HMG4HOS4DS2Q" accepted.
+
+[2022-03-13 03:10:10  DBG]  Connection id "0HMG4HOS4DS2Q" started.
+
+[2022-03-13 03:10:10  DBG]  Connection 0HMG4HOS4DS2Q established using the following protocol: "Tls12"
+
+[2022-03-13 03:10:10  INF]  Request starting HTTP/2 GET https://localhost:6001/swagger/index.html - -
+
+[2022-03-13 03:10:10  DBG]  Wildcard detected, all requests with hosts will be allowed.
+
+[2022-03-13 03:10:10  DBG]  No candidates found for the request path '/swagger/index.html'
+
+[2022-03-13 03:10:10  DBG]  Request did not match any endpoints
+
+[2022-03-13 03:10:10  DBG]  Response markup is scheduled to include browser refresh script injection.
+
+[2022-03-13 03:10:10  DBG]  Response markup was updated to include browser refresh script injection.
+
+[2022-03-13 03:10:10  INF]  Request starting HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - -
+
+[2022-03-13 03:10:10  INF]  Request finished HTTP/2 GET https://localhost:6001/swagger/index.html - - - 200 - text/html;charset=utf-8 269.8314ms
+
+[2022-03-13 03:10:10  INF]  Request finished HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 5.9627ms
+
+[2022-03-13 03:10:11  INF]  Request starting HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - -
+
+[2022-03-13 03:10:11  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+
+[2022-03-13 03:10:11  DBG]  Request did not match any endpoints
+
+[2022-03-13 03:10:11  INF]  Request finished HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 127.9693ms
+
+[2022-03-13 03:10:15  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - -
+
+[2022-03-13 03:10:15  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:15  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:15  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:15  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:15  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:17  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:17  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - - - 200 - application/json;+charset=utf-8 1229.1650ms
+
+[2022-03-13 03:10:18  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - -
+
+[2022-03-13 03:10:18  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:18  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:18  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:18  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:18  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:18  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:18  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - - - 200 - application/json;+charset=utf-8 20.1947ms
+
+[2022-03-13 03:10:18  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - -
+
+[2022-03-13 03:10:18  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:18  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:18  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:18  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:18  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:18  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:18  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - - - 200 - application/json;+charset=utf-8 11.5393ms
+
+[2022-03-13 03:10:18  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - -
+
+[2022-03-13 03:10:18  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:18  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:18  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:18  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:18  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:18  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:18  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - - - 200 - application/json;+charset=utf-8 14.5791ms
+
+[2022-03-13 03:10:19  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - -
+
+[2022-03-13 03:10:19  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:19  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:19  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:19  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - - - 200 - application/json;+charset=utf-8 14.4320ms
+
+[2022-03-13 03:10:19  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - -
+
+[2022-03-13 03:10:19  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:19  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:19  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:19  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - - - 200 - application/json;+charset=utf-8 11.4455ms
+
+[2022-03-13 03:10:19  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - -
+
+[2022-03-13 03:10:19  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:19  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:19  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:19  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - - - 200 - application/json;+charset=utf-8 15.7262ms
+
+[2022-03-13 03:10:19  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - -
+
+[2022-03-13 03:10:19  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:19  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:19  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:19  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:19  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=55 - - - 200 - application/json;+charset=utf-8 13.6167ms
+
+[2022-03-13 03:10:39  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+
+[2022-03-13 03:10:39  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:39  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:39  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:39  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:39  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:39  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:39  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+[2022-03-13 03:10:39  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 147.3828ms
+
+[2022-03-13 03:10:40  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+
+[2022-03-13 03:10:40  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:40  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:40  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:40  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+[2022-03-13 03:10:40  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 60.9497ms
+
+[2022-03-13 03:10:40  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+
+[2022-03-13 03:10:40  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:40  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:40  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:40  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+[2022-03-13 03:10:40  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 60.9964ms
+
+[2022-03-13 03:10:40  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+
+[2022-03-13 03:10:40  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:40  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:40  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:40  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+[2022-03-13 03:10:40  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 53.7414ms
+
+[2022-03-13 03:10:40  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+
+[2022-03-13 03:10:40  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:40  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:40  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:40  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+[2022-03-13 03:10:40  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 74.0320ms
+
+[2022-03-13 03:10:40  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+
+[2022-03-13 03:10:40  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:40  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+
+[2022-03-13 03:10:40  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  DBG]  Static files was skipped as the request already matched an endpoint.
+
+[2022-03-13 03:10:40  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+
+[2022-03-13 03:10:40  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+
+[2022-03-13 03:10:41  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 64.9493ms
+
+[2022-03-13 03:10:45  DBG]  Connection id "0HMG4HOS4DS2Q" received FIN.
+
+[2022-03-13 03:10:45  DBG]  Connection id "0HMG4HOS4DS2Q" is closed. The last processed stream ID was 33.
+
+[2022-03-13 03:10:45  DBG]  Connection id "0HMG4HOS4DS2Q" sending FIN because: "The client closed the connection."
+
+[2022-03-13 03:10:45  DBG]  Connection id "0HMG4HOS4DS2Q" stopped.
+
+[2022-03-13 03:11:32  DBG]  Hosting starting
+[2022-03-13 03:11:32  DBG]  Using development certificate: CN=localhost (Thumbprint: A60303DA9ECD1A8D00817F1C0B90969E60557975)
+[2022-03-13 03:11:32  INF]  Now listening on: https://localhost:6001
+[2022-03-13 03:11:32  INF]  Now listening on: http://localhost:6000
+[2022-03-13 03:11:32  DBG]  Loaded hosting startup assembly AllAboutGames
+[2022-03-13 03:11:32  DBG]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-03-13 03:11:32  DBG]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-03-13 03:11:32  INF]  Application started. Press Ctrl+C to shut down.
+[2022-03-13 03:11:32  INF]  Hosting environment: Development
+[2022-03-13 03:11:32  INF]  Content root path: D:\Projects\
+[2022-03-13 03:11:32  DBG]  Hosting started
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QT" accepted.
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QT" started.
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QU" received FIN.
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QT" received FIN.
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QU" accepted.
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QU" started.
+[2022-03-13 03:11:32  DBG]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-03-13 03:11:32  DBG]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QU" stopped.
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QT" stopped.
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QU" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QT" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QV" accepted.
+[2022-03-13 03:11:32  DBG]  Connection id "0HMG4HPKLA0QV" started.
+[2022-03-13 03:11:32  DBG]  Connection 0HMG4HPKLA0QV established using the following protocol: "Tls12"
+[2022-03-13 03:11:32  INF]  Request starting HTTP/2 GET https://localhost:6001/swagger/index.html - -
+[2022-03-13 03:11:32  DBG]  Wildcard detected, all requests with hosts will be allowed.
+[2022-03-13 03:11:32  DBG]  No candidates found for the request path '/swagger/index.html'
+[2022-03-13 03:11:32  DBG]  Request did not match any endpoints
+[2022-03-13 03:11:33  DBG]  Response markup is scheduled to include browser refresh script injection.
+[2022-03-13 03:11:33  DBG]  Response markup was updated to include browser refresh script injection.
+[2022-03-13 03:11:33  INF]  Request starting HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - -
+[2022-03-13 03:11:33  INF]  Request finished HTTP/2 GET https://localhost:6001/swagger/index.html - - - 200 - text/html;charset=utf-8 239.1143ms
+[2022-03-13 03:11:33  INF]  Request finished HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 4.3720ms
+[2022-03-13 03:11:33  INF]  Request starting HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - -
+[2022-03-13 03:11:33  DBG]  No candidates found for the request path '/swagger/v1/swagger.json'
+[2022-03-13 03:11:33  DBG]  Request did not match any endpoints
+[2022-03-13 03:11:33  INF]  Request finished HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 96.5647ms
+[2022-03-13 03:11:35  DBG]  Connection id "0HMG4HPKLA0QV" received FIN.
+[2022-03-13 03:11:35  DBG]  Connection id "0HMG4HPKLA0QV" is closed. The last processed stream ID was 5.
+[2022-03-13 03:11:35  DBG]  Connection id "0HMG4HPKLA0QV" sending FIN because: "The client closed the connection."
+[2022-03-13 03:11:35  DBG]  Connection id "0HMG4HPKLA0QV" stopped.
+[2022-03-13 03:11:36  DBG]  Connection id "0HMG4HPKLA0R0" accepted.
+[2022-03-13 03:11:36  DBG]  Connection id "0HMG4HPKLA0R0" started.
+[2022-03-13 03:11:36  DBG]  Connection 0HMG4HPKLA0R0 established using the following protocol: "Tls12"
+[2022-03-13 03:11:36  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+[2022-03-13 03:11:36  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+[2022-03-13 03:11:36  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+[2022-03-13 03:11:36  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:36  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-03-13 03:11:36  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:37  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:37  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-03-13 03:11:37  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 1370.8067ms
+[2022-03-13 03:11:38  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+[2022-03-13 03:11:38  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+[2022-03-13 03:11:38  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+[2022-03-13 03:11:38  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:38  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-03-13 03:11:38  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:38  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:38  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-03-13 03:11:38  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 68.7995ms
+[2022-03-13 03:11:38  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+[2022-03-13 03:11:38  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+[2022-03-13 03:11:38  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+[2022-03-13 03:11:38  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:38  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-03-13 03:11:38  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:38  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:39  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-03-13 03:11:39  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 58.3839ms
+[2022-03-13 03:11:39  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+[2022-03-13 03:11:39  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+[2022-03-13 03:11:39  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+[2022-03-13 03:11:39  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:39  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-03-13 03:11:39  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:39  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:39  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-03-13 03:11:39  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 76.5460ms
+[2022-03-13 03:11:39  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+[2022-03-13 03:11:39  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+[2022-03-13 03:11:39  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+[2022-03-13 03:11:39  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:39  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-03-13 03:11:39  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:39  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:39  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-03-13 03:11:39  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 57.7682ms
+[2022-03-13 03:11:39  INF]  Request starting HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - -
+[2022-03-13 03:11:39  DBG]  1 candidate(s) found for the request path '/game/get/{id}'
+[2022-03-13 03:11:39  DBG]  Endpoint 'HTTP: GET /game/get/{id} => GetGame' with route pattern '/game/get/{id}' is valid for the request path '/game/get/{id}'
+[2022-03-13 03:11:39  DBG]  Request matched endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:39  DBG]  Static files was skipped as the request already matched an endpoint.
+[2022-03-13 03:11:39  INF]  Executing endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:39  INF]  Executed endpoint 'HTTP: GET /game/get/{id} => GetGame'
+[2022-03-13 03:11:39  ERR]  An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Can't cast database type double precision to Decimal
+   at Npgsql.Internal.TypeHandling.NpgsqlTypeHandler.ReadCustom[TAny](NpgsqlReadBuffer buf, Int32 len, Boolean async, FieldDescription fieldDescription)
+   at Npgsql.NpgsqlDataReader.GetFieldValue[T](Int32 ordinal)
+   at Npgsql.NpgsqlDataReader.GetDecimal(Int32 ordinal)
+   at lambda_method23(Closure , QueryContext , DbDataReader , ResultContext , SingleQueryResultCoordinator )
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Handlers.GameHandler.GetGame(Int32 gameID) in D:\Projects\Handlers\GameHandler.cs:line 26
+   at Microsoft.AspNetCore.Http.RequestDelegateFactory.<ExecuteTask>g__ExecuteAwaited|58_0[T](Task`1 task, HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+[2022-03-13 03:11:39  INF]  Request finished HTTP/2 GET https://localhost:6001/game/get/{id}?gameID=5 - - - 500 - text/plain;+charset=utf-8 85.8585ms
+[2022-03-13 03:11:45  DBG]  Connection id "0HMG4HPKLA0R0" received FIN.
+[2022-03-13 03:11:45  DBG]  Connection id "0HMG4HPKLA0R0" is closed. The last processed stream ID was 11.
+[2022-03-13 03:11:45  DBG]  Connection id "0HMG4HPKLA0R0" sending FIN because: "The client closed the connection."
+[2022-03-13 03:11:45  DBG]  Connection id "0HMG4HPKLA0R0" stopped.

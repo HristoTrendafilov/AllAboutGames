@@ -1,6 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-#nullable disable
 
 namespace AllAboutGames.Data.Models
 {
@@ -20,19 +19,16 @@ namespace AllAboutGames.Data.Models
         [Required]
         public string Name { get; set; }
 
-        [Required]
-        public double Price { get; set; }
+        public decimal? Price { get; set; }
 
         [Required]
         public string Summary { get; set; }
 
-        [Required]
-        public string Image { get; set; }
+        public string? Image { get; set; }
 
         public string? Website { get; set; }
 
-        [Required]
-        public DateTime ReleaseDate { get; set; }
+        public DateTime? ReleaseDate { get; set; }
 
         public int? RatingsCount { get; set; }
 
