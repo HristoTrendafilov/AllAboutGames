@@ -1,8 +1,22 @@
 using AllAboutGames.Core;
 using AllAboutGames.Data.DataContext;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
+using Serilog.Exceptions;
 
 var builder = WebApplication.CreateBuilder();
+
+Log.Logger = new LoggerConfiguration()
+  .ReadFrom.Configuration(builder.Configuration)
+  .Enrich.FromLogContext()
+  .Enrich.WithExceptionDetails()
+  .CreateLogger();
+
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog();
+
+Log.Information("Initilizing Application");
 DependencyManager.RegisterDependencies(builder);
 
 builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
@@ -30,4 +44,5 @@ var routesConfigurator = serviceScope.GetRequiredService<RoutesConfigurator>();
 routesConfigurator.Configure(app);
 
 app.UseHttpsRedirection();
+
 app.Run();

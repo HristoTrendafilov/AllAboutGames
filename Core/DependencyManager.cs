@@ -12,7 +12,6 @@ namespace AllAboutGames.Core
 
             // Handlers
             builder.Services.AddTransient<GameHandler>();
-            builder.Services.AddTransient<HelloHandler>();
 
             // Services
             builder.Services.AddTransient<GameService>();

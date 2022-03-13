@@ -1,23 +1,20 @@
 ﻿using AllAboutGames.Handlers;
+using Serilog;
 
 namespace AllAboutGames.Core
 {
     public class RoutesConfigurator
     {
-        private readonly HelloHandler HelloHandler;
         private readonly GameHandler GameHandler;
 
-        public RoutesConfigurator(GameHandler gameHandler, HelloHandler helloHandler)
+        public RoutesConfigurator(GameHandler gameHandler)
         {
-            this.HelloHandler = helloHandler;
             this.GameHandler = gameHandler;
         }
 
         public void Configure(WebApplication app)
         {
-            app.MapGet("/", this.HelloHandler.SayHello);
-            app.MapPost("/", this.GameHandler.SaveGame);
-
+            app.MapPost("/", this.GameHandler.SaveGameAsync);
             app.MapGet("/game/get/{id}", this.GameHandler.GetGame);
         }
     }

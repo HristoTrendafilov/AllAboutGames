@@ -13,18 +13,19 @@ namespace AllAboutGames.Services
             this.Db = db;
         }
 
-        public void SaveGame(Game game)
+        public async Task SaveGameAsync(Game game)
         {
-            this.Db.Add(game);
-            this.Db.SaveChanges();
+            await this.Db.AddAsync(game);
+            await this.Db.SaveChangesAsync();
         }
 
-        public Game GetGame(int gameID)
+        public Task<Game> GetGameAsync(int gameID)
         {
             var game = this.Db.Games
                 .Include(x => x.Developer)
                 .Where(x => x.GameID == gameID)
-                .FirstOrDefault();
+                .FirstOrDefaultAsync();
+
             return game;
         }
     }

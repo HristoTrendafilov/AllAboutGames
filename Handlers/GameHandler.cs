@@ -2,6 +2,7 @@
 using AllAboutGames.Data.ViewModels;
 using AllAboutGames.Services;
 using AutoMapper;
+using Serilog;
 
 namespace AllAboutGames.Handlers
 {
@@ -16,15 +17,18 @@ namespace AllAboutGames.Handlers
             this.Mapper = mapper;
         }
 
-        public void SaveGame(Game game)
+        public async Task SaveGameAsync(Game game)
         {
-            this.GameService.SaveGame(game);
+            await this.GameService.SaveGameAsync(game);
         }
 
-        public GameViewModel GetGame(int gameID)
+        public async Task<GameViewModel> GetGame(int gameID)
         {
-            var game = this.GameService.GetGame(gameID);
-            var viewModel = Mapper.Map(game, new GameViewModel());
+            Log.Information("XAXAAXAXA");
+            throw new Exception("aidee");
+
+            var game = await this.GameService.GetGameAsync(gameID);
+            var viewModel = this.Mapper.Map(game, new GameViewModel());
 
             return viewModel;
         }
