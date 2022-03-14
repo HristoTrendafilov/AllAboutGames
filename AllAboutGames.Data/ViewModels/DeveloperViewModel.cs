@@ -1,7 +1,10 @@
 ﻿#nullable disable
+using AllAboutGames.Core.CustomMapper;
+using AllAboutGames.Data.Models;
+
 namespace AllAboutGames.Data.ViewModels
 {
-    public class DeveloperViewModel
+    public class DeveloperViewModel : IMapFrom<Developer>
     {
         public int DeveloperID { get; set; }
 

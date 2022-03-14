@@ -21,6 +21,7 @@ namespace AllAboutGames.Data.Models
 
         public virtual ApplicationUser User { get; set; }
 
+        [Required(ErrorMessage = "Rating value is required.")]
         public int Value { get; set; }
     }
 }

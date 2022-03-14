@@ -14,13 +14,13 @@ namespace AllAboutGames.Data.Models
         [Key]
         public int PlatformID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Platform name is required.")]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Image is required.")]
         public string Image { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Info is required.")]
         public string Info { get; set; }
 
         public DateTime? ReleaseDate { get; set; }

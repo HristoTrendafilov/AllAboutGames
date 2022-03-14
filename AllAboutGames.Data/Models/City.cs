@@ -14,10 +14,11 @@ namespace AllAboutGames.Data.Models
         [Key]
         public int CityID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "City name is required.")]
+        [MaxLength(100, ErrorMessage = "The city name must be maximum 100 characters.")]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Country name is required.")]
         [ForeignKey(nameof(Country))]
         public int CountryID { get; set; }
 

@@ -9,7 +9,7 @@ namespace AllAboutGames.Data.Models
         [Key]
         public int ReviewID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Review text is required.")]
         public string Text { get; set; }
 
         public DateTime CreatedOn { get; set; }

@@ -1,8 +1,11 @@
-﻿namespace AllAboutGames.Data.ViewModels
+﻿using AllAboutGames.Core.CustomMapper;
+using AllAboutGames.Data.Models;
+
+namespace AllAboutGames.Data.ViewModels
 {
 #nullable disable
 
-    public class GameViewModel
+    public class GameViewModel : IMapFrom<Game>
     {
         public int GameID { get; set; }
 

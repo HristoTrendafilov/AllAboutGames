@@ -9,17 +9,13 @@ namespace AllAboutGames.Data.Models
         [Key]
         public int FeedBackID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "About information is required.")]
         public string About { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The text field is required.")]
         public string Text { get; set; }
 
         public DateTime CreatedOn { get; set; }
-
-        public bool IsDeleted { get; set; }
-
-        public DateTime? DeletedOn { get; set; }
 
         [Required]
         [ForeignKey(nameof(User))]

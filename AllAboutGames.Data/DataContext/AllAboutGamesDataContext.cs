@@ -13,6 +13,13 @@ namespace AllAboutGames.Data.DataContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.UseSerialColumns();
+
+            var entityTypes = modelBuilder.Model.GetEntityTypes().ToList();
+            var foreignKeys = entityTypes.SelectMany(e => e.GetForeignKeys().Where(f => f.DeleteBehavior == DeleteBehavior.Cascade));
+            foreach (var foreignKey in foreignKeys)
+            {
+                foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
+            }
         }
 
         public DbSet<City> Cities { get; set; }
