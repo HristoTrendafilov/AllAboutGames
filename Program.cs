@@ -7,6 +7,21 @@ using Serilog.Exceptions;
 
 var builder = WebApplication.CreateBuilder();
 
+DependencyManager.RegisterDependencies(builder);
+
+builder.Services.AddAutoMapper(typeof(GameViewModel));
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
+{
+    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnectionString"))
+    .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()));
+    //.EnableSensitiveDataLogging();
+});
+
 Log.Logger = new LoggerConfiguration()
   .ReadFrom.Configuration(builder.Configuration)
   .Enrich.FromLogContext()
@@ -16,20 +31,6 @@ Log.Logger = new LoggerConfiguration()
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog();
 
-DependencyManager.RegisterDependencies(builder);
-
-builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
-{
-    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnectionString"))
-    .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()));
-    //.EnableSensitiveDataLogging();
-});
-
-builder.Services.AddAutoMapper(typeof(GameViewModel));
-builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 if (app.Environment.IsDevelopment())
