@@ -9,9 +9,19 @@
 
   <ItemGroup>
     <Compile Remove="AllAboutGames.Data\**" />
+    <Compile Remove="AllAboutGames.Mapping\**" />
     <Content Remove="AllAboutGames.Data\**" />
+    <Content Remove="AllAboutGames.Mapping\**" />
     <EmbeddedResource Remove="AllAboutGames.Data\**" />
+    <EmbeddedResource Remove="AllAboutGames.Mapping\**" />
     <None Remove="AllAboutGames.Data\**" />
+    <None Remove="AllAboutGames.Mapping\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove=".editorconfig" />
+    <None Remove=".gitignore" />
+    <None Remove="README.md" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,6 +43,10 @@
 
   <ItemGroup>
     <ProjectReference Include="AllAboutGames.Data\AllAboutGames.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="D:\dev\AllAboutGames\.editorconfig" />
   </ItemGroup>
 
 </Project>

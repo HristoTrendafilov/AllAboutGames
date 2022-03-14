@@ -13,13 +13,8 @@ namespace AllAboutGames.Data.DataContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.UseSerialColumns();
-
-            var entityTypes = modelBuilder.Model.GetEntityTypes().ToList();
-            var foreignKeys = entityTypes.SelectMany(e => e.GetForeignKeys().Where(f => f.DeleteBehavior == DeleteBehavior.Cascade));
-            foreach (var foreignKey in foreignKeys)
-            {
-                foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
-            }
+            this.RemoveCascadeDeletion(modelBuilder);
+            this.CreateDefaultValues(modelBuilder);
         }
 
         public DbSet<City> Cities { get; set; }
@@ -36,5 +31,21 @@ namespace AllAboutGames.Data.DataContext
         public DbSet<ForumPost> ForumPosts { get; set; }
         public DbSet<ForumComment> ForumComments { get; set; }
         public DbSet<ForumLike> ForumLikes { get; set; }
+
+        private void CreateDefaultValues(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ApplicationUser>().Property(x => x.IsDeleted).HasDefaultValue(false);
+            modelBuilder.Entity<ApplicationUser>().Property(x => x.CreatedOn).HasDefaultValue(DateTime.Now);
+        }
+
+        private void RemoveCascadeDeletion(ModelBuilder modelBuilder)
+        {
+            var entityTypes = modelBuilder.Model.GetEntityTypes().ToList();
+            var foreignKeys = entityTypes.SelectMany(e => e.GetForeignKeys().Where(f => f.DeleteBehavior == DeleteBehavior.Cascade));
+            foreach (var foreignKey in foreignKeys)
+            {
+                foreignKey.DeleteBehavior = DeleteBehavior.Restrict;
+            }
+        }
     }
 }

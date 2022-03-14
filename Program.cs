@@ -1,10 +1,9 @@
 using AllAboutGames.Core;
-using AllAboutGames.Core.CustomMapper;
 using AllAboutGames.Data.DataContext;
+using AllAboutGames.Data.ViewModels;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Exceptions;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder();
 
@@ -26,8 +25,7 @@ builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
     //.EnableSensitiveDataLogging();
 });
 
-//builder.Services.AddAutoMapper(typeof(Program));
-AutoMapperConfig.RegisterMappings(typeof(Program).GetTypeInfo().Assembly);
+builder.Services.AddAutoMapper(typeof(GameViewModel));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddEndpointsApiExplorer();
