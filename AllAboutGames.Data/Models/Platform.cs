@@ -6,11 +6,6 @@ namespace AllAboutGames.Data.Models
 {
     public class Platform
     {
-        public Platform()
-        {
-            this.GamesPlatforms = new List<GamePlatform>();
-        }
-
         [Key]
         public int PlatformID { get; set; }
 
@@ -35,6 +30,6 @@ namespace AllAboutGames.Data.Models
 
         public Developer Developer { get; set; }
 
-        public virtual List<GamePlatform> GamesPlatforms { get; set; }
+        public virtual List<GamePlatform> GamesPlatforms { get; set; } = new List<GamePlatform>();
     }
 }

@@ -6,14 +6,6 @@ namespace AllAboutGames.Data.Models
 {
     public class Game
     {
-        public Game()
-        {
-            this.GamePlatforms = new List<GamePlatform>();
-            this.GameGenres = new List<GameGenre>();
-            this.Reviews = new List<Review>();
-            this.Ratings = new List<Rating>();
-        }
-
         [Key]
         public int GameID { get; set; }
 
@@ -48,12 +40,12 @@ namespace AllAboutGames.Data.Models
         [IncludeInQuery]
         public virtual Developer Developer { get; set; }
 
-        public virtual List<Review> Reviews { get; set; }
+        public virtual List<Review> Reviews { get; set; } = new List<Review>();
 
-        public virtual List<Rating> Ratings { get; set; }
+        public virtual List<Rating> Ratings { get; set; } = new List<Rating>();
 
-        public virtual List<GamePlatform> GamePlatforms { get; set; }
+        public virtual List<GamePlatform> GamePlatforms { get; set; } = new List<GamePlatform>();
 
-        public virtual List<GameGenre> GameGenres { get; set; }
+        public virtual List<GameGenre> GameGenres { get; set; } = new List<GameGenre>();
     }
 }

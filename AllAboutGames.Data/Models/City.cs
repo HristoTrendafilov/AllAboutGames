@@ -6,11 +6,6 @@ namespace AllAboutGames.Data.Models
 {
     public class City
     {
-        public City()
-        {
-            this.Users = new List<ApplicationUser>();
-        }
-
         [Key]
         public int CityID { get; set; }
 
@@ -24,6 +19,6 @@ namespace AllAboutGames.Data.Models
 
         public virtual Country Country { get; set; }
 
-        public virtual List<ApplicationUser> Users { get; set; }
+        public virtual List<ApplicationUser> Users { get; set; } = new List<ApplicationUser>();
     }
 }

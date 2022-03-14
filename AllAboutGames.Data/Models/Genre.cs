@@ -5,11 +5,6 @@ namespace AllAboutGames.Data.Models
 {
     public class Genre
     {
-        public Genre()
-        {
-            this.GamesGenres = new List<GameGenre>();
-        }
-
         [Key]
         public int GenreID { get; set; }
 
@@ -21,6 +16,6 @@ namespace AllAboutGames.Data.Models
 
         public DateTime? DeletedOn { get; set; }
 
-        public virtual List<GameGenre> GamesGenres { get; set; }
+        public virtual List<GameGenre> GamesGenres { get; set; } = new List<GameGenre>();
     }
 }

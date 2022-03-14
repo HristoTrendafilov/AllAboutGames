@@ -5,11 +5,6 @@ namespace AllAboutGames.Data.Models
 {
     public class Country
     {
-        public Country()
-        {
-            this.Cities = new List<City>();
-        }
-
         [Key]
         public int CountryID { get; set; }
 
@@ -17,6 +12,6 @@ namespace AllAboutGames.Data.Models
         [MaxLength(100, ErrorMessage = "The country name must be maximum 100 characters.")]
         public string Name { get; set; }
 
-        public virtual List<City> Cities { get; set; }
+        public virtual List<City> Cities { get; set; } = new List<City>();
     }
 }

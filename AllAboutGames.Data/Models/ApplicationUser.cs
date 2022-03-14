@@ -7,14 +7,6 @@ namespace AllAboutGames.Data.Models
 {
     public class ApplicationUser
     {
-        public ApplicationUser()
-        {
-            this.Ratings = new List<Rating>();
-            this.Reviews = new List<Review>();
-            this.ForumPosts = new List<ForumPost>();
-            this.FeedBacks = new List<FeedBack>();
-        }
-
         [Key]
         public long ApplicationUserID { get; set; }
         
@@ -43,14 +35,14 @@ namespace AllAboutGames.Data.Models
 
         public City City { get; set; }
 
-        public virtual List<Rating> Ratings { get; set; }
+        public virtual List<Rating> Ratings { get; set; } = new List<Rating>();
 
-        public virtual List<Review> Reviews { get; set; }
+        public virtual List<Review> Reviews { get; set; } = new List<Review>();
 
-        public virtual List<ForumPost> ForumPosts { get; set; }
+        public virtual List<ForumPost> ForumPosts { get; set; } = new List<ForumPost>();
 
-        public virtual List<ForumComment> ForumComments { get; set; }
+        public virtual List<ForumComment> ForumComments { get; set; } = new List<ForumComment>();
 
-        public virtual List<FeedBack> FeedBacks { get; set; }
+        public virtual List<FeedBack> FeedBacks { get; set; } = new List<FeedBack>();
     }
 }
