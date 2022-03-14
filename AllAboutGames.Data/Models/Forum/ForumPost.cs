@@ -6,41 +6,32 @@ namespace AllAboutGames.Data.Models.Forum
 {
     public class ForumPost
     {
-        public ForumPost()
-        {
-            this.ForumComments = new List<ForumComment>();
-            this.ForumLikes = new List<ForumLike>();
-        }
-
         [Key]
-        public int ForumPostID { get; set; }
+        public long ForumPostID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Post title is required.")]
+        [MaxLength(200, ErrorMessage = "The post title must be maximum 200 characters.")]
         public string Title { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Post content is required.")]
         public string Content { get; set; }
-
-        public bool IsDeleted { get; set; }
-
-        public DateTime? DeletedOn { get; set; }
 
         public DateTime CreatedOn { get; set; }
 
         [Required]
         [ForeignKey(nameof(User))]
-        public int UserID { get; set; }
+        public long UserID { get; set; }
 
         public virtual ApplicationUser User { get; set; }
 
         [Required]
         [ForeignKey(nameof(ForumCategory))]
-        public int ForumCategoryID { get; set; }
+        public long ForumCategoryID { get; set; }
 
         public ForumCategory ForumCategory { get; set; }
 
-        public virtual List<ForumComment> ForumComments { get; set; }
+        public virtual List<ForumComment> ForumComments { get; set; } = new List<ForumComment>();
 
-        public virtual List<ForumLike> ForumLikes { get; set; }
+        public virtual List<ForumLike> ForumLikes { get; set; } = new List<ForumLike>();
     }
 }

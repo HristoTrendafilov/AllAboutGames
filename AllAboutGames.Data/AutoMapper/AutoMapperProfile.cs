@@ -4,13 +4,13 @@ using AutoMapper;
 using System.Reflection;
 #nullable disable
 
-namespace AllAboutGames.Core
+namespace AllAboutGames.Data.MappingInterfaces
 {
-    public class MappingProfile : Profile
+    public class AutoMapperProfile : Profile
     {
-        public MappingProfile()
+        public AutoMapperProfile()
         {
-            var types = Assembly.GetAssembly(typeof(GameViewModel)).GetExportedTypes().ToList();
+            var types = Assembly.GetExecutingAssembly().GetExportedTypes().ToList();
             foreach (var map in GetFromMaps(types))
             {
                 this.CreateMap(map.Source, map.Destination).ReverseMap();

@@ -3,6 +3,7 @@ using AllAboutGames.Data.Models;
 using AllAboutGames.Data.ViewModels;
 using AllAboutGames.Services;
 using AutoMapper;
+using Newtonsoft.Json;
 using Serilog;
 #nullable disable
 
@@ -19,22 +20,22 @@ namespace AllAboutGames.Handlers
             this.Mapper = mapper;
         }
 
-        public async Task SaveGameAsync(Game game)
+        public async Task<CheckResult> SaveGameAsync(Game game)
         {
-            var (isValid, errors) = PropertyValidator.Validate(game);
-            if (!isValid)
+            var checkResult = PropertyValidator.Validate(game);
+            if (checkResult.IsFailed)
             {
-                Log.Fatal("ERORS: ", string.Join(Environment.NewLine, errors));
+                Log.Fatal("ERORS: ", checkResult.GetErrors());
+                return checkResult;
             }
 
             var DbGame = await this.GameService.GetEntityAsync<Game>(x => x.GameID == game.GameID);
             if (DbGame == null)
             {
                 await this.GameService.SaveGameAsync(game);
-                return;
             }
 
-            Results.Json(DbGame, null, null, StatusCodes.Status400BadRequest);
+            return checkResult;
         }
 
         public async Task<GameViewModel> GetGame(int gameID)

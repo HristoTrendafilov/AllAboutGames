@@ -22,13 +22,13 @@ namespace AllAboutGames.Data.Models
 
         [Required]
         [ForeignKey(nameof(ReviewedBy))]
-        public int UserID { get; set; }
+        public long UserID { get; set; }
 
         public virtual ApplicationUser ReviewedBy { get; set; }
 
         [Required]
         [ForeignKey(nameof(Rating))]
-        public int RatingID { get; set; }
+        public long RatingID { get; set; }
 
         public virtual Rating Rating { get; set; }
     }

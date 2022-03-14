@@ -6,26 +6,17 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace AllAboutGames.Data.Migrations
 {
-    public partial class FromSoftuni : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Tag");
-
-            migrationBuilder.DropTable(
-                name: "Test");
-
-            migrationBuilder.DropTable(
-                name: "VideoGames");
-
             migrationBuilder.CreateTable(
                 name: "Countries",
                 columns: table => new
                 {
                     CountryID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false)
+                    Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false)
                 },
                 constraints: table =>
                 {
@@ -38,7 +29,7 @@ namespace AllAboutGames.Data.Migrations
                 {
                     DeveloperID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
                     DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
@@ -51,13 +42,11 @@ namespace AllAboutGames.Data.Migrations
                 name: "ForumCategories",
                 columns: table => new
                 {
-                    ForumCategoryID = table.Column<int>(type: "integer", nullable: false)
+                    ForumCategoryID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
-                    Image = table.Column<string>(type: "text", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
-                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
+                    Image = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -70,7 +59,7 @@ namespace AllAboutGames.Data.Migrations
                 {
                     GenreID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
                     DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
@@ -85,7 +74,7 @@ namespace AllAboutGames.Data.Migrations
                 {
                     CityID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false),
+                    Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     CountryID = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
@@ -96,7 +85,7 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.CountryID,
                         principalTable: "Countries",
                         principalColumn: "CountryID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -105,14 +94,14 @@ namespace AllAboutGames.Data.Migrations
                 {
                     GameID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Name = table.Column<string>(type: "text", nullable: false),
-                    Price = table.Column<double>(type: "double precision", nullable: false),
+                    Name = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
+                    Price = table.Column<decimal>(type: "numeric", nullable: true),
                     Summary = table.Column<string>(type: "text", nullable: false),
-                    Image = table.Column<string>(type: "text", nullable: false),
-                    Website = table.Column<string>(type: "text", nullable: false),
-                    ReleaseDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    RatingsCount = table.Column<int>(type: "integer", nullable: false),
-                    TrailerUrl = table.Column<string>(type: "text", nullable: false),
+                    Image = table.Column<string>(type: "text", nullable: true),
+                    Website = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
+                    ReleaseDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    RatingsCount = table.Column<int>(type: "integer", nullable: true),
+                    TrailerUrl = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
                     DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     DeveloperID = table.Column<int>(type: "integer", nullable: false)
@@ -125,7 +114,7 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.DeveloperID,
                         principalTable: "Developers",
                         principalColumn: "DeveloperID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -137,7 +126,7 @@ namespace AllAboutGames.Data.Migrations
                     Name = table.Column<string>(type: "text", nullable: false),
                     Image = table.Column<string>(type: "text", nullable: false),
                     Info = table.Column<string>(type: "text", nullable: false),
-                    ReleaseDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ReleaseDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
                     DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     DeveloperID = table.Column<int>(type: "integer", nullable: false)
@@ -150,23 +139,22 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.DeveloperID,
                         principalTable: "Developers",
                         principalColumn: "DeveloperID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ApplicationUser",
                 columns: table => new
                 {
-                    ApplicationUserID = table.Column<int>(type: "integer", nullable: false)
+                    ApplicationUserID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Username = table.Column<string>(type: "text", nullable: false),
-                    Password = table.Column<string>(type: "text", nullable: false),
-                    ProfilePicture = table.Column<string>(type: "text", nullable: false),
-                    CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ModifiedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
-                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
+                    Username = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    Password = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ProfilePicture = table.Column<string>(type: "text", nullable: true),
+                    CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false, defaultValue: new DateTime(2022, 3, 14, 18, 49, 35, 681, DateTimeKind.Local).AddTicks(8374)),
+                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
+                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     CityID = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
@@ -177,7 +165,7 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.CityID,
                         principalTable: "Cities",
                         principalColumn: "CityID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -186,8 +174,6 @@ namespace AllAboutGames.Data.Migrations
                 {
                     GameGenreID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
-                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     GameID = table.Column<int>(type: "integer", nullable: false),
                     GenreID = table.Column<int>(type: "integer", nullable: false)
                 },
@@ -199,13 +185,13 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.GameID,
                         principalTable: "Games",
                         principalColumn: "GameID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_GamesGenres_Genres_GenreID",
                         column: x => x.GenreID,
                         principalTable: "Genres",
                         principalColumn: "GenreID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -214,8 +200,6 @@ namespace AllAboutGames.Data.Migrations
                 {
                     GamePlatformID = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
-                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     GameID = table.Column<int>(type: "integer", nullable: false),
                     PlatformID = table.Column<int>(type: "integer", nullable: false)
                 },
@@ -227,13 +211,13 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.GameID,
                         principalTable: "Games",
                         principalColumn: "GameID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_GamesPlatforms_Platforms_PlatformID",
                         column: x => x.PlatformID,
                         principalTable: "Platforms",
                         principalColumn: "PlatformID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -245,9 +229,7 @@ namespace AllAboutGames.Data.Migrations
                     About = table.Column<string>(type: "text", nullable: false),
                     Text = table.Column<string>(type: "text", nullable: false),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
-                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    UserID = table.Column<int>(type: "integer", nullable: false)
+                    UserID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -257,22 +239,20 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
                         principalColumn: "ApplicationUserID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ForumPosts",
                 columns: table => new
                 {
-                    ForumPostID = table.Column<int>(type: "integer", nullable: false)
+                    ForumPostID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    Title = table.Column<string>(type: "text", nullable: false),
+                    Title = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
                     Content = table.Column<string>(type: "text", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
-                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    UserID = table.Column<int>(type: "integer", nullable: false),
-                    ForumCategoryID = table.Column<int>(type: "integer", nullable: false)
+                    UserID = table.Column<long>(type: "bigint", nullable: false),
+                    ForumCategoryID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -282,23 +262,23 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
                         principalColumn: "ApplicationUserID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_ForumPosts_ForumCategories_ForumCategoryID",
                         column: x => x.ForumCategoryID,
                         principalTable: "ForumCategories",
                         principalColumn: "ForumCategoryID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Ratings",
                 columns: table => new
                 {
-                    RatingID = table.Column<int>(type: "integer", nullable: false)
+                    RatingID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     GameID = table.Column<int>(type: "integer", nullable: false),
-                    UserID = table.Column<int>(type: "integer", nullable: false),
+                    UserID = table.Column<long>(type: "bigint", nullable: false),
                     Value = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
@@ -309,27 +289,25 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
                         principalColumn: "ApplicationUserID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Ratings_Games_GameID",
                         column: x => x.GameID,
                         principalTable: "Games",
                         principalColumn: "GameID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ForumComments",
                 columns: table => new
                 {
-                    ForumCommentID = table.Column<int>(type: "integer", nullable: false)
+                    ForumCommentID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Text = table.Column<string>(type: "text", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
-                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    ForumPostID = table.Column<int>(type: "integer", nullable: false),
-                    UserID = table.Column<int>(type: "integer", nullable: false)
+                    ForumPostID = table.Column<long>(type: "bigint", nullable: false),
+                    UserID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -339,23 +317,23 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
                         principalColumn: "ApplicationUserID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_ForumComments_ForumPosts_ForumPostID",
                         column: x => x.ForumPostID,
                         principalTable: "ForumPosts",
                         principalColumn: "ForumPostID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "ForumLikes",
                 columns: table => new
                 {
-                    ForumLikeID = table.Column<int>(type: "integer", nullable: false)
+                    ForumLikeID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    UserID = table.Column<int>(type: "integer", nullable: false),
-                    ForumPostID = table.Column<int>(type: "integer", nullable: false)
+                    UserID = table.Column<long>(type: "bigint", nullable: false),
+                    ForumPostID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -365,13 +343,13 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
                         principalColumn: "ApplicationUserID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_ForumLikes_ForumPosts_ForumPostID",
                         column: x => x.ForumPostID,
                         principalTable: "ForumPosts",
                         principalColumn: "ForumPostID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -382,11 +360,9 @@ namespace AllAboutGames.Data.Migrations
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Text = table.Column<string>(type: "text", nullable: false),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
                     GameID = table.Column<int>(type: "integer", nullable: false),
-                    UserID = table.Column<int>(type: "integer", nullable: false),
-                    RatingID = table.Column<int>(type: "integer", nullable: false)
+                    UserID = table.Column<long>(type: "bigint", nullable: false),
+                    RatingID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -396,19 +372,19 @@ namespace AllAboutGames.Data.Migrations
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
                         principalColumn: "ApplicationUserID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Reviews_Games_GameID",
                         column: x => x.GameID,
                         principalTable: "Games",
                         principalColumn: "GameID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Reviews_Ratings_RatingID",
                         column: x => x.RatingID,
                         principalTable: "Ratings",
                         principalColumn: "RatingID",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(
@@ -561,56 +537,6 @@ namespace AllAboutGames.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Countries");
-
-            migrationBuilder.CreateTable(
-                name: "Test",
-                columns: table => new
-                {
-                    TestID = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Test", x => x.TestID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "VideoGames",
-                columns: table => new
-                {
-                    VideoGameID = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    ReleaseDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    VideoGameName = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_VideoGames", x => x.VideoGameID);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Tag",
-                columns: table => new
-                {
-                    TagID = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    TagName = table.Column<string>(type: "text", nullable: false),
-                    VideoGameID = table.Column<int>(type: "integer", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Tag", x => x.TagID);
-                    table.ForeignKey(
-                        name: "FK_Tag_VideoGames_VideoGameID",
-                        column: x => x.VideoGameID,
-                        principalTable: "VideoGames",
-                        principalColumn: "VideoGameID");
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Tag_VideoGameID",
-                table: "Tag",
-                column: "VideoGameID");
         }
     }
 }

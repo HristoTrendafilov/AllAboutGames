@@ -6,9 +6,9 @@ namespace AllAboutGames.Core
 {
     public class PropertyValidator
     {
-        public static (bool isValid, List<string> errors) Validate(object @object)
+        public static CheckResult Validate(object @object)
         {
-            var errors = new List<string>();
+            var check = new CheckResult();
 
             var validations = from property in @object.GetType().GetProperties()
                              from attribute in property.GetCustomAttributes(typeof(ValidationAttribute), true).Cast<ValidationAttribute>()
@@ -22,11 +22,11 @@ namespace AllAboutGames.Core
             {
                 if (!validation.Attribute.IsValid(validation.Property.GetValue(@object, null)))
                 {
-                    errors.Add(validation.Attribute.FormatErrorMessage(string.Empty));
+                    check.AddError(validation.Attribute.FormatErrorMessage(string.Empty));
                 }
             }
 
-            return errors.Count > 0 ? (false, null) : (true, errors);
+            return check;
         }
     }//end class
 

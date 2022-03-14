@@ -19,7 +19,7 @@ namespace AllAboutGames.Data.Models
 
         [Required]
         [ForeignKey(nameof(User))]
-        public int UserID { get; set; }
+        public long UserID { get; set; }
 
         public virtual ApplicationUser User { get; set; }
     }

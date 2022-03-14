@@ -7,7 +7,7 @@ namespace AllAboutGames.Data.Models
     public class Rating
     {
         [Key]
-        public int RatingID { get; set; }
+        public long RatingID { get; set; }
 
         [Required]
         [ForeignKey(nameof(Game))]
@@ -17,7 +17,7 @@ namespace AllAboutGames.Data.Models
 
         [Required]
         [ForeignKey(nameof(User))]
-        public int UserID { get; set; }
+        public long UserID { get; set; }
 
         public virtual ApplicationUser User { get; set; }
 

@@ -1,30 +1,21 @@
 ﻿using System.ComponentModel.DataAnnotations;
-#nullable disable
 
 namespace AllAboutGames.Data.Models.Forum
 {
     public class ForumCategory
     {
-        public ForumCategory()
-        {
-            this.ForumPosts = new List<ForumPost>();
-        }
-
         [Key]
-        public int ForumCategoryID { get; set; }
+        public long ForumCategoryID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Category name is required.")]
+        [MaxLength(200, ErrorMessage = "The category name must be maximum 200 characters.")]
         public string Name { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Category description is required.")]
         public string Description { get; set; }
 
-        public string Image { get; set; }
+        public string? Image { get; set; }
 
-        public bool IsDeleted { get; set; }
-
-        public DateTime? DeletedOn { get; set; }
-
-        public virtual List<ForumPost> ForumPosts { get; set; }
+        public virtual List<ForumPost> ForumPosts { get; set; } = new List<ForumPost>();
     }
 }

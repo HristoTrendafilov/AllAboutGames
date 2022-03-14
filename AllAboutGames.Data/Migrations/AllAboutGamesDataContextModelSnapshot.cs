@@ -24,17 +24,19 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.ApplicationUser", b =>
                 {
-                    b.Property<int>("ApplicationUserID")
+                    b.Property<long>("ApplicationUserID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("ApplicationUserID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("ApplicationUserID"));
 
                     b.Property<int>("CityID")
                         .HasColumnType("integer");
 
                     b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("timestamp with time zone");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasDefaultValue(new DateTime(2022, 3, 14, 18, 49, 35, 681, DateTimeKind.Local).AddTicks(8374));
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("timestamp with time zone");
@@ -43,21 +45,22 @@ namespace AllAboutGames.Data.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("timestamp with time zone");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Password")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.Property<string>("ProfilePicture")
                         .HasColumnType("text");
 
                     b.Property<string>("Username")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("ApplicationUserID");
 
@@ -79,7 +82,8 @@ namespace AllAboutGames.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("CityID");
 
@@ -98,7 +102,8 @@ namespace AllAboutGames.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("CountryID");
 
@@ -121,7 +126,8 @@ namespace AllAboutGames.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.HasKey("DeveloperID");
 
@@ -143,18 +149,12 @@ namespace AllAboutGames.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
-
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("UserID")
-                        .HasColumnType("integer");
+                    b.Property<long>("UserID")
+                        .HasColumnType("bigint");
 
                     b.HasKey("FeedBackID");
 
@@ -165,14 +165,11 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Forum.ForumCategory", b =>
                 {
-                    b.Property<int>("ForumCategoryID")
+                    b.Property<long>("ForumCategoryID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("ForumCategoryID"));
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("timestamp with time zone");
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("ForumCategoryID"));
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -181,12 +178,10 @@ namespace AllAboutGames.Data.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("text");
 
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
-
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.HasKey("ForumCategoryID");
 
@@ -195,30 +190,24 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Forum.ForumComment", b =>
                 {
-                    b.Property<int>("ForumCommentID")
+                    b.Property<long>("ForumCommentID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("ForumCommentID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("ForumCommentID"));
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int>("ForumPostID")
-                        .HasColumnType("integer");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
+                    b.Property<long>("ForumPostID")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("UserID")
-                        .HasColumnType("integer");
+                    b.Property<long>("UserID")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ForumCommentID");
 
@@ -231,17 +220,17 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Forum.ForumLike", b =>
                 {
-                    b.Property<int>("ForumLikeID")
+                    b.Property<long>("ForumLikeID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("ForumLikeID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("ForumLikeID"));
 
-                    b.Property<int>("ForumPostID")
-                        .HasColumnType("integer");
+                    b.Property<long>("ForumPostID")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("UserID")
-                        .HasColumnType("integer");
+                    b.Property<long>("UserID")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ForumLikeID");
 
@@ -254,11 +243,11 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Forum.ForumPost", b =>
                 {
-                    b.Property<int>("ForumPostID")
+                    b.Property<long>("ForumPostID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("ForumPostID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("ForumPostID"));
 
                     b.Property<string>("Content")
                         .IsRequired()
@@ -267,21 +256,16 @@ namespace AllAboutGames.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<int>("ForumCategoryID")
-                        .HasColumnType("integer");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
+                    b.Property<long>("ForumCategoryID")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Title")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
-                    b.Property<int>("UserID")
-                        .HasColumnType("integer");
+                    b.Property<long>("UserID")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ForumPostID");
 
@@ -315,7 +299,8 @@ namespace AllAboutGames.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)");
 
                     b.Property<decimal?>("Price")
                         .HasColumnType("numeric");
@@ -331,10 +316,12 @@ namespace AllAboutGames.Data.Migrations
                         .HasColumnType("text");
 
                     b.Property<string>("TrailerUrl")
-                        .HasColumnType("text");
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
 
                     b.Property<string>("Website")
-                        .HasColumnType("text");
+                        .HasMaxLength(500)
+                        .HasColumnType("character varying(500)");
 
                     b.HasKey("GameID");
 
@@ -405,7 +392,8 @@ namespace AllAboutGames.Data.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
 
                     b.HasKey("GenreID");
 
@@ -453,17 +441,17 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Rating", b =>
                 {
-                    b.Property<int>("RatingID")
+                    b.Property<long>("RatingID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("RatingID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("RatingID"));
 
                     b.Property<int>("GameID")
                         .HasColumnType("integer");
 
-                    b.Property<int>("UserID")
-                        .HasColumnType("integer");
+                    b.Property<long>("UserID")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("Value")
                         .HasColumnType("integer");
@@ -491,15 +479,15 @@ namespace AllAboutGames.Data.Migrations
                     b.Property<int>("GameID")
                         .HasColumnType("integer");
 
-                    b.Property<int>("RatingID")
-                        .HasColumnType("integer");
+                    b.Property<long>("RatingID")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("UserID")
-                        .HasColumnType("integer");
+                    b.Property<long>("UserID")
+                        .HasColumnType("bigint");
 
                     b.HasKey("ReviewID");
 
@@ -517,7 +505,7 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.City", "City")
                         .WithMany("Users")
                         .HasForeignKey("CityID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("City");
@@ -528,7 +516,7 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.Country", "Country")
                         .WithMany("Cities")
                         .HasForeignKey("CountryID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Country");
@@ -539,7 +527,7 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.ApplicationUser", "User")
                         .WithMany("FeedBacks")
                         .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("User");
@@ -550,13 +538,13 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.Forum.ForumPost", "ForumPost")
                         .WithMany("ForumComments")
                         .HasForeignKey("ForumPostID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("AllAboutGames.Data.Models.ApplicationUser", "User")
                         .WithMany("ForumComments")
                         .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("ForumPost");
@@ -569,13 +557,13 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.Forum.ForumPost", "ForumPost")
                         .WithMany("ForumLikes")
                         .HasForeignKey("ForumPostID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("AllAboutGames.Data.Models.ApplicationUser", "User")
                         .WithMany()
                         .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("ForumPost");
@@ -588,13 +576,13 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.Forum.ForumCategory", "ForumCategory")
                         .WithMany("ForumPosts")
                         .HasForeignKey("ForumCategoryID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("AllAboutGames.Data.Models.ApplicationUser", "User")
                         .WithMany("ForumPosts")
                         .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("ForumCategory");
@@ -607,7 +595,7 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.Developer", "Developer")
                         .WithMany("Games")
                         .HasForeignKey("DeveloperID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Developer");
@@ -618,13 +606,13 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.Game", "Game")
                         .WithMany("GameGenres")
                         .HasForeignKey("GameID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("AllAboutGames.Data.Models.Genre", "Genre")
                         .WithMany("GamesGenres")
                         .HasForeignKey("GenreID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Game");
@@ -637,13 +625,13 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.Game", "Game")
                         .WithMany("GamePlatforms")
                         .HasForeignKey("GameID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("AllAboutGames.Data.Models.Platform", "Platform")
                         .WithMany("GamesPlatforms")
                         .HasForeignKey("PlatformID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Game");
@@ -656,7 +644,7 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.Developer", "Developer")
                         .WithMany()
                         .HasForeignKey("DeveloperID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Developer");
@@ -667,13 +655,13 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.Game", "Game")
                         .WithMany("Ratings")
                         .HasForeignKey("GameID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("AllAboutGames.Data.Models.ApplicationUser", "User")
                         .WithMany("Ratings")
                         .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Game");
@@ -686,19 +674,19 @@ namespace AllAboutGames.Data.Migrations
                     b.HasOne("AllAboutGames.Data.Models.Game", "Game")
                         .WithMany("Reviews")
                         .HasForeignKey("GameID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("AllAboutGames.Data.Models.Rating", "Rating")
                         .WithMany()
                         .HasForeignKey("RatingID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("AllAboutGames.Data.Models.ApplicationUser", "ReviewedBy")
                         .WithMany("Reviews")
                         .HasForeignKey("UserID")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Game");
