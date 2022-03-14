@@ -8,26 +8,32 @@ namespace AllAboutGames.Core
     {
         public static (bool isValid, List<string> errors) Validate(object @object)
         {
-            if (@object == null)
-            {
-                throw new ArgumentNullException(nameof(@object));
-            }
-
             var errors = new List<string>();
 
-            var attributes = from prop in @object.GetType().GetProperties()
-                             from attribute in prop.GetCustomAttributes(typeof(ValidationAttribute), true).Cast<ValidationAttribute>()
-                             select new Tuple<PropertyInfo, ValidationAttribute>(prop, attribute);
+            var validations = from property in @object.GetType().GetProperties()
+                             from attribute in property.GetCustomAttributes(typeof(ValidationAttribute), true).Cast<ValidationAttribute>()
+                             select new ValidationClass
+                             {
+                                 Property = property,
+                                 Attribute = attribute
+                             };
 
-            foreach (var item in attributes)
+            foreach (var validation in validations)
             {
-                if (!item.Item2.IsValid(item.Item1.GetValue(@object, null)))
+                if (!validation.Attribute.IsValid(validation.Property.GetValue(@object, null)))
                 {
-                    errors.Add(item.Item2.FormatErrorMessage(string.Empty));
+                    errors.Add(validation.Attribute.FormatErrorMessage(string.Empty));
                 }
             }
 
             return errors.Count > 0 ? (false, null) : (true, errors);
         }
     }//end class
+
+    public class ValidationClass
+    {
+        public PropertyInfo Property { get; set; }
+
+        public ValidationAttribute Attribute { get; set; }
+    }
 }
