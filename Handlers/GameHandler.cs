@@ -21,7 +21,11 @@ namespace AllAboutGames.Handlers
 
         public async Task SaveGameAsync(Game game)
         {
-            var isValid = PropertyValidator.Validate(game, (errors) => Log.Fatal("Some stuped shit: " + String.Join(Environment.NewLine, errors)));
+            var (isValid, errors) = PropertyValidator.Validate(game);
+            if (!isValid)
+            {
+                Log.Fatal("ERORS: ", string.Join(Environment.NewLine, errors));
+            }
 
             var DbGame = await this.GameService.GetEntityAsync<Game>(x => x.GameID == game.GameID);
             if (DbGame == null)

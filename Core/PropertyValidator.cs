@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Reflection;
+#nullable disable
 
 namespace AllAboutGames.Core
 {
     public class PropertyValidator
     {
-        public static bool Validate(object @object, Action<List<string>> onError)
+        public static (bool isValid, List<string> errors) Validate(object @object)
         {
             if (@object == null)
             {
@@ -26,13 +27,7 @@ namespace AllAboutGames.Core
                 }
             }
 
-            if (errors.Count > 0)
-            {
-                onError?.Invoke(errors);
-                return false;
-            }
-
-            return true;
+            return errors.Count > 0 ? (false, null) : (true, errors);
         }
     }//end class
 }
