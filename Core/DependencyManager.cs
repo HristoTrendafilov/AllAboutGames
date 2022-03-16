@@ -1,4 +1,5 @@
-﻿using AllAboutGames.Data.ViewModels;
+﻿using AllAboutGames.Core.Gateway;
+using AllAboutGames.Data.ViewModels;
 using AllAboutGames.Handlers;
 using AllAboutGames.Services;
 
@@ -16,6 +17,8 @@ namespace AllAboutGames.Core
             builder.Services.AddTransient<GameService>();
 
             // Other
+            builder.Services.AddTransient<GatewayProtocol>();
+
             builder.Services.AddAutoMapper(typeof(GameViewModel));
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
