@@ -1,6 +1,7 @@
 ﻿using AllAboutGames.Data.Models;
 using AllAboutGames.Data.Models.Forum;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 #nullable disable
 
@@ -38,6 +39,8 @@ namespace AllAboutGames.Data.DataContext
             modelBuilder.Entity<ApplicationUser>().Property(x => x.CreatedOn).HasDefaultValue(DateTime.UtcNow);
 
             modelBuilder.Entity<Developer>().Property(x => x.IsDeleted).HasDefaultValue(false);
+
+            modelBuilder.Entity<Game>().Property(x => x.IsDeleted).HasDefaultValue(false);
         }
 
         private void RemoveCascadeDeletion(ModelBuilder modelBuilder)

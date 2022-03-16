@@ -18,9 +18,9 @@
             this.errors.Add(errorMessage);
         }
 
-        public string GetErrors()
+        public string GetErrors(string separator = "\n")
         {
-            return string.Join(Environment.NewLine, this.errors ?? new List<string>());
+            return string.Join(separator, this.errors);
         }
     }
 }

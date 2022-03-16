@@ -1,6 +1,9 @@
-﻿using AllAboutGames.Data.Attributes;
+﻿using AllAboutGames.Core;
+using AllAboutGames.Data.Attributes;
 using AllAboutGames.Data.DataContext;
+using AutoMapper;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.Linq.Expressions;
 #nullable disable
 
@@ -9,10 +12,12 @@ namespace AllAboutGames.Services
     public class BaseService
     {
         protected readonly AllAboutGamesDataContext Db;
+        private readonly IMapper Mapper;
 
-        public BaseService(AllAboutGamesDataContext db)
+        public BaseService(AllAboutGamesDataContext db, IMapper mapper)
         {
             this.Db = db;
+            this.Mapper = mapper;
         }
 
         public async Task<TEntity> GetEntityAsync<TEntity>(Expression<Func<TEntity, bool>> filter) 
@@ -28,7 +33,7 @@ namespace AllAboutGames.Services
 
             var properties = typeof(TEntity)
                 .GetProperties()
-                .Where(prop => prop.IsDefined(typeof(IncludeInQuery), false))
+                .Where(x => x.IsDefined(typeof(IncludeInQuery), false))
                 .ToList();
 
             foreach (var property in properties)
@@ -37,6 +42,35 @@ namespace AllAboutGames.Services
             }
 
             return query;
+        }
+
+        public async Task<CheckResult> SaveEntityAsync<TEntity, TSource>(TSource entityDTO)
+        {
+            var checkResult = new CheckResult();
+
+            var dbEntity = this.Mapper.Map(entityDTO, typeof(TEntity));
+            var primaryKey = dbEntity.GetType()
+                .GetProperties()
+                .Where(x => x.IsDefined(typeof(KeyAttribute), false))
+                .FirstOrDefault();
+
+            if (primaryKey == null)
+            {
+                checkResult.AddError("Cant resolve the given model.");
+                return checkResult;
+            }
+
+            var primaryKeyValue = (long)primaryKey.GetValue(dbEntity.GetType());
+            if (primaryKeyValue > 0)
+            {
+                this.Db.Update(dbEntity);
+            }
+            else
+            {
+                await this.Db.AddAsync(dbEntity);
+            }
+
+            return checkResult;
         }
     }
 }

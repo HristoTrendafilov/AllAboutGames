@@ -1,12 +1,11 @@
-﻿using AllAboutGames.Data.Attributes;
+﻿using AllAboutGames.Core.CustomMapper;
+using AllAboutGames.Data.Models;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace AllAboutGames.Data.Models
+namespace AllAboutGames.Data.DTO
 {
-    public class Game
+    public class GameDTO : IMapFrom<Game>
     {
-        [Key]
         public int GameID { get; set; }
 
         [Required(ErrorMessage = "Game name is required.")]
@@ -32,18 +31,14 @@ namespace AllAboutGames.Data.Models
 
         public DateTime? DeletedOn { get; set; }
 
-        [ForeignKey(nameof(Developer))]
         public int? DeveloperID { get; set; }
 
-        [IncludeInQuery]
-        public virtual Developer Developer { get; set; }
+        public virtual List<int> Reviews { get; set; } = new List<int>();
 
-        public virtual List<Review> Reviews { get; set; } = new List<Review>();
+        public virtual List<int> Ratings { get; set; } = new List<int>();
 
-        public virtual List<Rating> Ratings { get; set; } = new List<Rating>();
+        public virtual List<int> GamePlatforms { get; set; } = new List<int>();
 
-        public virtual List<GamePlatform> GamePlatforms { get; set; } = new List<GamePlatform>();
-
-        public virtual List<GameGenre> GameGenres { get; set; } = new List<GameGenre>();
+        public virtual List<int> GameGenres { get; set; } = new List<int>();
     }
 }

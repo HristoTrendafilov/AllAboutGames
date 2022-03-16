@@ -1,4 +1,5 @@
 ﻿using AllAboutGames.Core;
+using AllAboutGames.Data.DTO;
 using AllAboutGames.Data.Models;
 using AllAboutGames.Data.ViewModels;
 using AllAboutGames.Services;
@@ -20,21 +21,16 @@ namespace AllAboutGames.Handlers
             this.Mapper = mapper;
         }
 
-        public async Task<CheckResult> SaveGameAsync(Game game)
+        public async Task<CheckResult> SaveGameAsync(GameDTO gameDto)
         {
-            var checkResult = PropertyValidator.Validate(game);
+            var checkResult = PropertyValidator.Validate(gameDto);
             if (checkResult.IsFailed)
             {
                 Log.Fatal("ERORS: ", checkResult.GetErrors());
                 return checkResult;
             }
 
-            var DbGame = await this.GameService.GetEntityAsync<Game>(x => x.GameID == game.GameID);
-            if (DbGame == null)
-            {
-                await this.GameService.SaveGameAsync(game);
-            }
-
+            await this.GameService.SaveEntityAsync<Game, GameDTO>(gameDto);
             return checkResult;
         }
 

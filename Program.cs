@@ -31,6 +31,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<GatewayProtocolMiddleware>();
+
 var serviceScope = app.Services.CreateScope().ServiceProvider;
 var routesConfigurator = serviceScope.GetRequiredService<RoutesConfigurator>();
 routesConfigurator.Configure(app);
