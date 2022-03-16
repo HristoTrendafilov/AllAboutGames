@@ -8,9 +8,6 @@ namespace AllAboutGames.Core
     {
         public static void RegisterDependencies(WebApplicationBuilder builder)
         {
-            // Routes
-            builder.Services.AddScoped<RoutesConfigurator>();
-
             // Handlers
             builder.Services.AddTransient<GameHandler>();
 

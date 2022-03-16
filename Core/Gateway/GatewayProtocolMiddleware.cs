@@ -15,7 +15,6 @@ namespace AllAboutGames.Core.Gateway
             }
 
             string requestBody;
-
             try
             {
                 using (var streamReader = new StreamReader(context.Request.Body, System.Text.Encoding.UTF8))
@@ -29,7 +28,6 @@ namespace AllAboutGames.Core.Gateway
             }
 
             GatewayMessage requestMessage;
-
             try
             {
                 requestMessage = JsonConvert.DeserializeObject<GatewayMessage>(requestBody);

@@ -1,13 +1,16 @@
 using AllAboutGames.Core;
 using AllAboutGames.Core.Gateway;
+using AllAboutGames.Core.Handlers;
 using AllAboutGames.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Exceptions;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder();
 
 DependencyManager.RegisterDependencies(builder);
+HandlersScanner.ScanForHandlers(Assembly.GetExecutingAssembly());
 
 builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
 {
@@ -33,10 +36,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseMiddleware<GatewayProtocolMiddleware>();
-
-var serviceScope = app.Services.CreateScope().ServiceProvider;
-var routesConfigurator = serviceScope.GetRequiredService<RoutesConfigurator>();
-routesConfigurator.Configure(app);
 
 app.UseHttpsRedirection();
 
