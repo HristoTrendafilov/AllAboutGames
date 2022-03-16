@@ -6,6 +6,13 @@ namespace AllAboutGames.Core.Gateway
 {
     public class GatewayProtocolMiddleware : IMiddleware
     {
+        private readonly GatewayProtocol GatewayProtocol;
+
+        public GatewayProtocolMiddleware(GatewayProtocol gatewayProtocol)
+        {
+            this.GatewayProtocol = gatewayProtocol;
+        }
+
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
             if (context.Request.Path != "/api/gateway")
@@ -40,7 +47,7 @@ namespace AllAboutGames.Core.Gateway
             // TODO: Get the real IP from the context headers
             Log.Information($"Incoming request: {requestMessage.MessageType} {Environment.NewLine} JSON: {Environment.NewLine} {requestMessage.MessageJson}");
 
-
+            await this.GatewayProtocol.ProcessGatewayMessage(requestMessage);
         }
     }
 }

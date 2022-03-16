@@ -6,7 +6,7 @@ namespace AllAboutGames.Data.Models
     public class Country
     {
         [Key]
-        public int CountryID { get; set; }
+        public long CountryID { get; set; }
 
         [Required(ErrorMessage = "Country name is required.")]
         [MaxLength(100, ErrorMessage = "The country name must be maximum 100 characters.")]

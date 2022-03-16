@@ -6,7 +6,7 @@ namespace AllAboutGames.Data.Models
     public class Genre
     {
         [Key]
-        public int GenreID { get; set; }
+        public long GenreID { get; set; }
 
         [Required(ErrorMessage = "Genre name is required.")]
         [MaxLength(100, ErrorMessage = "The Genre name must be maximum 100 characters.")]

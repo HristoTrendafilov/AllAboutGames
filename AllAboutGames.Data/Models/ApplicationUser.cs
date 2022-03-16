@@ -8,7 +8,7 @@ namespace AllAboutGames.Data.Models
     public class ApplicationUser
     {
         [Key]
-        public long ApplicationUserID { get; set; }
+        public long UserID { get; set; }
         
         [Required(ErrorMessage = "Username is required.")]
         [MaxLength(100, ErrorMessage = "The username must be maximum 100 characters.")]
@@ -31,7 +31,7 @@ namespace AllAboutGames.Data.Models
 
         [Required(ErrorMessage = "City is required.")]
         [ForeignKey(nameof(City))]
-        public int CityID { get; set; }
+        public long CityID { get; set; }
 
         public City City { get; set; }
 
@@ -44,5 +44,7 @@ namespace AllAboutGames.Data.Models
         public virtual List<ForumComment> ForumComments { get; set; } = new List<ForumComment>();
 
         public virtual List<FeedBack> FeedBacks { get; set; } = new List<FeedBack>();
+
+        public virtual List<ApplicationUserRole> UsersRoles { get; set; } = new List<ApplicationUserRole>();
     }
 }

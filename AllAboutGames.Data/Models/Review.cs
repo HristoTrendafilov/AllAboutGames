@@ -7,7 +7,7 @@ namespace AllAboutGames.Data.Models
     public class Review
     {
         [Key]
-        public int ReviewID { get; set; }
+        public long ReviewID { get; set; }
 
         [Required(ErrorMessage = "Review text is required.")]
         public string Text { get; set; }
@@ -16,20 +16,17 @@ namespace AllAboutGames.Data.Models
 
         [Required]
         [ForeignKey(nameof(Game))]
-        public int GameID { get; set; }
-
+        public long GameID { get; set; }
         public virtual Game Game { get; set; }
 
         [Required]
         [ForeignKey(nameof(ReviewedBy))]
         public long UserID { get; set; }
-
         public virtual ApplicationUser ReviewedBy { get; set; }
 
         [Required]
         [ForeignKey(nameof(Rating))]
         public long RatingID { get; set; }
-
         public virtual Rating Rating { get; set; }
     }
 }

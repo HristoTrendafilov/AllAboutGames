@@ -14,7 +14,7 @@ namespace AllAboutGames.Data.Migrations
                 name: "Countries",
                 columns: table => new
                 {
-                    CountryID = table.Column<int>(type: "integer", nullable: false)
+                    CountryID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false)
                 },
@@ -27,10 +27,10 @@ namespace AllAboutGames.Data.Migrations
                 name: "Developers",
                 columns: table => new
                 {
-                    DeveloperID = table.Column<int>(type: "integer", nullable: false)
+                    DeveloperID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Name = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
                     DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
@@ -57,7 +57,7 @@ namespace AllAboutGames.Data.Migrations
                 name: "Genres",
                 columns: table => new
                 {
-                    GenreID = table.Column<int>(type: "integer", nullable: false)
+                    GenreID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
@@ -69,13 +69,28 @@ namespace AllAboutGames.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Role",
+                columns: table => new
+                {
+                    RoleID = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
+                    ValidFrom = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
+                    ValidTo = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Role", x => x.RoleID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Cities",
                 columns: table => new
                 {
-                    CityID = table.Column<int>(type: "integer", nullable: false)
+                    CityID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Name = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    CountryID = table.Column<int>(type: "integer", nullable: false)
+                    CountryID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -92,7 +107,7 @@ namespace AllAboutGames.Data.Migrations
                 name: "Games",
                 columns: table => new
                 {
-                    GameID = table.Column<int>(type: "integer", nullable: false)
+                    GameID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Name = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
                     Price = table.Column<decimal>(type: "numeric", nullable: true),
@@ -100,11 +115,10 @@ namespace AllAboutGames.Data.Migrations
                     Image = table.Column<string>(type: "text", nullable: true),
                     Website = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
                     ReleaseDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    RatingsCount = table.Column<int>(type: "integer", nullable: true),
                     TrailerUrl = table.Column<string>(type: "character varying(500)", maxLength: 500, nullable: true),
-                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
                     DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    DeveloperID = table.Column<int>(type: "integer", nullable: false)
+                    DeveloperID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -121,7 +135,7 @@ namespace AllAboutGames.Data.Migrations
                 name: "Platforms",
                 columns: table => new
                 {
-                    PlatformID = table.Column<int>(type: "integer", nullable: false)
+                    PlatformID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Name = table.Column<string>(type: "text", nullable: false),
                     Image = table.Column<string>(type: "text", nullable: false),
@@ -129,7 +143,7 @@ namespace AllAboutGames.Data.Migrations
                     ReleaseDate = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false),
                     DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    DeveloperID = table.Column<int>(type: "integer", nullable: false)
+                    DeveloperID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -146,20 +160,20 @@ namespace AllAboutGames.Data.Migrations
                 name: "ApplicationUser",
                 columns: table => new
                 {
-                    ApplicationUserID = table.Column<long>(type: "bigint", nullable: false)
+                    UserID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Username = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     Password = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
                     DateOfBirth = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     ProfilePicture = table.Column<string>(type: "text", nullable: true),
-                    CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false, defaultValue: new DateTime(2022, 3, 14, 18, 49, 35, 681, DateTimeKind.Local).AddTicks(8374)),
+                    CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false, defaultValue: new DateTime(2022, 3, 16, 17, 19, 34, 791, DateTimeKind.Utc).AddTicks(5190)),
                     IsDeleted = table.Column<bool>(type: "boolean", nullable: false, defaultValue: false),
                     DeletedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: true),
-                    CityID = table.Column<int>(type: "integer", nullable: false)
+                    CityID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_ApplicationUser", x => x.ApplicationUserID);
+                    table.PrimaryKey("PK_ApplicationUser", x => x.UserID);
                     table.ForeignKey(
                         name: "FK_ApplicationUser_Cities_CityID",
                         column: x => x.CityID,
@@ -172,10 +186,10 @@ namespace AllAboutGames.Data.Migrations
                 name: "GamesGenres",
                 columns: table => new
                 {
-                    GameGenreID = table.Column<int>(type: "integer", nullable: false)
+                    GameGenreID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    GameID = table.Column<int>(type: "integer", nullable: false),
-                    GenreID = table.Column<int>(type: "integer", nullable: false)
+                    GameID = table.Column<long>(type: "bigint", nullable: false),
+                    GenreID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -198,10 +212,10 @@ namespace AllAboutGames.Data.Migrations
                 name: "GamesPlatforms",
                 columns: table => new
                 {
-                    GamePlatformID = table.Column<int>(type: "integer", nullable: false)
+                    GamePlatformID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    GameID = table.Column<int>(type: "integer", nullable: false),
-                    PlatformID = table.Column<int>(type: "integer", nullable: false)
+                    GameID = table.Column<long>(type: "bigint", nullable: false),
+                    PlatformID = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -221,10 +235,36 @@ namespace AllAboutGames.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "ApplicationUserRole",
+                columns: table => new
+                {
+                    ApplicationUserRoleID = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
+                    UserID = table.Column<long>(type: "bigint", nullable: false),
+                    RoleID = table.Column<long>(type: "bigint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ApplicationUserRole", x => x.ApplicationUserRoleID);
+                    table.ForeignKey(
+                        name: "FK_ApplicationUserRole_ApplicationUser_UserID",
+                        column: x => x.UserID,
+                        principalTable: "ApplicationUser",
+                        principalColumn: "UserID",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_ApplicationUserRole_Role_RoleID",
+                        column: x => x.RoleID,
+                        principalTable: "Role",
+                        principalColumn: "RoleID",
+                        onDelete: ReferentialAction.Restrict);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "FeedBack",
                 columns: table => new
                 {
-                    FeedBackID = table.Column<int>(type: "integer", nullable: false)
+                    FeedBackID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     About = table.Column<string>(type: "text", nullable: false),
                     Text = table.Column<string>(type: "text", nullable: false),
@@ -238,7 +278,7 @@ namespace AllAboutGames.Data.Migrations
                         name: "FK_FeedBack_ApplicationUser_UserID",
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
-                        principalColumn: "ApplicationUserID",
+                        principalColumn: "UserID",
                         onDelete: ReferentialAction.Restrict);
                 });
 
@@ -261,7 +301,7 @@ namespace AllAboutGames.Data.Migrations
                         name: "FK_ForumPosts_ApplicationUser_UserID",
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
-                        principalColumn: "ApplicationUserID",
+                        principalColumn: "UserID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_ForumPosts_ForumCategories_ForumCategoryID",
@@ -277,7 +317,7 @@ namespace AllAboutGames.Data.Migrations
                 {
                     RatingID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
-                    GameID = table.Column<int>(type: "integer", nullable: false),
+                    GameID = table.Column<long>(type: "bigint", nullable: false),
                     UserID = table.Column<long>(type: "bigint", nullable: false),
                     Value = table.Column<int>(type: "integer", nullable: false)
                 },
@@ -288,7 +328,7 @@ namespace AllAboutGames.Data.Migrations
                         name: "FK_Ratings_ApplicationUser_UserID",
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
-                        principalColumn: "ApplicationUserID",
+                        principalColumn: "UserID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Ratings_Games_GameID",
@@ -316,7 +356,7 @@ namespace AllAboutGames.Data.Migrations
                         name: "FK_ForumComments_ApplicationUser_UserID",
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
-                        principalColumn: "ApplicationUserID",
+                        principalColumn: "UserID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_ForumComments_ForumPosts_ForumPostID",
@@ -342,7 +382,7 @@ namespace AllAboutGames.Data.Migrations
                         name: "FK_ForumLikes_ApplicationUser_UserID",
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
-                        principalColumn: "ApplicationUserID",
+                        principalColumn: "UserID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_ForumLikes_ForumPosts_ForumPostID",
@@ -356,11 +396,11 @@ namespace AllAboutGames.Data.Migrations
                 name: "Reviews",
                 columns: table => new
                 {
-                    ReviewID = table.Column<int>(type: "integer", nullable: false)
+                    ReviewID = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn),
                     Text = table.Column<string>(type: "text", nullable: false),
                     CreatedOn = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    GameID = table.Column<int>(type: "integer", nullable: false),
+                    GameID = table.Column<long>(type: "bigint", nullable: false),
                     UserID = table.Column<long>(type: "bigint", nullable: false),
                     RatingID = table.Column<long>(type: "bigint", nullable: false)
                 },
@@ -371,7 +411,7 @@ namespace AllAboutGames.Data.Migrations
                         name: "FK_Reviews_ApplicationUser_UserID",
                         column: x => x.UserID,
                         principalTable: "ApplicationUser",
-                        principalColumn: "ApplicationUserID",
+                        principalColumn: "UserID",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Reviews_Games_GameID",
@@ -391,6 +431,16 @@ namespace AllAboutGames.Data.Migrations
                 name: "IX_ApplicationUser_CityID",
                 table: "ApplicationUser",
                 column: "CityID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ApplicationUserRole_RoleID",
+                table: "ApplicationUserRole",
+                column: "RoleID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ApplicationUserRole_UserID",
+                table: "ApplicationUserRole",
+                column: "UserID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Cities_CountryID",
@@ -491,6 +541,9 @@ namespace AllAboutGames.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "ApplicationUserRole");
+
+            migrationBuilder.DropTable(
                 name: "FeedBack");
 
             migrationBuilder.DropTable(
@@ -507,6 +560,9 @@ namespace AllAboutGames.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Reviews");
+
+            migrationBuilder.DropTable(
+                name: "Role");
 
             migrationBuilder.DropTable(
                 name: "ForumPosts");

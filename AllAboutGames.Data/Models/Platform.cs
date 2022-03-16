@@ -7,7 +7,7 @@ namespace AllAboutGames.Data.Models
     public class Platform
     {
         [Key]
-        public int PlatformID { get; set; }
+        public long PlatformID { get; set; }
 
         [Required(ErrorMessage = "Platform name is required.")]
         public string Name { get; set; }
@@ -26,7 +26,7 @@ namespace AllAboutGames.Data.Models
 
         [Required]
         [ForeignKey(nameof(Developer))]
-        public int DeveloperID { get; set; }
+        public long DeveloperID { get; set; }
 
         public Developer Developer { get; set; }
 

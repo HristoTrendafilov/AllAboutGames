@@ -7,7 +7,7 @@ namespace AllAboutGames.Data.Models
     public class City
     {
         [Key]
-        public int CityID { get; set; }
+        public long CityID { get; set; }
 
         [Required(ErrorMessage = "City name is required.")]
         [MaxLength(100, ErrorMessage = "The city name must be maximum 100 characters.")]
@@ -15,7 +15,7 @@ namespace AllAboutGames.Data.Models
 
         [Required(ErrorMessage = "Country name is required.")]
         [ForeignKey(nameof(Country))]
-        public int CountryID { get; set; }
+        public long CountryID { get; set; }
 
         public virtual Country Country { get; set; }
 

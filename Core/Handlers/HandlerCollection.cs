@@ -5,12 +5,20 @@ namespace AllAboutGames.Core.Handlers
 {
     public class HandlerCollection
     {
-        public HandlerCollection(IReadOnlyCollection<GatewayHandlerModel> handlers)
+        public HandlerCollection(List<GatewayHandlerModel> handlers)
         {
+            this.Handlers = handlers;
             this.HandlersByMessageType = handlers.ToDictionary(model => model.RequestType.Name, model => model);
         }
 
+        private IReadOnlyCollection<GatewayHandlerModel> Handlers { get; }
+
         private IDictionary<string, GatewayHandlerModel> HandlersByMessageType { get; set; }
+
+        public List<GatewayHandlerModel> GetAllHandlers()
+        {
+            return this.Handlers.ToList();
+        }
 
         public GatewayHandlerModel GetHandler(string messageType)
         {

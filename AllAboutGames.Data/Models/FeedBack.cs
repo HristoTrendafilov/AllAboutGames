@@ -7,7 +7,7 @@ namespace AllAboutGames.Data.Models
     public class FeedBack
     {
         [Key]
-        public int FeedBackID { get; set; }
+        public long FeedBackID { get; set; }
 
         [Required(ErrorMessage = "About information is required.")]
         public string About { get; set; }

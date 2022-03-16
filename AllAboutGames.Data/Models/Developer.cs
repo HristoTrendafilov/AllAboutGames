@@ -6,7 +6,7 @@ namespace AllAboutGames.Data.Models
     public class Developer
     {
         [Key]
-        public int DeveloperID { get; set; }
+        public long DeveloperID { get; set; }
 
         [Required(ErrorMessage = "Developer name is required.")]
         [MaxLength(200, ErrorMessage = "The Developer name must be maximum 200 characters.")]

@@ -1,0 +1,305 @@
+[2022-03-16 19:58:32  Debug]  Hosting starting
+[2022-03-16 19:58:32  Debug]  Using development certificate: CN=localhost (Thumbprint: A60303DA9ECD1A8D00817F1C0B90969E60557975)
+[2022-03-16 19:58:32  Information]  Now listening on: https://localhost:6001
+[2022-03-16 19:58:32  Information]  Now listening on: http://localhost:6000
+[2022-03-16 19:58:32  Debug]  Loaded hosting startup assembly AllAboutGames
+[2022-03-16 19:58:32  Debug]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-03-16 19:58:32  Debug]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-03-16 19:58:32  Information]  Application started. Press Ctrl+C to shut down.
+[2022-03-16 19:58:32  Information]  Hosting environment: Development
+[2022-03-16 19:58:32  Information]  Content root path: D:\Projects\
+[2022-03-16 19:58:32  Debug]  Hosting started
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SC" received FIN.
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SC" accepted.
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SC" started.
+[2022-03-16 19:58:33  Debug]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SC" stopped.
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SC" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SD" accepted.
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SD" started.
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SE" accepted.
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SE" started.
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SD" received FIN.
+[2022-03-16 19:58:33  Debug]  Connection 0HMG7EQB0N3SD established using the following protocol: "Tls12"
+[2022-03-16 19:58:33  Debug]  Connection 0HMG7EQB0N3SE established using the following protocol: "Tls12"
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SD" is closed. The last processed stream ID was 0.
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SD" sending FIN because: "The client closed the connection."
+[2022-03-16 19:58:33  Debug]  Connection id "0HMG7EQB0N3SD" stopped.
+[2022-03-16 19:58:33  Information]  Request starting HTTP/2 GET https://localhost:6001/swagger/index.html - -
+[2022-03-16 19:58:33  Debug]  Wildcard detected, all requests with hosts will be allowed.
+[2022-03-16 19:58:33  Debug]  Response markup is scheduled to include browser refresh script injection.
+[2022-03-16 19:58:34  Debug]  Response markup was updated to include browser refresh script injection.
+[2022-03-16 19:58:34  Information]  Request starting HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - -
+[2022-03-16 19:58:34  Information]  Request finished HTTP/2 GET https://localhost:6001/swagger/index.html - - - 200 - text/html;charset=utf-8 282.9930ms
+[2022-03-16 19:58:34  Information]  Request finished HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 3.8448ms
+[2022-03-16 19:58:34  Information]  Request starting HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - -
+[2022-03-16 19:58:34  Information]  Request finished HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 17.6313ms
+[2022-03-16 19:58:43  Debug]  Connection id "0HMG7EQB0N3SE" received FIN.
+[2022-03-16 19:58:43  Debug]  Connection id "0HMG7EQB0N3SE" is closed. The last processed stream ID was 5.
+[2022-03-16 19:58:43  Debug]  Connection id "0HMG7EQB0N3SE" sending FIN because: "The client closed the connection."
+[2022-03-16 19:58:43  Debug]  Connection id "0HMG7EQB0N3SE" stopped.
+[2022-03-16 19:59:59  Debug]  Connection id "0HMG7EQB0N3SF" accepted.
+[2022-03-16 19:59:59  Debug]  Connection id "0HMG7EQB0N3SG" accepted.
+[2022-03-16 19:59:59  Debug]  Connection id "0HMG7EQB0N3SF" started.
+[2022-03-16 19:59:59  Debug]  Connection id "0HMG7EQB0N3SG" started.
+[2022-03-16 19:59:59  Debug]  Connection id "0HMG7EQB0N3SF" received FIN.
+[2022-03-16 19:59:59  Debug]  Connection id "0HMG7EQB0N3SF" sending FIN because: "The client closed the connection."
+[2022-03-16 19:59:59  Debug]  Connection id "0HMG7EQB0N3SF" disconnecting.
+[2022-03-16 19:59:59  Debug]  Connection id "0HMG7EQB0N3SF" stopped.
+[2022-03-16 19:59:59  Information]  Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 115
+[2022-03-16 19:59:59  Debug]  POST requests are not supported
+[2022-03-16 20:00:17  Debug]  Connection id "0HMG7EQB0N3SG", Request id "0HMG7EQB0N3SG:00000002": started reading request body.
+[2022-03-16 20:00:17  Debug]  Connection id "0HMG7EQB0N3SG", Request id "0HMG7EQB0N3SG:00000002": done reading request body.
+[2022-03-16 20:00:47  Information]  Incoming request: SaveGameRequest 
+ JSON: 
+ {"Name": "testName", "Summary": "testSummary"}
+[2022-03-16 20:02:48  Debug]  Hosting starting
+[2022-03-16 20:02:49  Debug]  Using development certificate: CN=localhost (Thumbprint: A60303DA9ECD1A8D00817F1C0B90969E60557975)
+[2022-03-16 20:02:49  Information]  Now listening on: https://localhost:6001
+[2022-03-16 20:02:49  Information]  Now listening on: http://localhost:6000
+[2022-03-16 20:02:49  Debug]  Loaded hosting startup assembly AllAboutGames
+[2022-03-16 20:02:49  Debug]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-03-16 20:02:49  Debug]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-03-16 20:02:49  Information]  Application started. Press Ctrl+C to shut down.
+[2022-03-16 20:02:49  Information]  Hosting environment: Development
+[2022-03-16 20:02:49  Information]  Content root path: D:\Projects\
+[2022-03-16 20:02:49  Debug]  Hosting started
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ7" accepted.
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ7" started.
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ8" accepted.
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ8" started.
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ7" received FIN.
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ8" received FIN.
+[2022-03-16 20:02:49  Debug]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-03-16 20:02:49  Debug]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ7" stopped.
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ8" stopped.
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ7" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ8" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ9" accepted.
+[2022-03-16 20:02:49  Debug]  Connection id "0HMG7ESNCUPQ9" started.
+[2022-03-16 20:02:49  Debug]  Connection 0HMG7ESNCUPQ9 established using the following protocol: "Tls12"
+[2022-03-16 20:02:49  Information]  Request starting HTTP/2 GET https://localhost:6001/swagger/index.html - -
+[2022-03-16 20:02:49  Debug]  Wildcard detected, all requests with hosts will be allowed.
+[2022-03-16 20:02:49  Debug]  Response markup is scheduled to include browser refresh script injection.
+[2022-03-16 20:02:50  Debug]  Response markup was updated to include browser refresh script injection.
+[2022-03-16 20:02:50  Information]  Request starting HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - -
+[2022-03-16 20:02:50  Information]  Request finished HTTP/2 GET https://localhost:6001/swagger/index.html - - - 200 - text/html;charset=utf-8 259.9168ms
+[2022-03-16 20:02:50  Information]  Request finished HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 5.6015ms
+[2022-03-16 20:02:50  Information]  Request starting HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - -
+[2022-03-16 20:02:50  Information]  Request finished HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 16.4430ms
+[2022-03-16 20:02:52  Debug]  Connection id "0HMG7ESNCUPQA" accepted.
+[2022-03-16 20:02:52  Debug]  Connection id "0HMG7ESNCUPQA" received FIN.
+[2022-03-16 20:02:52  Debug]  Connection id "0HMG7ESNCUPQA" started.
+[2022-03-16 20:02:52  Debug]  Connection id "0HMG7ESNCUPQB" accepted.
+[2022-03-16 20:02:52  Debug]  Connection id "0HMG7ESNCUPQB" started.
+[2022-03-16 20:02:52  Debug]  Connection id "0HMG7ESNCUPQA" sending FIN because: "The client closed the connection."
+[2022-03-16 20:02:52  Debug]  Connection id "0HMG7ESNCUPQA" disconnecting.
+[2022-03-16 20:02:52  Debug]  Connection id "0HMG7ESNCUPQA" stopped.
+[2022-03-16 20:02:52  Information]  Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 115
+[2022-03-16 20:02:52  Debug]  POST requests are not supported
+[2022-03-16 20:02:56  Debug]  Connection id "0HMG7ESNCUPQ9" received FIN.
+[2022-03-16 20:02:56  Debug]  Connection id "0HMG7ESNCUPQB", Request id "0HMG7ESNCUPQB:00000002": started reading request body.
+[2022-03-16 20:02:56  Debug]  Connection id "0HMG7ESNCUPQB", Request id "0HMG7ESNCUPQB:00000002": done reading request body.
+[2022-03-16 20:02:56  Debug]  Connection id "0HMG7ESNCUPQ9" is closed. The last processed stream ID was 5.
+[2022-03-16 20:02:56  Debug]  Connection id "0HMG7ESNCUPQ9" sending FIN because: "The client closed the connection."
+[2022-03-16 20:02:56  Debug]  Connection id "0HMG7ESNCUPQ9" stopped.
+[2022-03-16 20:02:56  Information]  Incoming request: SaveGameRequest 
+ JSON: 
+ {"Name": "testName", "Summary": "testSummary"}
+[2022-03-16 20:06:09  Debug]  Hosting starting
+[2022-03-16 20:06:09  Debug]  Using development certificate: CN=localhost (Thumbprint: A60303DA9ECD1A8D00817F1C0B90969E60557975)
+[2022-03-16 20:06:09  Information]  Now listening on: https://localhost:6001
+[2022-03-16 20:06:09  Information]  Now listening on: http://localhost:6000
+[2022-03-16 20:06:09  Debug]  Loaded hosting startup assembly AllAboutGames
+[2022-03-16 20:06:09  Debug]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-03-16 20:06:09  Debug]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-03-16 20:06:09  Information]  Application started. Press Ctrl+C to shut down.
+[2022-03-16 20:06:09  Information]  Hosting environment: Development
+[2022-03-16 20:06:09  Information]  Content root path: D:\Projects\
+[2022-03-16 20:06:09  Debug]  Hosting started
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGQ" received FIN.
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGP" received FIN.
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGQ" accepted.
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGP" accepted.
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGQ" started.
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGP" started.
+[2022-03-16 20:06:10  Debug]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-03-16 20:06:10  Debug]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGP" stopped.
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGQ" stopped.
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGP" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGR" accepted.
+[2022-03-16 20:06:10  Debug]  Connection id "0HMG7EUJ7ULGR" started.
+[2022-03-16 20:06:10  Debug]  Connection 0HMG7EUJ7ULGR established using the following protocol: "Tls12"
+[2022-03-16 20:06:10  Information]  Request starting HTTP/2 GET https://localhost:6001/swagger/index.html - -
+[2022-03-16 20:06:10  Debug]  Wildcard detected, all requests with hosts will be allowed.
+[2022-03-16 20:06:10  Debug]  Response markup is scheduled to include browser refresh script injection.
+[2022-03-16 20:06:10  Information]  Request starting HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - -
+[2022-03-16 20:06:10  Debug]  Response markup was updated to include browser refresh script injection.
+[2022-03-16 20:06:10  Information]  Request finished HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 5.4350ms
+[2022-03-16 20:06:10  Information]  Request finished HTTP/2 GET https://localhost:6001/swagger/index.html - - - 200 - text/html;charset=utf-8 223.2019ms
+[2022-03-16 20:06:10  Information]  Request starting HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - -
+[2022-03-16 20:06:10  Information]  Request finished HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 15.5878ms
+[2022-03-16 20:06:14  Debug]  Connection id "0HMG7EUJ7ULGS" received FIN.
+[2022-03-16 20:06:14  Debug]  Connection id "0HMG7EUJ7ULGS" accepted.
+[2022-03-16 20:06:14  Debug]  Connection id "0HMG7EUJ7ULGS" started.
+[2022-03-16 20:06:14  Debug]  Connection id "0HMG7EUJ7ULGT" accepted.
+[2022-03-16 20:06:14  Debug]  Connection id "0HMG7EUJ7ULGS" sending FIN because: "The client closed the connection."
+[2022-03-16 20:06:14  Debug]  Connection id "0HMG7EUJ7ULGT" started.
+[2022-03-16 20:06:14  Debug]  Connection id "0HMG7EUJ7ULGS" disconnecting.
+[2022-03-16 20:06:14  Debug]  Connection id "0HMG7EUJ7ULGS" stopped.
+[2022-03-16 20:06:14  Information]  Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 115
+[2022-03-16 20:06:14  Debug]  POST requests are not supported
+[2022-03-16 20:06:14  Debug]  Connection id "0HMG7EUJ7ULGT", Request id "0HMG7EUJ7ULGT:00000002": started reading request body.
+[2022-03-16 20:06:14  Debug]  Connection id "0HMG7EUJ7ULGT", Request id "0HMG7EUJ7ULGT:00000002": done reading request body.
+[2022-03-16 20:06:14  Information]  Incoming request: SaveGameRequest 
+ JSON: 
+ {"Name": "testName", "Summary": "testSummary"}
+[2022-03-16 20:06:39  Debug]  Hosting starting
+[2022-03-16 20:06:40  Debug]  Using development certificate: CN=localhost (Thumbprint: A60303DA9ECD1A8D00817F1C0B90969E60557975)
+[2022-03-16 20:06:40  Information]  Now listening on: https://localhost:6001
+[2022-03-16 20:06:40  Information]  Now listening on: http://localhost:6000
+[2022-03-16 20:06:40  Debug]  Loaded hosting startup assembly AllAboutGames
+[2022-03-16 20:06:40  Debug]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-03-16 20:06:40  Debug]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-03-16 20:06:40  Information]  Application started. Press Ctrl+C to shut down.
+[2022-03-16 20:06:40  Information]  Hosting environment: Development
+[2022-03-16 20:06:40  Information]  Content root path: D:\Projects\
+[2022-03-16 20:06:40  Debug]  Hosting started
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEI" accepted.
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEI" started.
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEJ" accepted.
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEJ" started.
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEJ" received FIN.
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEI" received FIN.
+[2022-03-16 20:06:40  Debug]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-03-16 20:06:40  Debug]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEI" stopped.
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEJ" stopped.
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEI" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEK" accepted.
+[2022-03-16 20:06:40  Debug]  Connection id "0HMG7EUS9UGEK" started.
+[2022-03-16 20:06:40  Debug]  Connection 0HMG7EUS9UGEK established using the following protocol: "Tls12"
+[2022-03-16 20:06:41  Information]  Request starting HTTP/2 GET https://localhost:6001/swagger/index.html - -
+[2022-03-16 20:06:41  Debug]  Wildcard detected, all requests with hosts will be allowed.
+[2022-03-16 20:06:41  Debug]  Response markup is scheduled to include browser refresh script injection.
+[2022-03-16 20:06:41  Debug]  Response markup was updated to include browser refresh script injection.
+[2022-03-16 20:06:41  Information]  Request starting HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - -
+[2022-03-16 20:06:41  Information]  Request finished HTTP/2 GET https://localhost:6001/swagger/index.html - - - 200 - text/html;charset=utf-8 215.7419ms
+[2022-03-16 20:06:41  Information]  Request finished HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 5.0161ms
+[2022-03-16 20:06:41  Information]  Request starting HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - -
+[2022-03-16 20:06:41  Information]  Request finished HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 15.8458ms
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEK" received FIN.
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEK" is closed. The last processed stream ID was 5.
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEK" sending FIN because: "The client closed the connection."
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEK" stopped.
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEL" accepted.
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEL" started.
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEL" received FIN.
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEM" accepted.
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEL" sending FIN because: "The client closed the connection."
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEM" started.
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEL" disconnecting.
+[2022-03-16 20:06:44  Debug]  Connection id "0HMG7EUS9UGEL" stopped.
+[2022-03-16 20:06:44  Information]  Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 115
+[2022-03-16 20:06:44  Debug]  POST requests are not supported
+[2022-03-16 20:06:49  Debug]  Connection id "0HMG7EUS9UGEM", Request id "0HMG7EUS9UGEM:00000002": started reading request body.
+[2022-03-16 20:06:49  Debug]  Connection id "0HMG7EUS9UGEM", Request id "0HMG7EUS9UGEM:00000002": done reading request body.
+[2022-03-16 20:07:01  Information]  Incoming request: SaveGameRequest 
+ JSON: 
+ {"Name": "testName", "Summary": "testSummary"}
+[2022-03-16 20:08:07  Debug]  Hosting starting
+[2022-03-16 20:08:08  Debug]  Using development certificate: CN=localhost (Thumbprint: A60303DA9ECD1A8D00817F1C0B90969E60557975)
+[2022-03-16 20:08:08  Information]  Now listening on: https://localhost:6001
+[2022-03-16 20:08:08  Information]  Now listening on: http://localhost:6000
+[2022-03-16 20:08:08  Debug]  Loaded hosting startup assembly AllAboutGames
+[2022-03-16 20:08:08  Debug]  Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+[2022-03-16 20:08:08  Debug]  Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+[2022-03-16 20:08:08  Information]  Application started. Press Ctrl+C to shut down.
+[2022-03-16 20:08:08  Information]  Hosting environment: Development
+[2022-03-16 20:08:08  Information]  Content root path: D:\Projects\
+[2022-03-16 20:08:08  Debug]  Hosting started
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ1" accepted.
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ0" accepted.
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ1" started.
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ0" started.
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ0" received FIN.
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ1" received FIN.
+[2022-03-16 20:08:08  Debug]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-03-16 20:08:08  Debug]  Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ0" stopped.
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ1" stopped.
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ0" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ1" sending FIN because: "The Socket transport's send loop completed gracefully."
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ2" accepted.
+[2022-03-16 20:08:08  Debug]  Connection id "0HMG7EVMG3AQ2" started.
+[2022-03-16 20:08:08  Debug]  Connection 0HMG7EVMG3AQ2 established using the following protocol: "Tls12"
+[2022-03-16 20:08:08  Information]  Request starting HTTP/2 GET https://localhost:6001/swagger/index.html - -
+[2022-03-16 20:08:08  Debug]  Wildcard detected, all requests with hosts will be allowed.
+[2022-03-16 20:08:09  Debug]  Response markup is scheduled to include browser refresh script injection.
+[2022-03-16 20:08:09  Debug]  Response markup was updated to include browser refresh script injection.
+[2022-03-16 20:08:09  Information]  Request starting HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - -
+[2022-03-16 20:08:09  Information]  Request finished HTTP/2 GET https://localhost:6001/swagger/index.html - - - 200 - text/html;charset=utf-8 198.6671ms
+[2022-03-16 20:08:09  Information]  Request finished HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 7.6984ms
+[2022-03-16 20:08:09  Information]  Request starting HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - -
+[2022-03-16 20:08:09  Information]  Request finished HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 15.4268ms
+[2022-03-16 20:08:11  Debug]  Connection id "0HMG7EVMG3AQ3" accepted.
+[2022-03-16 20:08:11  Debug]  Connection id "0HMG7EVMG3AQ3" received FIN.
+[2022-03-16 20:08:11  Debug]  Connection id "0HMG7EVMG3AQ3" started.
+[2022-03-16 20:08:11  Debug]  Connection id "0HMG7EVMG3AQ4" accepted.
+[2022-03-16 20:08:11  Debug]  Connection id "0HMG7EVMG3AQ3" sending FIN because: "The client closed the connection."
+[2022-03-16 20:08:11  Debug]  Connection id "0HMG7EVMG3AQ4" started.
+[2022-03-16 20:08:11  Debug]  Connection id "0HMG7EVMG3AQ3" disconnecting.
+[2022-03-16 20:08:11  Debug]  Connection id "0HMG7EVMG3AQ3" stopped.
+[2022-03-16 20:08:11  Information]  Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 107
+[2022-03-16 20:08:11  Debug]  POST requests are not supported
+[2022-03-16 20:08:14  Debug]  Connection id "0HMG7EVMG3AQ2" received FIN.
+[2022-03-16 20:08:15  Debug]  Connection id "0HMG7EVMG3AQ2" is closed. The last processed stream ID was 5.
+[2022-03-16 20:08:15  Debug]  Connection id "0HMG7EVMG3AQ4", Request id "0HMG7EVMG3AQ4:00000002": started reading request body.
+[2022-03-16 20:08:15  Debug]  Connection id "0HMG7EVMG3AQ2" sending FIN because: "The client closed the connection."
+[2022-03-16 20:08:15  Debug]  Connection id "0HMG7EVMG3AQ4", Request id "0HMG7EVMG3AQ4:00000002": done reading request body.
+[2022-03-16 20:08:15  Debug]  Connection id "0HMG7EVMG3AQ2" stopped.
+[2022-03-16 20:08:18  Information]  Incoming request: GameDTO 
+ JSON: 
+ {"Name": "testName", "Summary": "testSummary"}

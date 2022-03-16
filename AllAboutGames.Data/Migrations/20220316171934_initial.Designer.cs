@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AllAboutGames.Data.Migrations
 {
     [DbContext(typeof(AllAboutGamesDataContext))]
-    [Migration("20220314164935_initial")]
+    [Migration("20220316171934_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,19 +26,19 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.ApplicationUser", b =>
                 {
-                    b.Property<long>("ApplicationUserID")
+                    b.Property<long>("UserID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("ApplicationUserID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("UserID"));
 
-                    b.Property<int>("CityID")
-                        .HasColumnType("integer");
+                    b.Property<long>("CityID")
+                        .HasColumnType("bigint");
 
                     b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone")
-                        .HasDefaultValue(new DateTime(2022, 3, 14, 18, 49, 35, 681, DateTimeKind.Local).AddTicks(8374));
+                        .HasDefaultValue(new DateTime(2022, 3, 16, 17, 19, 34, 791, DateTimeKind.Utc).AddTicks(5190));
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("timestamp with time zone");
@@ -64,23 +64,46 @@ namespace AllAboutGames.Data.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
-                    b.HasKey("ApplicationUserID");
+                    b.HasKey("UserID");
 
                     b.HasIndex("CityID");
 
                     b.ToTable("ApplicationUser");
                 });
 
+            modelBuilder.Entity("AllAboutGames.Data.Models.ApplicationUserRole", b =>
+                {
+                    b.Property<long>("ApplicationUserRoleID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("ApplicationUserRoleID"));
+
+                    b.Property<long>("RoleID")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("UserID")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("ApplicationUserRoleID");
+
+                    b.HasIndex("RoleID");
+
+                    b.HasIndex("UserID");
+
+                    b.ToTable("ApplicationUserRole");
+                });
+
             modelBuilder.Entity("AllAboutGames.Data.Models.City", b =>
                 {
-                    b.Property<int>("CityID")
+                    b.Property<long>("CityID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("CityID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("CityID"));
 
-                    b.Property<int>("CountryID")
-                        .HasColumnType("integer");
+                    b.Property<long>("CountryID")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -96,11 +119,11 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Country", b =>
                 {
-                    b.Property<int>("CountryID")
+                    b.Property<long>("CountryID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("CountryID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("CountryID"));
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -114,17 +137,19 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Developer", b =>
                 {
-                    b.Property<int>("DeveloperID")
+                    b.Property<long>("DeveloperID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("DeveloperID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("DeveloperID"));
 
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("timestamp with time zone");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -138,11 +163,11 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.FeedBack", b =>
                 {
-                    b.Property<int>("FeedBackID")
+                    b.Property<long>("FeedBackID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("FeedBackID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("FeedBackID"));
 
                     b.Property<string>("About")
                         .IsRequired()
@@ -280,24 +305,26 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Game", b =>
                 {
-                    b.Property<int>("GameID")
+                    b.Property<long>("GameID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("GameID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("GameID"));
 
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int?>("DeveloperID")
+                    b.Property<long?>("DeveloperID")
                         .IsRequired()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Image")
                         .HasColumnType("text");
 
                     b.Property<bool>("IsDeleted")
-                        .HasColumnType("boolean");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -306,9 +333,6 @@ namespace AllAboutGames.Data.Migrations
 
                     b.Property<decimal?>("Price")
                         .HasColumnType("numeric");
-
-                    b.Property<int?>("RatingsCount")
-                        .HasColumnType("integer");
 
                     b.Property<DateTime?>("ReleaseDate")
                         .HasColumnType("timestamp with time zone");
@@ -334,17 +358,17 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.GameGenre", b =>
                 {
-                    b.Property<int>("GameGenreID")
+                    b.Property<long>("GameGenreID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("GameGenreID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("GameGenreID"));
 
-                    b.Property<int>("GameID")
-                        .HasColumnType("integer");
+                    b.Property<long>("GameID")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("GenreID")
-                        .HasColumnType("integer");
+                    b.Property<long>("GenreID")
+                        .HasColumnType("bigint");
 
                     b.HasKey("GameGenreID");
 
@@ -357,17 +381,17 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.GamePlatform", b =>
                 {
-                    b.Property<int>("GamePlatformID")
+                    b.Property<long>("GamePlatformID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("GamePlatformID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("GamePlatformID"));
 
-                    b.Property<int>("GameID")
-                        .HasColumnType("integer");
+                    b.Property<long>("GameID")
+                        .HasColumnType("bigint");
 
-                    b.Property<int>("PlatformID")
-                        .HasColumnType("integer");
+                    b.Property<long>("PlatformID")
+                        .HasColumnType("bigint");
 
                     b.HasKey("GamePlatformID");
 
@@ -380,11 +404,11 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Genre", b =>
                 {
-                    b.Property<int>("GenreID")
+                    b.Property<long>("GenreID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("GenreID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("GenreID"));
 
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("timestamp with time zone");
@@ -404,17 +428,17 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Platform", b =>
                 {
-                    b.Property<int>("PlatformID")
+                    b.Property<long>("PlatformID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("PlatformID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("PlatformID"));
 
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("DeveloperID")
-                        .HasColumnType("integer");
+                    b.Property<long>("DeveloperID")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Image")
                         .IsRequired()
@@ -449,8 +473,8 @@ namespace AllAboutGames.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("RatingID"));
 
-                    b.Property<int>("GameID")
-                        .HasColumnType("integer");
+                    b.Property<long>("GameID")
+                        .HasColumnType("bigint");
 
                     b.Property<long>("UserID")
                         .HasColumnType("bigint");
@@ -469,17 +493,17 @@ namespace AllAboutGames.Data.Migrations
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Review", b =>
                 {
-                    b.Property<int>("ReviewID")
+                    b.Property<long>("ReviewID")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("bigint");
 
-                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<int>("ReviewID"));
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("ReviewID"));
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<int>("GameID")
-                        .HasColumnType("integer");
+                    b.Property<long>("GameID")
+                        .HasColumnType("bigint");
 
                     b.Property<long>("RatingID")
                         .HasColumnType("bigint");
@@ -502,6 +526,30 @@ namespace AllAboutGames.Data.Migrations
                     b.ToTable("Reviews");
                 });
 
+            modelBuilder.Entity("AllAboutGames.Data.Models.Role", b =>
+                {
+                    b.Property<long>("RoleID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("RoleID"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("character varying(100)");
+
+                    b.Property<DateTime>("ValidFrom")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("ValidTo")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.HasKey("RoleID");
+
+                    b.ToTable("Role");
+                });
+
             modelBuilder.Entity("AllAboutGames.Data.Models.ApplicationUser", b =>
                 {
                     b.HasOne("AllAboutGames.Data.Models.City", "City")
@@ -511,6 +559,25 @@ namespace AllAboutGames.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("City");
+                });
+
+            modelBuilder.Entity("AllAboutGames.Data.Models.ApplicationUserRole", b =>
+                {
+                    b.HasOne("AllAboutGames.Data.Models.Role", "Role")
+                        .WithMany("UsersRoles")
+                        .HasForeignKey("RoleID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("AllAboutGames.Data.Models.ApplicationUser", "User")
+                        .WithMany("UsersRoles")
+                        .HasForeignKey("UserID")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Role");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("AllAboutGames.Data.Models.City", b =>
@@ -709,6 +776,8 @@ namespace AllAboutGames.Data.Migrations
                     b.Navigation("Ratings");
 
                     b.Navigation("Reviews");
+
+                    b.Navigation("UsersRoles");
                 });
 
             modelBuilder.Entity("AllAboutGames.Data.Models.City", b =>
@@ -757,6 +826,11 @@ namespace AllAboutGames.Data.Migrations
             modelBuilder.Entity("AllAboutGames.Data.Models.Platform", b =>
                 {
                     b.Navigation("GamesPlatforms");
+                });
+
+            modelBuilder.Entity("AllAboutGames.Data.Models.Role", b =>
+                {
+                    b.Navigation("UsersRoles");
                 });
 #pragma warning restore 612, 618
         }

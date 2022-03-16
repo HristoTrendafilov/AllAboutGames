@@ -23,16 +23,16 @@ namespace AllAboutGames.Handlers
         }
 
         [BindRequest(typeof(GameDTO))]
-        public async Task<CheckResult> SaveGameAsync(GameDTO gameDto)
+        public async Task<CheckResult> SaveGameAsync(GameDTO request)
         {
-            var checkResult = PropertyValidator.Validate(gameDto);
+            var checkResult = PropertyValidator.Validate(request);
             if (checkResult.IsFailed)
             {
                 Log.Fatal("ERORS: ", checkResult.GetErrors());
                 return checkResult;
             }
 
-            await this.GameService.SaveEntityAsync<Game, GameDTO>(gameDto);
+            await this.GameService.SaveEntityAsync<Game, GameDTO>(request);
             return checkResult;
         }
 
@@ -41,5 +41,10 @@ namespace AllAboutGames.Handlers
             var game = await this.GameService.GetEntityAsync<Game>(x => x.GameID == gameID);
             return game == null ? null : this.Mapper.Map(game, new GameViewModel());
         }
+    }
+
+    public class SaveGameRequest
+    {
+        public GameDTO GameDTO { get; set; }
     }
 }

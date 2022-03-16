@@ -7,7 +7,7 @@ namespace AllAboutGames.Data.Models
     public class Game
     {
         [Key]
-        public int GameID { get; set; }
+        public long GameID { get; set; }
 
         [Required(ErrorMessage = "Game name is required.")]
         [MaxLength(200, ErrorMessage = "The Game name must be maximum 200 characters.")]
@@ -33,7 +33,7 @@ namespace AllAboutGames.Data.Models
         public DateTime? DeletedOn { get; set; }
 
         [ForeignKey(nameof(Developer))]
-        public int? DeveloperID { get; set; }
+        public long? DeveloperID { get; set; }
 
         [IncludeInQuery]
         public virtual Developer Developer { get; set; }

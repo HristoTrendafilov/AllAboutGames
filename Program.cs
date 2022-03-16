@@ -10,7 +10,7 @@ using System.Reflection;
 var builder = WebApplication.CreateBuilder();
 
 DependencyManager.RegisterDependencies(builder);
-HandlersScanner.ScanForHandlers(Assembly.GetExecutingAssembly());
+
 
 builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
 {

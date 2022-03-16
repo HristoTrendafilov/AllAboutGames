@@ -1,18 +1,23 @@
 ﻿using AllAboutGames.Core.Handlers;
 using Newtonsoft.Json;
+using Serilog;
+using System.Reflection;
+#nullable disable
 
 namespace AllAboutGames.Core.Gateway
 {
     public class GatewayProtocol
     {
         private readonly HandlerCollection Handlers;
+        private readonly IServiceProvider ServiceProvider;
 
-        public GatewayProtocol(HandlerCollection handlers)
+        public GatewayProtocol(HandlerCollection handlers, IServiceProvider serviceProvider)
         {
             this.Handlers = handlers;
+            this.ServiceProvider = serviceProvider;
         }
 
-        public async Task<GatewayResult> ProcessGatewayMessage(GatewayMessage request, RequestSession session)
+        public async Task<GatewayResult> ProcessGatewayMessage(GatewayMessage request)
         {
             if (request == null)
             {
@@ -38,22 +43,15 @@ namespace AllAboutGames.Core.Gateway
                     return GatewayResult.FromErrorMessage("Няма Handler, който да обработи заявка с тип " + request.MessageType);
                 }
 
-                var authResult = this.AuthorizeUser(handler, request, session);
-                if (authResult.IsFailed)
-                {
-                    return authResult;
-                }
+                //var authResult = this.AuthorizeUser(handler, request, session);
+                //if (authResult.IsFailed)
+                //{
+                //    return authResult;
+                //}
 
-                var handlerInstance = this.serviceProvider.Resolve(handler.Method.DeclaringType);
+                var handlerInstance = this.ServiceProvider.GetService(handler.Method.DeclaringType);
 
-                var requestModel = JsonConvert.DeserializeObject(request.MessageJson, handler.RequestType, SerializerSettings);
-
-                var (isValid, validationErrorMessages) = DataValidator.Validate(requestModel);
-
-                if (!isValid)
-                {
-                    return GatewayResult.FromErrorMessage(validationErrorMessages);
-                }
+                var requestModel = JsonConvert.DeserializeObject(request.MessageJson, handler.RequestType);
 
                 var parameters = handler.Method.GetParameters().Select(info =>
                 {
@@ -67,84 +65,72 @@ namespace AllAboutGames.Core.Gateway
                         return request;
                     }
 
-                    if (info.ParameterType == typeof(AuthResult))
-                    {
-                        return session.AuthResult;
-                    }
+                    //if (info.ParameterType == typeof(AuthResult))
+                    //{
+                    //    return session.AuthResult;
+                    //}
 
-                    if (info.ParameterType == typeof(RequestSession))
-                    {
-                        return session;
-                    }
+                    //if (info.ParameterType == typeof(RequestSession))
+                    //{
+                    //    return session;
+                    //}
 
                     throw new NotSupportedException($"Parameters don't match for handler method {handler.Method.DeclaringType.Name}.{handler.Method.Name}");
                 }).ToArray();
 
-                try
-                {
-                    if (!handler.ExecuteInTransaction)
-                    {
-                        return await ExecuteHandlerMethod(handler.Method, handlerInstance, parameters);
-                    }
-
-                    var db = this.serviceProvider.Resolve<ISqlVisitor>();
-
-                    try
-                    {
-                        db.BeginTransaction();
-
-                        var result = await ExecuteHandlerMethod(handler.Method, handlerInstance, parameters);
-
-                        if (!result.Success)
-                        {
-                            db.RollbackTransaction();
-                            return result;
-                        }
-
-                        db.TryCommit();
-
-                        return result;
-                    }
-                    catch (Exception)
-                    {
-                        db.RollbackTransaction();
-                        throw;
-                    }
-                }
-                catch (TargetInvocationException ex)
-                {
-                    if (ex.InnerException != null)
-                    {
-                        ExceptionDispatchInfo.Capture(ex.InnerException).Throw();
-                        throw new NotImplementedException();
-                    }
-
-                    throw;
-                }
+                return await ExecuteHandlerMethod(handler.Method, handlerInstance, parameters);
             }
             catch (Exception ex)
             {
-                MainLogger.Error(ex);
-
-                if (ex is GatewayResult.FailedJCoreRequestException failedException)
-                {
-                    return failedException.GatewayResult;
-                }
-
-                string message;
-
-#pragma warning disable 162
-                if (Global.AppConfig.Debug.DetailedGatewayErrors)
-                {
-                    message = ex.ToString();
-                }
-                else
-                {
-                    message = "Грешка при обработката на заявка от тип " + request.MessageType;
-                }
-#pragma warning restore 162
-
+                var message = "Error while trying to process the request: " + request.MessageType;
+                Log.Error(ex, message);
                 return GatewayResult.FromErrorMessage(message);
+            }
+        }
+
+        private static async Task<GatewayResult> ExecuteHandlerMethod(MethodInfo methodInfo, object handlerInstance, object[] parameters)
+        {
+            var taskType = typeof(Task);
+
+            if (taskType.IsAssignableFrom(methodInfo.ReturnType))
+            {
+                if (methodInfo.ReturnType == taskType)
+                {
+                    await (Task)methodInfo.Invoke(handlerInstance, parameters);
+
+                    return GatewayResult.SuccessfullResult();
+                }
+
+                var task = (Task)methodInfo.Invoke(handlerInstance, parameters);
+
+                await task;
+
+                object returnValue = task.GetType().GetProperty("Result").GetValue(task);
+
+                if (returnValue is GatewayResult result)
+                {
+                    return result;
+                }
+
+                return GatewayResult.SuccessfulResult(returnValue);
+            }
+            else
+            {
+                if (methodInfo.ReturnType == typeof(void))
+                {
+                    methodInfo.Invoke(handlerInstance, parameters);
+
+                    return GatewayResult.SuccessfullResult();
+                }
+
+                var returnValue = methodInfo.Invoke(handlerInstance, parameters);
+
+                if (returnValue is GatewayResult result)
+                {
+                    return result;
+                }
+
+                return GatewayResult.SuccessfulResult(returnValue);
             }
         }
     }

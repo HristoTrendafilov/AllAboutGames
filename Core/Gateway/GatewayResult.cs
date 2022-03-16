@@ -1,4 +1,7 @@
-﻿namespace AllAboutGames.Core.Gateway
+﻿using Newtonsoft.Json;
+#nullable disable
+
+namespace AllAboutGames.Core.Gateway
 {
     public class GatewayResult
     {
@@ -6,9 +9,9 @@
 
         public List<GatewayResultDetail> Details { get; set; }
 
-        public static void SuccessfullResult<T>(T @object)
+        public static GatewayResult SuccessfullResult()
         {
-
+            return new GatewayResult();
         }
 
         public void AddError(string message, string property = "")
@@ -21,6 +24,19 @@
             var result = new GatewayResult();
             result.AddError(error);
             return result;
+        }
+
+        public static GatewayResult SuccessfulResult<T>(T obj)
+        {
+            if (typeof(T) == typeof(GatewayResult))
+            {
+                return obj as GatewayResult;
+            }
+
+            return new GatewayResult
+            {
+                JsonValue = JsonConvert.SerializeObject(obj)
+            };
         }
     }
 
