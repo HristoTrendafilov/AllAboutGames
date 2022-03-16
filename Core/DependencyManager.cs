@@ -1,4 +1,5 @@
-﻿using AllAboutGames.Handlers;
+﻿using AllAboutGames.Data.ViewModels;
+using AllAboutGames.Handlers;
 using AllAboutGames.Services;
 
 namespace AllAboutGames.Core
@@ -14,10 +15,14 @@ namespace AllAboutGames.Core
             builder.Services.AddTransient<GameHandler>();
 
             // Services
+            builder.Services.AddTransient<BaseService>();
             builder.Services.AddTransient<GameService>();
 
             // Other
-            builder.Services.AddTransient<BaseService>();
+            builder.Services.AddAutoMapper(typeof(GameViewModel));
+            builder.Services.AddEndpointsApiExplorer();
+            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+            builder.Services.AddSwaggerGen();
         }
     }
 }

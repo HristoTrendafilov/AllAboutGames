@@ -1,6 +1,5 @@
 ﻿using AllAboutGames.Data.DataContext;
 using AllAboutGames.Data.Models;
-using Microsoft.EntityFrameworkCore;
 #nullable disable
 
 namespace AllAboutGames.Services
@@ -11,7 +10,18 @@ namespace AllAboutGames.Services
 
         public async Task SaveGameAsync(Game game)
         {
-            await this.Db.AddAsync(game);
+            if (game.GameID > 0)
+            {
+                var entity = await Db.FindAsync<Game>(game.GameID);
+                Db.Entry(entity).CurrentValues.SetValues(game);
+
+                this.Db.Update(game);
+            }
+            else
+            {
+                await this.Db.AddAsync(game);
+            }
+
             await this.Db.SaveChangesAsync();
         }
     }

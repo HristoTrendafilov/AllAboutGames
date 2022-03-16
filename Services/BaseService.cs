@@ -38,7 +38,5 @@ namespace AllAboutGames.Services
 
             return query;
         }
-
-
     }
 }
