@@ -1,4 +1,5 @@
 ﻿using AllAboutGames.Core;
+using AllAboutGames.Core.Attributes;
 using AllAboutGames.Data.DTO;
 using AllAboutGames.Data.Models;
 using AllAboutGames.Data.ViewModels;
@@ -21,6 +22,7 @@ namespace AllAboutGames.Handlers
             this.Mapper = mapper;
         }
 
+        [BindRequest(typeof(GameDTO))]
         public async Task<CheckResult> SaveGameAsync(GameDTO gameDto)
         {
             var checkResult = PropertyValidator.Validate(gameDto);
