@@ -18,6 +18,7 @@ namespace AllAboutGames.Data.DataContext
             this.CreateDefaultValues(modelBuilder);
         }
 
+        public DbSet<ApplicationUser> Users { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Developer> Developers { get; set; }
@@ -32,6 +33,7 @@ namespace AllAboutGames.Data.DataContext
         public DbSet<ForumPost> ForumPosts { get; set; }
         public DbSet<ForumComment> ForumComments { get; set; }
         public DbSet<ForumLike> ForumLikes { get; set; }
+        public DbSet<Role> Roles { get; set; }
 
         private void CreateDefaultValues(ModelBuilder modelBuilder)
         {
