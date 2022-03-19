@@ -1,5 +1,4 @@
-﻿using AllAboutGames.Core.Gateway;
-using AllAboutGames.Core.Handlers;
+﻿using AllAboutGames.Core.Handlers;
 using AllAboutGames.Core.Middlewares.Gateway;
 using AllAboutGames.Data.ViewModels;
 using AllAboutGames.Services;

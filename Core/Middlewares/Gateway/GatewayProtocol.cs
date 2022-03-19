@@ -1,7 +1,7 @@
-﻿using AllAboutGames.Core.Gateway;
-using AllAboutGames.Core.Handlers;
+﻿using AllAboutGames.Core.Handlers;
 using Newtonsoft.Json;
 using Serilog;
+using Serilog.Events;
 using System.Reflection;
 #nullable disable
 
@@ -85,7 +85,15 @@ namespace AllAboutGames.Core.Middlewares.Gateway
             {
                 var message = "Error while trying to process the request: " + request.MessageType;
                 Log.Error(ex, message);
-                return GatewayResult.FromErrorMessage(message);
+
+                if (Log.IsEnabled(LogEventLevel.Debug))
+                {
+                    return GatewayResult.FromErrorMessage(ex.Message + Environment.NewLine + ex.InnerException);
+                }
+                else
+                {
+                    return GatewayResult.FromErrorMessage(message);
+                }
             }
         }
 

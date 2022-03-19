@@ -1,6 +1,6 @@
-﻿using AllAboutGames.Core.Middlewares.Gateway;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Serilog;
+using System.Text;
 #nullable disable
 
 namespace AllAboutGames.Core.Middlewares.Gateway
@@ -48,7 +48,16 @@ namespace AllAboutGames.Core.Middlewares.Gateway
             // TODO: Get the real IP from the context headers
             Log.Information($"Incoming request: {requestMessage.MessageType} {Environment.NewLine} JSON: {Environment.NewLine} {requestMessage.MessageJson}");
 
-            await this.GatewayProtocol.ProcessGatewayMessage(requestMessage);
+            var responseMessage = await this.GatewayProtocol.ProcessGatewayMessage(requestMessage);
+
+            var json = JsonConvert.SerializeObject(responseMessage);
+
+            var response = context.Response;
+            response.StatusCode = 200;
+            response.Headers["Content-Type"] = "application/json";
+
+            await using var writer = new StreamWriter(response.Body, new UTF8Encoding(false));
+            await writer.WriteAsync(json);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using AllAboutGames.Core;
 using AllAboutGames.Core.Attributes;
+using AllAboutGames.Core.Middlewares.Gateway;
 using AllAboutGames.Data.DTO;
 using AllAboutGames.Data.Models;
 using AllAboutGames.Data.ViewModels;
@@ -22,18 +23,18 @@ namespace AllAboutGames.Handlers
         }
 
         [BindRequest(typeof(SaveGameRequest))]
-        public async Task<CheckResult> SaveGameAsync(SaveGameRequest request)
+        public async Task<GatewayResult> SaveGameAsync(SaveGameRequest request)
         {
             var checkResult = PropertyValidator.Validate(request.GameDTO);
             if (checkResult.IsFailed)
             {
-                Log.Fatal("ERORS: ", checkResult.GetErrors());
-                return checkResult;
+                return GatewayResult.FromErrorMessage(checkResult.GetErrors());
             }
 
             await this.GameService.SaveEntityAsync<Game>(request.GameDTO);
             await this.GameService.SaveChangesAsync();
-            return checkResult;
+
+            return GatewayResult.SuccessfullResult();
         }
 
         public async Task<GameViewModel> GetGame(int gameID)

@@ -1,5 +1,5 @@
 ﻿using AllAboutGames.Core.Attributes;
-using AllAboutGames.Core.Gateway;
+using AllAboutGames.Core.Middlewares.Gateway;
 using System.Reflection;
 #nullable disable
 

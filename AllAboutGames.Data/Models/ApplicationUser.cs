@@ -1,7 +1,6 @@
 ﻿using AllAboutGames.Data.Models.Forum;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-#nullable disable
 
 namespace AllAboutGames.Data.Models
 {

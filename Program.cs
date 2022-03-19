@@ -1,11 +1,14 @@
 using AllAboutGames.Core;
-using AllAboutGames.Core.Gateway;
-using AllAboutGames.Core.Handlers;
+using AllAboutGames.Core.Middlewares.Gateway;
 using AllAboutGames.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using Serilog.Core;
+using Serilog.Events;
 using Serilog.Exceptions;
-using System.Reflection;
+using Serilog.Filters;
+using Serilog.Formatting.Json;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder();
 
@@ -19,10 +22,27 @@ builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
     //.EnableSensitiveDataLogging();
 });
 
+var loggingSwitch = new LoggingLevelSwitch();
+Enum.TryParse(builder.Configuration["Serilog:LogLevel"], out LogEventLevel minimumLevel);
+loggingSwitch.MinimumLevel = minimumLevel;
+
 Log.Logger = new LoggerConfiguration()
-  .ReadFrom.Configuration(builder.Configuration)
+  .WriteTo.Console()
+  .MinimumLevel.ControlledBy(loggingSwitch)
+  .WriteTo.Logger(lc =>
+  {
+      lc.Filter.ByIncludingOnly(logEvent => logEvent.Exception != null)
+        .WriteTo.File(new JsonFormatter(), builder.Configuration["Serilog:ExceptionsPath"],
+        rollingInterval: RollingInterval.Day,
+        encoding: Encoding.UTF8);
+  })
+  .WriteTo.Logger(lc =>
+  {
+      lc.WriteTo.File(builder.Configuration["Serilog:LogPath"],
+          rollingInterval: RollingInterval.Day,
+          encoding: Encoding.UTF8);
+  })
   .Enrich.FromLogContext()
-  .Enrich.WithExceptionDetails()
   .CreateLogger();
 
 builder.Logging.ClearProviders();
