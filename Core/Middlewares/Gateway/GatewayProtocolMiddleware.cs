@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using Serilog;
 #nullable disable
 
-namespace AllAboutGames.Core.Gateway
+namespace AllAboutGames.Core.Middlewares.Gateway
 {
     public class GatewayProtocolMiddleware : IMiddleware
     {

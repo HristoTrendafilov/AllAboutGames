@@ -1,4 +1,6 @@
-﻿namespace AllAboutGames.Core.Middlewares
+﻿using System.Text;
+
+namespace AllAboutGames.Core.Middlewares
 {
     public class AuthMiddleware : IMiddleware
     {
@@ -12,5 +14,7 @@
 
             await next(context);
         }
+
+
     }
 }

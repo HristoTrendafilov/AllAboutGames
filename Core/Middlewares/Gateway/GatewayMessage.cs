@@ -1,4 +1,4 @@
-﻿namespace AllAboutGames.Core.Gateway
+﻿namespace AllAboutGames.Core.Middlewares.Gateway
 {
     public class GatewayMessage
     {
