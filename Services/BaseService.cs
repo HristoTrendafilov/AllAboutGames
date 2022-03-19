@@ -48,7 +48,8 @@ namespace AllAboutGames.Services
         {
             var checkResult = new CheckResult();
 
-            var dbEntity = this.Mapper.Map(entityDTO, typeof(TEntity));
+            var entity = Activator.CreateInstance(typeof(TEntity));
+            var dbEntity = this.Mapper.Map(entityDTO, entity);
             var primaryKey = dbEntity.GetType()
                 .GetProperties()
                 .Where(x => x.IsDefined(typeof(KeyAttribute), false))
@@ -60,7 +61,7 @@ namespace AllAboutGames.Services
                 return checkResult;
             }
 
-            var primaryKeyValue = (long)primaryKey.GetValue(dbEntity.GetType());
+            var primaryKeyValue = (long)primaryKey.GetValue(dbEntity);
             if (primaryKeyValue > 0)
             {
                 this.Db.Update(dbEntity);
@@ -71,6 +72,11 @@ namespace AllAboutGames.Services
             }
 
             return checkResult;
+        }
+
+        public async Task SaveChangesAsync()
+        {
+            await this.Db.SaveChangesAsync();
         }
     }
 }

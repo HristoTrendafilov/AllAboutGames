@@ -32,6 +32,7 @@ namespace AllAboutGames.Handlers
             }
 
             await this.GameService.SaveEntityAsync<Game>(request.GameDTO);
+            await this.GameService.SaveChangesAsync();
             return checkResult;
         }
 

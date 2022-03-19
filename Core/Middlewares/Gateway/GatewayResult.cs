@@ -5,6 +5,11 @@ namespace AllAboutGames.Core.Gateway
 {
     public class GatewayResult
     {
+        public GatewayResult()
+        {
+            this.Details = new List<GatewayResultDetail>();
+        }
+
         public string JsonValue { get; set; }
 
         public List<GatewayResultDetail> Details { get; set; }

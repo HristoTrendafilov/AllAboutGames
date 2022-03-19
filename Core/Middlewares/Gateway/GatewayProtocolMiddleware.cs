@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using AllAboutGames.Core.Middlewares.Gateway;
+using Newtonsoft.Json;
 using Serilog;
 #nullable disable
 

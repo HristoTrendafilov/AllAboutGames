@@ -1,4 +1,5 @@
-﻿using AllAboutGames.Core.Handlers;
+﻿using AllAboutGames.Core.Gateway;
+using AllAboutGames.Core.Handlers;
 using Newtonsoft.Json;
 using Serilog;
 using System.Reflection;
