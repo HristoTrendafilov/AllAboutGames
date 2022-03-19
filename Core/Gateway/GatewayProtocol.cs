@@ -40,7 +40,7 @@ namespace AllAboutGames.Core.Gateway
 
                 if (handler == null)
                 {
-                    return GatewayResult.FromErrorMessage("Няма Handler, който да обработи заявка с тип " + request.MessageType);
+                    return GatewayResult.FromErrorMessage("There is no handler that can process the request: " + request.MessageType);
                 }
 
                 //var authResult = this.AuthorizeUser(handler, request, session);

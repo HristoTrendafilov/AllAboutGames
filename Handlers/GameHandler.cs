@@ -5,7 +5,6 @@ using AllAboutGames.Data.Models;
 using AllAboutGames.Data.ViewModels;
 using AllAboutGames.Services;
 using AutoMapper;
-using Newtonsoft.Json;
 using Serilog;
 #nullable disable
 
@@ -22,17 +21,17 @@ namespace AllAboutGames.Handlers
             this.Mapper = mapper;
         }
 
-        [BindRequest(typeof(GameDTO))]
-        public async Task<CheckResult> SaveGameAsync(GameDTO request)
+        [BindRequest(typeof(SaveGameRequest))]
+        public async Task<CheckResult> SaveGameAsync(SaveGameRequest request)
         {
-            var checkResult = PropertyValidator.Validate(request);
+            var checkResult = PropertyValidator.Validate(request.GameDTO);
             if (checkResult.IsFailed)
             {
                 Log.Fatal("ERORS: ", checkResult.GetErrors());
                 return checkResult;
             }
 
-            await this.GameService.SaveEntityAsync<Game, GameDTO>(request);
+            await this.GameService.SaveEntityAsync<Game>(request.GameDTO);
             return checkResult;
         }
 

@@ -44,7 +44,7 @@ namespace AllAboutGames.Services
             return query;
         }
 
-        public async Task<CheckResult> SaveEntityAsync<TEntity, TSource>(TSource entityDTO)
+        public async Task<CheckResult> SaveEntityAsync<TEntity>(object entityDTO)
         {
             var checkResult = new CheckResult();
 
