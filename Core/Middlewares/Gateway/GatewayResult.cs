@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 #nullable disable
 
-namespace AllAboutGames.Core.Gateway
+namespace AllAboutGames.Core.Middlewares.Gateway
 {
     public class GatewayResult
     {
