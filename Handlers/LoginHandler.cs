@@ -19,9 +19,7 @@ namespace AllAboutGames.Handlers
         public async Task<LoginResponse> Login(LoginRequest req)
         {
             var user = await this.UserService.GetEntityAsync<ApplicationUser>(x => x.Username == req.Username && x.Password == req.Password);
-
             var jwt = this.AuthService.GenerateJwtToken(user.UserID);
-
             return new LoginResponse()
             {
                 Jwt = jwt
