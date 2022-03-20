@@ -18,7 +18,7 @@ namespace AllAboutGames.Data.DataContext
             this.CreateDefaultValues(modelBuilder);
         }
 
-        public DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<ApplicationUser> ApplicationUsers { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Developer> Developers { get; set; }

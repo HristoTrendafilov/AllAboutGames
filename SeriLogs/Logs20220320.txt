@@ -1,0 +1,503 @@
+﻿2022-03-20 12:56:57.248 +02:00 [DBG] Hosting starting
+2022-03-20 12:56:57.720 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: A60303DA9ECD1A8D00817F1C0B90969E60557975)
+2022-03-20 12:56:57.781 +02:00 [INF] Now listening on: https://localhost:6001
+2022-03-20 12:56:57.782 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 12:56:57.783 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 12:56:57.784 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 12:56:57.785 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 12:56:57.785 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 12:56:57.786 +02:00 [INF] Hosting environment: Development
+2022-03-20 12:56:57.787 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 12:56:57.787 +02:00 [DBG] Hosting started
+2022-03-20 12:56:57.900 +02:00 [DBG] Connection id "0HMGAC1D9328L" accepted.
+2022-03-20 12:56:57.900 +02:00 [DBG] Connection id "0HMGAC1D9328M" accepted.
+2022-03-20 12:56:57.902 +02:00 [DBG] Connection id "0HMGAC1D9328L" started.
+2022-03-20 12:56:57.903 +02:00 [DBG] Connection id "0HMGAC1D9328M" started.
+2022-03-20 12:56:58.145 +02:00 [DBG] Connection id "0HMGAC1D9328N" accepted.
+2022-03-20 12:56:58.152 +02:00 [DBG] Connection id "0HMGAC1D9328N" started.
+2022-03-20 12:56:58.155 +02:00 [DBG] Connection id "0HMGAC1D9328O" accepted.
+2022-03-20 12:56:58.157 +02:00 [DBG] Connection id "0HMGAC1D9328O" started.
+2022-03-20 12:56:58.190 +02:00 [DBG] Connection id "0HMGAC1D9328N" received FIN.
+2022-03-20 12:56:58.200 +02:00 [DBG] Connection 0HMGAC1D9328O established using the following protocol: "Tls12"
+2022-03-20 12:56:58.200 +02:00 [DBG] Connection 0HMGAC1D9328N established using the following protocol: "Tls12"
+2022-03-20 12:56:58.214 +02:00 [DBG] Connection id "0HMGAC1D9328N" is closed. The last processed stream ID was 0.
+2022-03-20 12:56:58.217 +02:00 [DBG] Connection id "0HMGAC1D9328N" sending FIN because: "The client closed the connection."
+2022-03-20 12:56:58.223 +02:00 [DBG] Connection id "0HMGAC1D9328N" stopped.
+2022-03-20 12:56:58.275 +02:00 [INF] Request starting HTTP/2 GET https://localhost:6001/swagger/index.html - -
+2022-03-20 12:56:58.367 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 12:56:58.473 +02:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2022-03-20 12:56:58.691 +02:00 [DBG] Response markup was updated to include browser refresh script injection.
+2022-03-20 12:56:58.692 +02:00 [INF] Request starting HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - -
+2022-03-20 12:56:58.696 +02:00 [INF] Request finished HTTP/2 GET https://localhost:6001/swagger/index.html - - - 200 - text/html;charset=utf-8 423.1712ms
+2022-03-20 12:56:58.696 +02:00 [INF] Request finished HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 4.3529ms
+2022-03-20 12:56:58.855 +02:00 [INF] Request starting HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - -
+2022-03-20 12:56:58.870 +02:00 [INF] Request finished HTTP/2 GET https://localhost:6001/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 14.7120ms
+2022-03-20 12:57:07.934 +02:00 [DBG] Authentication of the HTTPS connection timed out.
+2022-03-20 12:57:07.934 +02:00 [DBG] Authentication of the HTTPS connection timed out.
+2022-03-20 12:57:07.937 +02:00 [DBG] Connection id "0HMGAC1D9328L" stopped.
+2022-03-20 12:57:07.938 +02:00 [DBG] Connection id "0HMGAC1D9328M" stopped.
+2022-03-20 12:57:07.939 +02:00 [DBG] Connection id "0HMGAC1D9328L" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-03-20 12:57:07.940 +02:00 [DBG] Connection id "0HMGAC1D9328M" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-03-20 12:57:08.515 +02:00 [DBG] Connection id "0HMGAC1D9328O" received FIN.
+2022-03-20 12:57:08.518 +02:00 [DBG] Connection id "0HMGAC1D9328O" is closed. The last processed stream ID was 5.
+2022-03-20 12:57:08.519 +02:00 [DBG] Connection id "0HMGAC1D9328O" sending FIN because: "The client closed the connection."
+2022-03-20 12:57:08.527 +02:00 [DBG] Connection id "0HMGAC1D9328O" stopped.
+2022-03-20 12:59:07.612 +02:00 [DBG] Hosting starting
+2022-03-20 12:59:07.750 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: A60303DA9ECD1A8D00817F1C0B90969E60557975)
+2022-03-20 12:59:07.811 +02:00 [INF] Now listening on: https://localhost:6001
+2022-03-20 12:59:07.813 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 12:59:07.814 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 12:59:07.816 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 12:59:07.817 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 12:59:07.818 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 12:59:07.819 +02:00 [INF] Hosting environment: Development
+2022-03-20 12:59:07.819 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 12:59:07.820 +02:00 [DBG] Hosting started
+2022-03-20 12:59:08.266 +02:00 [DBG] Connection id "0HMGAC2K4BHFK" accepted.
+2022-03-20 12:59:08.266 +02:00 [DBG] Connection id "0HMGAC2K4BHFJ" accepted.
+2022-03-20 12:59:08.268 +02:00 [DBG] Connection id "0HMGAC2K4BHFK" started.
+2022-03-20 12:59:08.268 +02:00 [DBG] Connection id "0HMGAC2K4BHFJ" started.
+2022-03-20 12:59:08.294 +02:00 [DBG] Connection id "0HMGAC2K4BHFK" received FIN.
+2022-03-20 12:59:08.294 +02:00 [DBG] Connection id "0HMGAC2K4BHFJ" received FIN.
+2022-03-20 12:59:08.611 +02:00 [DBG] Connection id "0HMGAC2K4BHFL" accepted.
+2022-03-20 12:59:08.639 +02:00 [DBG] Connection id "0HMGAC2K4BHFL" started.
+2022-03-20 12:59:08.334 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-03-20 12:59:08.334 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|187_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-03-20 12:59:08.654 +02:00 [DBG] Connection id "0HMGAC2K4BHFJ" stopped.
+2022-03-20 12:59:08.654 +02:00 [DBG] Connection id "0HMGAC2K4BHFK" stopped.
+2022-03-20 12:59:08.661 +02:00 [DBG] Connection id "0HMGAC2K4BHFK" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-03-20 12:59:08.662 +02:00 [DBG] Connection id "0HMGAC2K4BHFJ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-03-20 12:59:08.695 +02:00 [DBG] Connection 0HMGAC2K4BHFL established using the following protocol: "Tls12"
+2022-03-20 12:59:08.791 +02:00 [INF] Request starting HTTP/2 GET https://localhost:6001/swagger/index.html - -
+2022-03-20 12:59:08.874 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 12:59:08.882 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'AllAboutGames.Core.Middlewares.AuthMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-03-20 12:59:09.056 +02:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2022-03-20 12:59:09.073 +02:00 [DBG] Response markup was updated to include browser refresh script injection.
+2022-03-20 12:59:09.079 +02:00 [INF] Request finished HTTP/2 GET https://localhost:6001/swagger/index.html - - - 500 - text/html;+charset=utf-8 291.5021ms
+2022-03-20 12:59:09.103 +02:00 [INF] Request starting HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - -
+2022-03-20 12:59:09.108 +02:00 [INF] Request finished HTTP/2 GET https://localhost:6001/_framework/aspnetcore-browser-refresh.js - - - 200 11984 application/javascript;+charset=utf-8 4.4929ms
+2022-03-20 12:59:09.202 +02:00 [INF] Request starting HTTP/2 GET https://localhost:6001/favicon.ico - -
+2022-03-20 12:59:09.204 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'AllAboutGames.Core.Middlewares.AuthMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-03-20 12:59:09.209 +02:00 [INF] Request finished HTTP/2 GET https://localhost:6001/favicon.ico - - - 500 - text/plain;+charset=utf-8 6.8581ms
+2022-03-20 12:59:18.714 +02:00 [DBG] Connection id "0HMGAC2K4BHFL" received FIN.
+2022-03-20 12:59:18.719 +02:00 [DBG] Connection id "0HMGAC2K4BHFL" is closed. The last processed stream ID was 5.
+2022-03-20 12:59:18.721 +02:00 [DBG] Connection id "0HMGAC2K4BHFL" sending FIN because: "The client closed the connection."
+2022-03-20 12:59:18.725 +02:00 [DBG] Connection id "0HMGAC2K4BHFL" stopped.
+2022-03-20 13:00:12.597 +02:00 [DBG] Hosting starting
+2022-03-20 13:00:12.763 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: A60303DA9ECD1A8D00817F1C0B90969E60557975)
+2022-03-20 13:00:12.810 +02:00 [INF] Now listening on: https://localhost:6001
+2022-03-20 13:00:12.812 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 13:00:12.813 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 13:00:12.814 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 13:00:12.815 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 13:00:12.816 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 13:00:12.817 +02:00 [INF] Hosting environment: Development
+2022-03-20 13:00:12.817 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 13:00:12.818 +02:00 [DBG] Hosting started
+2022-03-20 13:00:13.048 +02:00 [DBG] Connection id "0HMGAC37E5R6U" accepted.
+2022-03-20 13:00:13.048 +02:00 [DBG] Connection id "0HMGAC37E5R6V" accepted.
+2022-03-20 13:00:13.049 +02:00 [DBG] Connection id "0HMGAC37E5R6U" started.
+2022-03-20 13:00:13.050 +02:00 [DBG] Connection id "0HMGAC37E5R6V" started.
+2022-03-20 13:00:13.082 +02:00 [DBG] Connection id "0HMGAC37E5R6U" received FIN.
+2022-03-20 13:00:13.082 +02:00 [DBG] Connection id "0HMGAC37E5R6V" received FIN.
+2022-03-20 13:00:13.114 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-03-20 13:00:13.114 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2022-03-20 13:00:13.191 +02:00 [DBG] Connection id "0HMGAC37E5R6V" stopped.
+2022-03-20 13:00:13.191 +02:00 [DBG] Connection id "0HMGAC37E5R6U" stopped.
+2022-03-20 13:00:13.195 +02:00 [DBG] Connection id "0HMGAC37E5R6U" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-03-20 13:00:13.195 +02:00 [DBG] Connection id "0HMGAC37E5R6V" sending FIN because: "The Socket transport's send loop completed gracefully."
+2022-03-20 13:00:13.343 +02:00 [DBG] Connection id "0HMGAC37E5R70" accepted.
+2022-03-20 13:00:13.345 +02:00 [DBG] Connection id "0HMGAC37E5R70" started.
+2022-03-20 13:00:13.396 +02:00 [DBG] Connection 0HMGAC37E5R70 established using the following protocol: "Tls12"
+2022-03-20 13:00:13.450 +02:00 [INF] Request starting HTTP/2 GET https://localhost:6001/swagger/index.html - -
+2022-03-20 13:00:13.480 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 13:00:27.735 +02:00 [INF] Request finished HTTP/2 GET https://localhost:6001/swagger/index.html - - - 404 0 - 14289.0598ms
+2022-03-20 13:00:28.815 +02:00 [DBG] Connection id "0HMGAC37E5R70" received FIN.
+2022-03-20 13:00:28.823 +02:00 [DBG] Connection id "0HMGAC37E5R70" is closed. The last processed stream ID was 1.
+2022-03-20 13:00:28.824 +02:00 [DBG] Connection id "0HMGAC37E5R70" sending FIN because: "The client closed the connection."
+2022-03-20 13:00:28.828 +02:00 [DBG] Connection id "0HMGAC37E5R70" stopped.
+2022-03-20 13:01:40.783 +02:00 [DBG] Hosting starting
+2022-03-20 13:01:40.917 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 13:01:40.919 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 13:01:40.920 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 13:01:40.921 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 13:01:40.923 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 13:01:40.924 +02:00 [INF] Hosting environment: Development
+2022-03-20 13:01:40.924 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 13:01:40.925 +02:00 [DBG] Hosting started
+2022-03-20 13:05:18.877 +02:00 [DBG] Connection id "0HMGAC62IPV5I" received FIN.
+2022-03-20 13:05:18.893 +02:00 [DBG] Connection id "0HMGAC62IPV5I" accepted.
+2022-03-20 13:05:18.899 +02:00 [DBG] Connection id "0HMGAC62IPV5I" started.
+2022-03-20 13:05:18.900 +02:00 [DBG] Connection id "0HMGAC62IPV5J" accepted.
+2022-03-20 13:05:18.902 +02:00 [DBG] Connection id "0HMGAC62IPV5J" started.
+2022-03-20 13:05:18.921 +02:00 [DBG] Connection id "0HMGAC62IPV5I" sending FIN because: "The client closed the connection."
+2022-03-20 13:05:18.929 +02:00 [DBG] Connection id "0HMGAC62IPV5I" disconnecting.
+2022-03-20 13:05:18.935 +02:00 [DBG] Connection id "0HMGAC62IPV5I" stopped.
+2022-03-20 13:05:18.954 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 122
+2022-03-20 13:05:18.983 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 13:06:36.569 +02:00 [DBG] Hosting starting
+2022-03-20 13:06:36.700 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 13:06:36.702 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 13:06:36.703 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 13:06:36.703 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 13:06:36.704 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 13:06:36.705 +02:00 [INF] Hosting environment: Development
+2022-03-20 13:06:36.706 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 13:06:36.707 +02:00 [DBG] Hosting started
+2022-03-20 13:06:40.465 +02:00 [DBG] Connection id "0HMGAC6QSSOL9" received FIN.
+2022-03-20 13:06:40.472 +02:00 [DBG] Connection id "0HMGAC6QSSOL9" accepted.
+2022-03-20 13:06:40.474 +02:00 [DBG] Connection id "0HMGAC6QSSOL9" started.
+2022-03-20 13:06:40.475 +02:00 [DBG] Connection id "0HMGAC6QSSOLA" accepted.
+2022-03-20 13:06:40.476 +02:00 [DBG] Connection id "0HMGAC6QSSOLA" started.
+2022-03-20 13:06:40.494 +02:00 [DBG] Connection id "0HMGAC6QSSOL9" sending FIN because: "The client closed the connection."
+2022-03-20 13:06:40.498 +02:00 [DBG] Connection id "0HMGAC6QSSOL9" disconnecting.
+2022-03-20 13:06:40.503 +02:00 [DBG] Connection id "0HMGAC6QSSOL9" stopped.
+2022-03-20 13:06:40.517 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 122
+2022-03-20 13:06:40.539 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 13:07:03.425 +02:00 [DBG] Hosting starting
+2022-03-20 13:07:03.575 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 13:07:03.577 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 13:07:03.577 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 13:07:03.578 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 13:07:03.579 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 13:07:03.580 +02:00 [INF] Hosting environment: Development
+2022-03-20 13:07:03.580 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 13:07:03.581 +02:00 [DBG] Hosting started
+2022-03-20 13:07:05.391 +02:00 [DBG] Connection id "0HMGAC72AJI5F" received FIN.
+2022-03-20 13:07:05.398 +02:00 [DBG] Connection id "0HMGAC72AJI5F" accepted.
+2022-03-20 13:07:05.401 +02:00 [DBG] Connection id "0HMGAC72AJI5F" started.
+2022-03-20 13:07:05.402 +02:00 [DBG] Connection id "0HMGAC72AJI5G" accepted.
+2022-03-20 13:07:05.404 +02:00 [DBG] Connection id "0HMGAC72AJI5G" started.
+2022-03-20 13:07:05.419 +02:00 [DBG] Connection id "0HMGAC72AJI5F" sending FIN because: "The client closed the connection."
+2022-03-20 13:07:05.425 +02:00 [DBG] Connection id "0HMGAC72AJI5F" disconnecting.
+2022-03-20 13:07:05.431 +02:00 [DBG] Connection id "0HMGAC72AJI5F" stopped.
+2022-03-20 13:07:05.446 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 122
+2022-03-20 13:07:05.471 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 13:11:21.285 +02:00 [DBG] Connection id "0HMGAC72AJI5G", Request id "0HMGAC72AJI5G:00000002": started reading request body.
+2022-03-20 13:11:21.286 +02:00 [DBG] Connection id "0HMGAC72AJI5G", Request id "0HMGAC72AJI5G:00000002": done reading request body.
+2022-03-20 13:11:21.601 +02:00 [INF] Incoming request: SaveGameRequest 
+ JSON: 
+ {"GameDTO":{"name":"fromPostman","summary":"NEW"} }
+2022-03-20 13:11:21.637 +02:00 [ERR] Error while trying to process the request: SaveGameRequest
+System.InvalidOperationException: Cannot resolve 'AllAboutGames.Handlers.GameHandler' from root provider because it requires scoped service 'AllAboutGames.Data.DataContext.AllAboutGamesDataContext'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 53
+2022-03-20 13:11:21.762 +02:00 [DBG] Connection id "0HMGAC72AJI5G" completed keep alive response.
+2022-03-20 13:11:21.766 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:6000/api/gateway application/json 122 - 200 - application/json 256321.9800ms
+2022-03-20 13:38:02.730 +02:00 [DBG] Hosting starting
+2022-03-20 13:38:02.892 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 13:38:02.895 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 13:38:02.896 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 13:38:02.897 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 13:38:02.898 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 13:38:02.899 +02:00 [INF] Hosting environment: Development
+2022-03-20 13:38:02.899 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 13:38:02.900 +02:00 [DBG] Hosting started
+2022-03-20 13:38:09.018 +02:00 [DBG] Connection id "0HMGACODNHAHG" received FIN.
+2022-03-20 13:38:09.026 +02:00 [DBG] Connection id "0HMGACODNHAHG" accepted.
+2022-03-20 13:38:09.028 +02:00 [DBG] Connection id "0HMGACODNHAHG" started.
+2022-03-20 13:38:09.029 +02:00 [DBG] Connection id "0HMGACODNHAHH" accepted.
+2022-03-20 13:38:09.031 +02:00 [DBG] Connection id "0HMGACODNHAHH" started.
+2022-03-20 13:38:09.045 +02:00 [DBG] Connection id "0HMGACODNHAHG" sending FIN because: "The client closed the connection."
+2022-03-20 13:38:09.055 +02:00 [DBG] Connection id "0HMGACODNHAHG" disconnecting.
+2022-03-20 13:38:09.062 +02:00 [DBG] Connection id "0HMGACODNHAHG" stopped.
+2022-03-20 13:38:09.077 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 122
+2022-03-20 13:38:09.104 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 14:02:42.546 +02:00 [DBG] Hosting starting
+2022-03-20 14:02:42.763 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 14:02:42.766 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 14:02:42.767 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 14:02:42.767 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 14:02:42.768 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 14:02:42.769 +02:00 [INF] Hosting environment: Development
+2022-03-20 14:02:42.769 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 14:02:42.770 +02:00 [DBG] Hosting started
+2022-03-20 14:02:49.723 +02:00 [DBG] Connection id "0HMGAD670KP6V" received FIN.
+2022-03-20 14:02:49.730 +02:00 [DBG] Connection id "0HMGAD670KP6V" accepted.
+2022-03-20 14:02:49.733 +02:00 [DBG] Connection id "0HMGAD670KP6V" started.
+2022-03-20 14:02:49.734 +02:00 [DBG] Connection id "0HMGAD670KP70" accepted.
+2022-03-20 14:02:49.736 +02:00 [DBG] Connection id "0HMGAD670KP70" started.
+2022-03-20 14:02:49.763 +02:00 [DBG] Connection id "0HMGAD670KP6V" sending FIN because: "The client closed the connection."
+2022-03-20 14:02:49.774 +02:00 [DBG] Connection id "0HMGAD670KP6V" disconnecting.
+2022-03-20 14:02:49.783 +02:00 [DBG] Connection id "0HMGAD670KP6V" stopped.
+2022-03-20 14:02:49.805 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117
+2022-03-20 14:02:49.837 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 14:02:49.861 +02:00 [DBG] Connection id "0HMGAD670KP70", Request id "0HMGAD670KP70:00000002": started reading request body.
+2022-03-20 14:02:49.863 +02:00 [DBG] Connection id "0HMGAD670KP70", Request id "0HMGAD670KP70:00000002": done reading request body.
+2022-03-20 14:02:50.068 +02:00 [INF] Incoming request: LoginRequest 
+ JSON: 
+ {"username":"HristoTrendafilov", "password":"test"}
+2022-03-20 14:02:52.432 +02:00 [ERR] Error while trying to process the request: LoginRequest
+Npgsql.PostgresException (0x80004005): 42P01: relation "Users" does not exist
+
+POSITION: 147
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Services.BaseService.GetEntityAsync[TEntity](Expression`1 filter) in D:\Projects\Services\BaseService.cs:line 24
+   at AllAboutGames.Handlers.LoginHandler.Login(LoginRequest req) in D:\Projects\Handlers\LoginHandler.cs:line 21
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ExecuteHandlerMethod(MethodInfo methodInfo, Object handlerInstance, Object[] parameters) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 115
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 82
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "Users" does not exist
+    Position: 147
+    File: parse_relation.c
+    Line: 1384
+    Routine: parserOpenTable
+2022-03-20 14:02:52.581 +02:00 [DBG] Connection id "0HMGAD670KP70" completed keep alive response.
+2022-03-20 14:02:52.587 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117 - 200 - application/json 2784.3609ms
+2022-03-20 14:03:21.731 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117
+2022-03-20 14:03:21.735 +02:00 [DBG] Connection id "0HMGAD670KP70", Request id "0HMGAD670KP70:00000003": started reading request body.
+2022-03-20 14:03:21.743 +02:00 [DBG] Connection id "0HMGAD670KP70", Request id "0HMGAD670KP70:00000003": done reading request body.
+2022-03-20 14:03:21.745 +02:00 [INF] Incoming request: LoginRequest 
+ JSON: 
+ {"username":"HristoTrendafilov", "password":"test"}
+2022-03-20 14:03:38.488 +02:00 [ERR] Error while trying to process the request: LoginRequest
+Npgsql.PostgresException (0x80004005): 42P01: relation "Users" does not exist
+
+POSITION: 147
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Services.BaseService.GetEntityAsync[TEntity](Expression`1 filter) in D:\Projects\Services\BaseService.cs:line 24
+   at AllAboutGames.Handlers.LoginHandler.Login(LoginRequest req) in D:\Projects\Handlers\LoginHandler.cs:line 21
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ExecuteHandlerMethod(MethodInfo methodInfo, Object handlerInstance, Object[] parameters) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 115
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 82
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "Users" does not exist
+    Position: 147
+    File: parse_relation.c
+    Line: 1384
+    Routine: parserOpenTable
+2022-03-20 14:03:38.515 +02:00 [DBG] Connection id "0HMGAD670KP70" completed keep alive response.
+2022-03-20 14:03:38.517 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117 - 200 - application/json 16785.7049ms
+2022-03-20 14:04:45.715 +02:00 [DBG] Hosting starting
+2022-03-20 14:04:45.912 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 14:04:45.914 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 14:04:45.915 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 14:04:45.916 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 14:04:45.917 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 14:04:45.918 +02:00 [INF] Hosting environment: Development
+2022-03-20 14:04:45.919 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 14:04:45.920 +02:00 [DBG] Hosting started
+2022-03-20 14:04:52.228 +02:00 [DBG] Connection id "0HMGAD7BGU64U" received FIN.
+2022-03-20 14:04:52.234 +02:00 [DBG] Connection id "0HMGAD7BGU64U" accepted.
+2022-03-20 14:04:52.237 +02:00 [DBG] Connection id "0HMGAD7BGU64U" started.
+2022-03-20 14:04:52.238 +02:00 [DBG] Connection id "0HMGAD7BGU64V" accepted.
+2022-03-20 14:04:52.241 +02:00 [DBG] Connection id "0HMGAD7BGU64V" started.
+2022-03-20 14:04:52.260 +02:00 [DBG] Connection id "0HMGAD7BGU64U" sending FIN because: "The client closed the connection."
+2022-03-20 14:04:52.263 +02:00 [DBG] Connection id "0HMGAD7BGU64U" disconnecting.
+2022-03-20 14:04:52.269 +02:00 [DBG] Connection id "0HMGAD7BGU64U" stopped.
+2022-03-20 14:04:52.284 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117
+2022-03-20 14:04:52.306 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 14:04:52.321 +02:00 [DBG] Connection id "0HMGAD7BGU64V", Request id "0HMGAD7BGU64V:00000002": started reading request body.
+2022-03-20 14:04:52.323 +02:00 [DBG] Connection id "0HMGAD7BGU64V", Request id "0HMGAD7BGU64V:00000002": done reading request body.
+2022-03-20 14:04:52.455 +02:00 [INF] Incoming request: LoginRequest 
+ JSON: 
+ {"username":"HristoTrendafilov", "password":"test"}
+2022-03-20 14:04:57.666 +02:00 [ERR] Error while trying to process the request: LoginRequest
+Npgsql.PostgresException (0x80004005): 42P01: relation "ApplicationUsers" does not exist
+
+POSITION: 147
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at AllAboutGames.Services.BaseService.GetEntityAsync[TEntity](Expression`1 filter) in D:\Projects\Services\BaseService.cs:line 24
+   at AllAboutGames.Handlers.LoginHandler.Login(LoginRequest req) in D:\Projects\Handlers\LoginHandler.cs:line 21
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ExecuteHandlerMethod(MethodInfo methodInfo, Object handlerInstance, Object[] parameters) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 115
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 82
+  Exception data:
+    Severity: ERROR
+    SqlState: 42P01
+    MessageText: relation "ApplicationUsers" does not exist
+    Position: 147
+    File: parse_relation.c
+    Line: 1384
+    Routine: parserOpenTable
+2022-03-20 14:04:57.745 +02:00 [DBG] Connection id "0HMGAD7BGU64V" completed keep alive response.
+2022-03-20 14:04:57.751 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117 - 200 - application/json 5469.3469ms
+2022-03-20 14:08:14.344 +02:00 [DBG] Hosting starting
+2022-03-20 14:08:14.483 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 14:08:14.485 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 14:08:14.486 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 14:08:14.487 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 14:08:14.488 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 14:08:14.489 +02:00 [INF] Hosting environment: Development
+2022-03-20 14:08:14.489 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 14:08:14.490 +02:00 [DBG] Hosting started
+2022-03-20 14:08:23.016 +02:00 [DBG] Connection id "0HMGAD9AB5G3F" received FIN.
+2022-03-20 14:08:23.022 +02:00 [DBG] Connection id "0HMGAD9AB5G3F" accepted.
+2022-03-20 14:08:23.027 +02:00 [DBG] Connection id "0HMGAD9AB5G3F" started.
+2022-03-20 14:08:23.028 +02:00 [DBG] Connection id "0HMGAD9AB5G3G" accepted.
+2022-03-20 14:08:23.030 +02:00 [DBG] Connection id "0HMGAD9AB5G3G" started.
+2022-03-20 14:08:23.049 +02:00 [DBG] Connection id "0HMGAD9AB5G3F" sending FIN because: "The client closed the connection."
+2022-03-20 14:08:23.052 +02:00 [DBG] Connection id "0HMGAD9AB5G3F" disconnecting.
+2022-03-20 14:08:23.059 +02:00 [DBG] Connection id "0HMGAD9AB5G3F" stopped.
+2022-03-20 14:08:23.072 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117
+2022-03-20 14:08:23.095 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 14:08:23.110 +02:00 [DBG] Connection id "0HMGAD9AB5G3G", Request id "0HMGAD9AB5G3G:00000002": started reading request body.
+2022-03-20 14:08:23.112 +02:00 [DBG] Connection id "0HMGAD9AB5G3G", Request id "0HMGAD9AB5G3G:00000002": done reading request body.
+2022-03-20 14:08:23.252 +02:00 [INF] Incoming request: LoginRequest 
+ JSON: 
+ {"username":"HristoTrendafilov", "password":"test"}
+2022-03-20 14:08:27.423 +02:00 [ERR] Error while trying to process the request: LoginRequest
+System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'HS256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '96'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at AllAboutGames.Services.AuthService.GenerateJwtToken(Int64 id) in D:\Projects\Services\AuthService.cs:line 25
+   at AllAboutGames.Handlers.LoginHandler.Login(LoginRequest req) in D:\Projects\Handlers\LoginHandler.cs:line 23
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ExecuteHandlerMethod(MethodInfo methodInfo, Object handlerInstance, Object[] parameters) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 115
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 82
+2022-03-20 14:08:27.522 +02:00 [DBG] Connection id "0HMGAD9AB5G3G" completed keep alive response.
+2022-03-20 14:08:27.528 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117 - 200 - application/json 4458.6630ms
+2022-03-20 14:09:26.107 +02:00 [DBG] Hosting starting
+2022-03-20 14:09:26.252 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 14:09:26.254 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 14:09:26.254 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 14:09:26.255 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 14:09:26.256 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 14:09:26.257 +02:00 [INF] Hosting environment: Development
+2022-03-20 14:09:26.258 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 14:09:26.265 +02:00 [DBG] Hosting started
+2022-03-20 14:09:31.973 +02:00 [DBG] Connection id "0HMGAD9USPI1O" received FIN.
+2022-03-20 14:09:31.979 +02:00 [DBG] Connection id "0HMGAD9USPI1O" accepted.
+2022-03-20 14:09:31.981 +02:00 [DBG] Connection id "0HMGAD9USPI1O" started.
+2022-03-20 14:09:31.982 +02:00 [DBG] Connection id "0HMGAD9USPI1P" accepted.
+2022-03-20 14:09:31.983 +02:00 [DBG] Connection id "0HMGAD9USPI1P" started.
+2022-03-20 14:09:32.001 +02:00 [DBG] Connection id "0HMGAD9USPI1O" sending FIN because: "The client closed the connection."
+2022-03-20 14:09:32.005 +02:00 [DBG] Connection id "0HMGAD9USPI1O" disconnecting.
+2022-03-20 14:09:32.010 +02:00 [DBG] Connection id "0HMGAD9USPI1O" stopped.
+2022-03-20 14:09:32.023 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117
+2022-03-20 14:09:32.046 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 14:09:32.060 +02:00 [DBG] Connection id "0HMGAD9USPI1P", Request id "0HMGAD9USPI1P:00000002": started reading request body.
+2022-03-20 14:09:32.062 +02:00 [DBG] Connection id "0HMGAD9USPI1P", Request id "0HMGAD9USPI1P:00000002": done reading request body.
+2022-03-20 14:09:32.194 +02:00 [INF] Incoming request: LoginRequest 
+ JSON: 
+ {"username":"HristoTrendafilov", "password":"test"}
+2022-03-20 14:09:38.949 +02:00 [ERR] Error while trying to process the request: LoginRequest
+System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '96'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at AllAboutGames.Services.AuthService.GenerateJwtToken(Int64 id) in D:\Projects\Services\AuthService.cs:line 25
+   at AllAboutGames.Handlers.LoginHandler.Login(LoginRequest req) in D:\Projects\Handlers\LoginHandler.cs:line 23
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ExecuteHandlerMethod(MethodInfo methodInfo, Object handlerInstance, Object[] parameters) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 115
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 82
+2022-03-20 14:09:39.028 +02:00 [DBG] Connection id "0HMGAD9USPI1P" completed keep alive response.
+2022-03-20 14:09:39.035 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117 - 200 - application/json 7013.3645ms
+2022-03-20 14:10:38.048 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117
+2022-03-20 14:10:38.053 +02:00 [DBG] Connection id "0HMGAD9USPI1P", Request id "0HMGAD9USPI1P:00000003": started reading request body.
+2022-03-20 14:10:38.064 +02:00 [DBG] Connection id "0HMGAD9USPI1P", Request id "0HMGAD9USPI1P:00000003": done reading request body.
+2022-03-20 14:10:38.065 +02:00 [INF] Incoming request: LoginRequest 
+ JSON: 
+ {"username":"HristoTrendafilov", "password":"test"}
+2022-03-20 14:10:59.222 +02:00 [ERR] Error while trying to process the request: LoginRequest
+System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'http://www.w3.org/2001/04/xmldsig-more#hmac-sha256' requires a key size of at least '128' bits. Key '[PII of type 'Microsoft.IdentityModel.Tokens.SymmetricSecurityKey' is hidden. For more details, see https://aka.ms/IdentityModel/PII.]', is of size: '96'. (Parameter 'key')
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider..ctor(SecurityKey key, String algorithm, Boolean willCreateSignatures)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateSignatureProvider(SecurityKey key, String algorithm, Boolean willCreateSignatures, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm, Boolean cacheProvider)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateForSigning(SecurityKey key, String algorithm)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at AllAboutGames.Services.AuthService.GenerateJwtToken(Int64 id) in D:\Projects\Services\AuthService.cs:line 25
+   at AllAboutGames.Handlers.LoginHandler.Login(LoginRequest req) in D:\Projects\Handlers\LoginHandler.cs:line 23
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ExecuteHandlerMethod(MethodInfo methodInfo, Object handlerInstance, Object[] parameters) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 115
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 82
+2022-03-20 14:10:59.228 +02:00 [DBG] Connection id "0HMGAD9USPI1P" completed keep alive response.
+2022-03-20 14:10:59.228 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117 - 200 - application/json 21180.2070ms
+2022-03-20 14:12:44.496 +02:00 [DBG] Hosting starting
+2022-03-20 14:12:44.640 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 14:12:44.642 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 14:12:44.643 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 14:12:44.644 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 14:12:44.645 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 14:12:44.646 +02:00 [INF] Hosting environment: Development
+2022-03-20 14:12:44.647 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 14:12:44.648 +02:00 [DBG] Hosting started
+2022-03-20 14:12:50.712 +02:00 [DBG] Connection id "0HMGADBQ43QA9" received FIN.
+2022-03-20 14:12:50.719 +02:00 [DBG] Connection id "0HMGADBQ43QA9" accepted.
+2022-03-20 14:12:50.722 +02:00 [DBG] Connection id "0HMGADBQ43QA9" started.
+2022-03-20 14:12:50.723 +02:00 [DBG] Connection id "0HMGADBQ43QAA" accepted.
+2022-03-20 14:12:50.724 +02:00 [DBG] Connection id "0HMGADBQ43QAA" started.
+2022-03-20 14:12:50.749 +02:00 [DBG] Connection id "0HMGADBQ43QA9" sending FIN because: "The client closed the connection."
+2022-03-20 14:12:50.752 +02:00 [DBG] Connection id "0HMGADBQ43QA9" disconnecting.
+2022-03-20 14:12:50.757 +02:00 [DBG] Connection id "0HMGADBQ43QA9" stopped.
+2022-03-20 14:12:50.771 +02:00 [INF] Request starting HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117
+2022-03-20 14:12:50.795 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-03-20 14:12:50.810 +02:00 [DBG] Connection id "0HMGADBQ43QAA", Request id "0HMGADBQ43QAA:00000002": started reading request body.
+2022-03-20 14:12:50.812 +02:00 [DBG] Connection id "0HMGADBQ43QAA", Request id "0HMGADBQ43QAA:00000002": done reading request body.
+2022-03-20 14:12:50.952 +02:00 [INF] Incoming request: LoginRequest 
+ JSON: 
+ {"username":"HristoTrendafilov", "password":"test"}
+2022-03-20 14:12:52.588 +02:00 [DBG] Connection id "0HMGADBQ43QAA" completed keep alive response.
+2022-03-20 14:12:52.596 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117 - 200 - application/json 1827.2798ms

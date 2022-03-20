@@ -1,19 +1,15 @@
 using AllAboutGames.Core;
+using AllAboutGames.Core.Middlewares;
 using AllAboutGames.Core.Middlewares.Gateway;
 using AllAboutGames.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using Serilog.Core;
 using Serilog.Events;
-using Serilog.Exceptions;
-using Serilog.Filters;
 using Serilog.Formatting.Json;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder();
-
 DependencyManager.RegisterDependencies(builder);
-
 
 builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
 {
@@ -22,13 +18,10 @@ builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
     //.EnableSensitiveDataLogging();
 });
 
-var loggingSwitch = new LoggingLevelSwitch();
 Enum.TryParse(builder.Configuration["Serilog:LogLevel"], out LogEventLevel minimumLevel);
-loggingSwitch.MinimumLevel = minimumLevel;
-
 Log.Logger = new LoggerConfiguration()
   .WriteTo.Console()
-  .MinimumLevel.ControlledBy(loggingSwitch)
+  .MinimumLevel.Is(minimumLevel)
   .WriteTo.Logger(lc =>
   {
       lc.Filter.ByIncludingOnly(logEvent => logEvent.Exception != null)
@@ -49,14 +42,8 @@ builder.Logging.ClearProviders();
 builder.Logging.AddSerilog();
 
 var app = builder.Build();
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
+app.UseMiddleware<AuthMiddleware>();
 app.UseMiddleware<GatewayProtocolMiddleware>();
-
 app.UseHttpsRedirection();
 
 app.Run();

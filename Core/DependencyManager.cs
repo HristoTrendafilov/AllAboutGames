@@ -1,4 +1,5 @@
 ﻿using AllAboutGames.Core.Handlers;
+using AllAboutGames.Core.Middlewares;
 using AllAboutGames.Core.Middlewares.Gateway;
 using AllAboutGames.Data.ViewModels;
 using AllAboutGames.Services;
@@ -20,8 +21,11 @@ namespace AllAboutGames.Core
             // Services
             builder.Services.AddTransient<BaseService>();
             builder.Services.AddTransient<GameService>();
+            builder.Services.AddTransient<UserService>();
+            builder.Services.AddTransient(provider => new AuthService(builder.Configuration["JWT:Secret"]));
 
             // Middlewares
+            builder.Services.AddTransient<AuthMiddleware>();
             builder.Services.AddTransient<GatewayProtocolMiddleware>();
 
             // Other
