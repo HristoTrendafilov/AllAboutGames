@@ -1,28 +1,51 @@
-﻿using Microsoft.IdentityModel.Tokens;
+﻿using AllAboutGames.Core;
+using AllAboutGames.Data.Models;
+using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 
 namespace AllAboutGames.Services
 {
     public class AuthService
     {
-        private readonly string Secret;
-
-        public AuthService(string secret)
+        public static string GenerateJwtToken(long id)
         {
-            this.Secret = secret;
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var key = Encoding.UTF8.GetBytes(Global.AppSettings.JWT.Secret);
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(new[] { new Claim("ID", id.ToString()) }),
+                Expires = DateTime.UtcNow.AddDays(1),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+
+            var token = tokenHandler.CreateToken(tokenDescriptor);
+            return tokenHandler.WriteToken(token);
         }
 
-        public string GenerateJwtToken(long id)
+        public static long DecodeJwtTokent(string jwt)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(this.Secret));
-            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
-            var header = new JwtHeader(credentials);
+            try
+            {
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.UTF8.GetBytes(Global.AppSettings.JWT.Secret);
+                tokenHandler.ValidateToken(jwt, new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false,
+                }, out SecurityToken validatedToken);
 
-            var payload = new JwtPayload(id.ToString(), null, null, null, DateTime.UtcNow.AddDays(30));
-            var securityToken = new JwtSecurityToken(header, payload);
-
-            return new JwtSecurityTokenHandler().WriteToken(securityToken);
+                var jwtToken = (JwtSecurityToken)validatedToken;
+                var userID = long.Parse(jwtToken.Claims.First(x => x.Type == "ID").Value);
+                return userID;
+            }
+            catch
+            {
+                return 0;
+            }
         }
     }
 }

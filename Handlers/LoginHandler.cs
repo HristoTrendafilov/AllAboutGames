@@ -7,19 +7,17 @@ namespace AllAboutGames.Handlers
     public class LoginHandler
     {
         private readonly UserService UserService;
-        private readonly AuthService AuthService;
 
-        public LoginHandler(UserService userService, AuthService authService)
+        public LoginHandler(UserService userService)
         {
             this.UserService = userService;
-            this.AuthService = authService;
         }
 
         [BindRequest(typeof(LoginRequest), typeof(LoginResponse))]
         public async Task<LoginResponse> Login(LoginRequest req)
         {
-            var user = await this.UserService.GetEntityAsync<ApplicationUser>(x => x.Username == req.Username && x.Password == req.Password);
-            var jwt = this.AuthService.GenerateJwtToken(user.UserID);
+            //var user = await this.UserService.GetEntityAsync<ApplicationUser>(x => x.Username == req.Username && x.Password == req.Password);
+            var jwt = AuthService.GenerateJwtToken(666);
             return new LoginResponse()
             {
                 Jwt = jwt
