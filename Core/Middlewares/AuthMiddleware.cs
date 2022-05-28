@@ -1,8 +1,4 @@
-﻿using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Text;
-
-namespace AllAboutGames.Core.Middlewares
+﻿namespace AllAboutGames.Core.Middlewares
 {
     public class AuthMiddleware : IMiddleware
     {

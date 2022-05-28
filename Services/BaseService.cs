@@ -12,36 +12,12 @@ namespace AllAboutGames.Services
     public class BaseService
     {
         protected readonly AllAboutGamesDataContext Db;
-        private readonly IMapper Mapper;
+        protected readonly IMapper Mapper;
 
         public BaseService(AllAboutGamesDataContext db, IMapper mapper)
         {
             this.Db = db;
             this.Mapper = mapper;
-        }
-
-        public async Task<TEntity> GetEntityAsync<TEntity>(Expression<Func<TEntity, bool>> filter) 
-            where TEntity : class =>  await this.GetQuery(filter).FirstOrDefaultAsync();
-
-        public async Task<List<TEntity>> GetEntitiesAsync<TEntity>(Expression<Func<TEntity, bool>> filter)
-            where TEntity : class => await this.GetQuery(filter).ToListAsync();
-
-        private IQueryable<TEntity> GetQuery<TEntity>(Expression<Func<TEntity, bool>> filter)
-            where TEntity : class
-        {
-            var query = this.Db.Set<TEntity>().Where(filter);
-
-            var properties = typeof(TEntity)
-                .GetProperties()
-                .Where(x => x.IsDefined(typeof(IncludeInQuery), false))
-                .ToList();
-
-            foreach (var property in properties)
-            {
-                query = query.Include(property.Name);
-            }
-
-            return query;
         }
 
         public async Task<CheckResult> SaveEntityAsync<TEntity>(object entityDTO)

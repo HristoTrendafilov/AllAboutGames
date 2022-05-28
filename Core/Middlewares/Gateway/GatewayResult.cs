@@ -14,7 +14,7 @@ namespace AllAboutGames.Core.Middlewares.Gateway
 
         public List<GatewayResultDetail> Details { get; set; }
 
-        public static GatewayResult SuccessfullResult()
+        public static GatewayResult SuccessfulResult()
         {
             return new GatewayResult();
         }
@@ -40,7 +40,11 @@ namespace AllAboutGames.Core.Middlewares.Gateway
 
             return new GatewayResult
             {
-                JsonValue = JsonConvert.SerializeObject(obj)
+                JsonValue = JsonConvert.SerializeObject(obj, Formatting.None,
+                        new JsonSerializerSettings()
+                        {
+                            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                        })
             };
         }
     }

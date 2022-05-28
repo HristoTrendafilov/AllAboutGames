@@ -107,7 +107,7 @@ namespace AllAboutGames.Core.Middlewares.Gateway
                 {
                     await (Task)methodInfo.Invoke(handlerInstance, parameters);
 
-                    return GatewayResult.SuccessfullResult();
+                    return GatewayResult.SuccessfulResult();
                 }
 
                 var task = (Task)methodInfo.Invoke(handlerInstance, parameters);
@@ -129,7 +129,7 @@ namespace AllAboutGames.Core.Middlewares.Gateway
                 {
                     methodInfo.Invoke(handlerInstance, parameters);
 
-                    return GatewayResult.SuccessfullResult();
+                    return GatewayResult.SuccessfulResult();
                 }
 
                 var returnValue = methodInfo.Invoke(handlerInstance, parameters);

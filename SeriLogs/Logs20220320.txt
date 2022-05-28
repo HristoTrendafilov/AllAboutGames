@@ -501,3 +501,12 @@ System.ArgumentOutOfRangeException: IDX10653: The encryption algorithm 'http://w
  {"username":"HristoTrendafilov", "password":"test"}
 2022-03-20 14:12:52.588 +02:00 [DBG] Connection id "0HMGADBQ43QAA" completed keep alive response.
 2022-03-20 14:12:52.596 +02:00 [INF] Request finished HTTP/1.1 POST http://localhost:6000/api/gateway application/json 117 - 200 - application/json 1827.2798ms
+2022-03-20 14:28:17.886 +02:00 [DBG] Hosting starting
+2022-03-20 14:28:17.994 +02:00 [INF] Now listening on: http://localhost:6000
+2022-03-20 14:28:17.996 +02:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-03-20 14:28:17.996 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-03-20 14:28:17.997 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-03-20 14:28:17.998 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-03-20 14:28:17.998 +02:00 [INF] Hosting environment: Development
+2022-03-20 14:28:17.999 +02:00 [INF] Content root path: D:\Projects\
+2022-03-20 14:28:18.000 +02:00 [DBG] Hosting started

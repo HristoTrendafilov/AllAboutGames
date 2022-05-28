@@ -31,16 +31,27 @@ namespace AllAboutGames.Handlers
                 return GatewayResult.FromErrorMessage(checkResult.GetErrors());
             }
 
-            await this.GameService.SaveEntityAsync<Game>(request.GameDTO);
+            var saveCheck = await this.GameService.SaveEntityAsync<Game>(request.GameDTO);
+            if (saveCheck.IsFailed)
+            {
+                return GatewayResult.FromErrorMessage(saveCheck.GetErrors());
+            }
+
             await this.GameService.SaveChangesAsync();
 
-            return GatewayResult.SuccessfullResult();
+            return GatewayResult.SuccessfulResult();
         }
 
-        public async Task<GameViewModel> GetGame(int gameID)
+        public GatewayResult GetGame(int gameID)
         {
-            var game = await this.GameService.GetEntityAsync<Game>(x => x.GameID == gameID);
-            return game == null ? null : this.Mapper.Map(game, new GameViewModel());
+            var game = this.GameService.GetGame(x => x.GameID == gameID);
+            if(game == null)
+            {
+                return GatewayResult.FromErrorMessage("The game doest not exist.");
+            }
+
+            var viewModel = this.Mapper.Map(game, new GameViewModel());
+            return GatewayResult.SuccessfulResult(viewModel);
         }
     }
 

@@ -19,7 +19,7 @@ namespace AllAboutGames.Services
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
             var header = new JwtHeader(credentials);
 
-            var payload = new JwtPayload(id.ToString(), null, null, null, DateTime.UtcNow.AddDays(30));
+            var payload = new JwtPayload(id.ToString(), null, null, null, DateTime.UtcNow.AddDays(7));
             var securityToken = new JwtSecurityToken(header, payload);
 
             return new JwtSecurityTokenHandler().WriteToken(securityToken);
