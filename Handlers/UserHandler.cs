@@ -30,7 +30,7 @@ namespace AllAboutGames.Handlers
                 return GatewayResult.FromErrorMessage("The username or password are incorect.");
             }
 
-            var jwt = this.AuthService.GenerateJwtToken(user.UserID);
+            var jwt = AuthService.GenerateJwtToken(user.UserID);
             return GatewayResult.SuccessfulResult(new LoginResponse() { Jwt = jwt });
         }
 
