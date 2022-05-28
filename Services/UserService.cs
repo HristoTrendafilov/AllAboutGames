@@ -14,7 +14,7 @@ namespace AllAboutGames.Services
         public ApplicationUser GetUser(Expression<Func<ApplicationUser, bool>> predicate)
         {
             return this.Db.ApplicationUsers
-                .Include(x => x.City)
+                .Include(x => x.Country)
                 .Where(predicate)
                 .FirstOrDefault();
         }

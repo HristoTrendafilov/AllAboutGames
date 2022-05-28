@@ -21,8 +21,8 @@ namespace AllAboutGames.Handlers
             this.Mapper = mapper;
         }
 
-        [BindRequest(typeof(LoginRequest), typeof(LoginResponse))]
-        public GatewayResult Login(LoginRequest req)
+        [BindRequest(typeof(LoginUserRequest), typeof(LoginUserResponse))]
+        public GatewayResult Login(LoginUserRequest req)
         {
             var user = this.UserService.GetUser(x => x.Username == req.Username && x.Password == req.Password);
             if (user == null)
@@ -31,11 +31,11 @@ namespace AllAboutGames.Handlers
             }
 
             var jwt = AuthService.GenerateJwtToken(user.UserID);
-            return GatewayResult.SuccessfulResult(new LoginResponse() { Jwt = jwt });
+            return GatewayResult.SuccessfulResult(new LoginUserResponse() { Jwt = jwt });
         }
 
-        [BindRequest(typeof(RegisterRequest), typeof(RegisterResponse))]
-        public async Task<GatewayResult> Register(RegisterRequest request)
+        [BindRequest(typeof(RegisterUserRequest), typeof(RegisterUserResponse))]
+        public async Task<GatewayResult> Register(RegisterUserRequest request)
         {
             var checkResult = PropertyValidator.Validate(request.UserDTO);
             if (checkResult.IsFailed)
@@ -51,7 +51,7 @@ namespace AllAboutGames.Handlers
 
             await this.UserService.SaveChangesAsync();
 
-            return GatewayResult.SuccessfulResult(new RegisterRequest());
+            return GatewayResult.SuccessfulResult(new RegisterUserRequest());
         }
 
         [BindRequest(typeof(GetUserRequest), typeof(GetUserResponse))]
@@ -68,24 +68,24 @@ namespace AllAboutGames.Handlers
         }
     }
 
-    public class LoginRequest
+    public class LoginUserRequest
     {
         public string Username { get; set; }
 
         public string Password { get; set; }
     }
 
-    public class LoginResponse
+    public class LoginUserResponse
     {
         public string Jwt { get; set; }
     }
 
-    public class RegisterRequest
+    public class RegisterUserRequest
     {
         public UserDTO UserDTO { get; set; }
     }
 
-    public class RegisterResponse
+    public class RegisterUserResponse
     {
 
     }

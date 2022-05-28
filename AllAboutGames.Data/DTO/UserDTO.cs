@@ -17,7 +17,7 @@ namespace AllAboutGames.Data.DTO
         [MaxLength(100, ErrorMessage = "The password must be maximum 100 characters.")]
         public string Password { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Date of birth is required.")]
         public DateTime DateOfBirth { get; set; }
 
         public string? ProfilePicture { get; set; }
@@ -28,10 +28,9 @@ namespace AllAboutGames.Data.DTO
 
         public DateTime? DeletedOn { get; set; }
 
-        [Required(ErrorMessage = "City is required.")]
-        public long CityID { get; set; }
+        public long CountryID { get; set; }
 
-        public City City { get; set; }
+        public Country Country { get; set; }
 
         public virtual List<Rating> Ratings { get; set; } = new List<Rating>();
 

@@ -10,12 +10,16 @@
   <ItemGroup>
     <Compile Remove="AllAboutGames.Data\**" />
     <Compile Remove="AllAboutGames.Mapping\**" />
+    <Compile Remove="Client\**" />
     <Content Remove="AllAboutGames.Data\**" />
     <Content Remove="AllAboutGames.Mapping\**" />
+    <Content Remove="Client\**" />
     <EmbeddedResource Remove="AllAboutGames.Data\**" />
     <EmbeddedResource Remove="AllAboutGames.Mapping\**" />
+    <EmbeddedResource Remove="Client\**" />
     <None Remove="AllAboutGames.Data\**" />
     <None Remove="AllAboutGames.Mapping\**" />
+    <None Remove="Client\**" />
   </ItemGroup>
 
   <ItemGroup>

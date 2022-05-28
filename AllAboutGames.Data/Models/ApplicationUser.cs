@@ -28,11 +28,10 @@ namespace AllAboutGames.Data.Models
 
         public DateTime? DeletedOn { get; set; }
 
-        [Required(ErrorMessage = "City is required.")]
-        [ForeignKey(nameof(City))]
-        public long CityID { get; set; }
+        [ForeignKey(nameof(Country))]
+        public long CountryID { get; set; }
 
-        public City City { get; set; }
+        public Country Country { get; set; }
 
         public virtual List<Rating> Ratings { get; set; } = new List<Rating>();
 

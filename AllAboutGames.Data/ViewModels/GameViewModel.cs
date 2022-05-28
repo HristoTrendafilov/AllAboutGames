@@ -1,6 +1,5 @@
 ﻿using AllAboutGames.Core.CustomMapper;
 using AllAboutGames.Data.Models;
-#nullable disable
 
 namespace AllAboutGames.Data.ViewModels
 {

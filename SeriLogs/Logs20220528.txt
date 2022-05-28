@@ -253,3 +253,73 @@ AllAboutGames.Data.DTO.UserDTO -> AllAboutGames.Data.Models.ApplicationUser
  {"username":"RegisterTest", "password":"RegisterPass"}
 2022-05-28 13:16:20.490 +03:00 [DBG] Connection id "0HMI0ICDIKRUJ" completed keep alive response.
 2022-05-28 13:16:20.497 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:6000/api/gateway application/json 120 - 200 - application/json 1798.0393ms
+2022-05-28 18:46:09.599 +03:00 [DBG] Hosting starting
+2022-05-28 18:46:09.864 +03:00 [INF] Now listening on: http://localhost:6000
+2022-05-28 18:46:09.867 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-28 18:46:09.867 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-28 18:46:09.868 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-28 18:46:09.869 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 18:46:09.870 +03:00 [INF] Hosting environment: Development
+2022-05-28 18:46:09.870 +03:00 [INF] Content root path: D:\Projects\
+2022-05-28 18:46:09.871 +03:00 [DBG] Hosting started
+2022-05-28 18:56:40.974 +03:00 [DBG] Hosting starting
+2022-05-28 18:56:41.104 +03:00 [INF] Now listening on: http://localhost:6002
+2022-05-28 18:56:41.107 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-28 18:56:41.108 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-28 18:56:41.108 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-28 18:56:41.109 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 18:56:41.111 +03:00 [INF] Hosting environment: Development
+2022-05-28 18:56:41.111 +03:00 [INF] Content root path: D:\Projects\
+2022-05-28 18:56:41.112 +03:00 [DBG] Hosting started
+2022-05-28 18:57:04.868 +03:00 [DBG] Connection id "0HMI0OAR0UL88" accepted.
+2022-05-28 18:57:04.879 +03:00 [DBG] Connection id "0HMI0OAR0UL88" started.
+2022-05-28 18:57:05.050 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:6002/api/gateway - -
+2022-05-28 18:57:05.135 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-05-28 18:58:21.540 +03:00 [DBG] Hosting starting
+2022-05-28 18:58:21.653 +03:00 [INF] Now listening on: http://localhost:6002
+2022-05-28 18:58:21.655 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-28 18:58:21.656 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-28 18:58:21.656 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-28 18:58:21.657 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 18:58:21.658 +03:00 [INF] Hosting environment: Development
+2022-05-28 18:58:21.659 +03:00 [INF] Content root path: D:\Projects\
+2022-05-28 18:58:21.659 +03:00 [DBG] Hosting started
+2022-05-28 18:58:29.954 +03:00 [DBG] Connection id "0HMI0OBKCDBEL" accepted.
+2022-05-28 18:58:29.956 +03:00 [DBG] Connection id "0HMI0OBKCDBEL" started.
+2022-05-28 18:58:30.002 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:6002/api/gateway - -
+2022-05-28 18:58:30.027 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-05-28 19:00:25.814 +03:00 [DBG] Hosting starting
+2022-05-28 19:00:26.002 +03:00 [INF] Now listening on: http://localhost:6002
+2022-05-28 19:00:26.004 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-28 19:00:26.005 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-28 19:00:26.006 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-28 19:00:26.007 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 19:00:26.008 +03:00 [INF] Hosting environment: Development
+2022-05-28 19:00:26.008 +03:00 [INF] Content root path: D:\Projects\
+2022-05-28 19:00:26.009 +03:00 [DBG] Hosting started
+2022-05-28 19:00:34.645 +03:00 [DBG] Connection id "0HMI0OCPHHTOA" accepted.
+2022-05-28 19:00:34.647 +03:00 [DBG] Connection id "0HMI0OCPHHTOA" started.
+2022-05-28 19:00:34.689 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:6002/api/gateway - -
+2022-05-28 19:00:34.711 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-05-28 19:05:43.171 +03:00 [DBG] Hosting starting
+2022-05-28 19:05:43.288 +03:00 [INF] Now listening on: http://localhost:6002
+2022-05-28 19:05:43.292 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-28 19:05:43.294 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-28 19:05:43.295 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-28 19:05:43.298 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 19:05:43.299 +03:00 [INF] Hosting environment: Development
+2022-05-28 19:05:43.300 +03:00 [INF] Content root path: D:\Projects\
+2022-05-28 19:05:43.302 +03:00 [DBG] Hosting started
+2022-05-28 19:05:54.134 +03:00 [DBG] Connection id "0HMI0OFOOEG7U" accepted.
+2022-05-28 19:05:54.136 +03:00 [DBG] Connection id "0HMI0OFOOEG7U" started.
+2022-05-28 19:05:54.179 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:6002/api/gateway - -
+2022-05-28 19:05:54.202 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-05-28 19:07:08.469 +03:00 [DBG] Hosting starting
+2022-05-28 19:07:08.618 +03:00 [INF] Now listening on: http://localhost:6002
+2022-05-28 19:07:08.621 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-28 19:07:08.621 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-28 19:07:08.622 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-28 19:07:08.623 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 19:07:08.625 +03:00 [INF] Hosting environment: Development
+2022-05-28 19:07:08.625 +03:00 [INF] Content root path: D:\Projects\
+2022-05-28 19:07:08.626 +03:00 [DBG] Hosting started
