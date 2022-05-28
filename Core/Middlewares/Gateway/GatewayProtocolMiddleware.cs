@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using AllAboutGames.Services;
+using Newtonsoft.Json;
 using Serilog;
 using System.Text;
 #nullable disable
@@ -48,7 +49,7 @@ namespace AllAboutGames.Core.Middlewares.Gateway
             // TODO: Get the real IP from the context headers
             Log.Information($"Incoming request: {requestMessage.MessageType} {Environment.NewLine} JSON: {Environment.NewLine} {requestMessage.MessageJson}");
 
-            var responseMessage = await this.GatewayProtocol.ProcessGatewayMessage(requestMessage);
+            var responseMessage = await this.GatewayProtocol.ProcessGatewayMessage(requestMessage, context);
 
             var json = JsonConvert.SerializeObject(responseMessage);
 

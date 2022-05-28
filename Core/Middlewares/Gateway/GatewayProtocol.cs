@@ -1,4 +1,5 @@
 ﻿using AllAboutGames.Core.Handlers;
+using AllAboutGames.Services;
 using Newtonsoft.Json;
 using Serilog;
 using Serilog.Events;
@@ -18,7 +19,7 @@ namespace AllAboutGames.Core.Middlewares.Gateway
             this.ServiceProvider = serviceProvider;
         }
 
-        public async Task<GatewayResult> ProcessGatewayMessage(GatewayMessage request)
+        public async Task<GatewayResult> ProcessGatewayMessage(GatewayMessage request, HttpContext context)
         {
             if (request == null)
             {
@@ -44,6 +45,13 @@ namespace AllAboutGames.Core.Middlewares.Gateway
                     return GatewayResult.FromErrorMessage("There is no handler that can process the request: " + request.MessageType);
                 }
 
+                var token = context.Request.Headers["Authorization"].FirstOrDefault();
+                if (token != null)
+                {
+                    var jwt = token.Split(' ')[1];
+                    var userID = AuthService.DecodeJwtTokent(jwt);
+                }
+
                 //var authResult = this.AuthorizeUser(handler, request, session);
                 //if (authResult.IsFailed)
                 //{
@@ -66,18 +74,9 @@ namespace AllAboutGames.Core.Middlewares.Gateway
                         return request;
                     }
 
-                    //if (info.ParameterType == typeof(AuthResult))
-                    //{
-                    //    return session.AuthResult;
-                    //}
-
-                    //if (info.ParameterType == typeof(RequestSession))
-                    //{
-                    //    return session;
-                    //}
-
                     throw new NotSupportedException($"Parameters don't match for handler method {handler.Method.DeclaringType.Name}.{handler.Method.Name}");
-                }).ToArray();
+                })
+                .ToArray();
 
                 return await ExecuteHandlerMethod(handler.Method, handlerInstance, parameters);
             }

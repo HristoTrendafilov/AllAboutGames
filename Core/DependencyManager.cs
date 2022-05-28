@@ -22,7 +22,7 @@ namespace AllAboutGames.Core
             builder.Services.AddTransient<BaseService>();
             builder.Services.AddTransient<GameService>();
             builder.Services.AddTransient<UserService>();
-            builder.Services.AddTransient(provider => new AuthService(builder.Configuration["JWT:Secret"]));
+            builder.Services.AddTransient<AuthService>();
 
             // Middlewares
             builder.Services.AddTransient<AuthMiddleware>();

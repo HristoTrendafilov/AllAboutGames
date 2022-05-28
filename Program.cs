@@ -9,6 +9,7 @@ using Serilog.Formatting.Json;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder();
+Global.LoadSettings(builder);
 DependencyManager.RegisterDependencies(builder);
 
 builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
@@ -18,22 +19,18 @@ builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
     //.EnableSensitiveDataLogging();
 });
 
-Enum.TryParse(builder.Configuration["Serilog:LogLevel"], out LogEventLevel minimumLevel);
+Enum.TryParse(Global.AppSettings.Serilog.LogLevel, out LogEventLevel minimumLevel);
 Log.Logger = new LoggerConfiguration()
   .WriteTo.Console()
   .MinimumLevel.Is(minimumLevel)
   .WriteTo.Logger(lc =>
   {
       lc.Filter.ByIncludingOnly(logEvent => logEvent.Exception != null)
-        .WriteTo.File(new JsonFormatter(), builder.Configuration["Serilog:ExceptionsPath"],
-        rollingInterval: RollingInterval.Day,
-        encoding: Encoding.UTF8);
+        .WriteTo.File(new JsonFormatter(), Global.AppSettings.Serilog.ExceptionsPath, rollingInterval: RollingInterval.Day, encoding: Encoding.UTF8);
   })
   .WriteTo.Logger(lc =>
   {
-      lc.WriteTo.File(builder.Configuration["Serilog:LogPath"],
-          rollingInterval: RollingInterval.Day,
-          encoding: Encoding.UTF8);
+      lc.WriteTo.File(Global.AppSettings.Serilog.LogsPath, rollingInterval: RollingInterval.Day, encoding: Encoding.UTF8);
   })
   .Enrich.FromLogContext()
   .CreateLogger();
