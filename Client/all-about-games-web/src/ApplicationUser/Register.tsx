@@ -86,24 +86,27 @@ export class RegisterUser extends React.PureComponent {
                                                 name="username"
                                                 type='input'
                                                 className="form-control"/>
+                                                   {errors.username && <div style={{color:'red'}}>{errors.username}</div>}
                                         </div>
-                                        {errors.username && <div>{errors.username}</div>}
+                                     
                                         <div className="mb-3 col-xl-6">
-                                            <label className="form-label d-flex justify-content-center">Password</label>
+                                            <label className="form-label d-flex justify-content-center">Passwordssss</label>
                                             <Field
                                                 name="password"
                                                 type="password"
                                                 className="form-control"/>
+                                                 {errors.password && <div style={{color:'red'}}>{errors.password}</div>}
                                         </div>
-                                        {errors.password && <div>{errors.password}</div>}
+                                       
                                         <div className="mb-3 col-xl-6">
                                             <label className="form-label d-flex justify-content-center">Birth date</label>
                                             <Field
                                                 name="dateOfBirth"
                                                 type="date"
                                                 className="form-control"/>
+                                                   {errors.dateOfBirth && <div style={{color:'red'}}>{errors.dateOfBirth}</div>}
                                         </div>
-                                        {errors.dateOfBirth && <div>{errors.dateOfBirth}</div>}
+                                     
                                         <div className="mb-3 col-xl-6">
                                             <label className="form-label d-flex justify-content-center">Country</label>
                                             <Field as='select' name='countryID' className="form-select">
@@ -112,8 +115,9 @@ export class RegisterUser extends React.PureComponent {
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
                                             </Field>
+                                            {errors.countryID && <div style={{color:'red'}}>{errors.countryID}</div>}
                                         </div>
-                                        {errors.countryID && <div>{errors.countryID}</div>}
+                                      
                                         <div className="col-xl-12 text-center">
                                             <button
                                                 type="submit"
