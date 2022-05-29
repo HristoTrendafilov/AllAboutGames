@@ -37,13 +37,13 @@ namespace AllAboutGames.Handlers
         [BindRequest(typeof(RegisterUserRequest), typeof(RegisterUserResponse))]
         public async Task<GatewayResult> Register(RegisterUserRequest request)
         {
-            var checkResult = PropertyValidator.Validate(request.UserDTO);
+            var checkResult = PropertyValidator.Validate(request.Item);
             if (checkResult.IsFailed)
             {
                 return GatewayResult.FromErrorMessage(checkResult.GetErrors());
             }
 
-            var saveCheck = await this.UserService.SaveEntityAsync<ApplicationUser>(request.UserDTO);
+            var saveCheck = await this.UserService.SaveEntityAsync<ApplicationUser>(request.Item);
             if (saveCheck.IsFailed)
             {
                 return GatewayResult.FromErrorMessage(saveCheck.GetErrors());
@@ -82,7 +82,7 @@ namespace AllAboutGames.Handlers
 
     public class RegisterUserRequest
     {
-        public UserDTO UserDTO { get; set; }
+        public UserDTO Item { get; set; }
     }
 
     public class RegisterUserResponse
