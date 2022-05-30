@@ -1,7 +1,11 @@
 ﻿using AllAboutGames.Core;
 using AllAboutGames.Core.Attributes;
 using AllAboutGames.Core.Middlewares.Gateway;
+using AllAboutGames.Data.DTO;
+using AllAboutGames.Data.Models;
+using AllAboutGames.Data.ViewModels;
 using AllAboutGames.Services;
+using AutoMapper;
 #nullable disable
 
 namespace AllAboutGames.Handlers

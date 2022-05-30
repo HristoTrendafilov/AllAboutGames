@@ -1,0 +1,307 @@
+﻿2022-05-30 08:25:39.238 +03:00 [DBG] Hosting starting
+2022-05-30 08:25:39.520 +03:00 [INF] Now listening on: http://localhost:6002
+2022-05-30 08:25:39.523 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-30 08:25:39.524 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-30 08:25:39.524 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-30 08:25:39.526 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-30 08:25:39.527 +03:00 [INF] Hosting environment: Development
+2022-05-30 08:25:39.528 +03:00 [INF] Content root path: D:\dev\AllAboutGames\
+2022-05-30 08:25:39.529 +03:00 [DBG] Hosting started
+2022-05-30 08:27:06.106 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:06.357 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:06.373 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:21.010 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:21.446 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:21.449 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:21.710 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:21.963 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:21.977 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:22.239 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:22.241 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:22.492 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:22.507 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:22.757 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:22.771 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:23.245 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:25.847 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:25.848 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:26.101 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:26.122 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:26.356 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:26.387 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:26.618 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:26.651 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:26.883 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:27:26.915 +03:00 [DBG] Config reload token fired. Checking for changes...
+2022-05-30 08:28:44.964 +03:00 [DBG] Connection id "0HMI1VL1VSJ89" accepted.
+2022-05-30 08:28:44.973 +03:00 [DBG] Connection id "0HMI1VL1VSJ89" started.
+2022-05-30 08:28:45.069 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 161
+2022-05-30 08:28:45.142 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-05-30 08:28:45.232 +03:00 [DBG] Connection id "0HMI1VL1VSJ89", Request id "0HMI1VL1VSJ89:00000002": started reading request body.
+2022-05-30 08:28:45.234 +03:00 [DBG] Connection id "0HMI1VL1VSJ89", Request id "0HMI1VL1VSJ89:00000002": done reading request body.
+2022-05-30 08:28:45.559 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"test","password":"test","dateOfBirth":"2022-05-03","countryID":"1"}}
+2022-05-30 08:28:51.646 +03:00 [ERR] Error while trying to process the request: RegisterUserRequest
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.InvalidCastException: Cannot write DateTime with Kind=Unspecified to PostgreSQL type 'timestamp with time zone', only UTC is supported. Note that it's not possible to mix DateTimes with different Kinds in an array/range. See the Npgsql.EnableLegacyTimestampBehavior AppContext switch to enable legacy behavior.
+   at Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandler.ValidateAndGetLength(DateTime value, NpgsqlParameter parameter)
+   at Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandler.ValidateObjectAndGetLength(Object value, NpgsqlLengthCache& lengthCache, NpgsqlParameter parameter)
+   at Npgsql.NpgsqlParameter.ValidateAndGetLength()
+   at Npgsql.NpgsqlParameterCollection.ValidateAndBind(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AllAboutGames.Services.BaseService.SaveChangesAsync() in D:\dev\AllAboutGames\Services\BaseService.cs:line 55
+   at AllAboutGames.Handlers.UserHandler.Register(RegisterUserRequest request) in D:\dev\AllAboutGames\Handlers\UserHandler.cs:line 52
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ExecuteHandlerMethod(MethodInfo methodInfo, Object handlerInstance, Object[] parameters) in D:\dev\AllAboutGames\Core\Middlewares\Gateway\GatewayProtocol.cs:line 114
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request, HttpContext context) in D:\dev\AllAboutGames\Core\Middlewares\Gateway\GatewayProtocol.cs:line 81
+2022-05-30 08:28:51.769 +03:00 [DBG] Connection id "0HMI1VL1VSJ89" completed keep alive response.
+2022-05-30 08:28:51.776 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 161 - 200 - application/json 6710.1824ms
+2022-05-30 08:30:08.107 +03:00 [DBG] Hosting starting
+2022-05-30 08:30:08.250 +03:00 [INF] Now listening on: http://localhost:6002
+2022-05-30 08:30:08.252 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-30 08:30:08.253 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-30 08:30:08.254 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-30 08:30:08.256 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-30 08:30:08.257 +03:00 [INF] Hosting environment: Development
+2022-05-30 08:30:08.258 +03:00 [INF] Content root path: D:\dev\AllAboutGames\
+2022-05-30 08:30:08.259 +03:00 [DBG] Hosting started
+2022-05-30 08:30:08.444 +03:00 [DBG] Connection id "0HMI1VLQS0BIK" accepted.
+2022-05-30 08:30:08.447 +03:00 [DBG] Connection id "0HMI1VLQS0BIK" started.
+2022-05-30 08:30:08.477 +03:00 [DBG] Connection id "0HMI1VLQS0BIL" accepted.
+2022-05-30 08:30:08.478 +03:00 [DBG] Connection id "0HMI1VLQS0BIL" started.
+2022-05-30 08:30:08.507 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 161
+2022-05-30 08:30:08.536 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-05-30 08:30:08.553 +03:00 [DBG] Connection id "0HMI1VLQS0BIK", Request id "0HMI1VLQS0BIK:00000002": started reading request body.
+2022-05-30 08:30:08.555 +03:00 [DBG] Connection id "0HMI1VLQS0BIK", Request id "0HMI1VLQS0BIK:00000002": done reading request body.
+2022-05-30 08:30:08.688 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"test","password":"test","dateOfBirth":"2022-05-03","countryID":"1"}}
+2022-05-30 08:30:15.517 +03:00 [ERR] Error while trying to process the request: RegisterUserRequest
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.InvalidCastException: Cannot write DateTime with Kind=Unspecified to PostgreSQL type 'timestamp with time zone', only UTC is supported. Note that it's not possible to mix DateTimes with different Kinds in an array/range. See the Npgsql.EnableLegacyTimestampBehavior AppContext switch to enable legacy behavior.
+   at Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandler.ValidateAndGetLength(DateTime value, NpgsqlParameter parameter)
+   at Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandler.ValidateObjectAndGetLength(Object value, NpgsqlLengthCache& lengthCache, NpgsqlParameter parameter)
+   at Npgsql.NpgsqlParameter.ValidateAndGetLength()
+   at Npgsql.NpgsqlParameterCollection.ValidateAndBind(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AllAboutGames.Services.BaseService.SaveChangesAsync() in D:\dev\AllAboutGames\Services\BaseService.cs:line 55
+   at AllAboutGames.Handlers.UserHandler.Register(RegisterUserRequest request) in D:\dev\AllAboutGames\Handlers\UserHandler.cs:line 52
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ExecuteHandlerMethod(MethodInfo methodInfo, Object handlerInstance, Object[] parameters) in D:\dev\AllAboutGames\Core\Middlewares\Gateway\GatewayProtocol.cs:line 114
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request, HttpContext context) in D:\dev\AllAboutGames\Core\Middlewares\Gateway\GatewayProtocol.cs:line 81
+2022-05-30 08:30:15.603 +03:00 [DBG] Connection id "0HMI1VLQS0BIK" completed keep alive response.
+2022-05-30 08:30:15.609 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 161 - 200 - application/json 7106.1077ms
+2022-05-30 09:46:29.877 +03:00 [DBG] Hosting starting
+2022-05-30 09:46:30.053 +03:00 [INF] Now listening on: http://localhost:6002
+2022-05-30 09:46:30.055 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-30 09:46:30.056 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-30 09:46:30.057 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-30 09:46:30.058 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-30 09:46:30.058 +03:00 [INF] Hosting environment: Development
+2022-05-30 09:46:30.059 +03:00 [INF] Content root path: D:\dev\AllAboutGames\
+2022-05-30 09:46:30.060 +03:00 [DBG] Hosting started
+2022-05-30 09:46:49.335 +03:00 [DBG] Connection id "0HMI210M1H68L" accepted.
+2022-05-30 09:46:49.337 +03:00 [DBG] Connection id "0HMI210M1H68L" started.
+2022-05-30 09:46:49.385 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 163
+2022-05-30 09:46:49.415 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-05-30 09:46:49.435 +03:00 [DBG] Connection id "0HMI210M1H68L", Request id "0HMI210M1H68L:00000002": started reading request body.
+2022-05-30 09:46:49.436 +03:00 [DBG] Connection id "0HMI210M1H68L", Request id "0HMI210M1H68L:00000002": done reading request body.
+2022-05-30 09:46:49.608 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"test","password":"123213","dateOfBirth":"2022-05-04","countryID":"1"}}
+2022-05-30 09:46:51.576 +03:00 [ERR] Error while trying to process the request: RegisterUserRequest
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> System.InvalidCastException: Cannot write DateTime with Kind=Unspecified to PostgreSQL type 'timestamp with time zone', only UTC is supported. Note that it's not possible to mix DateTimes with different Kinds in an array/range. See the Npgsql.EnableLegacyTimestampBehavior AppContext switch to enable legacy behavior.
+   at Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandler.ValidateAndGetLength(DateTime value, NpgsqlParameter parameter)
+   at Npgsql.Internal.TypeHandlers.DateTimeHandlers.TimestampTzHandler.ValidateObjectAndGetLength(Object value, NpgsqlLengthCache& lengthCache, NpgsqlParameter parameter)
+   at Npgsql.NpgsqlParameter.ValidateAndGetLength()
+   at Npgsql.NpgsqlParameterCollection.ValidateAndBind(ConnectorTypeMapper typeMapper)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AllAboutGames.Services.BaseService.SaveChangesAsync() in D:\dev\AllAboutGames\Services\BaseService.cs:line 55
+   at AllAboutGames.Handlers.UserHandler.Register(RegisterUserRequest request) in D:\dev\AllAboutGames\Handlers\UserHandler.cs:line 52
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ExecuteHandlerMethod(MethodInfo methodInfo, Object handlerInstance, Object[] parameters) in D:\dev\AllAboutGames\Core\Middlewares\Gateway\GatewayProtocol.cs:line 114
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request, HttpContext context) in D:\dev\AllAboutGames\Core\Middlewares\Gateway\GatewayProtocol.cs:line 81
+2022-05-30 09:46:51.670 +03:00 [DBG] Connection id "0HMI210M1H68L" completed keep alive response.
+2022-05-30 09:46:51.676 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 163 - 200 - application/json 2294.0444ms
+2022-05-30 13:26:02.557 +03:00 [DBG] Hosting starting
+2022-05-30 13:26:02.869 +03:00 [INF] Now listening on: http://localhost:6002
+2022-05-30 13:26:02.871 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-30 13:26:02.872 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-30 13:26:02.873 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-30 13:26:02.874 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-30 13:26:02.875 +03:00 [INF] Hosting environment: Development
+2022-05-30 13:26:02.876 +03:00 [INF] Content root path: D:\dev\AllAboutGames\
+2022-05-30 13:26:02.876 +03:00 [DBG] Hosting started
+2022-05-30 13:26:36.001 +03:00 [DBG] Connection id "0HMI24RFVCATQ" accepted.
+2022-05-30 13:26:36.011 +03:00 [DBG] Connection id "0HMI24RFVCATQ" started.
+2022-05-30 13:26:36.098 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 160
+2022-05-30 13:26:36.167 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-05-30 13:26:36.248 +03:00 [DBG] Connection id "0HMI24RFVCATQ", Request id "0HMI24RFVCATQ:00000002": started reading request body.
+2022-05-30 13:26:36.250 +03:00 [DBG] Connection id "0HMI24RFVCATQ", Request id "0HMI24RFVCATQ:00000002": done reading request body.
+2022-05-30 13:26:36.604 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"test","password":"tet","dateOfBirth":"2022-04-26","countryID":"1"}}
+2022-05-30 13:26:39.169 +03:00 [ERR] Error while trying to process the request: RegisterUserRequest
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationUsers" violates foreign key constraint "FK_ApplicationUsers_Countries_CountryID"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationUsers" violates foreign key constraint "FK_ApplicationUsers_Countries_CountryID"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: ApplicationUsers
+    ConstraintName: FK_ApplicationUsers_Countries_CountryID
+    File: ri_triggers.c
+    Line: 2539
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AllAboutGames.Services.BaseService.SaveChangesAsync() in D:\dev\AllAboutGames\Services\BaseService.cs:line 55
+   at AllAboutGames.Handlers.UserHandler.Register(RegisterUserRequest request) in D:\dev\AllAboutGames\Handlers\UserHandler.cs:line 52
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ExecuteHandlerMethod(MethodInfo methodInfo, Object handlerInstance, Object[] parameters) in D:\dev\AllAboutGames\Core\Middlewares\Gateway\GatewayProtocol.cs:line 114
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request, HttpContext context) in D:\dev\AllAboutGames\Core\Middlewares\Gateway\GatewayProtocol.cs:line 81
+2022-05-30 13:26:39.328 +03:00 [DBG] Connection id "0HMI24RFVCATQ" completed keep alive response.
+2022-05-30 13:26:39.342 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 160 - 200 - application/json 3247.1869ms
+2022-05-30 13:26:46.923 +03:00 [DBG] Connection id "0HMI24RFVCATQ" received FIN.
+2022-05-30 13:26:46.934 +03:00 [DBG] Connection id "0HMI24RFVCATQ" disconnecting.
+2022-05-30 13:26:46.943 +03:00 [DBG] Connection id "0HMI24RFVCATQ" sending FIN because: "The client closed the connection."
+2022-05-30 13:26:46.954 +03:00 [DBG] Connection id "0HMI24RFVCATQ" stopped.
+2022-05-30 13:27:13.744 +03:00 [DBG] Connection id "0HMI24RFVCATR" accepted.
+2022-05-30 13:27:13.746 +03:00 [DBG] Connection id "0HMI24RFVCATR" started.
+2022-05-30 13:27:13.749 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 160
+2022-05-30 13:27:13.751 +03:00 [DBG] Connection id "0HMI24RFVCATR", Request id "0HMI24RFVCATR:00000002": started reading request body.
+2022-05-30 13:27:13.756 +03:00 [DBG] Connection id "0HMI24RFVCATR", Request id "0HMI24RFVCATR:00000002": done reading request body.
+2022-05-30 13:27:13.761 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"test","password":"tet","dateOfBirth":"2022-04-26","countryID":"1"}}
+2022-05-30 13:27:25.269 +03:00 [ERR] Error while trying to process the request: RegisterUserRequest
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23503: insert or update on table "ApplicationUsers" violates foreign key constraint "FK_ApplicationUsers_Countries_CountryID"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|211_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERROR
+    SqlState: 23503
+    MessageText: insert or update on table "ApplicationUsers" violates foreign key constraint "FK_ApplicationUsers_Countries_CountryID"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: ApplicationUsers
+    ConstraintName: FK_ApplicationUsers_Countries_CountryID
+    File: ri_triggers.c
+    Line: 2539
+    Routine: ri_ReportViolation
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AllAboutGames.Services.BaseService.SaveChangesAsync() in D:\dev\AllAboutGames\Services\BaseService.cs:line 55
+   at AllAboutGames.Handlers.UserHandler.Register(RegisterUserRequest request) in D:\dev\AllAboutGames\Handlers\UserHandler.cs:line 52
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ExecuteHandlerMethod(MethodInfo methodInfo, Object handlerInstance, Object[] parameters) in D:\dev\AllAboutGames\Core\Middlewares\Gateway\GatewayProtocol.cs:line 114
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request, HttpContext context) in D:\dev\AllAboutGames\Core\Middlewares\Gateway\GatewayProtocol.cs:line 81
+2022-05-30 13:27:25.325 +03:00 [DBG] Connection id "0HMI24RFVCATR" completed keep alive response.
+2022-05-30 13:27:25.328 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 160 - 200 - application/json 11578.4915ms
+2022-05-30 13:27:27.010 +03:00 [DBG] Connection id "0HMI24RFVCATR" received FIN.
+2022-05-30 13:27:27.011 +03:00 [DBG] Connection id "0HMI24RFVCATR" disconnecting.
+2022-05-30 13:27:27.021 +03:00 [DBG] Connection id "0HMI24RFVCATR" sending FIN because: "The client closed the connection."
+2022-05-30 13:27:27.025 +03:00 [DBG] Connection id "0HMI24RFVCATR" stopped.
+2022-05-30 13:27:53.558 +03:00 [DBG] Hosting starting
+2022-05-30 13:27:53.713 +03:00 [INF] Now listening on: http://localhost:6002
+2022-05-30 13:27:53.716 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-30 13:27:53.717 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-30 13:27:53.718 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-30 13:27:53.719 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-30 13:27:53.721 +03:00 [INF] Hosting environment: Development
+2022-05-30 13:27:53.722 +03:00 [INF] Content root path: D:\dev\AllAboutGames\
+2022-05-30 13:27:53.724 +03:00 [DBG] Hosting started
+2022-05-30 13:27:58.402 +03:00 [DBG] Connection id "0HMI24S8H747J" accepted.
+2022-05-30 13:27:58.403 +03:00 [DBG] Connection id "0HMI24S8H747J" started.
+2022-05-30 13:27:58.446 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 160
+2022-05-30 13:27:58.470 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-05-30 13:27:58.488 +03:00 [DBG] Connection id "0HMI24S8H747J", Request id "0HMI24S8H747J:00000002": started reading request body.
+2022-05-30 13:27:58.489 +03:00 [DBG] Connection id "0HMI24S8H747J", Request id "0HMI24S8H747J:00000002": done reading request body.
+2022-05-30 13:27:58.630 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"test","password":"tet","dateOfBirth":"2022-04-26","countryID":"1"}}
+2022-05-30 13:28:00.340 +03:00 [DBG] Connection id "0HMI24S8H747J" completed keep alive response.
+2022-05-30 13:28:00.350 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 160 - 200 - application/json 1906.8818ms
+2022-05-30 13:28:07.056 +03:00 [DBG] Connection id "0HMI24S8H747J" received FIN.
+2022-05-30 13:28:07.058 +03:00 [DBG] Connection id "0HMI24S8H747J" disconnecting.
+2022-05-30 13:28:07.059 +03:00 [DBG] Connection id "0HMI24S8H747J" sending FIN because: "The client closed the connection."
+2022-05-30 13:28:07.071 +03:00 [DBG] Connection id "0HMI24S8H747J" stopped.

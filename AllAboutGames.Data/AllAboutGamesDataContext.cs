@@ -14,8 +14,10 @@ namespace AllAboutGames.Data.DataContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.UseSerialColumns();
+
             this.RemoveCascadeDeletion(modelBuilder);
             this.CreateDefaultValues(modelBuilder);
+            this.CreateColumnTypes(modelBuilder);
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
@@ -34,10 +36,18 @@ namespace AllAboutGames.Data.DataContext
         public DbSet<ForumLike> ForumLikes { get; set; }
         public DbSet<Role> Roles { get; set; }
 
+        private void CreateColumnTypes(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<ApplicationUser>().Property(x => x.DateOfBirth).HasColumnType("date");
+            modelBuilder.Entity<ApplicationUser>().Property(x => x.CreatedOn).HasColumnType("timestamp without time zone");
+            modelBuilder.Entity<ApplicationUser>().Property(x => x.DeletedOn).HasColumnType("timestamp without time zone");
+
+        }
+
         private void CreateDefaultValues(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<ApplicationUser>().Property(x => x.IsDeleted).HasDefaultValue(false);
-            modelBuilder.Entity<ApplicationUser>().Property(x => x.CreatedOn).HasDefaultValue(DateTime.UtcNow);
+            modelBuilder.Entity<ApplicationUser>().Property(x => x.CreatedOn).HasDefaultValue(DateTime.Now);
 
             modelBuilder.Entity<Developer>().Property(x => x.IsDeleted).HasDefaultValue(false);
 

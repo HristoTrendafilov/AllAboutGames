@@ -3,6 +3,7 @@ using System;
 using AllAboutGames.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AllAboutGames.Data.Migrations
 {
     [DbContext(typeof(AllAboutGamesDataContext))]
-    partial class AllAboutGamesDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220530102336_datetime_test")]
+    partial class datetime_test
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,13 +38,13 @@ namespace AllAboutGames.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2022, 5, 30, 13, 30, 48, 756, DateTimeKind.Local).AddTicks(6167));
+                        .HasDefaultValue(new DateTime(2022, 5, 30, 13, 23, 36, 86, DateTimeKind.Local).AddTicks(7158));
 
                     b.Property<DateTime>("DateOfBirth")
-                        .HasColumnType("date");
+                        .HasColumnType("timestamp without time zone");
 
                     b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("timestamp without time zone");
+                        .HasColumnType("timestamp with time zone");
 
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
