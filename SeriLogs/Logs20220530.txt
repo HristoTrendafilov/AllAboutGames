@@ -305,3 +305,45 @@ DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error
 2022-05-30 13:28:07.058 +03:00 [DBG] Connection id "0HMI24S8H747J" disconnecting.
 2022-05-30 13:28:07.059 +03:00 [DBG] Connection id "0HMI24S8H747J" sending FIN because: "The client closed the connection."
 2022-05-30 13:28:07.071 +03:00 [DBG] Connection id "0HMI24S8H747J" stopped.
+2022-05-30 13:33:41.978 +03:00 [DBG] Hosting starting
+2022-05-30 13:33:42.215 +03:00 [INF] Now listening on: http://localhost:6002
+2022-05-30 13:33:42.217 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-05-30 13:33:42.218 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-05-30 13:33:42.219 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-05-30 13:33:42.220 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-30 13:33:42.222 +03:00 [INF] Hosting environment: Development
+2022-05-30 13:33:42.223 +03:00 [INF] Content root path: D:\dev\AllAboutGames\
+2022-05-30 13:33:42.224 +03:00 [DBG] Hosting started
+2022-05-30 13:33:44.681 +03:00 [DBG] Connection id "0HMI24VFNJLNU" received FIN.
+2022-05-30 13:33:44.687 +03:00 [DBG] Connection id "0HMI24VFNJLNU" accepted.
+2022-05-30 13:33:44.689 +03:00 [DBG] Connection id "0HMI24VFNJLNU" started.
+2022-05-30 13:33:44.691 +03:00 [DBG] Connection id "0HMI24VFNJLNV" accepted.
+2022-05-30 13:33:44.691 +03:00 [DBG] Connection id "0HMI24VFNJLNV" started.
+2022-05-30 13:33:44.712 +03:00 [DBG] Connection id "0HMI24VFNJLNU" sending FIN because: "The client closed the connection."
+2022-05-30 13:33:44.716 +03:00 [DBG] Connection id "0HMI24VFNJLNU" disconnecting.
+2022-05-30 13:33:44.722 +03:00 [DBG] Connection id "0HMI24VFNJLNU" stopped.
+2022-05-30 13:33:44.739 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:6002/api/gateway application/json 77
+2022-05-30 13:33:44.766 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-05-30 13:33:44.784 +03:00 [DBG] Connection id "0HMI24VFNJLNV", Request id "0HMI24VFNJLNV:00000002": started reading request body.
+2022-05-30 13:33:44.785 +03:00 [DBG] Connection id "0HMI24VFNJLNV", Request id "0HMI24VFNJLNV:00000002": done reading request body.
+2022-05-30 13:33:44.925 +03:00 [INF] Incoming request: GetUserRequest 
+ JSON: 
+ {"userID":1}
+2022-05-30 13:33:46.652 +03:00 [DBG] Connection id "0HMI24VFNJLNV" completed keep alive response.
+2022-05-30 13:33:46.658 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:6002/api/gateway application/json 77 - 200 - application/json 1922.2769ms
+2022-05-30 13:33:54.432 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:6002/api/gateway application/json 77
+2022-05-30 13:33:54.434 +03:00 [DBG] Connection id "0HMI24VFNJLNV", Request id "0HMI24VFNJLNV:00000003": started reading request body.
+2022-05-30 13:33:54.435 +03:00 [DBG] Connection id "0HMI24VFNJLNV", Request id "0HMI24VFNJLNV:00000003": done reading request body.
+2022-05-30 13:33:54.436 +03:00 [INF] Incoming request: GetUserRequest 
+ JSON: 
+ {"userID":3}
+2022-05-30 13:33:54.582 +03:00 [DBG] Connection id "0HMI24VFNJLNV" completed keep alive response.
+2022-05-30 13:33:54.583 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:6002/api/gateway application/json 77 - 200 - application/json 151.0209ms
+2022-05-30 13:35:49.990 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:6002/api/gateway application/json 77
+2022-05-30 13:35:49.993 +03:00 [DBG] Connection id "0HMI24VFNJLNV", Request id "0HMI24VFNJLNV:00000004": started reading request body.
+2022-05-30 13:35:49.994 +03:00 [DBG] Connection id "0HMI24VFNJLNV", Request id "0HMI24VFNJLNV:00000004": done reading request body.
+2022-05-30 13:35:49.995 +03:00 [INF] Incoming request: GetUserRequest 
+ JSON: 
+ {"userID":1}
+2022-05-30 13:35:50.045 +03:00 [DBG] Connection id "0HMI24VFNJLNV" completed keep alive response.
+2022-05-30 13:35:50.049 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:6002/api/gateway application/json 77 - 200 - application/json 60.3046ms
