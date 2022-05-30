@@ -17,7 +17,6 @@ namespace AllAboutGames.Data.DataContext
 
             this.RemoveCascadeDeletion(modelBuilder);
             this.CreateDefaultValues(modelBuilder);
-            this.CreateColumnTypes(modelBuilder);
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
@@ -35,14 +34,6 @@ namespace AllAboutGames.Data.DataContext
         public DbSet<ForumComment> ForumComments { get; set; }
         public DbSet<ForumLike> ForumLikes { get; set; }
         public DbSet<Role> Roles { get; set; }
-
-        private void CreateColumnTypes(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<ApplicationUser>().Property(x => x.DateOfBirth).HasColumnType("date");
-            modelBuilder.Entity<ApplicationUser>().Property(x => x.CreatedOn).HasColumnType("timestamp without time zone");
-            modelBuilder.Entity<ApplicationUser>().Property(x => x.DeletedOn).HasColumnType("timestamp without time zone");
-
-        }
 
         private void CreateDefaultValues(ModelBuilder modelBuilder)
         {

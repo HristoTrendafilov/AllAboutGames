@@ -18,14 +18,17 @@ namespace AllAboutGames.Data.Models
         public string Password { get; set; }
 
         [Required]
+        [Column(TypeName = "date")]
         public DateTime DateOfBirth { get; set; }
 
         public string? ProfilePicture { get; set; }
 
+        [Column(TypeName = "timestamp without time zone")]
         public DateTime CreatedOn { get; set; }
 
         public bool IsDeleted { get; set; }
 
+        [Column(TypeName = "timestamp without time zone")]
         public DateTime? DeletedOn { get; set; }
 
         [ForeignKey(nameof(Country))]
