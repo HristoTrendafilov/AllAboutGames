@@ -16,7 +16,7 @@ export class RegisterUser extends React.PureComponent {
 
         const gateWay = {
             messageType: 'RegisterUserRequest',
-            messageJson: objectStr
+            messageJson: objectStrss
         }
 
         const toBeSend = JSON.stringify(gateWay);
