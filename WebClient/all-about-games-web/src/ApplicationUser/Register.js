@@ -2,6 +2,7 @@ import {Field, Form, Formik} from 'formik';
 import React from 'react';
 import axios from "axios";
 import * as Validations from '../Infrastructure/ValidationModels';
+import {TextField}  from '../Infrastructure/FormikCustomFields';
 
 export class RegisterUser extends React.PureComponent {
 
@@ -16,7 +17,7 @@ export class RegisterUser extends React.PureComponent {
 
         const gateWay = {
             messageType: 'RegisterUserRequest',
-            messageJson: objectStrss
+            messageJson: objectStr
         }
 
         const toBeSend = JSON.stringify(gateWay);
@@ -50,23 +51,21 @@ export class RegisterUser extends React.PureComponent {
                                 <Form>
 
                                     <div className="row">
-                                        <div className="mb-3 col-xl-6">
-                                            <label className="form-label justify-content-center d-flex">Username</label>
-                                            <Field
-                                                name="username"
-                                                type='input'
-                                                className="form-control"/>
-                                            {errors.username && touched.username && <div style={{color:'red'}}>{errors.username}</div>}
-                                        </div>
 
-                                        <div className="mb-3 col-xl-6">
-                                            <label className="form-label d-flex justify-content-center">Password</label>
-                                            <Field
-                                                name="password"
-                                                type="password"
-                                                className="form-control"/>
-                                            {errors.password && touched.password && <div style={{color:'red'}}>{errors.password}</div>}
-                                        </div>
+                                        <TextField
+                                            name='username'
+                                            label='Username'
+                                            touched = {touched}
+                                            errors={errors}
+                                        />
+
+                                        <TextField
+                                            name='password'
+                                            label='Password'
+                                            type='password'
+                                            touched = {touched}
+                                            errors={errors}
+                                        />
 
                                         <div className="mb-3 col-xl-6">
                                             <label className="form-label d-flex justify-content-center">Date of birth</label>
