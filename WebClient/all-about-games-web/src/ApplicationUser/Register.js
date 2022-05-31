@@ -1,13 +1,12 @@
 import {Field, Form, Formik} from 'formik';
 import React from 'react';
-import * as Yup from 'yup';
 import axios from "axios";
+import * as Validations from '../Infrastructure/ValidationModels';
 
 export class RegisterUser extends React.PureComponent {
 
-
     handleSubmit = async (data) => {
-        console.log('in');
+        console.log(data);
 
         const object = {
 
@@ -27,21 +26,14 @@ export class RegisterUser extends React.PureComponent {
 
     }
 
-    DisplayingErrorMessagesSchema = Yup.object().shape({
-        username: Yup.string()
-            .min(2, 'Too Short!')
-            .max(50, 'Too Long!')
-            .required('username is required'),
-        password: Yup.string().required('password is required'),
-        dateOfBirth: Yup.date()
-            .required('birth date is required'),
-        countryID: Yup.number()
-            .min(1)
-            .required('country is required.')
-    });
-
     render() {
-        const { model } = this.state;
+        const model = {
+            username: '',
+            password: '',
+            dateOfBirth: '',
+            countryID: 0,
+            email: '',
+        }
 
         return (
             <div className='d-flex justify-content-center mt-4'>
@@ -51,11 +43,12 @@ export class RegisterUser extends React.PureComponent {
 
                         <Formik
                             initialValues={{ ...model }}
-                            onSubmit={async (values) => {this.handleSubmit(values)}}
-                            validationSchema={this.DisplayingErrorMessagesSchema}
+                            onSubmit={async (values) => {await this.handleSubmit(values)}}
+                            validationSchema={Validations.RegisterUserValidationSchema}
                         >
-                            {({isSubmitting, errors}) => (
+                            {({isSubmitting, errors, touched}) => (
                                 <Form>
+
                                     <div className="row">
                                         <div className="mb-3 col-xl-6">
                                             <label className="form-label justify-content-center d-flex">Username</label>
@@ -63,25 +56,25 @@ export class RegisterUser extends React.PureComponent {
                                                 name="username"
                                                 type='input'
                                                 className="form-control"/>
-                                            {errors.username && <div style={{color:'red'}}>{errors.username}</div>}
+                                            {errors.username && touched.username && <div style={{color:'red'}}>{errors.username}</div>}
                                         </div>
 
                                         <div className="mb-3 col-xl-6">
-                                            <label className="form-label d-flex justify-content-center">Passwordssss</label>
+                                            <label className="form-label d-flex justify-content-center">Password</label>
                                             <Field
                                                 name="password"
                                                 type="password"
                                                 className="form-control"/>
-                                            {errors.password && <div style={{color:'red'}}>{errors.password}</div>}
+                                            {errors.password && touched.password && <div style={{color:'red'}}>{errors.password}</div>}
                                         </div>
 
                                         <div className="mb-3 col-xl-6">
-                                            <label className="form-label d-flex justify-content-center">Birth date</label>
+                                            <label className="form-label d-flex justify-content-center">Date of birth</label>
                                             <Field
                                                 name="dateOfBirth"
                                                 type="date"
                                                 className="form-control"/>
-                                            {errors.dateOfBirth && <div style={{color:'red'}}>{errors.dateOfBirth}</div>}
+                                            {errors.dateOfBirth && touched.dateOfBirth && <div style={{color:'red'}}>{errors.dateOfBirth}</div>}
                                         </div>
 
                                         <div className="mb-3 col-xl-6">
@@ -92,14 +85,14 @@ export class RegisterUser extends React.PureComponent {
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
                                             </Field>
-                                            {errors.countryID && <div style={{color:'red'}}>{errors.countryID}</div>}
+                                            {errors.countryID && touched.countryID && <div style={{color:'red'}}>{errors.countryID}</div>}
                                         </div>
 
                                         <div className="col-xl-12 text-center">
                                             <button
                                                 type="submit"
                                                 className="btn btn-outline-primary w-50"
-                                            >
+                                                disabled={isSubmitting}>
                                                 Register
                                             </button>
 
