@@ -43,12 +43,13 @@ namespace AllAboutGames.Handlers
                 return GatewayResult.FromErrorMessage(checkResult.GetErrors());
             }
 
-            var saveCheck = await this.UserService.SaveEntityAsync<ApplicationUser>(request.Item);
-            if (saveCheck.IsFailed)
+            var dbUser = this.UserService.GetUser(x => x.Username == request.Item.Username);
+            if (dbUser != null)
             {
-                return GatewayResult.FromErrorMessage(saveCheck.GetErrors());
+                return GatewayResult.FromErrorMessage($"There already exist user with username: {request.Item.Username}");
             }
 
+            var saveCheck = await this.UserService.SaveEntityAsync<ApplicationUser>(request.Item);
             await this.UserService.SaveChangesAsync();
 
             return GatewayResult.SuccessfulResult(new RegisterUserRequest());
@@ -95,7 +96,7 @@ namespace AllAboutGames.Handlers
         public long UserID { get; set; }
     }
 
-    public class GetUserResponse 
+    public class GetUserResponse
     {
         public UserDTO UserDTO { get; set; }
     }

@@ -1,0 +1,421 @@
+﻿2022-06-06 18:38:11.957 +03:00 [DBG] Hosting starting
+2022-06-06 18:38:12.435 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-06 18:38:12.439 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-06 18:38:12.442 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-06 18:38:12.444 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-06 18:38:12.445 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-06 18:38:12.446 +03:00 [INF] Hosting environment: Development
+2022-06-06 18:38:12.447 +03:00 [INF] Content root path: D:\Projects\
+2022-06-06 18:38:12.448 +03:00 [DBG] Hosting started
+2022-06-06 18:38:38.133 +03:00 [DBG] Connection id "0HMI7QAG1NN9O" accepted.
+2022-06-06 18:38:38.159 +03:00 [DBG] Connection id "0HMI7QAG1NN9O" started.
+2022-06-06 18:38:38.345 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 200
+2022-06-06 18:38:38.472 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-06 18:38:38.641 +03:00 [DBG] Connection id "0HMI7QAG1NN9O", Request id "0HMI7QAG1NN9O:00000002": started reading request body.
+2022-06-06 18:38:38.645 +03:00 [DBG] Connection id "0HMI7QAG1NN9O", Request id "0HMI7QAG1NN9O:00000002": done reading request body.
+2022-06-06 18:38:39.415 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"ss","dateOfBirth":"2022-06-01","countryID":"2","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-06 18:38:40.978 +03:00 [DBG] Connection id "0HMI7QAG1NN9O" completed keep alive response.
+2022-06-06 18:38:40.989 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 200 - 200 - application/json 2654.8500ms
+2022-06-06 18:38:42.328 +03:00 [DBG] Connection id "0HMI7QAG1NN9O" received FIN.
+2022-06-06 18:38:42.351 +03:00 [DBG] Connection id "0HMI7QAG1NN9O" sending FIN because: "The client closed the connection."
+2022-06-06 18:38:42.355 +03:00 [DBG] Connection id "0HMI7QAG1NN9O" disconnecting.
+2022-06-06 18:38:42.360 +03:00 [DBG] Connection id "0HMI7QAG1NN9O" stopped.
+2022-06-06 18:58:58.207 +03:00 [DBG] Hosting starting
+2022-06-06 18:58:58.409 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-06 18:58:58.413 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-06 18:58:58.416 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-06 18:58:58.418 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-06 18:58:58.422 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-06 18:58:58.424 +03:00 [INF] Hosting environment: Development
+2022-06-06 18:58:58.427 +03:00 [INF] Content root path: D:\Projects\
+2022-06-06 18:58:58.429 +03:00 [DBG] Hosting started
+2022-06-06 18:59:13.343 +03:00 [DBG] Connection id "0HMI7QM05LQ8O" accepted.
+2022-06-06 18:59:13.347 +03:00 [DBG] Connection id "0HMI7QM05LQ8O" started.
+2022-06-06 18:59:13.432 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 200
+2022-06-06 18:59:13.479 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-06 18:59:13.503 +03:00 [DBG] Connection id "0HMI7QM05LQ8O", Request id "0HMI7QM05LQ8O:00000002": started reading request body.
+2022-06-06 18:59:13.507 +03:00 [DBG] Connection id "0HMI7QM05LQ8O", Request id "0HMI7QM05LQ8O:00000002": done reading request body.
+2022-06-06 18:59:13.735 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"ss","dateOfBirth":"2022-06-01","countryID":"2","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-06 18:59:14.202 +03:00 [DBG] Connection id "0HMI7QM05LQ8O" completed keep alive response.
+2022-06-06 18:59:14.208 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 200 - 200 - application/json 783.4737ms
+2022-06-06 18:59:24.162 +03:00 [DBG] Connection id "0HMI7QM05LQ8O" received FIN.
+2022-06-06 18:59:24.179 +03:00 [DBG] Connection id "0HMI7QM05LQ8O" sending FIN because: "The client closed the connection."
+2022-06-06 18:59:24.182 +03:00 [DBG] Connection id "0HMI7QM05LQ8O" disconnecting.
+2022-06-06 18:59:24.185 +03:00 [DBG] Connection id "0HMI7QM05LQ8O" stopped.
+2022-06-06 18:59:48.592 +03:00 [DBG] Connection id "0HMI7QM05LQ8P" accepted.
+2022-06-06 18:59:48.605 +03:00 [DBG] Connection id "0HMI7QM05LQ8P" started.
+2022-06-06 18:59:48.617 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 200
+2022-06-06 18:59:48.632 +03:00 [DBG] Connection id "0HMI7QM05LQ8P", Request id "0HMI7QM05LQ8P:00000002": started reading request body.
+2022-06-06 18:59:48.661 +03:00 [DBG] Connection id "0HMI7QM05LQ8P", Request id "0HMI7QM05LQ8P:00000002": done reading request body.
+2022-06-06 18:59:48.667 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"ss","dateOfBirth":"2022-06-01","countryID":"2","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-06 18:59:48.682 +03:00 [DBG] Connection id "0HMI7QM05LQ8P" completed keep alive response.
+2022-06-06 18:59:48.686 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 200 - 200 - application/json 69.1594ms
+2022-06-06 18:59:54.201 +03:00 [DBG] Connection id "0HMI7QM05LQ8P" received FIN.
+2022-06-06 18:59:54.207 +03:00 [DBG] Connection id "0HMI7QM05LQ8P" disconnecting.
+2022-06-06 18:59:54.212 +03:00 [DBG] Connection id "0HMI7QM05LQ8P" sending FIN because: "The client closed the connection."
+2022-06-06 18:59:54.228 +03:00 [DBG] Connection id "0HMI7QM05LQ8P" stopped.
+2022-06-06 19:17:54.218 +03:00 [DBG] Connection id "0HMI7QM05LQ8Q" accepted.
+2022-06-06 19:17:54.235 +03:00 [DBG] Connection id "0HMI7QM05LQ8Q" started.
+2022-06-06 19:17:54.247 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 191
+2022-06-06 19:17:54.249 +03:00 [DBG] Connection id "0HMI7QM05LQ8Q", Request id "0HMI7QM05LQ8Q:00000002": started reading request body.
+2022-06-06 19:17:54.250 +03:00 [DBG] Connection id "0HMI7QM05LQ8Q", Request id "0HMI7QM05LQ8Q:00000002": done reading request body.
+2022-06-06 19:17:54.252 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"sss","dateOfBirth":"2022-06-14","countryID":"1","email":"hristot@smart-ss.org"}}
+2022-06-06 19:17:54.262 +03:00 [DBG] Connection id "0HMI7QM05LQ8Q" completed keep alive response.
+2022-06-06 19:17:54.273 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 191 - 200 - application/json 25.5847ms
+2022-06-06 19:18:57.859 +03:00 [DBG] Hosting starting
+2022-06-06 19:18:58.038 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-06 19:18:58.042 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-06 19:18:58.043 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-06 19:18:58.045 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-06 19:18:58.047 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-06 19:18:58.049 +03:00 [INF] Hosting environment: Development
+2022-06-06 19:18:58.051 +03:00 [INF] Content root path: D:\Projects\
+2022-06-06 19:18:58.054 +03:00 [DBG] Hosting started
+2022-06-06 19:19:18.445 +03:00 [DBG] Connection id "0HMI7R17AE4P4" accepted.
+2022-06-06 19:19:18.465 +03:00 [DBG] Connection id "0HMI7R17AE4P4" started.
+2022-06-06 19:19:18.560 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 191
+2022-06-06 19:19:18.622 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-06 19:19:18.668 +03:00 [DBG] Connection id "0HMI7R17AE4P4", Request id "0HMI7R17AE4P4:00000002": started reading request body.
+2022-06-06 19:19:18.674 +03:00 [DBG] Connection id "0HMI7R17AE4P4", Request id "0HMI7R17AE4P4:00000002": done reading request body.
+2022-06-06 19:19:18.916 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"sss","dateOfBirth":"2022-06-14","countryID":"1","email":"hristot@smart-ss.org"}}
+2022-06-06 19:19:19.340 +03:00 [DBG] Connection id "0HMI7R17AE4P4" completed keep alive response.
+2022-06-06 19:19:19.346 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 191 - 200 - application/json 789.4492ms
+2022-06-06 19:20:41.059 +03:00 [DBG] Hosting starting
+2022-06-06 19:20:41.241 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-06 19:20:41.246 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-06 19:20:41.249 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-06 19:20:41.250 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-06 19:20:41.252 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-06 19:20:41.254 +03:00 [INF] Hosting environment: Development
+2022-06-06 19:20:41.257 +03:00 [INF] Content root path: D:\Projects\
+2022-06-06 19:20:41.261 +03:00 [DBG] Hosting started
+2022-06-06 19:20:49.812 +03:00 [DBG] Connection id "0HMI7R22HP94L" accepted.
+2022-06-06 19:20:49.816 +03:00 [DBG] Connection id "0HMI7R22HP94L" started.
+2022-06-06 19:20:49.884 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 191
+2022-06-06 19:20:49.921 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-06 19:20:49.946 +03:00 [DBG] Connection id "0HMI7R22HP94L", Request id "0HMI7R22HP94L:00000002": started reading request body.
+2022-06-06 19:20:49.951 +03:00 [DBG] Connection id "0HMI7R22HP94L", Request id "0HMI7R22HP94L:00000002": done reading request body.
+2022-06-06 19:20:50.147 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"sss","dateOfBirth":"2022-06-14","countryID":"1","email":"hristot@smart-ss.org"}}
+2022-06-06 19:20:50.577 +03:00 [DBG] Connection id "0HMI7R22HP94L" completed keep alive response.
+2022-06-06 19:20:50.585 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 191 - 200 - application/json 704.8760ms
+2022-06-06 19:24:26.320 +03:00 [DBG] Connection id "0HMI7R22HP94L" received FIN.
+2022-06-06 19:24:26.343 +03:00 [DBG] Connection id "0HMI7R22HP94L" disconnecting.
+2022-06-06 19:24:26.349 +03:00 [DBG] Connection id "0HMI7R22HP94L" sending FIN because: "The client closed the connection."
+2022-06-06 19:24:26.361 +03:00 [DBG] Connection id "0HMI7R22HP94L" stopped.
+2022-06-06 19:27:02.287 +03:00 [DBG] Hosting starting
+2022-06-06 19:27:02.414 +03:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Cors.Infrastructure.ICorsService' while attempting to activate 'Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2022-06-06 19:30:51.529 +03:00 [DBG] Hosting starting
+2022-06-06 19:30:51.819 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-06 19:30:51.821 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-06 19:30:51.822 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-06 19:30:51.824 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-06 19:30:51.825 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-06 19:30:51.826 +03:00 [INF] Hosting environment: Development
+2022-06-06 19:30:51.827 +03:00 [INF] Content root path: D:\Projects\
+2022-06-06 19:30:51.829 +03:00 [DBG] Hosting started
+2022-06-06 19:30:58.192 +03:00 [DBG] Connection id "0HMI7R7NRLKV0" accepted.
+2022-06-06 19:30:58.197 +03:00 [DBG] Connection id "0HMI7R7NRLKV0" started.
+2022-06-06 19:30:58.321 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 191
+2022-06-06 19:30:58.381 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-06 19:30:58.430 +03:00 [DBG] Connection id "0HMI7R7NRLKV0", Request id "0HMI7R7NRLKV0:00000002": started reading request body.
+2022-06-06 19:30:58.433 +03:00 [DBG] Connection id "0HMI7R7NRLKV0", Request id "0HMI7R7NRLKV0:00000002": done reading request body.
+2022-06-06 19:30:58.832 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"sss","dateOfBirth":"2022-06-14","countryID":"1","email":"hristot@smart-ss.org"}}
+2022-06-06 19:30:59.806 +03:00 [DBG] Connection id "0HMI7R7NRLKV0" completed keep alive response.
+2022-06-06 19:30:59.816 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 191 - 200 - application/json 1502.0751ms
+2022-06-06 19:31:01.897 +03:00 [DBG] Connection id "0HMI7R7NRLKV0" received FIN.
+2022-06-06 19:31:01.915 +03:00 [DBG] Connection id "0HMI7R7NRLKV0" sending FIN because: "The client closed the connection."
+2022-06-06 19:31:01.918 +03:00 [DBG] Connection id "0HMI7R7NRLKV0" disconnecting.
+2022-06-06 19:31:01.923 +03:00 [DBG] Connection id "0HMI7R7NRLKV0" stopped.
+2022-06-06 19:34:23.110 +03:00 [DBG] Connection id "0HMI7R7NRLKV1" accepted.
+2022-06-06 19:34:23.131 +03:00 [DBG] Connection id "0HMI7R7NRLKV1" started.
+2022-06-06 19:34:23.143 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 190
+2022-06-06 19:34:23.152 +03:00 [DBG] Connection id "0HMI7R7NRLKV1", Request id "0HMI7R7NRLKV1:00000002": started reading request body.
+2022-06-06 19:34:23.181 +03:00 [DBG] Connection id "0HMI7R7NRLKV1", Request id "0HMI7R7NRLKV1:00000002": done reading request body.
+2022-06-06 19:34:23.184 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"ss","dateOfBirth":"2022-06-09","countryID":"1","email":"hristot@smart-ss.org"}}
+2022-06-06 19:34:23.212 +03:00 [DBG] Connection id "0HMI7R7NRLKV1" completed keep alive response.
+2022-06-06 19:34:23.216 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 190 - 200 - application/json 72.2085ms
+2022-06-06 19:34:32.152 +03:00 [DBG] Connection id "0HMI7R7NRLKV1" received FIN.
+2022-06-06 19:34:32.156 +03:00 [DBG] Connection id "0HMI7R7NRLKV1" sending FIN because: "The client closed the connection."
+2022-06-06 19:34:32.160 +03:00 [DBG] Connection id "0HMI7R7NRLKV1" disconnecting.
+2022-06-06 19:34:32.162 +03:00 [DBG] Connection id "0HMI7R7NRLKV1" stopped.
+2022-06-06 19:38:21.497 +03:00 [DBG] Connection id "0HMI7R7NRLKV2" accepted.
+2022-06-06 19:38:21.513 +03:00 [DBG] Connection id "0HMI7R7NRLKV2" started.
+2022-06-06 19:38:21.527 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 190
+2022-06-06 19:38:21.533 +03:00 [DBG] Connection id "0HMI7R7NRLKV2", Request id "0HMI7R7NRLKV2:00000002": started reading request body.
+2022-06-06 19:38:21.537 +03:00 [DBG] Connection id "0HMI7R7NRLKV2", Request id "0HMI7R7NRLKV2:00000002": done reading request body.
+2022-06-06 19:38:21.541 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"aa","dateOfBirth":"2022-06-08","countryID":"2","email":"support@smart-ss.org"}}
+2022-06-06 19:38:21.580 +03:00 [DBG] Connection id "0HMI7R7NRLKV2" completed keep alive response.
+2022-06-06 19:38:21.597 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 190 - 200 - application/json 70.1968ms
+2022-06-06 19:38:27.527 +03:00 [DBG] Connection id "0HMI7R7NRLKV2" received FIN.
+2022-06-06 19:38:27.531 +03:00 [DBG] Connection id "0HMI7R7NRLKV2" disconnecting.
+2022-06-06 19:38:27.544 +03:00 [DBG] Connection id "0HMI7R7NRLKV2" sending FIN because: "The client closed the connection."
+2022-06-06 19:38:27.550 +03:00 [DBG] Connection id "0HMI7R7NRLKV2" stopped.
+2022-06-06 19:43:40.891 +03:00 [DBG] Connection id "0HMI7R7NRLKV3" accepted.
+2022-06-06 19:43:40.899 +03:00 [DBG] Connection id "0HMI7R7NRLKV3" started.
+2022-06-06 19:43:40.904 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 175
+2022-06-06 19:43:40.905 +03:00 [DBG] Connection id "0HMI7R7NRLKV3", Request id "0HMI7R7NRLKV3:00000002": started reading request body.
+2022-06-06 19:43:40.906 +03:00 [DBG] Connection id "0HMI7R7NRLKV3", Request id "0HMI7R7NRLKV3:00000002": done reading request body.
+2022-06-06 19:43:40.907 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"ss","dateOfBirth":"2022-06-08","countryID":"2","email":"ss@ss"}}
+2022-06-06 19:43:40.911 +03:00 [DBG] Connection id "0HMI7R7NRLKV3" completed keep alive response.
+2022-06-06 19:43:40.916 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 175 - 200 - application/json 12.3527ms
+2022-06-06 19:45:31.591 +03:00 [DBG] Hosting starting
+2022-06-06 19:45:31.742 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-06 19:45:31.745 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-06 19:45:31.747 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-06 19:45:31.748 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-06 19:45:31.749 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-06 19:45:31.750 +03:00 [INF] Hosting environment: Development
+2022-06-06 19:45:31.751 +03:00 [INF] Content root path: D:\Projects\
+2022-06-06 19:45:31.751 +03:00 [DBG] Hosting started
+2022-06-06 19:45:42.649 +03:00 [DBG] Connection id "0HMI7RFVEJ40N" accepted.
+2022-06-06 19:45:42.652 +03:00 [DBG] Connection id "0HMI7RFVEJ40N" started.
+2022-06-06 19:45:42.690 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 175
+2022-06-06 19:45:42.712 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-06 19:45:42.730 +03:00 [DBG] Connection id "0HMI7RFVEJ40N", Request id "0HMI7RFVEJ40N:00000002": started reading request body.
+2022-06-06 19:45:42.734 +03:00 [DBG] Connection id "0HMI7RFVEJ40N", Request id "0HMI7RFVEJ40N:00000002": done reading request body.
+2022-06-06 19:45:42.854 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"ss","dateOfBirth":"2022-06-08","countryID":"2","email":"ss@ss"}}
+2022-06-06 19:45:43.156 +03:00 [DBG] Connection id "0HMI7RFVEJ40N" completed keep alive response.
+2022-06-06 19:45:43.160 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 175 - 200 - application/json 472.1677ms
+2022-06-06 19:49:23.229 +03:00 [DBG] Connection id "0HMI7RFVEJ40O" accepted.
+2022-06-06 19:49:23.237 +03:00 [DBG] Connection id "0HMI7RFVEJ40O" started.
+2022-06-06 19:49:23.248 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/ - -
+2022-06-06 19:49:23.274 +03:00 [WRN] Failed to determine the https port for redirect.
+2022-06-06 19:49:23.281 +03:00 [DBG] Connection id "0HMI7RFVEJ40O" completed keep alive response.
+2022-06-06 19:49:23.282 +03:00 [DBG] Connection id "0HMI7RFVEJ40O" received FIN.
+2022-06-06 19:49:23.283 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/ - - - 404 0 - 34.8155ms
+2022-06-06 19:49:23.285 +03:00 [DBG] Connection id "0HMI7RFVEJ40O" sending FIN because: "The client closed the connection."
+2022-06-06 19:49:23.287 +03:00 [DBG] Connection id "0HMI7RFVEJ40O" disconnecting.
+2022-06-06 19:49:23.289 +03:00 [DBG] Connection id "0HMI7RFVEJ40O" stopped.
+2022-06-06 19:51:03.341 +03:00 [DBG] Connection id "0HMI7RFVEJ40N" received FIN.
+2022-06-06 19:51:03.354 +03:00 [DBG] Connection id "0HMI7RFVEJ40N" sending FIN because: "The client closed the connection."
+2022-06-06 19:51:03.368 +03:00 [DBG] Connection id "0HMI7RFVEJ40N" disconnecting.
+2022-06-06 19:51:03.370 +03:00 [DBG] Connection id "0HMI7RFVEJ40N" stopped.
+2022-06-06 19:51:03.637 +03:00 [DBG] Connection id "0HMI7RFVEJ40P" accepted.
+2022-06-06 19:51:03.642 +03:00 [DBG] Connection id "0HMI7RFVEJ40P" started.
+2022-06-06 19:51:03.650 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/ - -
+2022-06-06 19:51:03.652 +03:00 [DBG] Connection id "0HMI7RFVEJ40P" completed keep alive response.
+2022-06-06 19:51:03.652 +03:00 [DBG] Connection id "0HMI7RFVEJ40P" received FIN.
+2022-06-06 19:51:03.653 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/ - - - 404 0 - 3.8273ms
+2022-06-06 19:51:03.655 +03:00 [DBG] Connection id "0HMI7RFVEJ40P" sending FIN because: "The client closed the connection."
+2022-06-06 19:51:03.657 +03:00 [DBG] Connection id "0HMI7RFVEJ40P" disconnecting.
+2022-06-06 19:51:03.658 +03:00 [DBG] Connection id "0HMI7RFVEJ40P" stopped.
+2022-06-06 19:51:35.901 +03:00 [DBG] Connection id "0HMI7RFVEJ40Q" accepted.
+2022-06-06 19:51:35.907 +03:00 [DBG] Connection id "0HMI7RFVEJ40Q" started.
+2022-06-06 19:51:35.911 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/ - -
+2022-06-06 19:51:35.913 +03:00 [DBG] Connection id "0HMI7RFVEJ40Q" completed keep alive response.
+2022-06-06 19:51:35.920 +03:00 [DBG] Connection id "0HMI7RFVEJ40Q" received FIN.
+2022-06-06 19:51:35.920 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/ - - - 404 0 - 8.3646ms
+2022-06-06 19:51:35.924 +03:00 [DBG] Connection id "0HMI7RFVEJ40Q" sending FIN because: "The client closed the connection."
+2022-06-06 19:51:35.926 +03:00 [DBG] Connection id "0HMI7RFVEJ40Q" disconnecting.
+2022-06-06 19:51:35.928 +03:00 [DBG] Connection id "0HMI7RFVEJ40Q" stopped.
+2022-06-06 19:51:38.635 +03:00 [DBG] Connection id "0HMI7RFVEJ40R" accepted.
+2022-06-06 19:51:38.636 +03:00 [DBG] Connection id "0HMI7RFVEJ40R" started.
+2022-06-06 19:51:38.639 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/ - -
+2022-06-06 19:51:38.641 +03:00 [DBG] Connection id "0HMI7RFVEJ40R" completed keep alive response.
+2022-06-06 19:51:38.641 +03:00 [DBG] Connection id "0HMI7RFVEJ40R" received FIN.
+2022-06-06 19:51:38.643 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/ - - - 404 0 - 4.0448ms
+2022-06-06 19:51:38.644 +03:00 [DBG] Connection id "0HMI7RFVEJ40R" sending FIN because: "The client closed the connection."
+2022-06-06 19:51:38.646 +03:00 [DBG] Connection id "0HMI7RFVEJ40R" disconnecting.
+2022-06-06 19:51:38.648 +03:00 [DBG] Connection id "0HMI7RFVEJ40R" stopped.
+2022-06-06 19:51:40.204 +03:00 [DBG] Connection id "0HMI7RFVEJ40S" accepted.
+2022-06-06 19:51:40.205 +03:00 [DBG] Connection id "0HMI7RFVEJ40S" started.
+2022-06-06 19:51:40.208 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/ - -
+2022-06-06 19:51:40.210 +03:00 [DBG] Connection id "0HMI7RFVEJ40S" completed keep alive response.
+2022-06-06 19:51:40.210 +03:00 [DBG] Connection id "0HMI7RFVEJ40S" received FIN.
+2022-06-06 19:51:40.211 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/ - - - 404 0 - 2.8664ms
+2022-06-06 19:51:40.212 +03:00 [DBG] Connection id "0HMI7RFVEJ40S" sending FIN because: "The client closed the connection."
+2022-06-06 19:51:40.213 +03:00 [DBG] Connection id "0HMI7RFVEJ40S" disconnecting.
+2022-06-06 19:51:40.215 +03:00 [DBG] Connection id "0HMI7RFVEJ40S" stopped.
+2022-06-06 19:51:49.664 +03:00 [DBG] Connection id "0HMI7RFVEJ40T" accepted.
+2022-06-06 19:51:49.665 +03:00 [DBG] Connection id "0HMI7RFVEJ40T" started.
+2022-06-06 19:51:49.686 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/ - -
+2022-06-06 19:51:49.688 +03:00 [DBG] Connection id "0HMI7RFVEJ40T" completed keep alive response.
+2022-06-06 19:51:49.688 +03:00 [DBG] Connection id "0HMI7RFVEJ40T" received FIN.
+2022-06-06 19:51:49.690 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/ - - - 404 0 - 4.2317ms
+2022-06-06 19:51:49.691 +03:00 [DBG] Connection id "0HMI7RFVEJ40T" sending FIN because: "The client closed the connection."
+2022-06-06 19:51:49.694 +03:00 [DBG] Connection id "0HMI7RFVEJ40T" disconnecting.
+2022-06-06 19:51:49.695 +03:00 [DBG] Connection id "0HMI7RFVEJ40T" stopped.
+2022-06-06 19:53:18.451 +03:00 [DBG] Hosting starting
+2022-06-06 19:53:18.553 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-06 19:53:18.555 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-06 19:53:18.557 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-06 19:53:18.558 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-06 19:53:18.559 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-06 19:53:18.560 +03:00 [INF] Hosting environment: Development
+2022-06-06 19:53:18.560 +03:00 [INF] Content root path: D:\Projects\
+2022-06-06 19:53:18.561 +03:00 [DBG] Hosting started
+2022-06-06 19:53:27.691 +03:00 [DBG] Connection id "0HMI7RKA1IOHU" accepted.
+2022-06-06 19:53:27.694 +03:00 [DBG] Connection id "0HMI7RKA1IOHU" started.
+2022-06-06 19:53:27.735 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/ - -
+2022-06-06 19:53:27.772 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-06 19:53:27.788 +03:00 [WRN] Failed to determine the https port for redirect.
+2022-06-06 19:53:27.799 +03:00 [DBG] Connection id "0HMI7RKA1IOHU" completed keep alive response.
+2022-06-06 19:53:27.800 +03:00 [DBG] Connection id "0HMI7RKA1IOHU" received FIN.
+2022-06-06 19:53:27.802 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/ - - - 404 0 - 68.5986ms
+2022-06-06 19:53:27.818 +03:00 [DBG] Connection id "0HMI7RKA1IOHU" sending FIN because: "The client closed the connection."
+2022-06-06 19:53:27.821 +03:00 [DBG] Connection id "0HMI7RKA1IOHU" disconnecting.
+2022-06-06 19:53:27.823 +03:00 [DBG] Connection id "0HMI7RKA1IOHU" stopped.
+2022-06-06 19:54:25.302 +03:00 [INF] Application is shutting down...
+2022-06-06 19:54:25.312 +03:00 [DBG] Hosting stopping
+2022-06-06 19:54:25.332 +03:00 [DBG] Hosting stopped
+2022-06-06 19:54:30.284 +03:00 [DBG] Hosting starting
+2022-06-06 19:54:30.402 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-06 19:54:30.404 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-06 19:54:30.404 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-06 19:54:30.405 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-06 19:54:30.406 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-06 19:54:30.406 +03:00 [INF] Hosting environment: Development
+2022-06-06 19:54:30.407 +03:00 [INF] Content root path: D:\Projects\
+2022-06-06 19:54:30.408 +03:00 [DBG] Hosting started
+2022-06-06 19:54:53.394 +03:00 [DBG] Connection id "0HMI7RL3IT1U0" accepted.
+2022-06-06 19:54:53.404 +03:00 [DBG] Connection id "0HMI7RL3IT1U0" started.
+2022-06-06 19:54:53.452 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost/ - -
+2022-06-06 19:54:53.485 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-06 19:54:53.507 +03:00 [WRN] Failed to determine the https port for redirect.
+2022-06-06 19:54:53.519 +03:00 [DBG] Connection id "0HMI7RL3IT1U0" completed keep alive response.
+2022-06-06 19:54:53.531 +03:00 [DBG] Connection id "0HMI7RL3IT1U0" received FIN.
+2022-06-06 19:54:53.532 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost/ - - - 404 0 - 81.0233ms
+2022-06-06 19:54:53.544 +03:00 [DBG] Connection id "0HMI7RL3IT1U0" sending FIN because: "The client closed the connection."
+2022-06-06 19:54:53.546 +03:00 [DBG] Connection id "0HMI7RL3IT1U0" disconnecting.
+2022-06-06 19:54:53.547 +03:00 [DBG] Connection id "0HMI7RL3IT1U0" stopped.
+2022-06-06 19:57:24.154 +03:00 [DBG] Connection id "0HMI7RL3IT1U1" accepted.
+2022-06-06 19:57:24.160 +03:00 [DBG] Connection id "0HMI7RL3IT1U1" started.
+2022-06-06 19:57:24.165 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 191
+2022-06-06 19:57:24.179 +03:00 [DBG] Connection id "0HMI7RL3IT1U1", Request id "0HMI7RL3IT1U1:00000002": started reading request body.
+2022-06-06 19:57:24.180 +03:00 [DBG] Connection id "0HMI7RL3IT1U1", Request id "0HMI7RL3IT1U1:00000002": done reading request body.
+2022-06-06 19:57:24.306 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"aaa","dateOfBirth":"2022-06-08","countryID":"1","email":"hristot@smart-ss.org"}}
+2022-06-06 19:57:24.591 +03:00 [DBG] Connection id "0HMI7RL3IT1U1" completed keep alive response.
+2022-06-06 19:57:24.595 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 191 - 200 - application/json 430.1866ms
+2022-06-06 19:59:48.856 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 176
+2022-06-06 19:59:48.858 +03:00 [DBG] Connection id "0HMI7RL3IT1U1", Request id "0HMI7RL3IT1U1:00000003": started reading request body.
+2022-06-06 19:59:48.859 +03:00 [DBG] Connection id "0HMI7RL3IT1U1", Request id "0HMI7RL3IT1U1:00000003": done reading request body.
+2022-06-06 19:59:48.860 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"aa","dateOfBirth":"2022-06-16","countryID":"1","email":"dd@sss"}}
+2022-06-06 19:59:48.870 +03:00 [DBG] Connection id "0HMI7RL3IT1U1" completed keep alive response.
+2022-06-06 19:59:48.872 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 176 - 200 - application/json 15.9579ms
+2022-06-06 20:04:16.105 +03:00 [DBG] Hosting starting
+2022-06-06 20:04:16.294 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-06 20:04:16.297 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-06 20:04:16.298 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-06 20:04:16.299 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-06 20:04:16.301 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-06 20:04:16.302 +03:00 [INF] Hosting environment: Development
+2022-06-06 20:04:16.303 +03:00 [INF] Content root path: D:\Projects\
+2022-06-06 20:04:16.304 +03:00 [DBG] Hosting started
+2022-06-06 20:04:23.298 +03:00 [DBG] Connection id "0HMI7RQDDU14G" accepted.
+2022-06-06 20:04:23.301 +03:00 [DBG] Connection id "0HMI7RQDDU14G" started.
+2022-06-06 20:04:23.348 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 176
+2022-06-06 20:04:23.374 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-06 20:04:23.395 +03:00 [DBG] Connection id "0HMI7RQDDU14G", Request id "0HMI7RQDDU14G:00000002": started reading request body.
+2022-06-06 20:04:23.397 +03:00 [DBG] Connection id "0HMI7RQDDU14G", Request id "0HMI7RQDDU14G:00000002": done reading request body.
+2022-06-06 20:04:23.535 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"aa","dateOfBirth":"2022-06-16","countryID":"1","email":"dd@sss"}}
+2022-06-06 20:04:23.661 +03:00 [DBG] Connection id "0HMI7RQDDU14H" accepted.
+2022-06-06 20:04:23.664 +03:00 [DBG] Connection id "0HMI7RQDDU14H" started.
+2022-06-06 20:04:23.669 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 176
+2022-06-06 20:04:23.672 +03:00 [DBG] Connection id "0HMI7RQDDU14H", Request id "0HMI7RQDDU14H:00000002": started reading request body.
+2022-06-06 20:04:23.681 +03:00 [DBG] Connection id "0HMI7RQDDU14H", Request id "0HMI7RQDDU14H:00000002": done reading request body.
+2022-06-06 20:04:23.682 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"aa","dateOfBirth":"2022-06-16","countryID":"1","email":"dd@sss"}}
+2022-06-06 20:04:23.869 +03:00 [DBG] Connection id "0HMI7RQDDU14G" completed keep alive response.
+2022-06-06 20:04:23.869 +03:00 [DBG] Connection id "0HMI7RQDDU14H" completed keep alive response.
+2022-06-06 20:04:23.873 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 176 - 200 - application/json 528.4276ms
+2022-06-06 20:04:23.873 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 176 - 200 - application/json 203.1645ms
+2022-06-06 20:04:49.778 +03:00 [DBG] Connection id "0HMI7RQDDU14H" received FIN.
+2022-06-06 20:04:49.778 +03:00 [DBG] Connection id "0HMI7RQDDU14G" received FIN.
+2022-06-06 20:04:49.825 +03:00 [DBG] Connection id "0HMI7RQDDU14H" sending FIN because: "The client closed the connection."
+2022-06-06 20:04:49.827 +03:00 [DBG] Connection id "0HMI7RQDDU14G" sending FIN because: "The client closed the connection."
+2022-06-06 20:04:49.838 +03:00 [DBG] Connection id "0HMI7RQDDU14H" disconnecting.
+2022-06-06 20:04:49.838 +03:00 [DBG] Connection id "0HMI7RQDDU14G" disconnecting.
+2022-06-06 20:04:49.840 +03:00 [DBG] Connection id "0HMI7RQDDU14H" stopped.
+2022-06-06 20:04:49.840 +03:00 [DBG] Connection id "0HMI7RQDDU14G" stopped.
+2022-06-06 20:05:00.082 +03:00 [DBG] Connection id "0HMI7RQDDU14I" accepted.
+2022-06-06 20:05:00.083 +03:00 [DBG] Connection id "0HMI7RQDDU14I" started.
+2022-06-06 20:05:00.085 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 189
+2022-06-06 20:05:00.086 +03:00 [DBG] Connection id "0HMI7RQDDU14I", Request id "0HMI7RQDDU14I:00000002": started reading request body.
+2022-06-06 20:05:00.087 +03:00 [DBG] Connection id "0HMI7RQDDU14I", Request id "0HMI7RQDDU14I:00000002": done reading request body.
+2022-06-06 20:05:00.088 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"s","dateOfBirth":"2022-06-20","countryID":"2","email":"support@smart-ss.org"}}
+2022-06-06 20:05:00.096 +03:00 [DBG] Connection id "0HMI7RQDDU14I" completed keep alive response.
+2022-06-06 20:05:00.097 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 189 - 200 - application/json 11.9207ms
+2022-06-06 20:07:44.977 +03:00 [DBG] Connection id "0HMI7RQDDU14I" received FIN.
+2022-06-06 20:07:48.527 +03:00 [DBG] Hosting starting
+2022-06-06 20:07:48.633 +03:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider' while attempting to activate 'Microsoft.AspNetCore.Authentication.AuthenticationMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2022-06-06 20:08:31.074 +03:00 [DBG] Hosting starting
+2022-06-06 20:08:31.180 +03:00 [FTL] Application startup exception
+System.InvalidOperationException: Unable to resolve service for type 'Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider' while attempting to activate 'Microsoft.AspNetCore.Authentication.AuthenticationMiddleware'.
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.<ConfigureApplication>b__27_0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2022-06-06 20:10:44.085 +03:00 [DBG] Hosting starting
+2022-06-06 20:10:44.270 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-06 20:10:44.272 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-06 20:10:44.273 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-06 20:10:44.273 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-06 20:10:44.274 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-06 20:10:44.275 +03:00 [INF] Hosting environment: Development
+2022-06-06 20:10:44.276 +03:00 [INF] Content root path: D:\Projects\
+2022-06-06 20:10:44.276 +03:00 [DBG] Hosting started
+2022-06-06 20:10:52.120 +03:00 [DBG] Connection id "0HMI7RU1A175A" accepted.
+2022-06-06 20:10:52.123 +03:00 [DBG] Connection id "0HMI7RU1A175A" started.
+2022-06-06 20:10:52.170 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 189
+2022-06-06 20:10:52.193 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-06 20:10:52.213 +03:00 [DBG] Connection id "0HMI7RU1A175A", Request id "0HMI7RU1A175A:00000002": started reading request body.
+2022-06-06 20:10:52.215 +03:00 [DBG] Connection id "0HMI7RU1A175A", Request id "0HMI7RU1A175A:00000002": done reading request body.
+2022-06-06 20:10:52.345 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"","password":"s","dateOfBirth":"2022-06-20","countryID":"2","email":"support@smart-ss.org"}}
+2022-06-06 20:10:52.649 +03:00 [DBG] Connection id "0HMI7RU1A175A" completed keep alive response.
+2022-06-06 20:10:52.652 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 189 - 200 - application/json 484.7421ms
+2022-06-06 20:11:00.260 +03:00 [DBG] Connection id "0HMI7RU1A175A" received FIN.
+2022-06-06 20:11:00.274 +03:00 [DBG] Connection id "0HMI7RU1A175A" sending FIN because: "The client closed the connection."
+2022-06-06 20:11:00.276 +03:00 [DBG] Connection id "0HMI7RU1A175A" disconnecting.
+2022-06-06 20:11:00.278 +03:00 [DBG] Connection id "0HMI7RU1A175A" stopped.

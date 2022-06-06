@@ -2,39 +2,28 @@ import {Field, Form, Formik} from 'formik';
 import React from 'react';
 import axios from "axios";
 import * as Validations from '../Infrastructure/ValidationModels';
-import {TextField}  from '../Infrastructure/FormikCustomFields';
+import {SendRequest} from '../Infrastructure/Server';
 
 export class RegisterUser extends React.PureComponent {
+    constructor(props) {
+        super(props)
+        this.state = {
+            model: {
+                username: '',
+                password: '',
+                dateOfBirth: '',
+                countryID: 0,
+                email: ''
+            }
+        }
+    }
 
     handleSubmit = async (data) => {
-        console.log(data);
-
-        const object = {
-
-        }
-
-        const objectStr = JSON.stringify(object);
-
-        const gateWay = {
-            messageType: 'RegisterUserRequest',
-            messageJson: objectStr
-        }
-
-        const toBeSend = JSON.stringify(gateWay);
-        console.log(toBeSend);
-
-        const response = await axios.post('http://localhost:6002/api/gateway', toBeSend);
-
+        const response = SendRequest('RegisterUserRequest', data);
     }
 
     render() {
-        const model = {
-            username: '',
-            password: '',
-            dateOfBirth: '',
-            countryID: 0,
-            email: '',
-        }
+        const {model} = this.state;
 
         return (
             <div className='d-flex justify-content-center mt-4'>
@@ -43,8 +32,10 @@ export class RegisterUser extends React.PureComponent {
                     <div className="card-body">
 
                         <Formik
-                            initialValues={{ ...model }}
-                            onSubmit={async (values) => {await this.handleSubmit(values)}}
+                            initialValues={{...model}}
+                            onSubmit={async (values) => {
+                                await this.handleSubmit(values)
+                            }}
                             validationSchema={Validations.RegisterUserValidationSchema}
                         >
                             {({isSubmitting, errors, touched}) => (
@@ -52,28 +43,35 @@ export class RegisterUser extends React.PureComponent {
 
                                     <div className="row">
 
-                                        <TextField
-                                            name='username'
-                                            label='Username'
-                                            touched = {touched}
-                                            errors={errors}
-                                        />
-
-                                        <TextField
-                                            name='password'
-                                            label='Password'
-                                            type='password'
-                                            touched = {touched}
-                                            errors={errors}
-                                        />
+                                        <div className="mb-3 col-xl-6">
+                                            <label className="form-label justify-content-center d-flex">Username</label>
+                                            <Field
+                                                name='username'
+                                                type='input'
+                                                className="form-control"/>
+                                            {errors.username && touched.username &&
+                                                <div style={{color: 'red'}}>{errors.username}</div>}
+                                        </div>
 
                                         <div className="mb-3 col-xl-6">
-                                            <label className="form-label d-flex justify-content-center">Date of birth</label>
+                                            <label className="form-label justify-content-center d-flex">Password</label>
+                                            <Field
+                                                name='password'
+                                                type='password'
+                                                className="form-control"/>
+                                            {errors.password && touched.password &&
+                                                <div style={{color: 'red'}}>{errors.password}</div>}
+                                        </div>
+
+                                        <div className="mb-3 col-xl-6">
+                                            <label className="form-label d-flex justify-content-center">Date of
+                                                birth</label>
                                             <Field
                                                 name="dateOfBirth"
                                                 type="date"
                                                 className="form-control"/>
-                                            {errors.dateOfBirth && touched.dateOfBirth && <div style={{color:'red'}}>{errors.dateOfBirth}</div>}
+                                            {errors.dateOfBirth && touched.dateOfBirth &&
+                                                <div style={{color: 'red'}}>{errors.dateOfBirth}</div>}
                                         </div>
 
                                         <div className="mb-3 col-xl-6">
@@ -84,7 +82,18 @@ export class RegisterUser extends React.PureComponent {
                                                 <option value="2">Two</option>
                                                 <option value="3">Three</option>
                                             </Field>
-                                            {errors.countryID && touched.countryID && <div style={{color:'red'}}>{errors.countryID}</div>}
+                                            {errors.countryID && touched.countryID &&
+                                                <div style={{color: 'red'}}>{errors.countryID}</div>}
+                                        </div>
+
+                                        <div className="mb-3 col-xl-12">
+                                            <label className="form-label d-flex justify-content-center">Email</label>
+                                            <Field
+                                                name="email"
+                                                type="email"
+                                                className="form-control"/>
+                                            {errors.email && touched.email &&
+                                                <div style={{color: 'red'}}>{errors.email}</div>}
                                         </div>
 
                                         <div className="col-xl-12 text-center">

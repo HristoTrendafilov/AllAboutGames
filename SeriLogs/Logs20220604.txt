@@ -1,0 +1,178 @@
+﻿2022-06-04 12:02:39.885 +03:00 [DBG] Hosting starting
+2022-06-04 12:02:40.126 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-04 12:02:40.128 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-04 12:02:40.129 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-04 12:02:40.130 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-04 12:02:40.131 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-04 12:02:40.131 +03:00 [INF] Hosting environment: Development
+2022-06-04 12:02:40.132 +03:00 [INF] Content root path: D:\Projects\
+2022-06-04 12:02:40.133 +03:00 [DBG] Hosting started
+2022-06-04 12:19:29.505 +03:00 [DBG] Hosting starting
+2022-06-04 12:19:29.681 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-04 12:19:29.684 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-04 12:19:29.685 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-04 12:19:29.685 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-04 12:19:29.686 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-04 12:19:29.687 +03:00 [INF] Hosting environment: Development
+2022-06-04 12:19:29.688 +03:00 [INF] Content root path: D:\Projects\
+2022-06-04 12:19:29.689 +03:00 [DBG] Hosting started
+2022-06-04 12:19:53.588 +03:00 [DBG] Connection id "0HMI61DH6E746" accepted.
+2022-06-04 12:19:53.603 +03:00 [DBG] Connection id "0HMI61DH6E746" started.
+2022-06-04 12:19:53.709 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 163
+2022-06-04 12:19:53.813 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-04 12:19:53.932 +03:00 [DBG] Connection id "0HMI61DH6E746", Request id "0HMI61DH6E746:00000002": started reading request body.
+2022-06-04 12:19:53.934 +03:00 [DBG] Connection id "0HMI61DH6E746", Request id "0HMI61DH6E746:00000002": done reading request body.
+2022-06-04 12:19:54.291 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"username":"xxx","password":"xxx","dateOfBirth":"2022-06-08","countryID":"1","email":""}
+2022-06-04 12:20:42.269 +03:00 [DBG] Hosting starting
+2022-06-04 12:20:42.428 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-04 12:20:42.431 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-04 12:20:42.432 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-04 12:20:42.433 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-04 12:20:42.434 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-04 12:20:42.434 +03:00 [INF] Hosting environment: Development
+2022-06-04 12:20:42.436 +03:00 [INF] Content root path: D:\Projects\
+2022-06-04 12:20:42.437 +03:00 [DBG] Hosting started
+2022-06-04 12:20:53.392 +03:00 [DBG] Connection id "0HMI61E30OUMB" accepted.
+2022-06-04 12:20:53.396 +03:00 [DBG] Connection id "0HMI61E30OUMB" started.
+2022-06-04 12:20:53.445 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 163
+2022-06-04 12:20:53.475 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-04 12:20:53.502 +03:00 [DBG] Connection id "0HMI61E30OUMB", Request id "0HMI61E30OUMB:00000002": started reading request body.
+2022-06-04 12:20:53.505 +03:00 [DBG] Connection id "0HMI61E30OUMB", Request id "0HMI61E30OUMB:00000002": done reading request body.
+2022-06-04 12:20:53.710 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"username":"xxx","password":"xxx","dateOfBirth":"2022-06-08","countryID":"1","email":""}
+2022-06-04 12:21:16.857 +03:00 [DBG] Hosting starting
+2022-06-04 12:21:17.025 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-04 12:21:17.026 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-04 12:21:17.027 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-04 12:21:17.028 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-04 12:21:17.028 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-04 12:21:17.029 +03:00 [INF] Hosting environment: Development
+2022-06-04 12:21:17.030 +03:00 [INF] Content root path: D:\Projects\
+2022-06-04 12:21:17.031 +03:00 [DBG] Hosting started
+2022-06-04 12:21:37.254 +03:00 [DBG] Connection id "0HMI61EG32MJK" accepted.
+2022-06-04 12:21:37.266 +03:00 [DBG] Connection id "0HMI61EG32MJK" started.
+2022-06-04 12:21:37.306 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 163
+2022-06-04 12:21:37.334 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-04 12:21:37.356 +03:00 [DBG] Connection id "0HMI61EG32MJK", Request id "0HMI61EG32MJK:00000002": started reading request body.
+2022-06-04 12:21:37.359 +03:00 [DBG] Connection id "0HMI61EG32MJK", Request id "0HMI61EG32MJK:00000002": done reading request body.
+2022-06-04 12:21:37.488 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"username":"xxx","password":"xxx","dateOfBirth":"2022-06-14","countryID":"1","email":""}
+2022-06-04 12:23:20.505 +03:00 [DBG] Hosting starting
+2022-06-04 12:23:20.631 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-04 12:23:20.633 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-04 12:23:20.634 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-04 12:23:20.635 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-04 12:23:20.636 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-04 12:23:20.636 +03:00 [INF] Hosting environment: Development
+2022-06-04 12:23:20.637 +03:00 [INF] Content root path: D:\Projects\
+2022-06-04 12:23:20.637 +03:00 [DBG] Hosting started
+2022-06-04 12:23:29.861 +03:00 [DBG] Connection id "0HMI61FHKVN64" accepted.
+2022-06-04 12:23:29.863 +03:00 [DBG] Connection id "0HMI61FHKVN64" started.
+2022-06-04 12:23:29.905 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 163
+2022-06-04 12:23:29.929 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-04 12:23:29.947 +03:00 [DBG] Connection id "0HMI61FHKVN64", Request id "0HMI61FHKVN64:00000002": started reading request body.
+2022-06-04 12:23:29.949 +03:00 [DBG] Connection id "0HMI61FHKVN64", Request id "0HMI61FHKVN64:00000002": done reading request body.
+2022-06-04 12:23:30.076 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"username":"xxx","password":"xxx","dateOfBirth":"2022-06-16","countryID":"1","email":""}
+2022-06-04 12:24:39.847 +03:00 [DBG] Hosting starting
+2022-06-04 12:24:40.008 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-04 12:24:40.011 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-04 12:24:40.011 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-04 12:24:40.012 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-04 12:24:40.013 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-04 12:24:40.014 +03:00 [INF] Hosting environment: Development
+2022-06-04 12:24:40.015 +03:00 [INF] Content root path: D:\Projects\
+2022-06-04 12:24:40.016 +03:00 [DBG] Hosting started
+2022-06-04 12:27:56.274 +03:00 [DBG] Hosting starting
+2022-06-04 12:27:56.416 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-04 12:27:56.419 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-04 12:27:56.420 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-04 12:27:56.421 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-04 12:27:56.423 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-04 12:27:56.424 +03:00 [INF] Hosting environment: Development
+2022-06-04 12:27:56.425 +03:00 [INF] Content root path: D:\Projects\
+2022-06-04 12:27:56.426 +03:00 [DBG] Hosting started
+2022-06-04 12:28:06.392 +03:00 [DBG] Connection id "0HMI61I42677B" accepted.
+2022-06-04 12:28:06.395 +03:00 [DBG] Connection id "0HMI61I42677B" started.
+2022-06-04 12:28:06.437 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 174
+2022-06-04 12:28:06.459 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-04 12:28:06.477 +03:00 [DBG] Connection id "0HMI61I42677B", Request id "0HMI61I42677B:00000002": started reading request body.
+2022-06-04 12:28:06.479 +03:00 [DBG] Connection id "0HMI61I42677B", Request id "0HMI61I42677B:00000002": done reading request body.
+2022-06-04 12:28:06.601 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"xxx","password":"xxx","dateOfBirth":"2022-06-11","countryID":"1","email":""}}
+2022-06-04 12:36:40.118 +03:00 [DBG] Hosting starting
+2022-06-04 12:36:40.279 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-04 12:36:40.282 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-04 12:36:40.283 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-04 12:36:40.284 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-04 12:36:40.285 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-04 12:36:40.286 +03:00 [INF] Hosting environment: Development
+2022-06-04 12:36:40.287 +03:00 [INF] Content root path: D:\Projects\
+2022-06-04 12:36:40.288 +03:00 [DBG] Hosting started
+2022-06-04 12:36:45.564 +03:00 [DBG] Connection id "0HMI61MUPCJ03" accepted.
+2022-06-04 12:36:45.569 +03:00 [DBG] Connection id "0HMI61MUPCJ03" started.
+2022-06-04 12:36:45.623 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 175
+2022-06-04 12:36:45.647 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-04 12:36:45.664 +03:00 [DBG] Connection id "0HMI61MUPCJ03", Request id "0HMI61MUPCJ03:00000002": started reading request body.
+2022-06-04 12:36:45.667 +03:00 [DBG] Connection id "0HMI61MUPCJ03", Request id "0HMI61MUPCJ03:00000002": done reading request body.
+2022-06-04 12:36:45.789 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"xxx","password":"xxxx","dateOfBirth":"2022-06-02","countryID":"1","email":""}}
+2022-06-04 12:47:04.171 +03:00 [DBG] Hosting starting
+2022-06-04 12:47:04.348 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-04 12:47:04.350 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-04 12:47:04.351 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-04 12:47:04.352 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-04 12:47:04.352 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-04 12:47:04.353 +03:00 [INF] Hosting environment: Development
+2022-06-04 12:47:04.354 +03:00 [INF] Content root path: D:\Projects\
+2022-06-04 12:47:04.354 +03:00 [DBG] Hosting started
+2022-06-04 12:47:12.968 +03:00 [DBG] Connection id "0HMI61SPOPD5F" accepted.
+2022-06-04 12:47:12.970 +03:00 [DBG] Connection id "0HMI61SPOPD5F" started.
+2022-06-04 12:47:13.030 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 204
+2022-06-04 12:47:13.062 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-04 12:47:13.091 +03:00 [DBG] Connection id "0HMI61SPOPD5F", Request id "0HMI61SPOPD5F:00000002": started reading request body.
+2022-06-04 12:47:13.094 +03:00 [DBG] Connection id "0HMI61SPOPD5F", Request id "0HMI61SPOPD5F:00000002": done reading request body.
+2022-06-04 12:47:13.275 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"xxx","password":"xxx","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-04 12:47:15.152 +03:00 [DBG] Connection id "0HMI61SPOPD5F" completed keep alive response.
+2022-06-04 12:47:15.165 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 204 - 200 - application/json 2136.7827ms
+2022-06-04 12:47:16.886 +03:00 [DBG] Connection id "0HMI61SPOPD5F" received FIN.
+2022-06-04 12:47:16.889 +03:00 [DBG] Connection id "0HMI61SPOPD5F" disconnecting.
+2022-06-04 12:47:16.892 +03:00 [DBG] Connection id "0HMI61SPOPD5F" sending FIN because: "The client closed the connection."
+2022-06-04 12:47:16.899 +03:00 [DBG] Connection id "0HMI61SPOPD5F" stopped.
+2022-06-04 12:48:11.233 +03:00 [DBG] Connection id "0HMI61SPOPD5G" accepted.
+2022-06-04 12:48:11.235 +03:00 [DBG] Connection id "0HMI61SPOPD5G" started.
+2022-06-04 12:48:11.238 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 204
+2022-06-04 12:48:11.244 +03:00 [DBG] Connection id "0HMI61SPOPD5G", Request id "0HMI61SPOPD5G:00000002": started reading request body.
+2022-06-04 12:48:11.253 +03:00 [DBG] Connection id "0HMI61SPOPD5G", Request id "0HMI61SPOPD5G:00000002": done reading request body.
+2022-06-04 12:48:11.255 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"xxx","password":"xxx","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-04 12:48:11.303 +03:00 [DBG] Connection id "0HMI61SPOPD5G" completed keep alive response.
+2022-06-04 12:48:11.304 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 204 - 200 - application/json 65.9515ms
+2022-06-04 12:48:17.004 +03:00 [DBG] Connection id "0HMI61SPOPD5G" received FIN.
+2022-06-04 12:48:17.010 +03:00 [DBG] Connection id "0HMI61SPOPD5G" sending FIN because: "The client closed the connection."
+2022-06-04 12:48:17.012 +03:00 [DBG] Connection id "0HMI61SPOPD5G" disconnecting.
+2022-06-04 12:48:17.013 +03:00 [DBG] Connection id "0HMI61SPOPD5G" stopped.
+2022-06-04 12:49:06.421 +03:00 [DBG] Connection id "0HMI61SPOPD5H" accepted.
+2022-06-04 12:49:06.424 +03:00 [DBG] Connection id "0HMI61SPOPD5H" started.
+2022-06-04 12:49:06.426 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 204
+2022-06-04 12:49:06.427 +03:00 [DBG] Connection id "0HMI61SPOPD5H", Request id "0HMI61SPOPD5H:00000002": started reading request body.
+2022-06-04 12:49:06.428 +03:00 [DBG] Connection id "0HMI61SPOPD5H", Request id "0HMI61SPOPD5H:00000002": done reading request body.
+2022-06-04 12:49:06.430 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"item":{"username":"xxx","password":"xxx","dateOfBirth":"2022-06-16","countryID":"1","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-04 12:49:06.456 +03:00 [DBG] Connection id "0HMI61SPOPD5H" completed keep alive response.
+2022-06-04 12:49:06.457 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 204 - 200 - application/json 31.3912ms
+2022-06-04 12:49:07.095 +03:00 [DBG] Connection id "0HMI61SPOPD5H" received FIN.
+2022-06-04 12:49:07.097 +03:00 [DBG] Connection id "0HMI61SPOPD5H" disconnecting.
+2022-06-04 12:49:07.105 +03:00 [DBG] Connection id "0HMI61SPOPD5H" sending FIN because: "The client closed the connection."
+2022-06-04 12:49:07.112 +03:00 [DBG] Connection id "0HMI61SPOPD5H" stopped.

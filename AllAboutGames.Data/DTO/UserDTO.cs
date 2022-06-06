@@ -20,6 +20,9 @@ namespace AllAboutGames.Data.DTO
         [Required(ErrorMessage = "Date of birth is required.")]
         public DateTime DateOfBirth { get; set; }
 
+        [Required(ErrorMessage = "Email is required.")]
+        public string Email { get; set; }
+
         public string? ProfilePicture { get; set; }
 
         public DateTime CreatedOn { get; set; }

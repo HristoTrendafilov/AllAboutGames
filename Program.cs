@@ -2,15 +2,19 @@ using AllAboutGames.Core;
 using AllAboutGames.Core.Middlewares;
 using AllAboutGames.Core.Middlewares.Gateway;
 using AllAboutGames.Data.DataContext;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Serilog.Events;
 using Serilog.Formatting.Json;
+using System.Net;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder();
 Global.LoadSettings(builder);
 DependencyManager.RegisterDependencies(builder);
+
+builder.Services.AddAuthorization();
 
 builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
 {
@@ -39,8 +43,16 @@ builder.Logging.ClearProviders();
 builder.Logging.AddSerilog();
 
 var app = builder.Build();
+
+app.UseForwardedHeaders(new ForwardedHeadersOptions
+{
+    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+});
+
+
+
 app.UseMiddleware<AuthMiddleware>();
 app.UseMiddleware<GatewayProtocolMiddleware>();
-app.UseHttpsRedirection();
+//app.UseHttpsRedirection();
 
 app.Run();

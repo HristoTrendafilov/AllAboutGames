@@ -36,8 +36,6 @@ namespace AllAboutGames.Handlers
                 return GatewayResult.FromErrorMessage(saveCheck.GetErrors());
             }
 
-            await this.GameService.SaveChangesAsync();
-
             return GatewayResult.SuccessfulResult();
         }
 

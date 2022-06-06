@@ -17,9 +17,12 @@ namespace AllAboutGames.Data.Models
         [MaxLength(100, ErrorMessage = "The password must be maximum 100 characters.")]
         public string Password { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Date of birth is required.")]
         [Column(TypeName = "date")]
         public DateTime DateOfBirth { get; set; }
+
+        [Required(ErrorMessage = "Email is required.")]
+        public string Email { get; set; }
 
         public string? ProfilePicture { get; set; }
 
