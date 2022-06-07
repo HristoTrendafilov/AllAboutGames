@@ -1,29 +1,25 @@
 import {Field, Form, Formik} from 'formik';
 import React from 'react';
-import axios from "axios";
 import * as Validations from '../Infrastructure/ValidationModels';
 import {SendRequest} from '../Infrastructure/Server';
+import {RegisterUserRequest} from '../Infrastructure/Dto'
 
 export class RegisterUser extends React.PureComponent {
     constructor(props) {
         super(props)
-        this.state = {
-            model: {
-                username: '',
-                password: '',
-                dateOfBirth: '',
-                countryID: 0,
-                email: ''
-            }
-        }
     }
 
     handleSubmit = async (data) => {
-        const response = SendRequest('RegisterUserRequest', data);
+        RegisterUserRequest.messageJson.userDTO = {
+            ...data
+        }
+
+        const response = await SendRequest('RegisterUserRequest', data);
+        console.log(response);
     }
 
     render() {
-        const {model} = this.state;
+        const model = RegisterUserRequest.messageJson.userDTO;
 
         return (
             <div className='d-flex justify-content-center mt-4'>
@@ -50,7 +46,7 @@ export class RegisterUser extends React.PureComponent {
                                                 type='input'
                                                 className="form-control"/>
                                             {errors.username && touched.username &&
-                                                <div style={{color: 'red'}}>{errors.username}</div>}
+                                            <div style={{color: 'red'}}>{errors.username}</div>}
                                         </div>
 
                                         <div className="mb-3 col-xl-6">
@@ -60,7 +56,7 @@ export class RegisterUser extends React.PureComponent {
                                                 type='password'
                                                 className="form-control"/>
                                             {errors.password && touched.password &&
-                                                <div style={{color: 'red'}}>{errors.password}</div>}
+                                            <div style={{color: 'red'}}>{errors.password}</div>}
                                         </div>
 
                                         <div className="mb-3 col-xl-6">
@@ -71,7 +67,7 @@ export class RegisterUser extends React.PureComponent {
                                                 type="date"
                                                 className="form-control"/>
                                             {errors.dateOfBirth && touched.dateOfBirth &&
-                                                <div style={{color: 'red'}}>{errors.dateOfBirth}</div>}
+                                            <div style={{color: 'red'}}>{errors.dateOfBirth}</div>}
                                         </div>
 
                                         <div className="mb-3 col-xl-6">
@@ -83,7 +79,7 @@ export class RegisterUser extends React.PureComponent {
                                                 <option value="3">Three</option>
                                             </Field>
                                             {errors.countryID && touched.countryID &&
-                                                <div style={{color: 'red'}}>{errors.countryID}</div>}
+                                            <div style={{color: 'red'}}>{errors.countryID}</div>}
                                         </div>
 
                                         <div className="mb-3 col-xl-12">
@@ -93,7 +89,7 @@ export class RegisterUser extends React.PureComponent {
                                                 type="email"
                                                 className="form-control"/>
                                             {errors.email && touched.email &&
-                                                <div style={{color: 'red'}}>{errors.email}</div>}
+                                            <div style={{color: 'red'}}>{errors.email}</div>}
                                         </div>
 
                                         <div className="col-xl-12 text-center">
@@ -103,7 +99,6 @@ export class RegisterUser extends React.PureComponent {
                                                 disabled={isSubmitting}>
                                                 Register
                                             </button>
-
                                         </div>
                                     </div>
 

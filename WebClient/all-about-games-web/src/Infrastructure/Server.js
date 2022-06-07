@@ -2,22 +2,17 @@ import React from 'react';
 import axios from "axios";
 
 
-export const SendRequest = async (requestName, data) => {
+export const SendRequest = async (data) => {
 
-    const messageJson = {
-        item: {
-            ...data
-        }
+    const gateway = {
+        messageType: data.messageType,
+        messageJson: data.messageJson
     }
 
-    const gateWay = {
-        messageType: requestName,
-        messageJson: JSON.stringify(messageJson)
-    }
+    const gatewayRequest = JSON.stringify(gateway);
 
-    const toBeSend = JSON.stringify(gateWay);
-
-    const response = await axios.post('http://localhost:6002/api/gateway', toBeSend)
-        .then(resp => console.log(JSON.stringify(resp)))
-        .catch(err => console.log(err));
+    await axios.post('http://localhost:6002/api/gateway', gatewayRequest)
+        .then(resp => {
+            return JSON.stringify(resp.data)
+        })
 }
