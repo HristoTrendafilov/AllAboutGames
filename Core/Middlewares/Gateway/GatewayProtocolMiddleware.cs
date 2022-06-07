@@ -56,9 +56,12 @@ namespace AllAboutGames.Core.Middlewares.Gateway
             var response = context.Response;
             response.StatusCode = 200;
             response.Headers["Content-Type"] = "application/json";
+            response.Headers["Access-Control-Allow-Origin"] = "*";
 
             await using var writer = new StreamWriter(response.Body, new UTF8Encoding(false));
             await writer.WriteAsync(json);
+
+            await next(context);
         }
     }
 }

@@ -11,15 +11,19 @@
     <Compile Remove="AllAboutGames.Data\**" />
     <Compile Remove="AllAboutGames.Mapping\**" />
     <Compile Remove="Client\**" />
+    <Compile Remove="WebClient\**" />
     <Content Remove="AllAboutGames.Data\**" />
     <Content Remove="AllAboutGames.Mapping\**" />
     <Content Remove="Client\**" />
+    <Content Remove="WebClient\**" />
     <EmbeddedResource Remove="AllAboutGames.Data\**" />
     <EmbeddedResource Remove="AllAboutGames.Mapping\**" />
     <EmbeddedResource Remove="Client\**" />
+    <EmbeddedResource Remove="WebClient\**" />
     <None Remove="AllAboutGames.Data\**" />
     <None Remove="AllAboutGames.Mapping\**" />
     <None Remove="Client\**" />
+    <None Remove="WebClient\**" />
   </ItemGroup>
 
   <ItemGroup>

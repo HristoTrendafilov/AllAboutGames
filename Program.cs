@@ -14,7 +14,10 @@ var builder = WebApplication.CreateBuilder();
 Global.LoadSettings(builder);
 DependencyManager.RegisterDependencies(builder);
 
-builder.Services.AddAuthorization();
+builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
+{
+    builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+}));
 
 builder.Services.AddDbContext<AllAboutGamesDataContext>(options =>
 {
@@ -44,15 +47,7 @@ builder.Logging.AddSerilog();
 
 var app = builder.Build();
 
-app.UseForwardedHeaders(new ForwardedHeadersOptions
-{
-    ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
-});
-
-
-
 app.UseMiddleware<AuthMiddleware>();
 app.UseMiddleware<GatewayProtocolMiddleware>();
-//app.UseHttpsRedirection();
 
 app.Run();
