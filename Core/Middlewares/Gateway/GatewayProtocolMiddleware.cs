@@ -60,8 +60,6 @@ namespace AllAboutGames.Core.Middlewares.Gateway
 
             await using var writer = new StreamWriter(response.Body, new UTF8Encoding(false));
             await writer.WriteAsync(json);
-
-            await next(context);
         }
     }
 }
