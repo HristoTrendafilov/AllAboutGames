@@ -7,19 +7,22 @@ import {RegisterUserRequest} from '../Infrastructure/Dto'
 export class RegisterUser extends React.PureComponent {
     constructor(props) {
         super(props)
+        this.state = {
+            model: RegisterUserRequest.messageJson.userDTO,
+        }
     }
 
     handleSubmit = async (data) => {
-        RegisterUserRequest.messageJson.userDTO = {
-            ...data
-        }
+        console.log(this.state.model);
+        return
+        const data1 = {};
 
-        const response = await SendRequest('RegisterUserRequest', data);
+        const response = await SendRequest('RegisterUserRequest', data1);
         console.log(response);
     }
 
     render() {
-        const model = RegisterUserRequest.messageJson.userDTO;
+        const {model} = this.state;
 
         return (
             <div className='d-flex justify-content-center mt-4'>
