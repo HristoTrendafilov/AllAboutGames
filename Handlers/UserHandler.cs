@@ -37,19 +37,19 @@ namespace AllAboutGames.Handlers
         [BindRequest(typeof(RegisterUserRequest), typeof(RegisterUserResponse))]
         public async Task<GatewayResult> Register(RegisterUserRequest request)
         {
-            var checkResult = PropertyValidator.Validate(request.Item);
+            var checkResult = PropertyValidator.Validate(request.UserDTO);
             if (checkResult.IsFailed)
             {
                 return GatewayResult.FromErrorMessage(checkResult.GetErrors());
             }
 
-            var dbUser = this.UserService.GetUser(x => x.Username == request.Item.Username);
+            var dbUser = this.UserService.GetUser(x => x.Username == request.UserDTO.Username);
             if (dbUser != null)
             {
-                return GatewayResult.FromErrorMessage($"There already exist user with username: {request.Item.Username}");
+                return GatewayResult.FromErrorMessage($"There already exist user with username: {request.UserDTO.Username}");
             }
 
-            var saveCheck = await this.UserService.SaveEntityAsync<ApplicationUser>(request.Item);
+            var saveCheck = await this.UserService.SaveEntityAsync<ApplicationUser>(request.UserDTO);
             await this.UserService.SaveChangesAsync();
 
             return GatewayResult.SuccessfulResult(new RegisterUserRequest());
@@ -83,7 +83,7 @@ namespace AllAboutGames.Handlers
 
     public class RegisterUserRequest
     {
-        public UserDTO Item { get; set; }
+        public UserDTO UserDTO { get; set; }
     }
 
     public class RegisterUserResponse

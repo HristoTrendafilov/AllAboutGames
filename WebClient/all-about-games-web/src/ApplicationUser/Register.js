@@ -3,32 +3,37 @@ import React from 'react';
 import * as Validations from '../Infrastructure/ValidationModels';
 import {SendRequest} from '../Infrastructure/Server';
 import {RegisterUserRequest} from '../Infrastructure/Dto'
+import {ErrorMessages} from "../Infrastructure/ErrorMessages";
 
 export class RegisterUser extends React.PureComponent {
     constructor(props) {
         super(props)
         this.state = {
-            model: RegisterUserRequest.messageJson.userDTO,
+            isLoading: false,
+            stateErrors: []
         }
     }
 
     handleSubmit = async (data) => {
-        console.log(this.state.model);
-        return
-        const data1 = {};
+        const request = RegisterUserRequest;
+        request.UserDTO = {...data};
 
-        const response = await SendRequest('RegisterUserRequest', data1);
-        console.log(response);
+        const response = await SendRequest('RegisterUserRequest', request);
+        if (response.isFailed) {
+            this.setState({stateErrors: response.errors});
+            return;
+        }
     }
 
     render() {
-        const {model} = this.state;
+        const model = RegisterUserRequest.UserDTO;
+        const {stateErrors} = this.state;
 
         return (
             <div className='d-flex justify-content-center mt-4'>
-                <div className="card" style={{width: 600}}>
+                <div className="card border-info border-4" style={{width: 600}}>
                     <h5 className="card-header">Registration</h5>
-                    <div className="card-body">
+                    <div className="card-body pb-0">
 
                         <Formik
                             initialValues={{...model}}
@@ -43,7 +48,7 @@ export class RegisterUser extends React.PureComponent {
                                     <div className="row">
 
                                         <div className="mb-3 col-xl-6">
-                                            <label className="form-label justify-content-center d-flex">Username</label>
+                                            <label className="form-label justify-content-center d-flex fw-bold">Username</label>
                                             <Field
                                                 name='username'
                                                 type='input'
@@ -53,7 +58,7 @@ export class RegisterUser extends React.PureComponent {
                                         </div>
 
                                         <div className="mb-3 col-xl-6">
-                                            <label className="form-label justify-content-center d-flex">Password</label>
+                                            <label className="form-label justify-content-center d-flex fw-bold">Password</label>
                                             <Field
                                                 name='password'
                                                 type='password'
@@ -63,7 +68,7 @@ export class RegisterUser extends React.PureComponent {
                                         </div>
 
                                         <div className="mb-3 col-xl-6">
-                                            <label className="form-label d-flex justify-content-center">Date of
+                                            <label className="form-label d-flex justify-content-center fw-bold">Date of
                                                 birth</label>
                                             <Field
                                                 name="dateOfBirth"
@@ -74,7 +79,7 @@ export class RegisterUser extends React.PureComponent {
                                         </div>
 
                                         <div className="mb-3 col-xl-6">
-                                            <label className="form-label d-flex justify-content-center">Country</label>
+                                            <label className="form-label d-flex justify-content-center fw-bold">Country</label>
                                             <Field as='select' name='countryID' className="form-select">
                                                 <option value="0">Select country</option>
                                                 <option value="1">One</option>
@@ -86,7 +91,7 @@ export class RegisterUser extends React.PureComponent {
                                         </div>
 
                                         <div className="mb-3 col-xl-12">
-                                            <label className="form-label d-flex justify-content-center">Email</label>
+                                            <label className="form-label d-flex justify-content-center fw-bold">Email</label>
                                             <Field
                                                 name="email"
                                                 type="email"
@@ -95,7 +100,7 @@ export class RegisterUser extends React.PureComponent {
                                             <div style={{color: 'red'}}>{errors.email}</div>}
                                         </div>
 
-                                        <div className="col-xl-12 text-center">
+                                        <div className="col-xl-12 text-center mb-3">
                                             <button
                                                 type="submit"
                                                 className="btn btn-outline-primary w-50"
@@ -103,6 +108,9 @@ export class RegisterUser extends React.PureComponent {
                                                 Register
                                             </button>
                                         </div>
+
+                                        {stateErrors.length > 0 && <ErrorMessages apiErrors={stateErrors}/>}
+
                                     </div>
 
                                 </Form>
