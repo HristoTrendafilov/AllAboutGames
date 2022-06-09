@@ -4,6 +4,7 @@ import * as Validations from '../Infrastructure/ValidationModels';
 import {SendRequest} from '../Infrastructure/Server';
 import {RegisterUserRequest} from '../Infrastructure/Dto'
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
+import {TextField} from "../Infrastructure/CutomFormikFields";
 
 export class RegisterUser extends React.PureComponent {
     constructor(props) {
@@ -46,6 +47,13 @@ export class RegisterUser extends React.PureComponent {
                                 <Form>
 
                                     <div className="row">
+
+                                        <TextField
+                                            customClassName="mb-3 col-xl-6"
+                                            label="Username"
+                                            name="username"
+                                            type="text"
+                                        />
 
                                         <div className="mb-3 col-xl-6">
                                             <label className="form-label justify-content-center d-flex fw-bold">Username</label>
