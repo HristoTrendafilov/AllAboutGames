@@ -15,13 +15,13 @@ export const TextField = ({label, customClassName, ...props}) => {
 };
 
 export const CheckboxField = ({ label, children, customClassName, ...props }) => {
-    const [field, meta] = useField({ ...props, type: 'checkbox' });
+    const [field, meta] = useField({ ...props });
 
     return (
         <div className={customClassName}>
             <input className="form-check-input" type="checkbox" {...field} {...props}/>
-            <label className="form-check-label" htmlFor="flexCheckDefault">
-                &nbsp;&nbsp;{label}
+            <label className="form-check-label p-lg-2">
+                {label}
             </label>
             {meta.touched && meta.error &&
             <div className="text-danger justify-content-center d-flex">{meta.error}</div>}
