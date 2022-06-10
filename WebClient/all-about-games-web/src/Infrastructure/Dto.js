@@ -6,7 +6,8 @@ export const RegisterUserRequest = {
         password: '',
         dateOfBirth: '',
         countryID: 0,
-        email: ''
+        email: '',
+        isCheck: false
     }
 
 }

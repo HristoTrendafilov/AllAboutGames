@@ -4,7 +4,7 @@ import * as Validations from '../Infrastructure/ValidationModels';
 import {SendRequest} from '../Infrastructure/Server';
 import {RegisterUserRequest} from '../Infrastructure/Dto'
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
-import {TextField} from "../Infrastructure/CutomFormikFields";
+import {CheckboxField, TextField} from "../Infrastructure/CutomFormikFields";
 
 export class RegisterUser extends React.PureComponent {
     constructor(props) {
@@ -55,25 +55,12 @@ export class RegisterUser extends React.PureComponent {
                                             type="text"
                                         />
 
-                                        <div className="mb-3 col-xl-6">
-                                            <label className="form-label justify-content-center d-flex fw-bold">Username</label>
-                                            <Field
-                                                name='username'
-                                                type='input'
-                                                className="form-control"/>
-                                            {errors.username && touched.username &&
-                                            <div style={{color: 'red'}}>{errors.username}</div>}
-                                        </div>
-
-                                        <div className="mb-3 col-xl-6">
-                                            <label className="form-label justify-content-center d-flex fw-bold">Password</label>
-                                            <Field
-                                                name='password'
-                                                type='password'
-                                                className="form-control"/>
-                                            {errors.password && touched.password &&
-                                            <div style={{color: 'red'}}>{errors.password}</div>}
-                                        </div>
+                                        <TextField
+                                            customClassName="mb-3 col-xl-6"
+                                            label="Password"
+                                            name="password"
+                                            type="password"
+                                        />
 
                                         <div className="mb-3 col-xl-6">
                                             <label className="form-label d-flex justify-content-center fw-bold">Date of
