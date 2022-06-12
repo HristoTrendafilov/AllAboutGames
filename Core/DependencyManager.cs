@@ -23,6 +23,7 @@ namespace AllAboutGames.Core
             builder.Services.AddTransient<GameService>();
             builder.Services.AddTransient<UserService>();
             builder.Services.AddTransient<AuthService>();
+            builder.Services.AddTransient<CountryService>();
 
             // Middlewares
             builder.Services.AddTransient<AuthMiddleware>();

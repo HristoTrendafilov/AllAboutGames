@@ -1,0 +1,1264 @@
+﻿2022-06-12 13:07:12.040 +03:00 [DBG] Hosting starting
+2022-06-12 13:07:12.541 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:07:12.546 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:07:12.549 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:07:12.550 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:07:12.551 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:07:12.555 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:07:12.558 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:07:12.559 +03:00 [DBG] Hosting started
+2022-06-12 13:07:17.664 +03:00 [DBG] Connection id "0HMICBDAEH6R7" accepted.
+2022-06-12 13:07:17.667 +03:00 [DBG] Connection id "0HMICBDAEH6R7" started.
+2022-06-12 13:07:17.817 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:07:17.940 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:07:18.128 +03:00 [DBG] Connection id "0HMICBDAEH6R7", Request id "0HMICBDAEH6R7:00000002": started reading request body.
+2022-06-12 13:07:18.132 +03:00 [DBG] Connection id "0HMICBDAEH6R7", Request id "0HMICBDAEH6R7:00000002": done reading request body.
+2022-06-12 13:07:18.678 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:08:33.766 +03:00 [DBG] Hosting starting
+2022-06-12 13:08:34.004 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:08:34.009 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:08:34.011 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:08:34.012 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:08:34.013 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:08:34.015 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:08:34.015 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:08:34.016 +03:00 [DBG] Hosting started
+2022-06-12 13:08:38.369 +03:00 [DBG] Connection id "0HMICBE2G69HL" accepted.
+2022-06-12 13:08:38.374 +03:00 [DBG] Connection id "0HMICBE2G69HL" started.
+2022-06-12 13:08:38.451 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:08:38.497 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:08:38.543 +03:00 [DBG] Connection id "0HMICBE2G69HL", Request id "0HMICBE2G69HL:00000002": started reading request body.
+2022-06-12 13:08:38.546 +03:00 [DBG] Connection id "0HMICBE2G69HL", Request id "0HMICBE2G69HL:00000002": done reading request body.
+2022-06-12 13:08:38.818 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:09:02.675 +03:00 [DBG] Hosting starting
+2022-06-12 13:09:02.901 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:09:02.906 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:09:02.909 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:09:02.913 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:09:02.916 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:09:02.918 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:09:02.920 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:09:02.922 +03:00 [DBG] Hosting started
+2022-06-12 13:09:09.344 +03:00 [DBG] Connection id "0HMICBEBNJ1CR" accepted.
+2022-06-12 13:09:09.349 +03:00 [DBG] Connection id "0HMICBEBNJ1CR" started.
+2022-06-12 13:09:09.423 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:09:09.459 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:09:09.493 +03:00 [DBG] Connection id "0HMICBEBNJ1CR", Request id "0HMICBEBNJ1CR:00000002": started reading request body.
+2022-06-12 13:09:09.500 +03:00 [DBG] Connection id "0HMICBEBNJ1CR", Request id "0HMICBEBNJ1CR:00000002": done reading request body.
+2022-06-12 13:09:09.684 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:11:42.133 +03:00 [DBG] Hosting starting
+2022-06-12 13:11:42.428 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:11:42.432 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:11:42.433 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:11:42.434 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:11:42.435 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:11:42.436 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:11:42.437 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:11:42.437 +03:00 [DBG] Hosting started
+2022-06-12 13:11:48.562 +03:00 [DBG] Connection id "0HMICBFR5VR7M" accepted.
+2022-06-12 13:11:48.569 +03:00 [DBG] Connection id "0HMICBFR5VR7M" started.
+2022-06-12 13:11:48.717 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:11:48.802 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:11:48.863 +03:00 [DBG] Connection id "0HMICBFR5VR7M", Request id "0HMICBFR5VR7M:00000002": started reading request body.
+2022-06-12 13:11:48.869 +03:00 [DBG] Connection id "0HMICBFR5VR7M", Request id "0HMICBFR5VR7M:00000002": done reading request body.
+2022-06-12 13:11:49.347 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:11:50.523 +03:00 [ERR] Error while trying to process the request: RegisterUserRequest
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request, HttpContext context) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 66
+2022-06-12 13:11:50.948 +03:00 [DBG] Connection id "0HMICBFR5VR7M" completed keep alive response.
+2022-06-12 13:11:50.956 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222 - 200 - application/json 2249.6910ms
+2022-06-12 13:11:53.102 +03:00 [DBG] Connection id "0HMICBFR5VR7M" received FIN.
+2022-06-12 13:11:53.133 +03:00 [DBG] Connection id "0HMICBFR5VR7M" disconnecting.
+2022-06-12 13:11:53.137 +03:00 [DBG] Connection id "0HMICBFR5VR7M" sending FIN because: "The client closed the connection."
+2022-06-12 13:11:53.158 +03:00 [DBG] Connection id "0HMICBFR5VR7M" stopped.
+2022-06-12 13:12:01.690 +03:00 [DBG] Hosting starting
+2022-06-12 13:12:01.899 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:12:01.903 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:12:01.905 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:12:01.907 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:12:01.908 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:12:01.909 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:12:01.910 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:12:01.911 +03:00 [DBG] Hosting started
+2022-06-12 13:12:05.609 +03:00 [DBG] Connection id "0HMICBG08J5DF" accepted.
+2022-06-12 13:12:05.613 +03:00 [DBG] Connection id "0HMICBG08J5DF" started.
+2022-06-12 13:12:05.666 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:12:05.707 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:12:05.730 +03:00 [DBG] Connection id "0HMICBG08J5DF", Request id "0HMICBG08J5DF:00000002": started reading request body.
+2022-06-12 13:12:05.736 +03:00 [DBG] Connection id "0HMICBG08J5DF", Request id "0HMICBG08J5DF:00000002": done reading request body.
+2022-06-12 13:12:05.910 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:12:06.350 +03:00 [ERR] Error while trying to process the request: RegisterUserRequest
+System.InvalidOperationException: Sequence contains no elements
+   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.Last[TSource](IEnumerable`1 source)
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request, HttpContext context) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 66
+2022-06-12 13:12:06.436 +03:00 [DBG] Connection id "0HMICBG08J5DF" completed keep alive response.
+2022-06-12 13:12:06.442 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222 - 200 - application/json 779.5423ms
+2022-06-12 13:12:13.143 +03:00 [DBG] Connection id "0HMICBG08J5DF" received FIN.
+2022-06-12 13:12:13.159 +03:00 [DBG] Connection id "0HMICBG08J5DF" sending FIN because: "The client closed the connection."
+2022-06-12 13:12:13.164 +03:00 [DBG] Connection id "0HMICBG08J5DF" disconnecting.
+2022-06-12 13:12:13.169 +03:00 [DBG] Connection id "0HMICBG08J5DF" stopped.
+2022-06-12 13:12:21.584 +03:00 [DBG] Hosting starting
+2022-06-12 13:12:21.785 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:12:21.790 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:12:21.792 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:12:21.793 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:12:21.795 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:12:21.797 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:12:21.800 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:12:21.802 +03:00 [DBG] Hosting started
+2022-06-12 13:12:23.933 +03:00 [DBG] Connection id "0HMICBG5NASSA" accepted.
+2022-06-12 13:12:23.937 +03:00 [DBG] Connection id "0HMICBG5NASSA" started.
+2022-06-12 13:12:24.003 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:12:24.039 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:12:24.068 +03:00 [DBG] Connection id "0HMICBG5NASSA", Request id "0HMICBG5NASSA:00000002": started reading request body.
+2022-06-12 13:12:24.072 +03:00 [DBG] Connection id "0HMICBG5NASSA", Request id "0HMICBG5NASSA:00000002": done reading request body.
+2022-06-12 13:12:24.245 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:13:49.419 +03:00 [DBG] Hosting starting
+2022-06-12 13:13:49.624 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:13:49.628 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:13:49.630 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:13:49.633 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:13:49.637 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:13:49.639 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:13:49.642 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:13:49.645 +03:00 [DBG] Hosting started
+2022-06-12 13:13:57.707 +03:00 [DBG] Connection id "0HMICBH1LIEDA" accepted.
+2022-06-12 13:13:57.711 +03:00 [DBG] Connection id "0HMICBH1LIEDA" started.
+2022-06-12 13:13:57.842 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:13:57.891 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:13:57.932 +03:00 [DBG] Connection id "0HMICBH1LIEDA", Request id "0HMICBH1LIEDA:00000002": started reading request body.
+2022-06-12 13:13:57.938 +03:00 [DBG] Connection id "0HMICBH1LIEDA", Request id "0HMICBH1LIEDA:00000002": done reading request body.
+2022-06-12 13:13:58.228 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:15:23.208 +03:00 [DBG] Hosting starting
+2022-06-12 13:15:23.444 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:15:23.449 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:15:23.451 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:15:23.453 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:15:23.455 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:15:23.457 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:15:23.459 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:15:23.461 +03:00 [DBG] Hosting started
+2022-06-12 13:15:27.305 +03:00 [DBG] Connection id "0HMICBHSC3VQB" accepted.
+2022-06-12 13:15:27.309 +03:00 [DBG] Connection id "0HMICBHSC3VQB" started.
+2022-06-12 13:15:27.370 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:15:27.404 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:15:27.436 +03:00 [DBG] Connection id "0HMICBHSC3VQB", Request id "0HMICBHSC3VQB:00000002": started reading request body.
+2022-06-12 13:15:27.441 +03:00 [DBG] Connection id "0HMICBHSC3VQB", Request id "0HMICBHSC3VQB:00000002": done reading request body.
+2022-06-12 13:15:27.660 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:19:51.899 +03:00 [DBG] Hosting starting
+2022-06-12 13:19:52.094 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:19:52.100 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:19:52.102 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:19:52.104 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:19:52.106 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:19:52.109 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:19:52.113 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:19:52.117 +03:00 [DBG] Hosting started
+2022-06-12 13:19:57.265 +03:00 [DBG] Connection id "0HMICBKCQJF45" accepted.
+2022-06-12 13:19:57.274 +03:00 [DBG] Connection id "0HMICBKCQJF45" started.
+2022-06-12 13:19:57.364 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:19:57.396 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:19:57.420 +03:00 [DBG] Connection id "0HMICBKCQJF45", Request id "0HMICBKCQJF45:00000002": started reading request body.
+2022-06-12 13:19:57.423 +03:00 [DBG] Connection id "0HMICBKCQJF45", Request id "0HMICBKCQJF45:00000002": done reading request body.
+2022-06-12 13:19:57.637 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:19:58.175 +03:00 [ERR] Error while trying to process the request: RegisterUserRequest
+System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AllAboutGames.Core.Middlewares.Gateway.GatewayProtocol.ProcessGatewayMessage(GatewayMessage request, HttpContext context) in D:\Projects\Core\Middlewares\Gateway\GatewayProtocol.cs:line 68
+2022-06-12 13:19:58.435 +03:00 [DBG] Connection id "0HMICBKCQJF45" completed keep alive response.
+2022-06-12 13:19:58.444 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222 - 200 - application/json 1083.5541ms
+2022-06-12 13:19:58.811 +03:00 [DBG] Connection id "0HMICBKCQJF45" received FIN.
+2022-06-12 13:19:58.827 +03:00 [DBG] Connection id "0HMICBKCQJF45" sending FIN because: "The client closed the connection."
+2022-06-12 13:19:58.831 +03:00 [DBG] Connection id "0HMICBKCQJF45" disconnecting.
+2022-06-12 13:19:58.834 +03:00 [DBG] Connection id "0HMICBKCQJF45" stopped.
+2022-06-12 13:20:07.866 +03:00 [DBG] Connection id "0HMICBKCQJF46" accepted.
+2022-06-12 13:20:07.871 +03:00 [DBG] Connection id "0HMICBKCQJF46" started.
+2022-06-12 13:20:07.879 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:20:07.884 +03:00 [DBG] Connection id "0HMICBKCQJF46", Request id "0HMICBKCQJF46:00000002": started reading request body.
+2022-06-12 13:20:07.891 +03:00 [DBG] Connection id "0HMICBKCQJF46", Request id "0HMICBKCQJF46:00000002": done reading request body.
+2022-06-12 13:20:07.898 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:20:53.446 +03:00 [DBG] Hosting starting
+2022-06-12 13:20:53.675 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:20:53.679 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:20:53.680 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:20:53.681 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:20:53.681 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:20:53.682 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:20:53.684 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:20:53.685 +03:00 [DBG] Hosting started
+2022-06-12 13:20:56.198 +03:00 [DBG] Connection id "0HMICBKUCLAJS" accepted.
+2022-06-12 13:20:56.202 +03:00 [DBG] Connection id "0HMICBKUCLAJS" started.
+2022-06-12 13:20:56.265 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:20:56.300 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:20:56.326 +03:00 [DBG] Connection id "0HMICBKUCLAJS", Request id "0HMICBKUCLAJS:00000002": started reading request body.
+2022-06-12 13:20:56.331 +03:00 [DBG] Connection id "0HMICBKUCLAJS", Request id "0HMICBKUCLAJS:00000002": done reading request body.
+2022-06-12 13:20:56.501 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:24:03.065 +03:00 [DBG] Hosting starting
+2022-06-12 13:24:03.296 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:24:03.300 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:24:03.303 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:24:03.306 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:24:03.309 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:24:03.311 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:24:03.314 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:24:03.319 +03:00 [DBG] Hosting started
+2022-06-12 13:24:16.536 +03:00 [DBG] Connection id "0HMICBMQ36MV1" accepted.
+2022-06-12 13:24:16.545 +03:00 [DBG] Connection id "0HMICBMQ36MV1" started.
+2022-06-12 13:24:16.680 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:24:16.736 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:24:16.776 +03:00 [DBG] Connection id "0HMICBMQ36MV1", Request id "0HMICBMQ36MV1:00000002": started reading request body.
+2022-06-12 13:24:16.782 +03:00 [DBG] Connection id "0HMICBMQ36MV1", Request id "0HMICBMQ36MV1:00000002": done reading request body.
+2022-06-12 13:24:17.132 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:35:52.204 +03:00 [DBG] Hosting starting
+2022-06-12 13:35:52.421 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:35:52.425 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:35:52.426 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:35:52.427 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:35:52.428 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:35:52.429 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:35:52.430 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:35:52.433 +03:00 [DBG] Hosting started
+2022-06-12 13:35:55.959 +03:00 [DBG] Connection id "0HMICBTAHFCKA" accepted.
+2022-06-12 13:35:55.963 +03:00 [DBG] Connection id "0HMICBTAHFCKA" started.
+2022-06-12 13:35:56.027 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:35:56.068 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:35:56.090 +03:00 [DBG] Connection id "0HMICBTAHFCKA", Request id "0HMICBTAHFCKA:00000002": started reading request body.
+2022-06-12 13:35:56.094 +03:00 [DBG] Connection id "0HMICBTAHFCKA", Request id "0HMICBTAHFCKA:00000002": done reading request body.
+2022-06-12 13:35:56.271 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:36:51.034 +03:00 [DBG] Hosting starting
+2022-06-12 13:36:51.238 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:36:51.243 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:36:51.249 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:36:51.251 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:36:51.253 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:36:51.254 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:36:51.256 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:36:51.260 +03:00 [DBG] Hosting started
+2022-06-12 13:36:53.520 +03:00 [DBG] Connection id "0HMICBTRMD3OO" accepted.
+2022-06-12 13:36:53.524 +03:00 [DBG] Connection id "0HMICBTRMD3OO" started.
+2022-06-12 13:36:53.579 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:36:53.611 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:36:53.654 +03:00 [DBG] Connection id "0HMICBTRMD3OO", Request id "0HMICBTRMD3OO:00000002": started reading request body.
+2022-06-12 13:36:53.660 +03:00 [DBG] Connection id "0HMICBTRMD3OO", Request id "0HMICBTRMD3OO:00000002": done reading request body.
+2022-06-12 13:36:53.820 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:37:10.580 +03:00 [DBG] Hosting starting
+2022-06-12 13:37:10.834 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:37:10.838 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:37:10.840 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:37:10.843 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:37:10.846 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:37:10.847 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:37:10.848 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:37:10.849 +03:00 [DBG] Hosting started
+2022-06-12 13:37:14.142 +03:00 [DBG] Connection id "0HMICBU1R2KFJ" accepted.
+2022-06-12 13:37:14.146 +03:00 [DBG] Connection id "0HMICBU1R2KFJ" started.
+2022-06-12 13:37:14.197 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:37:14.230 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:37:14.254 +03:00 [DBG] Connection id "0HMICBU1R2KFJ", Request id "0HMICBU1R2KFJ:00000002": started reading request body.
+2022-06-12 13:37:14.258 +03:00 [DBG] Connection id "0HMICBU1R2KFJ", Request id "0HMICBU1R2KFJ:00000002": done reading request body.
+2022-06-12 13:37:14.413 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:42:55.428 +03:00 [DBG] Hosting starting
+2022-06-12 13:42:55.643 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:42:55.651 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:42:55.652 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:42:55.654 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:42:55.656 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:42:55.658 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:42:55.663 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:42:55.668 +03:00 [DBG] Hosting started
+2022-06-12 13:42:58.744 +03:00 [DBG] Connection id "0HMICC18HENQB" accepted.
+2022-06-12 13:42:58.750 +03:00 [DBG] Connection id "0HMICC18HENQB" started.
+2022-06-12 13:42:58.806 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:42:58.840 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:42:58.864 +03:00 [DBG] Connection id "0HMICC18HENQB", Request id "0HMICC18HENQB:00000002": started reading request body.
+2022-06-12 13:42:58.867 +03:00 [DBG] Connection id "0HMICC18HENQB", Request id "0HMICC18HENQB:00000002": done reading request body.
+2022-06-12 13:42:59.048 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:43:38.035 +03:00 [DBG] Hosting starting
+2022-06-12 13:43:38.263 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:43:38.267 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:43:38.270 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:43:38.273 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:43:38.278 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:43:38.280 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:43:38.283 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:43:38.286 +03:00 [DBG] Hosting started
+2022-06-12 13:43:43.373 +03:00 [DBG] Connection id "0HMICC1LR2TOQ" accepted.
+2022-06-12 13:43:43.378 +03:00 [DBG] Connection id "0HMICC1LR2TOQ" started.
+2022-06-12 13:43:43.432 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 222
+2022-06-12 13:43:43.464 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:43:43.492 +03:00 [DBG] Connection id "0HMICC1LR2TOQ", Request id "0HMICC1LR2TOQ:00000002": started reading request body.
+2022-06-12 13:43:43.496 +03:00 [DBG] Connection id "0HMICC1LR2TOQ", Request id "0HMICC1LR2TOQ:00000002": done reading request body.
+2022-06-12 13:43:43.658 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ddd","password":"","dateOfBirth":"2022-06-08","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:45:49.386 +03:00 [DBG] Hosting starting
+2022-06-12 13:45:49.595 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:45:49.599 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:45:49.600 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:45:49.601 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:45:49.602 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:45:49.604 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:45:49.605 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:45:49.605 +03:00 [DBG] Hosting started
+2022-06-12 13:45:53.738 +03:00 [DBG] Connection id "0HMICC2SMB1DA" accepted.
+2022-06-12 13:45:53.741 +03:00 [DBG] Connection id "0HMICC2SMB1DA" started.
+2022-06-12 13:45:53.802 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 219
+2022-06-12 13:45:53.834 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:45:53.859 +03:00 [DBG] Connection id "0HMICC2SMB1DA", Request id "0HMICC2SMB1DA:00000002": started reading request body.
+2022-06-12 13:45:53.862 +03:00 [DBG] Connection id "0HMICC2SMB1DA", Request id "0HMICC2SMB1DA:00000002": done reading request body.
+2022-06-12 13:45:54.061 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"","password":"","dateOfBirth":"2022-06-07","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:45:54.513 +03:00 [DBG] Connection id "0HMICC2SMB1DA" completed keep alive response.
+2022-06-12 13:45:54.518 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 219 - 200 - application/json 720.0294ms
+2022-06-12 13:46:01.158 +03:00 [DBG] Connection id "0HMICC2SMB1DA" received FIN.
+2022-06-12 13:46:01.185 +03:00 [DBG] Connection id "0HMICC2SMB1DA" sending FIN because: "The client closed the connection."
+2022-06-12 13:46:01.195 +03:00 [DBG] Connection id "0HMICC2SMB1DA" disconnecting.
+2022-06-12 13:46:01.205 +03:00 [DBG] Connection id "0HMICC2SMB1DA" stopped.
+2022-06-12 13:56:38.750 +03:00 [DBG] Hosting starting
+2022-06-12 13:56:39.008 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 13:56:39.013 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 13:56:39.015 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 13:56:39.018 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 13:56:39.021 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 13:56:39.023 +03:00 [INF] Hosting environment: Development
+2022-06-12 13:56:39.025 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 13:56:39.026 +03:00 [DBG] Hosting started
+2022-06-12 13:56:42.257 +03:00 [DBG] Connection id "0HMICC8TV2TGG" accepted.
+2022-06-12 13:56:42.262 +03:00 [DBG] Connection id "0HMICC8TV2TGG" started.
+2022-06-12 13:56:42.317 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 219
+2022-06-12 13:56:42.356 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 13:56:42.378 +03:00 [DBG] Connection id "0HMICC8TV2TGG", Request id "0HMICC8TV2TGG:00000002": started reading request body.
+2022-06-12 13:56:42.381 +03:00 [DBG] Connection id "0HMICC8TV2TGG", Request id "0HMICC8TV2TGG:00000002": done reading request body.
+2022-06-12 13:56:42.610 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"","password":"","dateOfBirth":"2022-06-07","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:56:43.018 +03:00 [DBG] Connection id "0HMICC8TV2TGG" completed keep alive response.
+2022-06-12 13:56:43.025 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 219 - 200 - application/json 710.6758ms
+2022-06-12 13:56:52.210 +03:00 [DBG] Connection id "0HMICC8TV2TGG" received FIN.
+2022-06-12 13:56:52.232 +03:00 [DBG] Connection id "0HMICC8TV2TGG" sending FIN because: "The client closed the connection."
+2022-06-12 13:56:52.236 +03:00 [DBG] Connection id "0HMICC8TV2TGG" disconnecting.
+2022-06-12 13:56:52.239 +03:00 [DBG] Connection id "0HMICC8TV2TGG" stopped.
+2022-06-12 13:56:57.899 +03:00 [DBG] Connection id "0HMICC8TV2TGH" accepted.
+2022-06-12 13:56:57.904 +03:00 [DBG] Connection id "0HMICC8TV2TGH" started.
+2022-06-12 13:56:57.911 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 219
+2022-06-12 13:56:57.917 +03:00 [DBG] Connection id "0HMICC8TV2TGH", Request id "0HMICC8TV2TGH:00000002": started reading request body.
+2022-06-12 13:56:57.934 +03:00 [DBG] Connection id "0HMICC8TV2TGH", Request id "0HMICC8TV2TGH:00000002": done reading request body.
+2022-06-12 13:56:57.941 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"","password":"","dateOfBirth":"2022-05-31","countryID":"1","email":"hristo.trendafilov93@gmail.com","isCheck":false}}
+2022-06-12 13:56:57.964 +03:00 [DBG] Connection id "0HMICC8TV2TGH" completed keep alive response.
+2022-06-12 13:56:57.969 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 219 - 200 - application/json 58.4345ms
+2022-06-12 13:57:02.236 +03:00 [DBG] Connection id "0HMICC8TV2TGH" received FIN.
+2022-06-12 13:57:02.244 +03:00 [DBG] Connection id "0HMICC8TV2TGH" sending FIN because: "The client closed the connection."
+2022-06-12 13:57:02.253 +03:00 [DBG] Connection id "0HMICC8TV2TGH" disconnecting.
+2022-06-12 13:57:02.260 +03:00 [DBG] Connection id "0HMICC8TV2TGH" stopped.
+2022-06-12 15:16:26.319 +03:00 [DBG] Hosting starting
+2022-06-12 15:16:26.566 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 15:16:26.568 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 15:16:26.569 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 15:16:26.570 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 15:16:26.571 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 15:16:26.573 +03:00 [INF] Hosting environment: Development
+2022-06-12 15:16:26.574 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 15:16:26.574 +03:00 [DBG] Hosting started
+2022-06-12 15:16:33.278 +03:00 [DBG] Connection id "0HMICDLHPQLSN" accepted.
+2022-06-12 15:16:33.282 +03:00 [DBG] Connection id "0HMICDLHPQLSN" started.
+2022-06-12 15:16:33.354 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 61
+2022-06-12 15:16:33.390 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 15:16:33.415 +03:00 [DBG] Connection id "0HMICDLHPQLSN", Request id "0HMICDLHPQLSN:00000002": started reading request body.
+2022-06-12 15:16:33.417 +03:00 [DBG] Connection id "0HMICDLHPQLSN", Request id "0HMICDLHPQLSN:00000002": done reading request body.
+2022-06-12 15:16:33.436 +03:00 [DBG] Connection id "0HMICDLHPQLSO" accepted.
+2022-06-12 15:16:33.438 +03:00 [DBG] Connection id "0HMICDLHPQLSO" started.
+2022-06-12 15:16:33.440 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 61
+2022-06-12 15:16:33.458 +03:00 [DBG] Connection id "0HMICDLHPQLSO", Request id "0HMICDLHPQLSO:00000002": started reading request body.
+2022-06-12 15:16:33.477 +03:00 [DBG] Connection id "0HMICDLHPQLSO", Request id "0HMICDLHPQLSO:00000002": done reading request body.
+2022-06-12 15:16:33.688 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ ""
+2022-06-12 15:16:33.688 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ ""
+2022-06-12 15:17:18.729 +03:00 [DBG] Hosting starting
+2022-06-12 15:17:18.918 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 15:17:18.920 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 15:17:18.921 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 15:17:18.922 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 15:17:18.923 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 15:17:18.924 +03:00 [INF] Hosting environment: Development
+2022-06-12 15:17:18.925 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 15:17:18.925 +03:00 [DBG] Hosting started
+2022-06-12 15:17:23.906 +03:00 [DBG] Connection id "0HMICDM0SLFSM" accepted.
+2022-06-12 15:17:23.910 +03:00 [DBG] Connection id "0HMICDM0SLFSN" accepted.
+2022-06-12 15:17:23.910 +03:00 [DBG] Connection id "0HMICDM0SLFSM" started.
+2022-06-12 15:17:23.912 +03:00 [DBG] Connection id "0HMICDM0SLFSN" started.
+2022-06-12 15:17:23.964 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 61
+2022-06-12 15:17:23.964 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 61
+2022-06-12 15:17:23.994 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 15:17:23.994 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 15:17:24.027 +03:00 [DBG] Connection id "0HMICDM0SLFSN", Request id "0HMICDM0SLFSN:00000002": started reading request body.
+2022-06-12 15:17:24.027 +03:00 [DBG] Connection id "0HMICDM0SLFSM", Request id "0HMICDM0SLFSM:00000002": started reading request body.
+2022-06-12 15:17:24.029 +03:00 [DBG] Connection id "0HMICDM0SLFSN", Request id "0HMICDM0SLFSN:00000002": done reading request body.
+2022-06-12 15:17:24.031 +03:00 [DBG] Connection id "0HMICDM0SLFSM", Request id "0HMICDM0SLFSM:00000002": done reading request body.
+2022-06-12 15:17:24.167 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ ""
+2022-06-12 15:17:24.167 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ ""
+2022-06-12 15:18:16.771 +03:00 [DBG] Hosting starting
+2022-06-12 15:18:16.912 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 15:18:16.914 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 15:18:16.916 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 15:18:16.917 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 15:18:16.918 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 15:18:16.918 +03:00 [INF] Hosting environment: Development
+2022-06-12 15:18:16.919 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 15:18:16.920 +03:00 [DBG] Hosting started
+2022-06-12 15:18:32.901 +03:00 [DBG] Connection id "0HMICDMLEKDBB" accepted.
+2022-06-12 15:18:32.935 +03:00 [DBG] Connection id "0HMICDMLEKDBB" started.
+2022-06-12 15:18:32.935 +03:00 [DBG] Connection id "0HMICDMLEKDBC" accepted.
+2022-06-12 15:18:32.937 +03:00 [DBG] Connection id "0HMICDMLEKDBC" started.
+2022-06-12 15:18:32.980 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:18:32.980 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:18:33.009 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 15:18:33.009 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 15:18:33.044 +03:00 [DBG] Connection id "0HMICDMLEKDBC", Request id "0HMICDMLEKDBC:00000002": started reading request body.
+2022-06-12 15:18:33.044 +03:00 [DBG] Connection id "0HMICDMLEKDBB", Request id "0HMICDMLEKDBB:00000002": started reading request body.
+2022-06-12 15:18:33.045 +03:00 [DBG] Connection id "0HMICDMLEKDBC", Request id "0HMICDMLEKDBC:00000002": done reading request body.
+2022-06-12 15:18:33.046 +03:00 [DBG] Connection id "0HMICDMLEKDBB", Request id "0HMICDMLEKDBB:00000002": done reading request body.
+2022-06-12 15:18:33.178 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:18:33.178 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:19:17.953 +03:00 [DBG] Connection id "0HMICDMLEKDBB" completed keep alive response.
+2022-06-12 15:19:17.953 +03:00 [DBG] Connection id "0HMICDMLEKDBC" completed keep alive response.
+2022-06-12 15:19:17.962 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 44983.6216ms
+2022-06-12 15:19:17.962 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 44983.6257ms
+2022-06-12 15:19:23.243 +03:00 [DBG] Connection id "0HMICDMLEKDBC" received FIN.
+2022-06-12 15:19:23.249 +03:00 [DBG] Connection id "0HMICDMLEKDBB" received FIN.
+2022-06-12 15:19:23.254 +03:00 [DBG] Connection id "0HMICDMLEKDBC" disconnecting.
+2022-06-12 15:19:23.255 +03:00 [DBG] Connection id "0HMICDMLEKDBB" disconnecting.
+2022-06-12 15:19:23.261 +03:00 [DBG] Connection id "0HMICDMLEKDBC" sending FIN because: "The client closed the connection."
+2022-06-12 15:19:23.261 +03:00 [DBG] Connection id "0HMICDMLEKDBB" sending FIN because: "The client closed the connection."
+2022-06-12 15:19:23.271 +03:00 [DBG] Connection id "0HMICDMLEKDBC" stopped.
+2022-06-12 15:19:23.271 +03:00 [DBG] Connection id "0HMICDMLEKDBB" stopped.
+2022-06-12 15:21:00.859 +03:00 [DBG] Hosting starting
+2022-06-12 15:21:01.090 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-12 15:21:01.093 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-12 15:21:01.093 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-12 15:21:01.094 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-12 15:21:01.095 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-12 15:21:01.095 +03:00 [INF] Hosting environment: Development
+2022-06-12 15:21:01.096 +03:00 [INF] Content root path: D:\Projects\
+2022-06-12 15:21:01.097 +03:00 [DBG] Hosting started
+2022-06-12 15:21:05.925 +03:00 [DBG] Connection id "0HMICDO31VRJB" accepted.
+2022-06-12 15:21:05.928 +03:00 [DBG] Connection id "0HMICDO31VRJC" accepted.
+2022-06-12 15:21:05.929 +03:00 [DBG] Connection id "0HMICDO31VRJB" started.
+2022-06-12 15:21:05.930 +03:00 [DBG] Connection id "0HMICDO31VRJC" started.
+2022-06-12 15:21:05.991 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:21:05.991 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:21:06.034 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 15:21:06.034 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-12 15:21:06.066 +03:00 [DBG] Connection id "0HMICDO31VRJB", Request id "0HMICDO31VRJB:00000002": started reading request body.
+2022-06-12 15:21:06.066 +03:00 [DBG] Connection id "0HMICDO31VRJC", Request id "0HMICDO31VRJC:00000002": started reading request body.
+2022-06-12 15:21:06.067 +03:00 [DBG] Connection id "0HMICDO31VRJB", Request id "0HMICDO31VRJB:00000002": done reading request body.
+2022-06-12 15:21:06.068 +03:00 [DBG] Connection id "0HMICDO31VRJC", Request id "0HMICDO31VRJC:00000002": done reading request body.
+2022-06-12 15:21:06.230 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:21:06.230 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:21:14.210 +03:00 [DBG] Connection id "0HMICDO31VRJC" completed keep alive response.
+2022-06-12 15:21:14.210 +03:00 [DBG] Connection id "0HMICDO31VRJB" completed keep alive response.
+2022-06-12 15:21:14.216 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 8229.2097ms
+2022-06-12 15:21:14.216 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 8229.2082ms
+2022-06-12 15:21:23.420 +03:00 [DBG] Connection id "0HMICDO31VRJB" received FIN.
+2022-06-12 15:21:23.420 +03:00 [DBG] Connection id "0HMICDO31VRJC" received FIN.
+2022-06-12 15:21:23.422 +03:00 [DBG] Connection id "0HMICDO31VRJB" sending FIN because: "The client closed the connection."
+2022-06-12 15:21:23.424 +03:00 [DBG] Connection id "0HMICDO31VRJC" disconnecting.
+2022-06-12 15:21:23.430 +03:00 [DBG] Connection id "0HMICDO31VRJB" disconnecting.
+2022-06-12 15:21:23.430 +03:00 [DBG] Connection id "0HMICDO31VRJC" sending FIN because: "The client closed the connection."
+2022-06-12 15:21:23.434 +03:00 [DBG] Connection id "0HMICDO31VRJB" stopped.
+2022-06-12 15:21:23.447 +03:00 [DBG] Connection id "0HMICDO31VRJC" stopped.
+2022-06-12 15:21:36.002 +03:00 [DBG] Connection id "0HMICDO31VRJD" accepted.
+2022-06-12 15:21:36.004 +03:00 [DBG] Connection id "0HMICDO31VRJD" started.
+2022-06-12 15:21:36.004 +03:00 [DBG] Connection id "0HMICDO31VRJE" accepted.
+2022-06-12 15:21:36.005 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:21:36.007 +03:00 [DBG] Connection id "0HMICDO31VRJE" started.
+2022-06-12 15:21:36.009 +03:00 [DBG] Connection id "0HMICDO31VRJD", Request id "0HMICDO31VRJD:00000002": started reading request body.
+2022-06-12 15:21:36.009 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:21:36.010 +03:00 [DBG] Connection id "0HMICDO31VRJD", Request id "0HMICDO31VRJD:00000002": done reading request body.
+2022-06-12 15:21:36.011 +03:00 [DBG] Connection id "0HMICDO31VRJE", Request id "0HMICDO31VRJE:00000002": started reading request body.
+2022-06-12 15:21:36.012 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:21:36.013 +03:00 [DBG] Connection id "0HMICDO31VRJE", Request id "0HMICDO31VRJE:00000002": done reading request body.
+2022-06-12 15:21:36.018 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:21:36.070 +03:00 [DBG] Connection id "0HMICDO31VRJE" completed keep alive response.
+2022-06-12 15:21:36.071 +03:00 [DBG] Connection id "0HMICDO31VRJD" completed keep alive response.
+2022-06-12 15:21:36.073 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 63.8639ms
+2022-06-12 15:21:36.074 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 68.4514ms
+2022-06-12 15:21:38.285 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:21:38.287 +03:00 [DBG] Connection id "0HMICDO31VRJE", Request id "0HMICDO31VRJE:00000003": started reading request body.
+2022-06-12 15:21:38.288 +03:00 [DBG] Connection id "0HMICDO31VRJE", Request id "0HMICDO31VRJE:00000003": done reading request body.
+2022-06-12 15:21:38.296 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:21:38.298 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:21:38.309 +03:00 [DBG] Connection id "0HMICDO31VRJD", Request id "0HMICDO31VRJD:00000003": started reading request body.
+2022-06-12 15:21:38.314 +03:00 [DBG] Connection id "0HMICDO31VRJE" completed keep alive response.
+2022-06-12 15:21:38.320 +03:00 [DBG] Connection id "0HMICDO31VRJD", Request id "0HMICDO31VRJD:00000003": done reading request body.
+2022-06-12 15:21:38.324 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 38.3449ms
+2022-06-12 15:21:38.326 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:21:38.346 +03:00 [DBG] Connection id "0HMICDO31VRJD" completed keep alive response.
+2022-06-12 15:21:38.350 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 52.8584ms
+2022-06-12 15:21:43.437 +03:00 [DBG] Connection id "0HMICDO31VRJE" received FIN.
+2022-06-12 15:21:43.437 +03:00 [DBG] Connection id "0HMICDO31VRJD" received FIN.
+2022-06-12 15:21:43.440 +03:00 [DBG] Connection id "0HMICDO31VRJE" sending FIN because: "The client closed the connection."
+2022-06-12 15:21:43.441 +03:00 [DBG] Connection id "0HMICDO31VRJD" sending FIN because: "The client closed the connection."
+2022-06-12 15:21:43.443 +03:00 [DBG] Connection id "0HMICDO31VRJE" disconnecting.
+2022-06-12 15:21:43.444 +03:00 [DBG] Connection id "0HMICDO31VRJD" disconnecting.
+2022-06-12 15:21:43.445 +03:00 [DBG] Connection id "0HMICDO31VRJE" stopped.
+2022-06-12 15:21:43.446 +03:00 [DBG] Connection id "0HMICDO31VRJD" stopped.
+2022-06-12 15:21:51.898 +03:00 [DBG] Connection id "0HMICDO31VRJF" accepted.
+2022-06-12 15:21:51.902 +03:00 [DBG] Connection id "0HMICDO31VRJF" started.
+2022-06-12 15:21:51.906 +03:00 [DBG] Connection id "0HMICDO31VRJG" accepted.
+2022-06-12 15:21:51.907 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:21:51.908 +03:00 [DBG] Connection id "0HMICDO31VRJG" started.
+2022-06-12 15:21:51.909 +03:00 [DBG] Connection id "0HMICDO31VRJF", Request id "0HMICDO31VRJF:00000002": started reading request body.
+2022-06-12 15:21:51.910 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:21:51.912 +03:00 [DBG] Connection id "0HMICDO31VRJF", Request id "0HMICDO31VRJF:00000002": done reading request body.
+2022-06-12 15:21:51.913 +03:00 [DBG] Connection id "0HMICDO31VRJG", Request id "0HMICDO31VRJG:00000002": started reading request body.
+2022-06-12 15:21:51.914 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:21:51.916 +03:00 [DBG] Connection id "0HMICDO31VRJG", Request id "0HMICDO31VRJG:00000002": done reading request body.
+2022-06-12 15:21:51.952 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:21:51.954 +03:00 [DBG] Connection id "0HMICDO31VRJF" completed keep alive response.
+2022-06-12 15:21:51.963 +03:00 [DBG] Connection id "0HMICDO31VRJG" completed keep alive response.
+2022-06-12 15:21:51.963 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 55.3498ms
+2022-06-12 15:21:51.967 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 56.7549ms
+2022-06-12 15:21:53.441 +03:00 [DBG] Connection id "0HMICDO31VRJG" received FIN.
+2022-06-12 15:21:53.441 +03:00 [DBG] Connection id "0HMICDO31VRJF" received FIN.
+2022-06-12 15:21:53.446 +03:00 [DBG] Connection id "0HMICDO31VRJG" sending FIN because: "The client closed the connection."
+2022-06-12 15:21:53.449 +03:00 [DBG] Connection id "0HMICDO31VRJF" sending FIN because: "The client closed the connection."
+2022-06-12 15:21:53.452 +03:00 [DBG] Connection id "0HMICDO31VRJG" disconnecting.
+2022-06-12 15:21:53.455 +03:00 [DBG] Connection id "0HMICDO31VRJF" disconnecting.
+2022-06-12 15:21:53.458 +03:00 [DBG] Connection id "0HMICDO31VRJG" stopped.
+2022-06-12 15:21:53.459 +03:00 [DBG] Connection id "0HMICDO31VRJF" stopped.
+2022-06-12 15:22:03.652 +03:00 [DBG] Connection id "0HMICDO31VRJH" accepted.
+2022-06-12 15:22:03.654 +03:00 [DBG] Connection id "0HMICDO31VRJH" started.
+2022-06-12 15:22:03.655 +03:00 [DBG] Connection id "0HMICDO31VRJI" accepted.
+2022-06-12 15:22:03.658 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:03.660 +03:00 [DBG] Connection id "0HMICDO31VRJI" started.
+2022-06-12 15:22:03.662 +03:00 [DBG] Connection id "0HMICDO31VRJH", Request id "0HMICDO31VRJH:00000002": started reading request body.
+2022-06-12 15:22:03.664 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:03.669 +03:00 [DBG] Connection id "0HMICDO31VRJH", Request id "0HMICDO31VRJH:00000002": done reading request body.
+2022-06-12 15:22:03.671 +03:00 [DBG] Connection id "0HMICDO31VRJI", Request id "0HMICDO31VRJI:00000002": started reading request body.
+2022-06-12 15:22:03.674 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:03.680 +03:00 [DBG] Connection id "0HMICDO31VRJI", Request id "0HMICDO31VRJI:00000002": done reading request body.
+2022-06-12 15:22:03.693 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:03.699 +03:00 [DBG] Connection id "0HMICDO31VRJH" completed keep alive response.
+2022-06-12 15:22:03.726 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 67.9856ms
+2022-06-12 15:22:03.728 +03:00 [DBG] Connection id "0HMICDO31VRJI" completed keep alive response.
+2022-06-12 15:22:03.735 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 70.9910ms
+2022-06-12 15:22:13.479 +03:00 [DBG] Connection id "0HMICDO31VRJI" received FIN.
+2022-06-12 15:22:13.479 +03:00 [DBG] Connection id "0HMICDO31VRJH" received FIN.
+2022-06-12 15:22:13.483 +03:00 [DBG] Connection id "0HMICDO31VRJI" disconnecting.
+2022-06-12 15:22:13.488 +03:00 [DBG] Connection id "0HMICDO31VRJH" disconnecting.
+2022-06-12 15:22:13.492 +03:00 [DBG] Connection id "0HMICDO31VRJI" sending FIN because: "The client closed the connection."
+2022-06-12 15:22:13.493 +03:00 [DBG] Connection id "0HMICDO31VRJH" sending FIN because: "The client closed the connection."
+2022-06-12 15:22:13.510 +03:00 [DBG] Connection id "0HMICDO31VRJI" stopped.
+2022-06-12 15:22:13.510 +03:00 [DBG] Connection id "0HMICDO31VRJH" stopped.
+2022-06-12 15:22:16.087 +03:00 [DBG] Connection id "0HMICDO31VRJJ" accepted.
+2022-06-12 15:22:16.089 +03:00 [DBG] Connection id "0HMICDO31VRJJ" started.
+2022-06-12 15:22:16.090 +03:00 [DBG] Connection id "0HMICDO31VRJK" accepted.
+2022-06-12 15:22:16.091 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:16.092 +03:00 [DBG] Connection id "0HMICDO31VRJK" started.
+2022-06-12 15:22:16.093 +03:00 [DBG] Connection id "0HMICDO31VRJJ", Request id "0HMICDO31VRJJ:00000002": started reading request body.
+2022-06-12 15:22:16.094 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:16.095 +03:00 [DBG] Connection id "0HMICDO31VRJJ", Request id "0HMICDO31VRJJ:00000002": done reading request body.
+2022-06-12 15:22:16.096 +03:00 [DBG] Connection id "0HMICDO31VRJK", Request id "0HMICDO31VRJK:00000002": started reading request body.
+2022-06-12 15:22:16.097 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:16.100 +03:00 [DBG] Connection id "0HMICDO31VRJK", Request id "0HMICDO31VRJK:00000002": done reading request body.
+2022-06-12 15:22:16.103 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:16.107 +03:00 [DBG] Connection id "0HMICDO31VRJJ" completed keep alive response.
+2022-06-12 15:22:16.115 +03:00 [DBG] Connection id "0HMICDO31VRJK" completed keep alive response.
+2022-06-12 15:22:16.118 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 26.9595ms
+2022-06-12 15:22:16.119 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 25.3735ms
+2022-06-12 15:22:21.705 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:21.709 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:21.714 +03:00 [DBG] Connection id "0HMICDO31VRJK", Request id "0HMICDO31VRJK:00000003": started reading request body.
+2022-06-12 15:22:21.715 +03:00 [DBG] Connection id "0HMICDO31VRJJ", Request id "0HMICDO31VRJJ:00000003": started reading request body.
+2022-06-12 15:22:21.717 +03:00 [DBG] Connection id "0HMICDO31VRJK", Request id "0HMICDO31VRJK:00000003": done reading request body.
+2022-06-12 15:22:21.719 +03:00 [DBG] Connection id "0HMICDO31VRJJ", Request id "0HMICDO31VRJJ:00000003": done reading request body.
+2022-06-12 15:22:21.722 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:21.726 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:21.744 +03:00 [DBG] Connection id "0HMICDO31VRJK" completed keep alive response.
+2022-06-12 15:22:21.746 +03:00 [DBG] Connection id "0HMICDO31VRJJ" completed keep alive response.
+2022-06-12 15:22:21.746 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 40.7499ms
+2022-06-12 15:22:21.747 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 38.0764ms
+2022-06-12 15:22:23.491 +03:00 [DBG] Connection id "0HMICDO31VRJK" received FIN.
+2022-06-12 15:22:23.491 +03:00 [DBG] Connection id "0HMICDO31VRJJ" received FIN.
+2022-06-12 15:22:23.493 +03:00 [DBG] Connection id "0HMICDO31VRJK" sending FIN because: "The client closed the connection."
+2022-06-12 15:22:23.496 +03:00 [DBG] Connection id "0HMICDO31VRJJ" sending FIN because: "The client closed the connection."
+2022-06-12 15:22:23.498 +03:00 [DBG] Connection id "0HMICDO31VRJK" disconnecting.
+2022-06-12 15:22:23.501 +03:00 [DBG] Connection id "0HMICDO31VRJJ" disconnecting.
+2022-06-12 15:22:23.505 +03:00 [DBG] Connection id "0HMICDO31VRJK" stopped.
+2022-06-12 15:22:23.508 +03:00 [DBG] Connection id "0HMICDO31VRJJ" stopped.
+2022-06-12 15:22:23.731 +03:00 [DBG] Connection id "0HMICDO31VRJL" accepted.
+2022-06-12 15:22:23.733 +03:00 [DBG] Connection id "0HMICDO31VRJL" started.
+2022-06-12 15:22:23.736 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:23.746 +03:00 [DBG] Connection id "0HMICDO31VRJM" accepted.
+2022-06-12 15:22:23.753 +03:00 [DBG] Connection id "0HMICDO31VRJL", Request id "0HMICDO31VRJL:00000002": started reading request body.
+2022-06-12 15:22:23.756 +03:00 [DBG] Connection id "0HMICDO31VRJM" started.
+2022-06-12 15:22:23.758 +03:00 [DBG] Connection id "0HMICDO31VRJL", Request id "0HMICDO31VRJL:00000002": done reading request body.
+2022-06-12 15:22:23.760 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:23.766 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:23.767 +03:00 [DBG] Connection id "0HMICDO31VRJM", Request id "0HMICDO31VRJM:00000002": started reading request body.
+2022-06-12 15:22:23.776 +03:00 [DBG] Connection id "0HMICDO31VRJM", Request id "0HMICDO31VRJM:00000002": done reading request body.
+2022-06-12 15:22:23.781 +03:00 [DBG] Connection id "0HMICDO31VRJL" completed keep alive response.
+2022-06-12 15:22:23.784 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:23.785 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 49.8051ms
+2022-06-12 15:22:23.796 +03:00 [DBG] Connection id "0HMICDO31VRJM" completed keep alive response.
+2022-06-12 15:22:23.798 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 37.9480ms
+2022-06-12 15:22:33.512 +03:00 [DBG] Connection id "0HMICDO31VRJL" received FIN.
+2022-06-12 15:22:33.512 +03:00 [DBG] Connection id "0HMICDO31VRJM" received FIN.
+2022-06-12 15:22:33.515 +03:00 [DBG] Connection id "0HMICDO31VRJL" sending FIN because: "The client closed the connection."
+2022-06-12 15:22:33.517 +03:00 [DBG] Connection id "0HMICDO31VRJM" sending FIN because: "The client closed the connection."
+2022-06-12 15:22:33.520 +03:00 [DBG] Connection id "0HMICDO31VRJL" disconnecting.
+2022-06-12 15:22:33.522 +03:00 [DBG] Connection id "0HMICDO31VRJM" disconnecting.
+2022-06-12 15:22:33.523 +03:00 [DBG] Connection id "0HMICDO31VRJL" stopped.
+2022-06-12 15:22:33.524 +03:00 [DBG] Connection id "0HMICDO31VRJM" stopped.
+2022-06-12 15:22:43.105 +03:00 [DBG] Connection id "0HMICDO31VRJN" accepted.
+2022-06-12 15:22:43.110 +03:00 [DBG] Connection id "0HMICDO31VRJN" started.
+2022-06-12 15:22:43.112 +03:00 [DBG] Connection id "0HMICDO31VRJO" accepted.
+2022-06-12 15:22:43.120 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:43.122 +03:00 [DBG] Connection id "0HMICDO31VRJO" started.
+2022-06-12 15:22:43.123 +03:00 [DBG] Connection id "0HMICDO31VRJN", Request id "0HMICDO31VRJN:00000002": started reading request body.
+2022-06-12 15:22:43.125 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:43.126 +03:00 [DBG] Connection id "0HMICDO31VRJN", Request id "0HMICDO31VRJN:00000002": done reading request body.
+2022-06-12 15:22:43.127 +03:00 [DBG] Connection id "0HMICDO31VRJO", Request id "0HMICDO31VRJO:00000002": started reading request body.
+2022-06-12 15:22:43.129 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:43.132 +03:00 [DBG] Connection id "0HMICDO31VRJO", Request id "0HMICDO31VRJO:00000002": done reading request body.
+2022-06-12 15:22:43.139 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:43.142 +03:00 [DBG] Connection id "0HMICDO31VRJN" completed keep alive response.
+2022-06-12 15:22:43.149 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 29.1014ms
+2022-06-12 15:22:43.151 +03:00 [DBG] Connection id "0HMICDO31VRJO" completed keep alive response.
+2022-06-12 15:22:43.155 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 29.5041ms
+2022-06-12 15:22:43.535 +03:00 [DBG] Connection id "0HMICDO31VRJN" received FIN.
+2022-06-12 15:22:43.535 +03:00 [DBG] Connection id "0HMICDO31VRJO" received FIN.
+2022-06-12 15:22:43.537 +03:00 [DBG] Connection id "0HMICDO31VRJN" sending FIN because: "The client closed the connection."
+2022-06-12 15:22:43.538 +03:00 [DBG] Connection id "0HMICDO31VRJO" disconnecting.
+2022-06-12 15:22:43.539 +03:00 [DBG] Connection id "0HMICDO31VRJN" disconnecting.
+2022-06-12 15:22:43.541 +03:00 [DBG] Connection id "0HMICDO31VRJO" sending FIN because: "The client closed the connection."
+2022-06-12 15:22:43.542 +03:00 [DBG] Connection id "0HMICDO31VRJN" stopped.
+2022-06-12 15:22:43.550 +03:00 [DBG] Connection id "0HMICDO31VRJO" stopped.
+2022-06-12 15:22:47.090 +03:00 [DBG] Connection id "0HMICDO31VRJP" accepted.
+2022-06-12 15:22:47.091 +03:00 [DBG] Connection id "0HMICDO31VRJP" started.
+2022-06-12 15:22:47.092 +03:00 [DBG] Connection id "0HMICDO31VRJQ" accepted.
+2022-06-12 15:22:47.093 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:47.094 +03:00 [DBG] Connection id "0HMICDO31VRJQ" started.
+2022-06-12 15:22:47.095 +03:00 [DBG] Connection id "0HMICDO31VRJP", Request id "0HMICDO31VRJP:00000002": started reading request body.
+2022-06-12 15:22:47.097 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:47.098 +03:00 [DBG] Connection id "0HMICDO31VRJP", Request id "0HMICDO31VRJP:00000002": done reading request body.
+2022-06-12 15:22:47.099 +03:00 [DBG] Connection id "0HMICDO31VRJQ", Request id "0HMICDO31VRJQ:00000002": started reading request body.
+2022-06-12 15:22:47.104 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:47.105 +03:00 [DBG] Connection id "0HMICDO31VRJQ", Request id "0HMICDO31VRJQ:00000002": done reading request body.
+2022-06-12 15:22:47.111 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:47.113 +03:00 [DBG] Connection id "0HMICDO31VRJP" completed keep alive response.
+2022-06-12 15:22:47.123 +03:00 [DBG] Connection id "0HMICDO31VRJQ" completed keep alive response.
+2022-06-12 15:22:47.123 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 29.7681ms
+2022-06-12 15:22:47.125 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 28.0552ms
+2022-06-12 15:22:49.577 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:49.581 +03:00 [DBG] Connection id "0HMICDO31VRJQ", Request id "0HMICDO31VRJQ:00000003": started reading request body.
+2022-06-12 15:22:49.586 +03:00 [DBG] Connection id "0HMICDO31VRJQ", Request id "0HMICDO31VRJQ:00000003": done reading request body.
+2022-06-12 15:22:49.590 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:49.595 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:22:49.606 +03:00 [DBG] Connection id "0HMICDO31VRJP", Request id "0HMICDO31VRJP:00000003": started reading request body.
+2022-06-12 15:22:49.609 +03:00 [DBG] Connection id "0HMICDO31VRJQ" completed keep alive response.
+2022-06-12 15:22:49.617 +03:00 [DBG] Connection id "0HMICDO31VRJP", Request id "0HMICDO31VRJP:00000003": done reading request body.
+2022-06-12 15:22:49.619 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 42.1230ms
+2022-06-12 15:22:49.623 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:22:49.638 +03:00 [DBG] Connection id "0HMICDO31VRJP" completed keep alive response.
+2022-06-12 15:22:49.640 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 44.2187ms
+2022-06-12 15:22:53.551 +03:00 [DBG] Connection id "0HMICDO31VRJQ" received FIN.
+2022-06-12 15:22:53.551 +03:00 [DBG] Connection id "0HMICDO31VRJP" received FIN.
+2022-06-12 15:22:53.556 +03:00 [DBG] Connection id "0HMICDO31VRJQ" sending FIN because: "The client closed the connection."
+2022-06-12 15:22:53.558 +03:00 [DBG] Connection id "0HMICDO31VRJP" sending FIN because: "The client closed the connection."
+2022-06-12 15:22:53.559 +03:00 [DBG] Connection id "0HMICDO31VRJQ" disconnecting.
+2022-06-12 15:22:53.560 +03:00 [DBG] Connection id "0HMICDO31VRJP" disconnecting.
+2022-06-12 15:22:53.561 +03:00 [DBG] Connection id "0HMICDO31VRJQ" stopped.
+2022-06-12 15:22:53.562 +03:00 [DBG] Connection id "0HMICDO31VRJP" stopped.
+2022-06-12 15:23:10.280 +03:00 [DBG] Connection id "0HMICDO31VRJR" accepted.
+2022-06-12 15:23:10.282 +03:00 [DBG] Connection id "0HMICDO31VRJR" started.
+2022-06-12 15:23:10.285 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:23:10.287 +03:00 [DBG] Connection id "0HMICDO31VRJR", Request id "0HMICDO31VRJR:00000002": started reading request body.
+2022-06-12 15:23:10.292 +03:00 [DBG] Connection id "0HMICDO31VRJR", Request id "0HMICDO31VRJR:00000002": done reading request body.
+2022-06-12 15:23:10.295 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:23:10.296 +03:00 [DBG] Connection id "0HMICDO31VRJS" accepted.
+2022-06-12 15:23:10.313 +03:00 [DBG] Connection id "0HMICDO31VRJS" started.
+2022-06-12 15:23:10.323 +03:00 [DBG] Connection id "0HMICDO31VRJR" completed keep alive response.
+2022-06-12 15:23:10.324 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:23:10.325 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 40.7756ms
+2022-06-12 15:23:10.327 +03:00 [DBG] Connection id "0HMICDO31VRJS", Request id "0HMICDO31VRJS:00000002": started reading request body.
+2022-06-12 15:23:10.332 +03:00 [DBG] Connection id "0HMICDO31VRJS", Request id "0HMICDO31VRJS:00000002": done reading request body.
+2022-06-12 15:23:10.334 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:23:10.348 +03:00 [DBG] Connection id "0HMICDO31VRJS" completed keep alive response.
+2022-06-12 15:23:10.349 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 25.3153ms
+2022-06-12 15:23:13.581 +03:00 [DBG] Connection id "0HMICDO31VRJR" received FIN.
+2022-06-12 15:23:13.585 +03:00 [DBG] Connection id "0HMICDO31VRJS" received FIN.
+2022-06-12 15:23:13.586 +03:00 [DBG] Connection id "0HMICDO31VRJR" sending FIN because: "The client closed the connection."
+2022-06-12 15:23:13.587 +03:00 [DBG] Connection id "0HMICDO31VRJS" disconnecting.
+2022-06-12 15:23:13.593 +03:00 [DBG] Connection id "0HMICDO31VRJR" disconnecting.
+2022-06-12 15:23:13.594 +03:00 [DBG] Connection id "0HMICDO31VRJS" sending FIN because: "The client closed the connection."
+2022-06-12 15:23:13.595 +03:00 [DBG] Connection id "0HMICDO31VRJR" stopped.
+2022-06-12 15:23:13.597 +03:00 [DBG] Connection id "0HMICDO31VRJS" stopped.
+2022-06-12 15:23:39.827 +03:00 [DBG] Connection id "0HMICDO31VRJT" accepted.
+2022-06-12 15:23:39.829 +03:00 [DBG] Connection id "0HMICDO31VRJT" started.
+2022-06-12 15:23:39.837 +03:00 [DBG] Connection id "0HMICDO31VRJU" accepted.
+2022-06-12 15:23:39.839 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:23:39.843 +03:00 [DBG] Connection id "0HMICDO31VRJU" started.
+2022-06-12 15:23:39.850 +03:00 [DBG] Connection id "0HMICDO31VRJT", Request id "0HMICDO31VRJT:00000002": started reading request body.
+2022-06-12 15:23:39.853 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:23:39.855 +03:00 [DBG] Connection id "0HMICDO31VRJT", Request id "0HMICDO31VRJT:00000002": done reading request body.
+2022-06-12 15:23:39.857 +03:00 [DBG] Connection id "0HMICDO31VRJU", Request id "0HMICDO31VRJU:00000002": started reading request body.
+2022-06-12 15:23:39.861 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:23:39.862 +03:00 [DBG] Connection id "0HMICDO31VRJU", Request id "0HMICDO31VRJU:00000002": done reading request body.
+2022-06-12 15:23:39.870 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:23:39.879 +03:00 [DBG] Connection id "0HMICDO31VRJT" completed keep alive response.
+2022-06-12 15:23:39.886 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 46.6062ms
+2022-06-12 15:23:39.888 +03:00 [DBG] Connection id "0HMICDO31VRJU" completed keep alive response.
+2022-06-12 15:23:39.893 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 39.5242ms
+2022-06-12 15:23:43.641 +03:00 [DBG] Connection id "0HMICDO31VRJU" received FIN.
+2022-06-12 15:23:43.641 +03:00 [DBG] Connection id "0HMICDO31VRJT" received FIN.
+2022-06-12 15:23:43.644 +03:00 [DBG] Connection id "0HMICDO31VRJU" sending FIN because: "The client closed the connection."
+2022-06-12 15:23:43.648 +03:00 [DBG] Connection id "0HMICDO31VRJT" disconnecting.
+2022-06-12 15:23:43.654 +03:00 [DBG] Connection id "0HMICDO31VRJU" disconnecting.
+2022-06-12 15:23:43.654 +03:00 [DBG] Connection id "0HMICDO31VRJT" sending FIN because: "The client closed the connection."
+2022-06-12 15:23:43.660 +03:00 [DBG] Connection id "0HMICDO31VRJU" stopped.
+2022-06-12 15:23:43.671 +03:00 [DBG] Connection id "0HMICDO31VRJT" stopped.
+2022-06-12 15:24:00.089 +03:00 [DBG] Connection id "0HMICDO31VRJV" accepted.
+2022-06-12 15:24:00.091 +03:00 [DBG] Connection id "0HMICDO31VRJV" started.
+2022-06-12 15:24:00.092 +03:00 [DBG] Connection id "0HMICDO31VRK0" accepted.
+2022-06-12 15:24:00.093 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:24:00.094 +03:00 [DBG] Connection id "0HMICDO31VRK0" started.
+2022-06-12 15:24:00.095 +03:00 [DBG] Connection id "0HMICDO31VRJV", Request id "0HMICDO31VRJV:00000002": started reading request body.
+2022-06-12 15:24:00.096 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:24:00.098 +03:00 [DBG] Connection id "0HMICDO31VRJV", Request id "0HMICDO31VRJV:00000002": done reading request body.
+2022-06-12 15:24:00.099 +03:00 [DBG] Connection id "0HMICDO31VRK0", Request id "0HMICDO31VRK0:00000002": started reading request body.
+2022-06-12 15:24:00.100 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:24:00.102 +03:00 [DBG] Connection id "0HMICDO31VRK0", Request id "0HMICDO31VRK0:00000002": done reading request body.
+2022-06-12 15:24:00.107 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:24:00.110 +03:00 [DBG] Connection id "0HMICDO31VRJV" completed keep alive response.
+2022-06-12 15:24:00.119 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 26.2546ms
+2022-06-12 15:24:00.120 +03:00 [DBG] Connection id "0HMICDO31VRK0" completed keep alive response.
+2022-06-12 15:24:00.123 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 27.0966ms
+2022-06-12 15:24:02.282 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:24:02.284 +03:00 [DBG] Connection id "0HMICDO31VRK0", Request id "0HMICDO31VRK0:00000003": started reading request body.
+2022-06-12 15:24:02.287 +03:00 [DBG] Connection id "0HMICDO31VRK0", Request id "0HMICDO31VRK0:00000003": done reading request body.
+2022-06-12 15:24:02.289 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:24:02.305 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:24:02.309 +03:00 [DBG] Connection id "0HMICDO31VRK0" completed keep alive response.
+2022-06-12 15:24:02.313 +03:00 [DBG] Connection id "0HMICDO31VRJV", Request id "0HMICDO31VRJV:00000003": started reading request body.
+2022-06-12 15:24:02.314 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 31.8143ms
+2022-06-12 15:24:02.316 +03:00 [DBG] Connection id "0HMICDO31VRJV", Request id "0HMICDO31VRJV:00000003": done reading request body.
+2022-06-12 15:24:02.319 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:24:02.335 +03:00 [DBG] Connection id "0HMICDO31VRJV" completed keep alive response.
+2022-06-12 15:24:02.339 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 34.2917ms
+2022-06-12 15:24:03.671 +03:00 [DBG] Connection id "0HMICDO31VRJV" received FIN.
+2022-06-12 15:24:03.671 +03:00 [DBG] Connection id "0HMICDO31VRK0" received FIN.
+2022-06-12 15:24:03.674 +03:00 [DBG] Connection id "0HMICDO31VRJV" sending FIN because: "The client closed the connection."
+2022-06-12 15:24:03.675 +03:00 [DBG] Connection id "0HMICDO31VRK0" sending FIN because: "The client closed the connection."
+2022-06-12 15:24:03.676 +03:00 [DBG] Connection id "0HMICDO31VRJV" disconnecting.
+2022-06-12 15:24:03.678 +03:00 [DBG] Connection id "0HMICDO31VRK0" disconnecting.
+2022-06-12 15:24:03.679 +03:00 [DBG] Connection id "0HMICDO31VRJV" stopped.
+2022-06-12 15:24:03.680 +03:00 [DBG] Connection id "0HMICDO31VRK0" stopped.
+2022-06-12 15:25:01.633 +03:00 [DBG] Connection id "0HMICDO31VRK1" accepted.
+2022-06-12 15:25:01.634 +03:00 [DBG] Connection id "0HMICDO31VRK1" started.
+2022-06-12 15:25:01.635 +03:00 [DBG] Connection id "0HMICDO31VRK2" accepted.
+2022-06-12 15:25:01.636 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:25:01.638 +03:00 [DBG] Connection id "0HMICDO31VRK2" started.
+2022-06-12 15:25:01.640 +03:00 [DBG] Connection id "0HMICDO31VRK1", Request id "0HMICDO31VRK1:00000002": started reading request body.
+2022-06-12 15:25:01.648 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:25:01.650 +03:00 [DBG] Connection id "0HMICDO31VRK1", Request id "0HMICDO31VRK1:00000002": done reading request body.
+2022-06-12 15:25:01.653 +03:00 [DBG] Connection id "0HMICDO31VRK2", Request id "0HMICDO31VRK2:00000002": started reading request body.
+2022-06-12 15:25:01.656 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:25:01.658 +03:00 [DBG] Connection id "0HMICDO31VRK2", Request id "0HMICDO31VRK2:00000002": done reading request body.
+2022-06-12 15:25:01.662 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:25:01.670 +03:00 [DBG] Connection id "0HMICDO31VRK1" completed keep alive response.
+2022-06-12 15:25:01.678 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 41.4347ms
+2022-06-12 15:25:01.679 +03:00 [DBG] Connection id "0HMICDO31VRK2" completed keep alive response.
+2022-06-12 15:25:01.682 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 34.3395ms
+2022-06-12 15:25:03.204 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:25:03.206 +03:00 [DBG] Connection id "0HMICDO31VRK2", Request id "0HMICDO31VRK2:00000003": started reading request body.
+2022-06-12 15:25:03.211 +03:00 [DBG] Connection id "0HMICDO31VRK2", Request id "0HMICDO31VRK2:00000003": done reading request body.
+2022-06-12 15:25:03.212 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:25:03.213 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:25:03.215 +03:00 [DBG] Connection id "0HMICDO31VRK1", Request id "0HMICDO31VRK1:00000003": started reading request body.
+2022-06-12 15:25:03.228 +03:00 [DBG] Connection id "0HMICDO31VRK1", Request id "0HMICDO31VRK1:00000003": done reading request body.
+2022-06-12 15:25:03.231 +03:00 [DBG] Connection id "0HMICDO31VRK2" completed keep alive response.
+2022-06-12 15:25:03.235 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:25:03.237 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 32.8090ms
+2022-06-12 15:25:03.254 +03:00 [DBG] Connection id "0HMICDO31VRK1" completed keep alive response.
+2022-06-12 15:25:03.259 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 46.9516ms
+2022-06-12 15:25:03.752 +03:00 [DBG] Connection id "0HMICDO31VRK1" received FIN.
+2022-06-12 15:25:03.752 +03:00 [DBG] Connection id "0HMICDO31VRK2" received FIN.
+2022-06-12 15:25:03.756 +03:00 [DBG] Connection id "0HMICDO31VRK1" disconnecting.
+2022-06-12 15:25:03.764 +03:00 [DBG] Connection id "0HMICDO31VRK2" disconnecting.
+2022-06-12 15:25:03.769 +03:00 [DBG] Connection id "0HMICDO31VRK1" sending FIN because: "The client closed the connection."
+2022-06-12 15:25:03.772 +03:00 [DBG] Connection id "0HMICDO31VRK2" sending FIN because: "The client closed the connection."
+2022-06-12 15:25:03.783 +03:00 [DBG] Connection id "0HMICDO31VRK2" stopped.
+2022-06-12 15:25:03.783 +03:00 [DBG] Connection id "0HMICDO31VRK1" stopped.
+2022-06-12 15:26:12.113 +03:00 [DBG] Connection id "0HMICDO31VRK3" accepted.
+2022-06-12 15:26:12.114 +03:00 [DBG] Connection id "0HMICDO31VRK3" started.
+2022-06-12 15:26:12.116 +03:00 [DBG] Connection id "0HMICDO31VRK4" accepted.
+2022-06-12 15:26:12.117 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:12.123 +03:00 [DBG] Connection id "0HMICDO31VRK4" started.
+2022-06-12 15:26:12.125 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000002": started reading request body.
+2022-06-12 15:26:12.131 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:12.135 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000002": done reading request body.
+2022-06-12 15:26:12.137 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000002": started reading request body.
+2022-06-12 15:26:12.138 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:12.140 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000002": done reading request body.
+2022-06-12 15:26:12.156 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:12.167 +03:00 [DBG] Connection id "0HMICDO31VRK3" completed keep alive response.
+2022-06-12 15:26:12.191 +03:00 [DBG] Connection id "0HMICDO31VRK4" completed keep alive response.
+2022-06-12 15:26:12.200 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 82.4019ms
+2022-06-12 15:26:12.205 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 73.7396ms
+2022-06-12 15:26:13.681 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:13.683 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000003": started reading request body.
+2022-06-12 15:26:13.684 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000003": done reading request body.
+2022-06-12 15:26:13.687 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:13.694 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:13.697 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000003": started reading request body.
+2022-06-12 15:26:13.704 +03:00 [DBG] Connection id "0HMICDO31VRK4" completed keep alive response.
+2022-06-12 15:26:13.707 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000003": done reading request body.
+2022-06-12 15:26:13.709 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 27.3870ms
+2022-06-12 15:26:13.710 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:13.728 +03:00 [DBG] Connection id "0HMICDO31VRK3" completed keep alive response.
+2022-06-12 15:26:13.730 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 35.9310ms
+2022-06-12 15:26:33.102 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:33.109 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:33.143 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000004": started reading request body.
+2022-06-12 15:26:33.144 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000004": started reading request body.
+2022-06-12 15:26:33.146 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000004": done reading request body.
+2022-06-12 15:26:33.147 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000004": done reading request body.
+2022-06-12 15:26:33.149 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:33.150 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:33.222 +03:00 [DBG] Connection id "0HMICDO31VRK3" completed keep alive response.
+2022-06-12 15:26:33.226 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 123.9102ms
+2022-06-12 15:26:33.226 +03:00 [DBG] Connection id "0HMICDO31VRK4" completed keep alive response.
+2022-06-12 15:26:33.231 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 121.5966ms
+2022-06-12 15:26:35.664 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:35.665 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000005": started reading request body.
+2022-06-12 15:26:35.667 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000005": done reading request body.
+2022-06-12 15:26:35.670 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:35.675 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:35.687 +03:00 [DBG] Connection id "0HMICDO31VRK4" completed keep alive response.
+2022-06-12 15:26:35.689 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000005": started reading request body.
+2022-06-12 15:26:35.691 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 27.2937ms
+2022-06-12 15:26:35.693 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000005": done reading request body.
+2022-06-12 15:26:35.698 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:35.709 +03:00 [DBG] Connection id "0HMICDO31VRK3" completed keep alive response.
+2022-06-12 15:26:35.713 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 37.4134ms
+2022-06-12 15:26:40.056 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:40.058 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000006": started reading request body.
+2022-06-12 15:26:40.061 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:40.061 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000006": done reading request body.
+2022-06-12 15:26:40.071 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:40.064 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000006": started reading request body.
+2022-06-12 15:26:40.087 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000006": done reading request body.
+2022-06-12 15:26:40.095 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:40.139 +03:00 [DBG] Connection id "0HMICDO31VRK4" completed keep alive response.
+2022-06-12 15:26:40.141 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 81.0579ms
+2022-06-12 15:26:40.173 +03:00 [DBG] Connection id "0HMICDO31VRK3" completed keep alive response.
+2022-06-12 15:26:40.175 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 119.1779ms
+2022-06-12 15:26:41.875 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:41.884 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000007": started reading request body.
+2022-06-12 15:26:41.894 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:26:41.895 +03:00 [DBG] Connection id "0HMICDO31VRK3", Request id "0HMICDO31VRK3:00000007": done reading request body.
+2022-06-12 15:26:41.897 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000007": started reading request body.
+2022-06-12 15:26:41.898 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:41.900 +03:00 [DBG] Connection id "0HMICDO31VRK4", Request id "0HMICDO31VRK4:00000007": done reading request body.
+2022-06-12 15:26:41.906 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:26:41.911 +03:00 [DBG] Connection id "0HMICDO31VRK3" completed keep alive response.
+2022-06-12 15:26:41.915 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 40.1784ms
+2022-06-12 15:26:41.923 +03:00 [DBG] Connection id "0HMICDO31VRK4" completed keep alive response.
+2022-06-12 15:26:41.927 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 33.3500ms
+2022-06-12 15:26:43.908 +03:00 [DBG] Connection id "0HMICDO31VRK3" received FIN.
+2022-06-12 15:26:43.908 +03:00 [DBG] Connection id "0HMICDO31VRK4" received FIN.
+2022-06-12 15:26:43.910 +03:00 [DBG] Connection id "0HMICDO31VRK3" sending FIN because: "The client closed the connection."
+2022-06-12 15:26:43.911 +03:00 [DBG] Connection id "0HMICDO31VRK4" disconnecting.
+2022-06-12 15:26:43.915 +03:00 [DBG] Connection id "0HMICDO31VRK3" disconnecting.
+2022-06-12 15:26:43.917 +03:00 [DBG] Connection id "0HMICDO31VRK4" sending FIN because: "The client closed the connection."
+2022-06-12 15:26:43.918 +03:00 [DBG] Connection id "0HMICDO31VRK3" stopped.
+2022-06-12 15:26:43.923 +03:00 [DBG] Connection id "0HMICDO31VRK4" stopped.
+2022-06-12 15:28:12.248 +03:00 [DBG] Connection id "0HMICDO31VRK5" accepted.
+2022-06-12 15:28:12.249 +03:00 [DBG] Connection id "0HMICDO31VRK5" started.
+2022-06-12 15:28:12.250 +03:00 [DBG] Connection id "0HMICDO31VRK6" accepted.
+2022-06-12 15:28:12.250 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:12.252 +03:00 [DBG] Connection id "0HMICDO31VRK6" started.
+2022-06-12 15:28:12.253 +03:00 [DBG] Connection id "0HMICDO31VRK5", Request id "0HMICDO31VRK5:00000002": started reading request body.
+2022-06-12 15:28:12.259 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:12.260 +03:00 [DBG] Connection id "0HMICDO31VRK5", Request id "0HMICDO31VRK5:00000002": done reading request body.
+2022-06-12 15:28:12.261 +03:00 [DBG] Connection id "0HMICDO31VRK6", Request id "0HMICDO31VRK6:00000002": started reading request body.
+2022-06-12 15:28:12.263 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:12.264 +03:00 [DBG] Connection id "0HMICDO31VRK6", Request id "0HMICDO31VRK6:00000002": done reading request body.
+2022-06-12 15:28:12.270 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:12.272 +03:00 [DBG] Connection id "0HMICDO31VRK5" completed keep alive response.
+2022-06-12 15:28:12.285 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 34.2242ms
+2022-06-12 15:28:12.291 +03:00 [DBG] Connection id "0HMICDO31VRK6" completed keep alive response.
+2022-06-12 15:28:12.295 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 36.4234ms
+2022-06-12 15:28:13.479 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:13.481 +03:00 [DBG] Connection id "0HMICDO31VRK6", Request id "0HMICDO31VRK6:00000003": started reading request body.
+2022-06-12 15:28:13.483 +03:00 [DBG] Connection id "0HMICDO31VRK6", Request id "0HMICDO31VRK6:00000003": done reading request body.
+2022-06-12 15:28:13.486 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:13.489 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:13.494 +03:00 [DBG] Connection id "0HMICDO31VRK5", Request id "0HMICDO31VRK5:00000003": started reading request body.
+2022-06-12 15:28:13.503 +03:00 [DBG] Connection id "0HMICDO31VRK6" completed keep alive response.
+2022-06-12 15:28:13.507 +03:00 [DBG] Connection id "0HMICDO31VRK5", Request id "0HMICDO31VRK5:00000003": done reading request body.
+2022-06-12 15:28:13.510 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 30.6852ms
+2022-06-12 15:28:13.513 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:13.529 +03:00 [DBG] Connection id "0HMICDO31VRK5" completed keep alive response.
+2022-06-12 15:28:13.531 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 42.0355ms
+2022-06-12 15:28:14.073 +03:00 [DBG] Connection id "0HMICDO31VRK6" received FIN.
+2022-06-12 15:28:14.078 +03:00 [DBG] Connection id "0HMICDO31VRK6" disconnecting.
+2022-06-12 15:28:14.081 +03:00 [DBG] Connection id "0HMICDO31VRK5" received FIN.
+2022-06-12 15:28:14.084 +03:00 [DBG] Connection id "0HMICDO31VRK6" sending FIN because: "The client closed the connection."
+2022-06-12 15:28:14.096 +03:00 [DBG] Connection id "0HMICDO31VRK5" sending FIN because: "The client closed the connection."
+2022-06-12 15:28:14.103 +03:00 [DBG] Connection id "0HMICDO31VRK6" stopped.
+2022-06-12 15:28:14.115 +03:00 [DBG] Connection id "0HMICDO31VRK5" disconnecting.
+2022-06-12 15:28:14.120 +03:00 [DBG] Connection id "0HMICDO31VRK5" stopped.
+2022-06-12 15:28:23.349 +03:00 [DBG] Connection id "0HMICDO31VRK7" accepted.
+2022-06-12 15:28:23.352 +03:00 [DBG] Connection id "0HMICDO31VRK7" started.
+2022-06-12 15:28:23.354 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:23.355 +03:00 [DBG] Connection id "0HMICDO31VRK7", Request id "0HMICDO31VRK7:00000002": started reading request body.
+2022-06-12 15:28:23.359 +03:00 [DBG] Connection id "0HMICDO31VRK7", Request id "0HMICDO31VRK7:00000002": done reading request body.
+2022-06-12 15:28:23.362 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:23.364 +03:00 [DBG] Connection id "0HMICDO31VRK8" accepted.
+2022-06-12 15:28:23.367 +03:00 [DBG] Connection id "0HMICDO31VRK8" started.
+2022-06-12 15:28:23.380 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:23.382 +03:00 [DBG] Connection id "0HMICDO31VRK7" completed keep alive response.
+2022-06-12 15:28:23.385 +03:00 [DBG] Connection id "0HMICDO31VRK8", Request id "0HMICDO31VRK8:00000002": started reading request body.
+2022-06-12 15:28:23.391 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 37.2606ms
+2022-06-12 15:28:23.397 +03:00 [DBG] Connection id "0HMICDO31VRK8", Request id "0HMICDO31VRK8:00000002": done reading request body.
+2022-06-12 15:28:23.406 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:23.417 +03:00 [DBG] Connection id "0HMICDO31VRK8" completed keep alive response.
+2022-06-12 15:28:23.421 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 41.6996ms
+2022-06-12 15:28:24.087 +03:00 [DBG] Connection id "0HMICDO31VRK7" received FIN.
+2022-06-12 15:28:24.087 +03:00 [DBG] Connection id "0HMICDO31VRK8" received FIN.
+2022-06-12 15:28:24.089 +03:00 [DBG] Connection id "0HMICDO31VRK7" disconnecting.
+2022-06-12 15:28:24.091 +03:00 [DBG] Connection id "0HMICDO31VRK8" sending FIN because: "The client closed the connection."
+2022-06-12 15:28:24.092 +03:00 [DBG] Connection id "0HMICDO31VRK7" sending FIN because: "The client closed the connection."
+2022-06-12 15:28:24.094 +03:00 [DBG] Connection id "0HMICDO31VRK8" disconnecting.
+2022-06-12 15:28:24.099 +03:00 [DBG] Connection id "0HMICDO31VRK8" stopped.
+2022-06-12 15:28:24.103 +03:00 [DBG] Connection id "0HMICDO31VRK7" stopped.
+2022-06-12 15:28:39.923 +03:00 [DBG] Connection id "0HMICDO31VRK9" accepted.
+2022-06-12 15:28:39.925 +03:00 [DBG] Connection id "0HMICDO31VRK9" started.
+2022-06-12 15:28:39.926 +03:00 [DBG] Connection id "0HMICDO31VRKA" accepted.
+2022-06-12 15:28:39.927 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:39.928 +03:00 [DBG] Connection id "0HMICDO31VRKA" started.
+2022-06-12 15:28:39.930 +03:00 [DBG] Connection id "0HMICDO31VRK9", Request id "0HMICDO31VRK9:00000002": started reading request body.
+2022-06-12 15:28:39.932 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:39.935 +03:00 [DBG] Connection id "0HMICDO31VRK9", Request id "0HMICDO31VRK9:00000002": done reading request body.
+2022-06-12 15:28:39.936 +03:00 [DBG] Connection id "0HMICDO31VRKA", Request id "0HMICDO31VRKA:00000002": started reading request body.
+2022-06-12 15:28:39.938 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:39.939 +03:00 [DBG] Connection id "0HMICDO31VRKA", Request id "0HMICDO31VRKA:00000002": done reading request body.
+2022-06-12 15:28:39.946 +03:00 [DBG] Connection id "0HMICDO31VRK9" completed keep alive response.
+2022-06-12 15:28:39.946 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:39.952 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 25.5425ms
+2022-06-12 15:28:39.966 +03:00 [DBG] Connection id "0HMICDO31VRKA" completed keep alive response.
+2022-06-12 15:28:39.969 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 37.4550ms
+2022-06-12 15:28:42.436 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:42.438 +03:00 [DBG] Connection id "0HMICDO31VRKA", Request id "0HMICDO31VRKA:00000003": started reading request body.
+2022-06-12 15:28:42.438 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:42.440 +03:00 [DBG] Connection id "0HMICDO31VRKA", Request id "0HMICDO31VRKA:00000003": done reading request body.
+2022-06-12 15:28:42.441 +03:00 [DBG] Connection id "0HMICDO31VRK9", Request id "0HMICDO31VRK9:00000003": started reading request body.
+2022-06-12 15:28:42.442 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:42.444 +03:00 [DBG] Connection id "0HMICDO31VRK9", Request id "0HMICDO31VRK9:00000003": done reading request body.
+2022-06-12 15:28:42.449 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:42.456 +03:00 [DBG] Connection id "0HMICDO31VRKA" completed keep alive response.
+2022-06-12 15:28:42.462 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 26.0909ms
+2022-06-12 15:28:42.471 +03:00 [DBG] Connection id "0HMICDO31VRK9" completed keep alive response.
+2022-06-12 15:28:42.472 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 33.6889ms
+2022-06-12 15:28:44.117 +03:00 [DBG] Connection id "0HMICDO31VRK9" received FIN.
+2022-06-12 15:28:44.117 +03:00 [DBG] Connection id "0HMICDO31VRKA" received FIN.
+2022-06-12 15:28:44.119 +03:00 [DBG] Connection id "0HMICDO31VRK9" sending FIN because: "The client closed the connection."
+2022-06-12 15:28:44.120 +03:00 [DBG] Connection id "0HMICDO31VRKA" sending FIN because: "The client closed the connection."
+2022-06-12 15:28:44.121 +03:00 [DBG] Connection id "0HMICDO31VRK9" disconnecting.
+2022-06-12 15:28:44.122 +03:00 [DBG] Connection id "0HMICDO31VRKA" disconnecting.
+2022-06-12 15:28:44.123 +03:00 [DBG] Connection id "0HMICDO31VRK9" stopped.
+2022-06-12 15:28:44.124 +03:00 [DBG] Connection id "0HMICDO31VRKA" stopped.
+2022-06-12 15:28:49.105 +03:00 [DBG] Connection id "0HMICDO31VRKB" accepted.
+2022-06-12 15:28:49.107 +03:00 [DBG] Connection id "0HMICDO31VRKB" started.
+2022-06-12 15:28:49.107 +03:00 [DBG] Connection id "0HMICDO31VRKC" accepted.
+2022-06-12 15:28:49.110 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:49.112 +03:00 [DBG] Connection id "0HMICDO31VRKC" started.
+2022-06-12 15:28:49.113 +03:00 [DBG] Connection id "0HMICDO31VRKB", Request id "0HMICDO31VRKB:00000002": started reading request body.
+2022-06-12 15:28:49.114 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:49.116 +03:00 [DBG] Connection id "0HMICDO31VRKB", Request id "0HMICDO31VRKB:00000002": done reading request body.
+2022-06-12 15:28:49.117 +03:00 [DBG] Connection id "0HMICDO31VRKC", Request id "0HMICDO31VRKC:00000002": started reading request body.
+2022-06-12 15:28:49.118 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:49.119 +03:00 [DBG] Connection id "0HMICDO31VRKC", Request id "0HMICDO31VRKC:00000002": done reading request body.
+2022-06-12 15:28:49.127 +03:00 [DBG] Connection id "0HMICDO31VRKB" completed keep alive response.
+2022-06-12 15:28:49.129 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:49.130 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 20.0199ms
+2022-06-12 15:28:49.139 +03:00 [DBG] Connection id "0HMICDO31VRKC" completed keep alive response.
+2022-06-12 15:28:49.141 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 26.3857ms
+2022-06-12 15:28:52.136 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:52.138 +03:00 [DBG] Connection id "0HMICDO31VRKC", Request id "0HMICDO31VRKC:00000003": started reading request body.
+2022-06-12 15:28:52.141 +03:00 [DBG] Connection id "0HMICDO31VRKC", Request id "0HMICDO31VRKC:00000003": done reading request body.
+2022-06-12 15:28:52.155 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:52.151 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:52.165 +03:00 [DBG] Connection id "0HMICDO31VRKB", Request id "0HMICDO31VRKB:00000003": started reading request body.
+2022-06-12 15:28:52.173 +03:00 [DBG] Connection id "0HMICDO31VRKC" completed keep alive response.
+2022-06-12 15:28:52.177 +03:00 [DBG] Connection id "0HMICDO31VRKB", Request id "0HMICDO31VRKB:00000003": done reading request body.
+2022-06-12 15:28:52.179 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 42.6483ms
+2022-06-12 15:28:52.181 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:52.196 +03:00 [DBG] Connection id "0HMICDO31VRKB" completed keep alive response.
+2022-06-12 15:28:52.198 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 46.5508ms
+2022-06-12 15:28:54.129 +03:00 [DBG] Connection id "0HMICDO31VRKC" received FIN.
+2022-06-12 15:28:54.129 +03:00 [DBG] Connection id "0HMICDO31VRKB" received FIN.
+2022-06-12 15:28:54.135 +03:00 [DBG] Connection id "0HMICDO31VRKC" sending FIN because: "The client closed the connection."
+2022-06-12 15:28:54.137 +03:00 [DBG] Connection id "0HMICDO31VRKB" sending FIN because: "The client closed the connection."
+2022-06-12 15:28:54.138 +03:00 [DBG] Connection id "0HMICDO31VRKC" disconnecting.
+2022-06-12 15:28:54.140 +03:00 [DBG] Connection id "0HMICDO31VRKC" stopped.
+2022-06-12 15:28:54.139 +03:00 [DBG] Connection id "0HMICDO31VRKB" disconnecting.
+2022-06-12 15:28:54.142 +03:00 [DBG] Connection id "0HMICDO31VRKB" stopped.
+2022-06-12 15:28:57.677 +03:00 [DBG] Connection id "0HMICDO31VRKD" accepted.
+2022-06-12 15:28:57.680 +03:00 [DBG] Connection id "0HMICDO31VRKD" started.
+2022-06-12 15:28:57.680 +03:00 [DBG] Connection id "0HMICDO31VRKE" accepted.
+2022-06-12 15:28:57.682 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:57.692 +03:00 [DBG] Connection id "0HMICDO31VRKE" started.
+2022-06-12 15:28:57.693 +03:00 [DBG] Connection id "0HMICDO31VRKD", Request id "0HMICDO31VRKD:00000002": started reading request body.
+2022-06-12 15:28:57.695 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:28:57.705 +03:00 [DBG] Connection id "0HMICDO31VRKD", Request id "0HMICDO31VRKD:00000002": done reading request body.
+2022-06-12 15:28:57.705 +03:00 [DBG] Connection id "0HMICDO31VRKE", Request id "0HMICDO31VRKE:00000002": started reading request body.
+2022-06-12 15:28:57.707 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:57.708 +03:00 [DBG] Connection id "0HMICDO31VRKE", Request id "0HMICDO31VRKE:00000002": done reading request body.
+2022-06-12 15:28:57.754 +03:00 [DBG] Connection id "0HMICDO31VRKD" completed keep alive response.
+2022-06-12 15:28:57.772 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:28:57.775 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 92.9966ms
+2022-06-12 15:28:57.800 +03:00 [DBG] Connection id "0HMICDO31VRKE" completed keep alive response.
+2022-06-12 15:28:57.802 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 107.7899ms
+2022-06-12 15:29:00.530 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:29:00.532 +03:00 [DBG] Connection id "0HMICDO31VRKE", Request id "0HMICDO31VRKE:00000003": started reading request body.
+2022-06-12 15:29:00.534 +03:00 [DBG] Connection id "0HMICDO31VRKE", Request id "0HMICDO31VRKE:00000003": done reading request body.
+2022-06-12 15:29:00.539 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:29:00.542 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:29:00.543 +03:00 [DBG] Connection id "0HMICDO31VRKD", Request id "0HMICDO31VRKD:00000003": started reading request body.
+2022-06-12 15:29:00.554 +03:00 [DBG] Connection id "0HMICDO31VRKE" completed keep alive response.
+2022-06-12 15:29:00.557 +03:00 [DBG] Connection id "0HMICDO31VRKD", Request id "0HMICDO31VRKD:00000003": done reading request body.
+2022-06-12 15:29:00.560 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 29.6083ms
+2022-06-12 15:29:00.561 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:29:00.581 +03:00 [DBG] Connection id "0HMICDO31VRKD" completed keep alive response.
+2022-06-12 15:29:00.585 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 43.8530ms
+2022-06-12 15:29:04.144 +03:00 [DBG] Connection id "0HMICDO31VRKD" received FIN.
+2022-06-12 15:29:04.144 +03:00 [DBG] Connection id "0HMICDO31VRKE" received FIN.
+2022-06-12 15:29:04.145 +03:00 [DBG] Connection id "0HMICDO31VRKD" sending FIN because: "The client closed the connection."
+2022-06-12 15:29:04.146 +03:00 [DBG] Connection id "0HMICDO31VRKE" disconnecting.
+2022-06-12 15:29:04.148 +03:00 [DBG] Connection id "0HMICDO31VRKD" disconnecting.
+2022-06-12 15:29:04.149 +03:00 [DBG] Connection id "0HMICDO31VRKE" sending FIN because: "The client closed the connection."
+2022-06-12 15:29:04.150 +03:00 [DBG] Connection id "0HMICDO31VRKD" stopped.
+2022-06-12 15:29:04.158 +03:00 [DBG] Connection id "0HMICDO31VRKE" stopped.
+2022-06-12 15:29:20.399 +03:00 [DBG] Connection id "0HMICDO31VRKF" accepted.
+2022-06-12 15:29:20.402 +03:00 [DBG] Connection id "0HMICDO31VRKF" started.
+2022-06-12 15:29:20.407 +03:00 [DBG] Connection id "0HMICDO31VRKG" accepted.
+2022-06-12 15:29:20.408 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:29:20.411 +03:00 [DBG] Connection id "0HMICDO31VRKG" started.
+2022-06-12 15:29:20.412 +03:00 [DBG] Connection id "0HMICDO31VRKF", Request id "0HMICDO31VRKF:00000002": started reading request body.
+2022-06-12 15:29:20.413 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:29:20.414 +03:00 [DBG] Connection id "0HMICDO31VRKF", Request id "0HMICDO31VRKF:00000002": done reading request body.
+2022-06-12 15:29:20.416 +03:00 [DBG] Connection id "0HMICDO31VRKG", Request id "0HMICDO31VRKG:00000002": started reading request body.
+2022-06-12 15:29:20.418 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:29:20.420 +03:00 [DBG] Connection id "0HMICDO31VRKG", Request id "0HMICDO31VRKG:00000002": done reading request body.
+2022-06-12 15:29:20.430 +03:00 [DBG] Connection id "0HMICDO31VRKF" completed keep alive response.
+2022-06-12 15:29:20.431 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:29:20.434 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 26.6019ms
+2022-06-12 15:29:20.447 +03:00 [DBG] Connection id "0HMICDO31VRKG" completed keep alive response.
+2022-06-12 15:29:20.450 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 36.9989ms
+2022-06-12 15:29:22.066 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:29:22.068 +03:00 [DBG] Connection id "0HMICDO31VRKG", Request id "0HMICDO31VRKG:00000003": started reading request body.
+2022-06-12 15:29:22.069 +03:00 [DBG] Connection id "0HMICDO31VRKG", Request id "0HMICDO31VRKG:00000003": done reading request body.
+2022-06-12 15:29:22.071 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:29:22.078 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-12 15:29:22.089 +03:00 [DBG] Connection id "0HMICDO31VRKF", Request id "0HMICDO31VRKF:00000003": started reading request body.
+2022-06-12 15:29:22.091 +03:00 [DBG] Connection id "0HMICDO31VRKG" completed keep alive response.
+2022-06-12 15:29:22.098 +03:00 [DBG] Connection id "0HMICDO31VRKF", Request id "0HMICDO31VRKF:00000003": done reading request body.
+2022-06-12 15:29:22.100 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 34.0664ms
+2022-06-12 15:29:22.103 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-12 15:29:22.124 +03:00 [DBG] Connection id "0HMICDO31VRKF" completed keep alive response.
+2022-06-12 15:29:22.131 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 52.9595ms
+2022-06-12 15:29:24.191 +03:00 [DBG] Connection id "0HMICDO31VRKG" received FIN.
+2022-06-12 15:29:24.191 +03:00 [DBG] Connection id "0HMICDO31VRKF" received FIN.
+2022-06-12 15:29:24.198 +03:00 [DBG] Connection id "0HMICDO31VRKG" sending FIN because: "The client closed the connection."
+2022-06-12 15:29:24.203 +03:00 [DBG] Connection id "0HMICDO31VRKF" sending FIN because: "The client closed the connection."
+2022-06-12 15:29:24.208 +03:00 [DBG] Connection id "0HMICDO31VRKG" disconnecting.
+2022-06-12 15:29:24.210 +03:00 [DBG] Connection id "0HMICDO31VRKF" disconnecting.
+2022-06-12 15:29:24.211 +03:00 [DBG] Connection id "0HMICDO31VRKG" stopped.
+2022-06-12 15:29:24.212 +03:00 [DBG] Connection id "0HMICDO31VRKF" stopped.

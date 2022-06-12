@@ -4,10 +4,9 @@ export const RegisterUserRequest = {
     UserDTO: {
         username: '',
         password: '',
+        repeatPassword: '',
         dateOfBirth: '',
         countryID: 0,
         email: '',
-        isCheck: false
     }
-
 }

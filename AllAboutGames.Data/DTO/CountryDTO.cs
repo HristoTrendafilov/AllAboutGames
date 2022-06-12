@@ -1,10 +1,11 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using AllAboutGames.Core.CustomMapper;
+using AllAboutGames.Data.Models;
+using System.ComponentModel.DataAnnotations;
 
-namespace AllAboutGames.Data.Models
+namespace AllAboutGames.Data.DTO
 {
-    public class Country
+    public class CountryDTO : IMapFrom<Country>
     {
-        [Key]
         public long CountryID { get; set; }
 
         [Required(ErrorMessage = "Country name is required.")]

@@ -4,15 +4,27 @@ import * as Validations from '../Infrastructure/ValidationModels';
 import {SendRequest} from '../Infrastructure/Server';
 import {RegisterUserRequest} from '../Infrastructure/Dto'
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
-import {CheckboxField, TextField} from "../Infrastructure/CutomFormikFields";
+import {CheckboxField, DateField, SelectField, TextField} from "../Infrastructure/CutomFormikFields";
 
 export class RegisterUser extends React.PureComponent {
     constructor(props) {
         super(props)
         this.state = {
             isLoading: false,
-            stateErrors: []
+            stateErrors: [],
+            countries:[]
         }
+    }
+
+    componentDidMount = async () => {
+        const response = await SendRequest('GetAllCountriesRequest', {});
+        if (response.isFailed) {
+            this.setState({stateErrors: response.errors});
+            return;
+        }
+
+        console.log(response.model.Countries);
+        this.setState({countries: response.model})
     }
 
     handleSubmit = async (data) => {
@@ -28,7 +40,7 @@ export class RegisterUser extends React.PureComponent {
 
     render() {
         const model = RegisterUserRequest.UserDTO;
-        const {stateErrors} = this.state;
+        const {stateErrors, countries} = this.state;
 
         return (
             <div className='d-flex justify-content-center mt-4'>
@@ -49,7 +61,7 @@ export class RegisterUser extends React.PureComponent {
                                     <div className="row">
 
                                         <TextField
-                                            customClassName="mb-3 col-xl-6"
+                                            customClassName="mb-3 col-xl-12"
                                             label="Username"
                                             name="username"
                                             type="text"
@@ -62,38 +74,33 @@ export class RegisterUser extends React.PureComponent {
                                             type="password"
                                         />
 
-                                        <div className="mb-3 col-xl-6">
-                                            <label className="form-label d-flex justify-content-center fw-bold">Date of
-                                                birth</label>
-                                            <Field
-                                                name="dateOfBirth"
-                                                type="date"
-                                                className="form-control"/>
-                                            {errors.dateOfBirth && touched.dateOfBirth &&
-                                            <div style={{color: 'red'}}>{errors.dateOfBirth}</div>}
-                                        </div>
+                                        <TextField
+                                            customClassName="mb-3 col-xl-6"
+                                            label="Repeat password"
+                                            name="repeatPassword"
+                                            type="password"
+                                        />
 
-                                        <div className="mb-3 col-xl-6">
-                                            <label className="form-label d-flex justify-content-center fw-bold">Country</label>
-                                            <Field as='select' name='countryID' className="form-select">
-                                                <option value="0">Select country</option>
-                                                <option value="1">One</option>
-                                                <option value="2">Two</option>
-                                                <option value="3">Three</option>
-                                            </Field>
-                                            {errors.countryID && touched.countryID &&
-                                            <div style={{color: 'red'}}>{errors.countryID}</div>}
-                                        </div>
+                                        <TextField
+                                            customClassName="mb-3 col-xl-12"
+                                            label="Email"
+                                            name="email"
+                                            type="email"
+                                        />
 
-                                        <div className="mb-3 col-xl-12">
-                                            <label className="form-label d-flex justify-content-center fw-bold">Email</label>
-                                            <Field
-                                                name="email"
-                                                type="email"
-                                                className="form-control"/>
-                                            {errors.email && touched.email &&
-                                            <div style={{color: 'red'}}>{errors.email}</div>}
-                                        </div>
+                                        <DateField
+                                            customClassName="mb-3 col-xl-6"
+                                            label="Date of birth"
+                                            name="dateOfBirth"
+                                            type="date"
+                                        />
+
+                                        <SelectField
+                                            customClassName="mb-3 col-xl-6"
+                                            name='countryID'
+                                            label='Country'
+                                            options={countries}
+                                        />
 
                                         <div className="col-xl-12 text-center mb-3">
                                             <button

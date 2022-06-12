@@ -37,12 +37,6 @@ namespace AllAboutGames.Handlers
         [BindRequest(typeof(RegisterUserRequest), typeof(RegisterUserResponse))]
         public async Task<GatewayResult> Register(RegisterUserRequest request)
         {
-            var checkResult = PropertyValidator.Validate(request.UserDTO);
-            if (checkResult.IsFailed)
-            {
-                return GatewayResult.FromErrorMessage(checkResult.GetErrors());
-            }
-
             var dbUser = this.UserService.GetUser(x => x.Username == request.UserDTO.Username);
             if (dbUser != null)
             {

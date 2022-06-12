@@ -3,6 +3,7 @@ using System;
 using AllAboutGames.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AllAboutGames.Data.Migrations
 {
     [DbContext(typeof(AllAboutGamesDataContext))]
-    partial class AllAboutGamesDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220612113831_isoToCountry")]
+    partial class isoToCountry
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,7 +38,7 @@ namespace AllAboutGames.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2022, 6, 12, 15, 1, 58, 178, DateTimeKind.Local).AddTicks(9899));
+                        .HasDefaultValue(new DateTime(2022, 6, 12, 14, 38, 31, 126, DateTimeKind.Local).AddTicks(8190));
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("date");
@@ -105,9 +107,6 @@ namespace AllAboutGames.Data.Migrations
                     NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("CountryID"));
 
                     b.Property<string>("Iso")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Iso3")
                         .HasColumnType("text");
 
                     b.Property<string>("Name")

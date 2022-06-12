@@ -3,6 +3,7 @@ using System;
 using AllAboutGames.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AllAboutGames.Data.Migrations
 {
     [DbContext(typeof(AllAboutGamesDataContext))]
-    partial class AllAboutGamesDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220612120124_removeColumnsCountry")]
+    partial class removeColumnsCountry
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,7 +38,7 @@ namespace AllAboutGames.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2022, 6, 12, 15, 1, 58, 178, DateTimeKind.Local).AddTicks(9899));
+                        .HasDefaultValue(new DateTime(2022, 6, 12, 15, 1, 24, 520, DateTimeKind.Local).AddTicks(1677));
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("date");
@@ -114,6 +116,9 @@ namespace AllAboutGames.Data.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
+
+                    b.Property<string>("NiceName")
+                        .HasColumnType("text");
 
                     b.HasKey("CountryID");
 

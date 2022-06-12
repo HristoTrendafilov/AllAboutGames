@@ -36,6 +36,8 @@ namespace AllAboutGames.Core.Middlewares.Gateway
                 return GatewayResult.FromErrorMessage("The request MessageJson is empty.");
             }
 
+
+
             try
             {
                 var handler = this.Handlers.GetHandler(request.MessageType);
@@ -61,6 +63,11 @@ namespace AllAboutGames.Core.Middlewares.Gateway
                 var handlerInstance = this.ServiceProvider.GetService(handler.Method.DeclaringType);
 
                 var requestModel = JsonConvert.DeserializeObject(request.MessageJson, handler.RequestType);
+                var check = this.ValidateRequestModel(requestModel);
+                if (check.IsFailed)
+                {
+                    return GatewayResult.FromErrorMessage(check.GetErrors());
+                }
 
                 var parameters = handler.Method.GetParameters().Select(info =>
                 {
@@ -140,6 +147,34 @@ namespace AllAboutGames.Core.Middlewares.Gateway
 
                 return GatewayResult.SuccessfulResult(returnValue);
             }
+        }
+
+        private CheckResult ValidateRequestModel(object requestModel)
+        {
+            var check = new CheckResult();
+
+            // First we validate the main class that is passed to the gateway
+            var requestModelValidation = PropertyValidator.Validate(requestModel);
+            if (requestModelValidation.IsFailed)
+            {
+                check.AddError(requestModelValidation.GetErrors());
+            }
+
+            // Then we start validating every nested class to see if there are validation errors
+            foreach (var property in requestModel.GetType().GetProperties())
+            {
+                if (property.PropertyType.IsClass)
+                {
+                    var nestedClass = property.GetValue(requestModel, null);
+                    var classValidation = PropertyValidator.Validate(nestedClass);
+                    if (classValidation.IsFailed)
+                    {
+                        check.AddError(classValidation.GetErrors());
+                    }
+                }
+            }
+
+            return check;
         }
     }
 }
