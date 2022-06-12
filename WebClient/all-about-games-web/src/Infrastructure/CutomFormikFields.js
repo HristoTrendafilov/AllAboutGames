@@ -52,7 +52,7 @@ export const SelectField = ({ label, options, customClassName, ...props }) => {
                 <option value={0}>---</option>
                 {
                     options?.map((x) =>
-                        <option key={x.CountryID} value={x.CountryID}>{x.Name}</option> )
+                        <option key={x.OptionsValue} value={x.OptionsValue}>{x.OptionsName}</option> )
                 }
             </select>
             {meta.touched && meta.error &&

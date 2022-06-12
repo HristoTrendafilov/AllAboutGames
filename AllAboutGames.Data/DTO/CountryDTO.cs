@@ -15,5 +15,9 @@ namespace AllAboutGames.Data.DTO
         public string Iso { get; set; }
 
         public string? Iso3 { get; set; }
+
+        public long OptionsValue => this.CountryID;
+
+        public string OptionsName => this.Name;
     }
 }
