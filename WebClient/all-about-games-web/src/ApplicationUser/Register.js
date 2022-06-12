@@ -4,7 +4,7 @@ import * as Validations from '../Infrastructure/ValidationModels';
 import {SendRequest} from '../Infrastructure/Server';
 import {RegisterUserRequest} from '../Infrastructure/Dto'
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
-import {CheckboxField, DateField, SelectField, TextField} from "../Infrastructure/CutomFormikFields";
+import {DateField, SelectField, TextField} from "../Infrastructure/CutomFormikFields";
 
 export class RegisterUser extends React.PureComponent {
     constructor(props) {
@@ -12,7 +12,7 @@ export class RegisterUser extends React.PureComponent {
         this.state = {
             isLoading: false,
             stateErrors: [],
-            countries:[]
+            countries: []
         }
     }
 
@@ -23,8 +23,7 @@ export class RegisterUser extends React.PureComponent {
             return;
         }
 
-        console.log(response.model.Countries);
-        this.setState({countries: response.model})
+        this.setState({countries: response.model.Countries})
     }
 
     handleSubmit = async (data) => {

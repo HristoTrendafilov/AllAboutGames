@@ -44,14 +44,15 @@ export const CheckboxField = ({ label, children, customClassName, ...props }) =>
 
 export const SelectField = ({ label, options, customClassName, ...props }) => {
     const [field, meta] = useField(props);
+
     return (
         <div className={customClassName}>
             {label && <label className="form-label justify-content-center d-flex fw-bold">{label}</label>}
             <select className='form-select' {...field} {...props}>
                 <option value={0}>---</option>
                 {
-                    options.map((x) =>
-                        <option key={x.CountryID} value={x.Name}>{x.Name}</option> )
+                    options?.map((x) =>
+                        <option key={x.CountryID} value={x.CountryID}>{x.Name}</option> )
                 }
             </select>
             {meta.touched && meta.error &&

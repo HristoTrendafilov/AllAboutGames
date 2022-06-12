@@ -18,7 +18,7 @@ export const SendRequest = async (messageType, messageJson) => {
 
     await axios.post('http://localhost:6002/api/gateway', gatewayRequest)
         .then(resp => {
-            gatewayResponse.model = resp.data.JsonValue;
+            gatewayResponse.model = JSON.parse(resp.data.JsonValue);
 
             resp.data.Details.map(x => {
                 if (x.Type === 3) {
