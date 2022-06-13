@@ -46,7 +46,7 @@ export class RegisterUser extends React.PureComponent {
         return (
             <div className='d-flex justify-content-center mt-4'>
                 <div className="card border-info border-3 bg-transparent" style={{width: 600}}>
-                    <h5 className="card-header text-warning border-3 border-info">Registration</h5>
+                    <h4 className="card-header text-warning border-3 border-info">Registration</h4>
                     <div className="card-body pb-0">
 
                         <Formik
