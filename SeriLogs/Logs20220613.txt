@@ -1,0 +1,229 @@
+﻿2022-06-13 14:11:58.918 +03:00 [DBG] Hosting starting
+2022-06-13 14:11:59.063 +03:00 [INF] Now listening on: http://localhost:6002
+2022-06-13 14:11:59.066 +03:00 [DBG] Loaded hosting startup assembly AllAboutGames
+2022-06-13 14:11:59.067 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-06-13 14:11:59.067 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-06-13 14:11:59.069 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-06-13 14:11:59.070 +03:00 [INF] Hosting environment: Development
+2022-06-13 14:11:59.071 +03:00 [INF] Content root path: D:\dev\AllAboutGames\
+2022-06-13 14:11:59.072 +03:00 [DBG] Hosting started
+2022-06-13 14:12:05.198 +03:00 [DBG] Connection id "0HMID5M67HSHH" accepted.
+2022-06-13 14:12:05.202 +03:00 [DBG] Connection id "0HMID5M67HSHH" started.
+2022-06-13 14:12:05.202 +03:00 [DBG] Connection id "0HMID5M67HSHI" accepted.
+2022-06-13 14:12:05.204 +03:00 [DBG] Connection id "0HMID5M67HSHI" started.
+2022-06-13 14:12:05.254 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:12:05.254 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:12:05.282 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-13 14:12:05.282 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2022-06-13 14:12:05.320 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000002": started reading request body.
+2022-06-13 14:12:05.320 +03:00 [DBG] Connection id "0HMID5M67HSHI", Request id "0HMID5M67HSHI:00000002": started reading request body.
+2022-06-13 14:12:05.322 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000002": done reading request body.
+2022-06-13 14:12:05.322 +03:00 [DBG] Connection id "0HMID5M67HSHI", Request id "0HMID5M67HSHI:00000002": done reading request body.
+2022-06-13 14:12:05.490 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:12:05.490 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:12:07.228 +03:00 [DBG] Connection id "0HMID5M67HSHI" completed keep alive response.
+2022-06-13 14:12:07.228 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:12:07.235 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 1983.9517ms
+2022-06-13 14:12:07.235 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 1983.9538ms
+2022-06-13 14:12:17.170 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 252
+2022-06-13 14:12:17.173 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000003": started reading request body.
+2022-06-13 14:12:17.174 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000003": done reading request body.
+2022-06-13 14:12:17.176 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"asdasdasdasdasd","password":"asdasd","repeatPassword":"asdasd","dateOfBirth":"2022-06-02","countryID":"1","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-13 14:12:17.529 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:12:17.531 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 252 - 200 - application/json 360.5666ms
+2022-06-13 14:13:26.279 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:13:26.283 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000004": started reading request body.
+2022-06-13 14:13:26.285 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000004": done reading request body.
+2022-06-13 14:13:26.287 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:13:26.302 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:13:26.303 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 27.0421ms
+2022-06-13 14:13:26.351 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:13:26.352 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000005": started reading request body.
+2022-06-13 14:13:26.353 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000005": done reading request body.
+2022-06-13 14:13:26.354 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:13:26.363 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:13:26.365 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 14.3335ms
+2022-06-13 14:13:32.511 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 248
+2022-06-13 14:13:32.512 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000006": started reading request body.
+2022-06-13 14:13:32.513 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000006": done reading request body.
+2022-06-13 14:13:32.514 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"axxaxaaxaxa","password":"asdasd","repeatPassword":"asdasd","dateOfBirth":"2022-06-02","countryID":"1","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-13 14:13:32.525 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:13:32.526 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 248 - 200 - application/json 15.0243ms
+2022-06-13 14:14:01.378 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:14:01.384 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:14:01.388 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000007": started reading request body.
+2022-06-13 14:14:01.389 +03:00 [DBG] Connection id "0HMID5M67HSHI", Request id "0HMID5M67HSHI:00000003": started reading request body.
+2022-06-13 14:14:01.389 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000007": done reading request body.
+2022-06-13 14:14:01.390 +03:00 [DBG] Connection id "0HMID5M67HSHI", Request id "0HMID5M67HSHI:00000003": done reading request body.
+2022-06-13 14:14:01.392 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:14:01.393 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:14:01.401 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:14:01.401 +03:00 [DBG] Connection id "0HMID5M67HSHI" completed keep alive response.
+2022-06-13 14:14:01.404 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 28.6631ms
+2022-06-13 14:14:01.405 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 22.3667ms
+2022-06-13 14:15:23.711 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:15:23.718 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:15:23.723 +03:00 [DBG] Connection id "0HMID5M67HSHI", Request id "0HMID5M67HSHI:00000004": started reading request body.
+2022-06-13 14:15:23.723 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000008": started reading request body.
+2022-06-13 14:15:23.724 +03:00 [DBG] Connection id "0HMID5M67HSHI", Request id "0HMID5M67HSHI:00000004": done reading request body.
+2022-06-13 14:15:23.726 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000008": done reading request body.
+2022-06-13 14:15:23.726 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:15:23.727 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:15:23.737 +03:00 [DBG] Connection id "0HMID5M67HSHI" completed keep alive response.
+2022-06-13 14:15:23.738 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:15:23.740 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 29.6289ms
+2022-06-13 14:15:23.740 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 23.7133ms
+2022-06-13 14:16:56.282 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:16:56.290 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000009": started reading request body.
+2022-06-13 14:16:56.291 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000009": done reading request body.
+2022-06-13 14:16:56.297 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:16:56.308 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:16:56.310 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 28.4354ms
+2022-06-13 14:16:56.347 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:16:56.349 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000A": started reading request body.
+2022-06-13 14:16:56.350 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000A": done reading request body.
+2022-06-13 14:16:56.352 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:16:56.363 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:16:56.365 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 17.6768ms
+2022-06-13 14:17:04.598 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 252
+2022-06-13 14:17:04.599 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000B": started reading request body.
+2022-06-13 14:17:04.601 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000B": done reading request body.
+2022-06-13 14:17:04.601 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"asdasdasdasdasd","password":"asdasd","repeatPassword":"asdasd","dateOfBirth":"2022-06-02","countryID":"1","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-13 14:17:04.615 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:17:04.616 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 252 - 200 - application/json 17.4776ms
+2022-06-13 14:17:07.229 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 255
+2022-06-13 14:17:07.230 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000C": started reading request body.
+2022-06-13 14:17:07.231 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000C": done reading request body.
+2022-06-13 14:17:07.232 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"asdasdasdasdasdggg","password":"asdasd","repeatPassword":"asdasd","dateOfBirth":"2022-06-02","countryID":"1","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-13 14:17:07.246 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:17:07.248 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 255 - 200 - application/json 18.3427ms
+2022-06-13 14:19:36.304 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:19:36.339 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000D": started reading request body.
+2022-06-13 14:19:36.345 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000D": done reading request body.
+2022-06-13 14:19:36.346 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:19:36.422 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:19:36.423 +03:00 [DBG] Connection id "0HMID5M67HSHI", Request id "0HMID5M67HSHI:00000005": started reading request body.
+2022-06-13 14:19:36.425 +03:00 [DBG] Connection id "0HMID5M67HSHI", Request id "0HMID5M67HSHI:00000005": done reading request body.
+2022-06-13 14:19:36.426 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:19:36.474 +03:00 [DBG] Connection id "0HMID5M67HSHI" completed keep alive response.
+2022-06-13 14:19:36.476 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 53.9352ms
+2022-06-13 14:19:36.490 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:19:36.492 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 189.1013ms
+2022-06-13 14:19:42.431 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 246
+2022-06-13 14:19:42.433 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000E": started reading request body.
+2022-06-13 14:19:42.434 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000E": done reading request body.
+2022-06-13 14:19:42.436 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"asfadfadf","password":"asdasd","repeatPassword":"asdasd","dateOfBirth":"2022-06-01","countryID":"1","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-13 14:19:42.451 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:19:42.452 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 246 - 200 - application/json 21.2447ms
+2022-06-13 14:21:18.911 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:21:18.916 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000F": started reading request body.
+2022-06-13 14:21:18.918 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:0000000F": done reading request body.
+2022-06-13 14:21:18.919 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:21:18.927 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:21:18.928 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 18.2099ms
+2022-06-13 14:21:18.952 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:21:18.953 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000010": started reading request body.
+2022-06-13 14:21:18.954 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000010": done reading request body.
+2022-06-13 14:21:18.956 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:21:18.969 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:21:18.971 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 19.1393ms
+2022-06-13 14:21:25.975 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 246
+2022-06-13 14:21:25.976 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000011": started reading request body.
+2022-06-13 14:21:25.979 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000011": done reading request body.
+2022-06-13 14:21:25.980 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"123123123","password":"asdasd","repeatPassword":"asdasd","dateOfBirth":"2022-06-02","countryID":"1","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-13 14:21:25.991 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:21:25.992 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 246 - 200 - application/json 16.8399ms
+2022-06-13 14:21:57.688 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:21:57.689 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000012": started reading request body.
+2022-06-13 14:21:57.690 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000012": done reading request body.
+2022-06-13 14:21:57.691 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:21:57.701 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:21:57.702 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 14.3165ms
+2022-06-13 14:21:57.739 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:21:57.740 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000013": started reading request body.
+2022-06-13 14:21:57.743 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000013": done reading request body.
+2022-06-13 14:21:57.745 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:21:57.757 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:21:57.759 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 19.6923ms
+2022-06-13 14:22:02.999 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 246
+2022-06-13 14:22:03.000 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000014": started reading request body.
+2022-06-13 14:22:03.001 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000014": done reading request body.
+2022-06-13 14:22:03.002 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"asdfasfaf","password":"asdasd","repeatPassword":"asdasd","dateOfBirth":"2022-06-02","countryID":"1","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-13 14:22:03.011 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:22:03.012 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 246 - 200 - application/json 12.8815ms
+2022-06-13 14:24:40.250 +03:00 [DBG] Connection id "0HMID5M67HSHI" received FIN.
+2022-06-13 14:24:40.261 +03:00 [DBG] Connection id "0HMID5M67HSHI" disconnecting.
+2022-06-13 14:24:40.274 +03:00 [DBG] Connection id "0HMID5M67HSHI" sending FIN because: "The client closed the connection."
+2022-06-13 14:24:40.289 +03:00 [DBG] Connection id "0HMID5M67HSHI" stopped.
+2022-06-13 14:24:42.523 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:24:42.524 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000015": started reading request body.
+2022-06-13 14:24:42.526 +03:00 [DBG] Connection id "0HMID5M67HSHH", Request id "0HMID5M67HSHH:00000015": done reading request body.
+2022-06-13 14:24:42.528 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:24:42.584 +03:00 [DBG] Connection id "0HMID5M67HSHJ" accepted.
+2022-06-13 14:24:42.585 +03:00 [DBG] Connection id "0HMID5M67HSHJ" started.
+2022-06-13 14:24:42.586 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59
+2022-06-13 14:24:42.588 +03:00 [DBG] Connection id "0HMID5M67HSHH" completed keep alive response.
+2022-06-13 14:24:42.589 +03:00 [DBG] Connection id "0HMID5M67HSHJ", Request id "0HMID5M67HSHJ:00000002": started reading request body.
+2022-06-13 14:24:42.590 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 66.5695ms
+2022-06-13 14:24:42.591 +03:00 [DBG] Connection id "0HMID5M67HSHJ", Request id "0HMID5M67HSHJ:00000002": done reading request body.
+2022-06-13 14:24:42.594 +03:00 [INF] Incoming request: GetAllCountriesRequest 
+ JSON: 
+ {}
+2022-06-13 14:24:42.603 +03:00 [DBG] Connection id "0HMID5M67HSHJ" completed keep alive response.
+2022-06-13 14:24:42.605 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 59 - 200 - application/json 18.9085ms
+2022-06-13 14:24:49.054 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 248
+2022-06-13 14:24:49.055 +03:00 [DBG] Connection id "0HMID5M67HSHJ", Request id "0HMID5M67HSHJ:00000003": started reading request body.
+2022-06-13 14:24:49.056 +03:00 [DBG] Connection id "0HMID5M67HSHJ", Request id "0HMID5M67HSHJ:00000003": done reading request body.
+2022-06-13 14:24:49.059 +03:00 [INF] Incoming request: RegisterUserRequest 
+ JSON: 
+ {"UserDTO":{"username":"ccasdfafadf","password":"asdasd","repeatPassword":"asdasd","dateOfBirth":"2022-06-02","countryID":"1","email":"hristo.trendafilov93@gmail.com"}}
+2022-06-13 14:24:49.074 +03:00 [DBG] Connection id "0HMID5M67HSHJ" completed keep alive response.
+2022-06-13 14:24:49.075 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:6002/api/gateway application/x-www-form-urlencoded 248 - 200 - application/json 21.4288ms

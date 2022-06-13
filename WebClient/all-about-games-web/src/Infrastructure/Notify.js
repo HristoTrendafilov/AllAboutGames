@@ -1,7 +1,7 @@
 import {toast} from 'react-toastify';
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCheck, faExclamation, faTimes, faInfoCircle} from '@fortawesome/free-solid-svg-icons';
+import {faExclamation, faInfoCircle} from '@fortawesome/free-solid-svg-icons';
 
 export const notify = (type, message, autoClose) => {
     switch (type) {
