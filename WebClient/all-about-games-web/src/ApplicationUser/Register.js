@@ -36,14 +36,7 @@ export class RegisterUser extends React.PureComponent {
             return;
         }
 
-        notify('success', 'Successfully registered.', false)
-        window.location.href = '/user/login'
-    }
-
-    redirect = () => {
-
-        window.location.href = '/user/login';
-        notify('success', 'Successfully registered.', false);
+        window.location.href = '/user/login?hasRegistered=true'
     }
 
     render() {
@@ -52,8 +45,8 @@ export class RegisterUser extends React.PureComponent {
 
         return (
             <div className='d-flex justify-content-center mt-4'>
-                <div className="card border-warning border-3" style={{width: 600}}>
-                    <h5 className="card-header">Registration</h5>
+                <div className="card border-info border-3 bg-transparent" style={{width: 600}}>
+                    <h5 className="card-header text-warning border-3 border-info">Registration</h5>
                     <div className="card-body pb-0">
 
                         <Formik
@@ -109,21 +102,11 @@ export class RegisterUser extends React.PureComponent {
                                         <div className="col-xl-12 text-center mb-3">
                                             <button
                                                 type="submit"
-                                                className="btn btn-outline-primary w-50"
+                                                className="btn btn-outline-warning w-50"
                                                 disabled={isSubmitting}>
                                                 Register
                                             </button>
                                         </div>
-
-                                    <div className="col-xl-12 text-center mb-3">
-                                        <button
-                                            type="button"
-                                            className="btn btn-outline-primary w-50"
-                                            disabled={isSubmitting}
-                                        onClick={this.redirect}>
-                                            XAXAaa
-                                        </button>
-                                    </div>
 
                                         {stateErrors.length > 0 && <ErrorMessages apiErrors={stateErrors}/>}
 

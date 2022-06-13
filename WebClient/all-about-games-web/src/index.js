@@ -11,17 +11,16 @@ import {ToastContainer} from "react-toastify";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+    <React.StrictMode>
 
-      <BrowserRouter>
-          <ToastContainer autoClose={5000}/>
-          <Header/>
-          <Routes>
-              <Route path="/user/register" element={<RegisterUser/>}/>
-              <Route path="/user/login" element={<LoginUser/>}/>
-              <Route path="/" element={<RegisterUser/>}/>
-          </Routes>
-
-      </BrowserRouter>
-  </React.StrictMode>
+        <BrowserRouter>
+            <ToastContainer autoClose={5000} theme="colored" position={"bottom-right"}/>
+            <Header/>
+            <Routes>
+                <Route path="/user/register" element={<RegisterUser/>}/>
+                <Route path="/user/login" element={<LoginUser/>}/>
+                <Route path="/" element={<RegisterUser/>}/>
+            </Routes>
+        </BrowserRouter>
+    </React.StrictMode>
 );

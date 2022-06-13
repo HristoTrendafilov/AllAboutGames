@@ -4,6 +4,7 @@ import * as Validations from "../Infrastructure/ValidationModels";
 import {TextField} from "../Infrastructure/CutomFormikFields";
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
 import {LoginUserRequest} from "../Infrastructure/Dto";
+import {notify} from "../Infrastructure/Notify";
 
 export class LoginUser extends React.PureComponent {
     constructor(props) {
@@ -12,6 +13,14 @@ export class LoginUser extends React.PureComponent {
             isLoading: false,
             stateErrors: [],
             countries: []
+        }
+    }
+
+    componentDidMount() {
+        const params = new URLSearchParams(window.location.search);
+        const hasRegistered = params.get('hasRegistered');
+        if (hasRegistered){
+            notify('success', "Successfully registered.\nLog into you\'r account");
         }
     }
 
@@ -25,8 +34,8 @@ export class LoginUser extends React.PureComponent {
 
         return (
             <div className='d-flex justify-content-center mt-4'>
-                <div className="card border-warning border-3" style={{width: 500}}>
-                    <h5 className="card-header">Login</h5>
+                <div className="card border-info border-3 bg-transparent" style={{width: 600}}>
+                    <h5 className="card-header text-warning border-3 border-info">Login</h5>
                     <div className="card-body pb-0">
 
                         <Formik
@@ -55,7 +64,7 @@ export class LoginUser extends React.PureComponent {
                                     <div className="col-xl-12 text-center mb-3">
                                         <button
                                             type="submit"
-                                            className="btn btn-outline-success w-50"
+                                            className="btn btn-outline-warning w-50"
                                             disabled={isSubmitting}>
                                             Login
                                         </button>
