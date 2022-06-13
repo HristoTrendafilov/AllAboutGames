@@ -7,7 +7,6 @@ export class ErrorMessages extends React.PureComponent {
 
     render() {
         const {apiErrors} = this.props;
-        console.log(apiErrors);
 
         return (
             <div className="card p-0 text-white border-danger">

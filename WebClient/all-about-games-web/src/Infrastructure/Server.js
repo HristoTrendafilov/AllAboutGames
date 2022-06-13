@@ -34,6 +34,6 @@ export const SendRequest = async (messageType, messageJson) => {
             gatewayResponse.isFailed = true;
         });
 
-
+    console.log(gatewayResponse);
     return gatewayResponse;
 }

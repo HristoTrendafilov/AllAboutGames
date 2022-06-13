@@ -3,7 +3,8 @@ import {Form, Formik} from "formik";
 import * as Validations from "../Infrastructure/ValidationModels";
 import {TextField} from "../Infrastructure/CutomFormikFields";
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
-import {LoginUserRequest} from "../Infrastructure/Dto";
+import {LoginUserRequest, RegisterUserRequest} from "../Infrastructure/Dto";
+import {SendRequest} from "../Infrastructure/Server";
 import {notify} from "../Infrastructure/Notify";
 
 export class LoginUser extends React.PureComponent {
@@ -12,7 +13,6 @@ export class LoginUser extends React.PureComponent {
         this.state = {
             isLoading: false,
             stateErrors: [],
-            countries: []
         }
     }
 
@@ -20,12 +20,21 @@ export class LoginUser extends React.PureComponent {
         const params = new URLSearchParams(window.location.search);
         const hasRegistered = params.get('hasRegistered');
         if (hasRegistered){
-            notify('success', "Successfully registered.\nLog into you\'r account");
+            notify('success', "Registration successful.\nLog into you\'r account");
         }
     }
 
-    LoginUser(data){
+    LoginUser = async (data) => {
+        this.setState({isLoading: true});
 
+        const response = await SendRequest('LoginUserRequest', data);
+        if (response.isFailed) {
+            this.setState({stateErrors: response.errors});
+            return;
+        }
+
+        this.setState({isLoading:false})
+        window.location.href = '/'
     }
 
     render() {
@@ -43,7 +52,7 @@ export class LoginUser extends React.PureComponent {
                             onSubmit={async (values) => {
                                 await this.LoginUser(values)
                             }}
-                            validationSchema={Validations.RegisterUserValidationSchema}
+                            validationSchema={Validations.LoginUserValidationSchema}
                         >
                             {({isSubmitting}) => (
                                 <Form className="row">

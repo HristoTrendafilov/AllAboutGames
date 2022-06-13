@@ -24,6 +24,7 @@ namespace AllAboutGames.Handlers
         [BindRequest(typeof(LoginUserRequest), typeof(LoginUserResponse))]
         public GatewayResult Login(LoginUserRequest req)
         {
+            Thread.Sleep(2000);
             var user = this.UserService.GetUser(x => x.Username == req.Username && x.Password == req.Password);
             if (user == null)
             {
