@@ -40,6 +40,12 @@ export class RegisterUser extends React.PureComponent {
         window.location.href = '/user/login'
     }
 
+    redirect = () => {
+
+        window.location.href = '/user/login';
+        notify('success', 'Successfully registered.', false);
+    }
+
     render() {
         const model = RegisterUserRequest.UserDTO;
         const {stateErrors, countries} = this.state;
@@ -108,6 +114,16 @@ export class RegisterUser extends React.PureComponent {
                                                 Register
                                             </button>
                                         </div>
+
+                                    <div className="col-xl-12 text-center mb-3">
+                                        <button
+                                            type="button"
+                                            className="btn btn-outline-primary w-50"
+                                            disabled={isSubmitting}
+                                        onClick={this.redirect}>
+                                            XAXAaa
+                                        </button>
+                                    </div>
 
                                         {stateErrors.length > 0 && <ErrorMessages apiErrors={stateErrors}/>}
 
