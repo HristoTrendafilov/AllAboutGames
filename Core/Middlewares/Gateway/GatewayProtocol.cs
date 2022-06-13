@@ -161,16 +161,14 @@ namespace AllAboutGames.Core.Middlewares.Gateway
             }
 
             // Then we start validating every nested class to see if there are validation errors
-            foreach (var property in requestModel.GetType().GetProperties())
+            var nestedClasses = requestModel.GetType().GetProperties().Where(x => x.PropertyType.IsClass).ToList();
+            foreach (var nestedClass in nestedClasses)
             {
-                if (property.PropertyType.IsClass)
+                var currentClass = nestedClass.GetValue(requestModel, null);
+                var classValidations = PropertyValidator.Validate(currentClass);
+                if (classValidations.IsFailed)
                 {
-                    var nestedClass = property.GetValue(requestModel, null);
-                    var classValidation = PropertyValidator.Validate(nestedClass);
-                    if (classValidation.IsFailed)
-                    {
-                        check.AddError(classValidation.GetErrors());
-                    }
+                    check.AddError(classValidations.GetErrors());
                 }
             }
 

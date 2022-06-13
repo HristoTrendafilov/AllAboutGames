@@ -10,3 +10,8 @@ export const RegisterUserRequest = {
         email: '',
     }
 }
+
+export const LoginUserRequest = {
+    username: '',
+    password: '',
+}
