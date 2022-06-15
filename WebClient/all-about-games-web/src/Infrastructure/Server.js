@@ -1,7 +1,5 @@
 import React from 'react';
 import axios from "axios";
-import data from "bootstrap/js/src/dom/data";
-
 
 export const SendRequest = async (messageType, messageJson) => {
     const gatewayMessage = {
@@ -42,5 +40,6 @@ export const SendRequest = async (messageType, messageJson) => {
             gatewayResponse.isFailed = true;
         });
 
+    console.log(gatewayResponse);
     return gatewayResponse;
 }

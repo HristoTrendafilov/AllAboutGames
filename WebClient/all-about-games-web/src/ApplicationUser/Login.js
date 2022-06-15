@@ -6,12 +6,12 @@ import {ErrorMessages} from "../Infrastructure/ErrorMessages";
 import {LoginUserRequest, RegisterUserRequest} from "../Infrastructure/Dto";
 import {SendRequest} from "../Infrastructure/Server";
 import {notify} from "../Infrastructure/Notify";
-import { useAuthContext } from '../Infrastructure/AuthContext';
+import {useAuthContext} from '../Infrastructure/AuthContext';
 
 export function LoginUser() {
 
-    const [state, setState] = useState({model: RegisterUserRequest,isLoading: false, stateErrors: []});
-    const { login, token } = useAuthContext();
+    const [state, setState] = useState({model: LoginUserRequest, isLoading: false, stateErrors: []});
+    const {login, token} = useAuthContext();
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
@@ -33,9 +33,7 @@ export function LoginUser() {
 
         setState({...state, isLoading: false})
         login(response.model.Jwt);
-        console.log(token);
 
-        // localStorage.setItem('token', response.model.Jwt);
         // window.location.href = '/'
     }
 
