@@ -47,6 +47,14 @@ builder.Logging.AddSerilog();
 
 var app = builder.Build();
 
+app.UseCors(options =>
+{
+    options
+    .WithOrigins("http://localhost")
+    .AllowAnyHeader()
+    .AllowCredentials();
+});
+
 app.UseMiddleware<AuthMiddleware>();
 app.UseMiddleware<GatewayProtocolMiddleware>();
 

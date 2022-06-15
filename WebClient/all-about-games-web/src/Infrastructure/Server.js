@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from "axios";
+import data from "bootstrap/js/src/dom/data";
 
 
 export const SendRequest = async (messageType, messageJson) => {
@@ -16,7 +17,14 @@ export const SendRequest = async (messageType, messageJson) => {
         isFailed: false
     }
 
-    await axios.post('http://localhost:6002/api/gateway', gatewayRequest)
+    const token = localStorage.getItem('token');
+
+    await axios.post('http://localhost:6002/api/gateway', gatewayRequest, {
+        headers:{
+            "Content-Type": "application/json",
+            "Authorization":`Bearer ${token}`
+        }
+    })
         .then(resp => {
             gatewayResponse.model = JSON.parse(resp.data.JsonValue);
 
@@ -34,6 +42,5 @@ export const SendRequest = async (messageType, messageJson) => {
             gatewayResponse.isFailed = true;
         });
 
-    console.log(gatewayResponse);
     return gatewayResponse;
 }

@@ -145,6 +145,8 @@ namespace AllAboutGames.Core.Middlewares.Gateway
                     return result;
                 }
 
+
+
                 return GatewayResult.SuccessfulResult(returnValue);
             }
         }
