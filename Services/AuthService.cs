@@ -26,26 +26,48 @@ namespace AllAboutGames.Services
 
         public static long DecodeJwtTokent(string jwt)
         {
+            //try
+            //{
+            //    var tokenHandler = new JwtSecurityTokenHandler();
+            //    var key = Encoding.UTF8.GetBytes(Global.AppSettings.JWT.Secret);
+            //    tokenHandler.ValidateToken(jwt, new TokenValidationParameters
+            //    {
+            //        ValidateIssuerSigningKey = true,
+            //        IssuerSigningKey = new SymmetricSecurityKey(key),
+            //        ValidateIssuer = false,
+            //        ValidateAudience = false,
+            //    }, out SecurityToken validatedToken);
+
+            //    var jwtToken = (JwtSecurityToken)validatedToken;
+            //    var userID = long.Parse(jwtToken.Claims.First(x => x.Type == "ID").Value);
+            //    return userID;
+            //}
+            //catch
+            //{
+            //    return 0;
+            //}
+
             try
             {
-                var tokenHandler = new JwtSecurityTokenHandler();
-                var key = Encoding.UTF8.GetBytes(Global.AppSettings.JWT.Secret);
-                tokenHandler.ValidateToken(jwt, new TokenValidationParameters
+                var key = Encoding.ASCII.GetBytes(Global.AppSettings.JWT.Secret);
+                var handler = new JwtSecurityTokenHandler();
+                var validations = new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
-                    ValidateAudience = false,
-                }, out SecurityToken validatedToken);
-
-                var jwtToken = (JwtSecurityToken)validatedToken;
-                var userID = long.Parse(jwtToken.Claims.First(x => x.Type == "ID").Value);
-                return userID;
+                    ValidateAudience = false
+                };
+                var claims = handler.ValidateToken(jwt, validations, out var tokenSecure);
+                var userID = long.Parse(claims.Identity.Name);
             }
-            catch
+            catch (Exception ex)
             {
                 return 0;
+                throw;
             }
+
+            return 0;
         }
     }
 }
