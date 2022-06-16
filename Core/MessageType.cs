@@ -1,6 +1,6 @@
 ﻿namespace AllAboutGames.Core
 {
-    public enum ErrorType
+    public enum MessageType
     {
         None = 0,
         Info = 1,

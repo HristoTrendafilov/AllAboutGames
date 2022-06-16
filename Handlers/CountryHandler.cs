@@ -17,22 +17,22 @@ namespace AllAboutGames.Handlers
             this.Mapper = mapper;
         }
 
-        [BindRequest(typeof(GetAllCountriesRequest), typeof(GetAllCountriesResponse))]
-        public GetAllCountriesResponse GetAllCountries(GetAllCountriesRequest req)
+        [BindRequest(typeof(GetCountriesRequest), typeof(GetCountriesResponse))]
+        public GetCountriesResponse GetCountries(GetCountriesRequest req)
         {
             var countries = this.CountryService.GetCountries(x => true);
 
             var countriesDto = this.Mapper.Map(countries, new List<CountryDTO>());
-            return new GetAllCountriesResponse() { Countries = countriesDto };
+            return new GetCountriesResponse() { Countries = countriesDto };
         }
     }
 
-    public class GetAllCountriesResponse
+    public class GetCountriesResponse
     {
         public List<CountryDTO> Countries { get; set; }
     }
 
-    public class GetAllCountriesRequest
+    public class GetCountriesRequest
     {
     }
 }

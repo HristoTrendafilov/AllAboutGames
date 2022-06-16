@@ -21,7 +21,7 @@ namespace AllAboutGames.Core.Middlewares.Gateway
 
         public void AddError(string message, string property = "")
         {
-            this.Details.Add(new GatewayResultDetail(ErrorType.Error, property, message));
+            this.Details.Add(new GatewayResultDetail(MessageType.Error, property, message));
         }
 
         public static GatewayResult FromErrorMessage(string error)
@@ -51,14 +51,14 @@ namespace AllAboutGames.Core.Middlewares.Gateway
 
     public class GatewayResultDetail
     {
-        public GatewayResultDetail(ErrorType type, string propertyName, string message)
+        public GatewayResultDetail(MessageType type, string propertyName, string message)
         {
             this.Type = type;
             this.PropertyName = propertyName;
             this.Message = message;
         }
 
-        public ErrorType Type { get; set; }
+        public MessageType Type { get; set; }
 
         public string PropertyName { get; set; }
 

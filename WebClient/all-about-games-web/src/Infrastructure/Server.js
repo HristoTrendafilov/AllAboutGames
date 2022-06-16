@@ -15,10 +15,7 @@ export const SendRequest = async (messageType, messageJson) => {
         isFailed: false
     }
 
-    let token = localStorage.getItem('token');
-    if(!token){
-        token = '';
-    }
+    let token = localStorage.getItem('token') || '';
 
     await axios.post('http://localhost:6002/api/gateway', gatewayRequest, {
         headers:{
@@ -27,22 +24,20 @@ export const SendRequest = async (messageType, messageJson) => {
         }
     })
         .then(resp => {
-            gatewayResponse.model = JSON.parse(resp.data.JsonValue);
+            const {JsonValue, Details} = resp.data;
+            gatewayResponse.model = JSON.parse(JsonValue);
 
-            resp.data.Details.map(x => {
+            Details.map(x => {
                 if (x.Type === 3) {
-                    gatewayResponse.isFailed = true;
-                    x.Message.split('\n').map(y => {
-                        gatewayResponse.errors.push(y);
-                    });
+                    const {Message} = x;
+                    Message.split('\n').map(y => {gatewayResponse.errors.push(y)});
                 }
             });
         })
         .catch(err => {
             gatewayResponse.errors.push(err.message);
-            gatewayResponse.isFailed = true;
         });
 
-    console.log(gatewayResponse);
+    gatewayResponse.isFailed = gatewayResponse.errors.length > 0;
     return gatewayResponse;
 }

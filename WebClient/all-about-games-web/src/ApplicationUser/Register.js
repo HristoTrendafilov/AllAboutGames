@@ -5,20 +5,24 @@ import {SendRequest} from '../Infrastructure/Server';
 import {RegisterUserRequest} from '../Infrastructure/Dto'
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
 import {DateField, SelectField, TextField} from "../Infrastructure/CutomFormikFields";
+// noinspection ES6CheckImport
+import {useNavigate} from "react-router-dom";
 
 export function RegisterUser() {
 
     const [state, setState] = useState({model: RegisterUserRequest.UserDTO, countries: [], stateErrors: []});
+    const navigate = useNavigate();
 
-    useEffect( () => {
+    useEffect(() => {
         (async () => {
-            const response = await SendRequest('GetAllCountriesRequest', {});
+            const response = await SendRequest('GetCountriesRequest', {});
             if (response.isFailed) {
                 setState({...state, stateErrors: response.errors});
                 return;
             }
 
-            setState({...state,countries: response.model.Countries})
+            const {Countries} = response.model;
+            setState({...state, countries: Countries})
         })();
     }, [])
 
@@ -28,11 +32,11 @@ export function RegisterUser() {
 
         const response = await SendRequest('RegisterUserRequest', request);
         if (response.isFailed) {
-            setState({...state,stateErrors: response.errors});
+            setState({...state, stateErrors: response.errors});
             return;
         }
 
-        window.location.href = '/user/login?hasRegistered=true'
+        navigate("/user/login?hasRegistered=true");
     }
 
     return (

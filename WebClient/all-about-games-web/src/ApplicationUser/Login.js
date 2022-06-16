@@ -11,7 +11,7 @@ import {useAuthContext} from '../Infrastructure/AuthContext';
 export function LoginUser() {
 
     const [state, setState] = useState({model: LoginUserRequest, isLoading: false, stateErrors: []});
-    const {login, token} = useAuthContext();
+    const {login} = useAuthContext();
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
