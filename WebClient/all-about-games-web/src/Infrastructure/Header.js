@@ -5,8 +5,9 @@ import {useAuthContext} from './AuthContext';
 import {useNavigate} from "react-router-dom";
 
 export function Header() {
-    const {isAuthenticated, logout} = useAuthContext();
+    const {isAuthenticated, logout, username} = useAuthContext();
     const navigate = useNavigate();
+    console.log(username);
 
     return (
         <Navbar bg="dark" variant="dark">
@@ -20,6 +21,7 @@ export function Header() {
                         </>
                         :
                         <>
+                            <Nav.Link href="/user/profile">{username}</Nav.Link>
                             <Nav.Link onClick={() => {
                                 logout();
                                 navigate('/');

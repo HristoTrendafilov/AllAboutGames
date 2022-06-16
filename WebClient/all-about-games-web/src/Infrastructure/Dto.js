@@ -15,3 +15,7 @@ export const LoginUserRequest = {
     username: '',
     password: '',
 }
+
+export const GetUserRequest = {
+    userID: 0
+}

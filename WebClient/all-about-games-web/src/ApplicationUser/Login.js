@@ -31,10 +31,12 @@ export function LoginUser() {
             return;
         }
 
-        setState({...state, isLoading: false})
-        login(response.model.Jwt);
+        const {Jwt} = response.model;
+        login(Jwt, data.username);
 
-        // window.location.href = '/'
+        setState({...state, isLoading: false})
+
+        window.location.href = '/'
     }
 
     return (
