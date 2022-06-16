@@ -7,12 +7,11 @@ import {useNavigate} from "react-router-dom";
 export function Header() {
     const {isAuthenticated, logout, username} = useAuthContext();
     const navigate = useNavigate();
-    console.log(username);
 
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="#home">AllAboutGames</Navbar.Brand>
+                <Navbar.Brand href="/">AllAboutGames</Navbar.Brand>
                 <Nav>
                     {!isAuthenticated ?
                         <>

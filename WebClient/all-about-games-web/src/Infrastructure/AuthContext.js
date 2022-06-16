@@ -1,12 +1,11 @@
 import {createContext, useContext, useState} from 'react';
-
 import useLocalStorage from '../Infrastructure/useLocalStorage';
 
 export const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
     const [token, setToken] = useLocalStorage('token', '');
-    const [username, setUsername] = useState('');
+    const [username, setUsername] = useLocalStorage('');
 
     const login = (authData, username) => {
         setToken(authData);
