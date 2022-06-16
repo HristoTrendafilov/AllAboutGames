@@ -1,5 +1,6 @@
 ﻿using AllAboutGames.Core;
 using AllAboutGames.Core.Attributes;
+using AllAboutGames.Core.Middlewares;
 using AllAboutGames.Core.Middlewares.Gateway;
 using AllAboutGames.Data.DTO;
 using AllAboutGames.Data.Models;
@@ -22,7 +23,7 @@ namespace AllAboutGames.Handlers
         }
 
         [BindRequest(typeof(LoginUserRequest), typeof(LoginUserResponse))]
-        public GatewayResult Login(LoginUserRequest req)
+        public GatewayResult Login(LoginUserRequest req, AuthResult authResult)
         {
             Thread.Sleep(2000);
             var user = this.UserService.GetUser(x => x.Username == req.Username && x.Password == req.Password);
@@ -31,7 +32,7 @@ namespace AllAboutGames.Handlers
                 return GatewayResult.FromErrorMessage("The username or password are incorect.");
             }
 
-            var jwt = AuthService.GenerateJwtToken(user.UserID);
+            var jwt = this.AuthService.GenerateJwtToken(user.UserID);
             return GatewayResult.SuccessfulResult(new LoginUserResponse() { Jwt = jwt });
         }
 

@@ -1,4 +1,5 @@
 ﻿using AllAboutGames.Core.Attributes;
+using AllAboutGames.Core.Middlewares;
 using AllAboutGames.Core.Middlewares.Gateway;
 using System.Reflection;
 #nullable disable
@@ -31,13 +32,18 @@ namespace AllAboutGames.Core.Handlers
                             methodInfo.Name));
                 }
 
+                Type[] allowedParameterTypes =
+                {
+                    typeof(GatewayMessage),
+                    typeof(AuthResult),
+                };
+
                 foreach (var parameterInfo in methodInfo.GetParameters())
                 {
-                    if (parameterInfo.ParameterType != requestType && parameterInfo.ParameterType != typeof(GatewayMessage))
+                    if (parameterInfo.ParameterType != requestType && !allowedParameterTypes.Contains(parameterInfo.ParameterType))
                     {
-                        throw new NotSupportedException(string.Format("Parameters don't match for handler method {0}.{1}",
-                                methodInfo.DeclaringType.Name,
-                                methodInfo.Name));
+                        throw new NotSupportedException(
+                            $"Parameters don't match for handler method {methodInfo.DeclaringType.Name}.{methodInfo.Name}");
                     }
                 }
 

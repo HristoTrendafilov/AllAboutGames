@@ -41,24 +41,10 @@ namespace AllAboutGames.Core.Middlewares.Gateway
             try
             {
                 var handler = this.Handlers.GetHandler(request.MessageType);
-
                 if (handler == null)
                 {
                     return GatewayResult.FromErrorMessage("There is no handler that can process the request: " + request.MessageType);
                 }
-
-                var token = context.Request.Headers["Authorization"].FirstOrDefault();
-                if (token != null)
-                {
-                    var jwt = token.Split(' ')[1];
-                    var userID = AuthService.DecodeJwtTokent(jwt);
-                }
-
-                //var authResult = this.AuthorizeUser(handler, request, session);
-                //if (authResult.IsFailed)
-                //{
-                //    return authResult;
-                //}
 
                 var handlerInstance = this.ServiceProvider.GetService(handler.Method.DeclaringType);
 
@@ -69,11 +55,18 @@ namespace AllAboutGames.Core.Middlewares.Gateway
                     return GatewayResult.FromErrorMessage(check.GetErrors());
                 }
 
+                var authResult = context.GetRequestAuth();
+
                 var parameters = handler.Method.GetParameters().Select(info =>
                 {
                     if (info.ParameterType == handler.RequestType)
                     {
                         return requestModel;
+                    }
+
+                    if (info.ParameterType == typeof(AuthResult))
+                    {
+                        return authResult;
                     }
 
                     if (info.ParameterType == typeof(GatewayMessage))

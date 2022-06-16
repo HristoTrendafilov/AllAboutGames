@@ -9,13 +9,13 @@ namespace AllAboutGames.Services
 {
     public class AuthService
     {
-        public static string GenerateJwtToken(long id)
+        public string GenerateJwtToken(long id)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.UTF8.GetBytes(Global.AppSettings.JWT.Secret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
-                Subject = new ClaimsIdentity(new[] { new Claim("ID", id.ToString()) }),
+                Subject = new ClaimsIdentity(new[] { new Claim("userID", id.ToString()) }),
                 Expires = DateTime.UtcNow.AddDays(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
@@ -24,50 +24,28 @@ namespace AllAboutGames.Services
             return tokenHandler.WriteToken(token);
         }
 
-        public static long DecodeJwtTokent(string jwt)
+        public long DecodeJwtTokent(string jwt)
         {
-            //try
-            //{
-            //    var tokenHandler = new JwtSecurityTokenHandler();
-            //    var key = Encoding.UTF8.GetBytes(Global.AppSettings.JWT.Secret);
-            //    tokenHandler.ValidateToken(jwt, new TokenValidationParameters
-            //    {
-            //        ValidateIssuerSigningKey = true,
-            //        IssuerSigningKey = new SymmetricSecurityKey(key),
-            //        ValidateIssuer = false,
-            //        ValidateAudience = false,
-            //    }, out SecurityToken validatedToken);
-
-            //    var jwtToken = (JwtSecurityToken)validatedToken;
-            //    var userID = long.Parse(jwtToken.Claims.First(x => x.Type == "ID").Value);
-            //    return userID;
-            //}
-            //catch
-            //{
-            //    return 0;
-            //}
-
             try
             {
-                var key = Encoding.ASCII.GetBytes(Global.AppSettings.JWT.Secret);
-                var handler = new JwtSecurityTokenHandler();
-                var validations = new TokenValidationParameters
+                var tokenHandler = new JwtSecurityTokenHandler();
+                var key = Encoding.UTF8.GetBytes(Global.AppSettings.JWT.Secret);
+                tokenHandler.ValidateToken(jwt, new TokenValidationParameters
                 {
                     ValidateIssuerSigningKey = true,
                     IssuerSigningKey = new SymmetricSecurityKey(key),
                     ValidateIssuer = false,
-                    ValidateAudience = false
-                };
-                var claims = handler.ValidateToken(jwt, validations, out var tokenSecure);
-                var userID = long.Parse(claims.Identity.Name);
+                    ValidateAudience = false,
+                }, out SecurityToken validatedToken);
+
+                var jwtToken = (JwtSecurityToken)validatedToken;
+                var userID = long.Parse(jwtToken.Claims.First(x => x.Type == "userID").Value);
+                return userID;
             }
-            catch (Exception ex)
+            catch
             {
                 return 0;
-                throw;
             }
-
-            return 0;
         }
     }
 }

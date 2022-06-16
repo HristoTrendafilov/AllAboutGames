@@ -15,12 +15,15 @@ export const SendRequest = async (messageType, messageJson) => {
         isFailed: false
     }
 
-    const token = localStorage.getItem('token');
+    let token = localStorage.getItem('token');
+    if(!token){
+        token = '';
+    }
 
     await axios.post('http://localhost:6002/api/gateway', gatewayRequest, {
         headers:{
             "Content-Type": "application/json",
-            "Authorization":`Bearer ${token}`
+            "Authorization":`Jwt ${token}`
         }
     })
         .then(resp => {
