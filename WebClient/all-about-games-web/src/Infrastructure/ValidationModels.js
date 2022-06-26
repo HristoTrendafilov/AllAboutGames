@@ -26,3 +26,9 @@ export const LoginUserValidationSchema = Yup.object().shape({
    password: Yup.string()
        .required('password is required')
 });
+
+export const AddGameGenreValidationSchema = Yup.object().shape({
+    name: Yup.string()
+        .min(2, 'category name should have at least 2 characters')
+        .required('category is required'),
+});

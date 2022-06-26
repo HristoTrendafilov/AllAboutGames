@@ -1,7 +1,35 @@
 import React from 'react';
 
+export const CountryDTO = {
+    countryID: 0,
+    name: '',
+    iso: '',
+    iso3: ''
+}
+
+export const UserDTO = {
+    userID: 0,
+    username: '',
+    password: '',
+    repeatPassword: '',
+    dateOfBirth: '',
+    countryID: 0,
+    email: '',
+    profilePicture: '',
+    createdOn: '',
+    country: CountryDTO,
+    ratings: [],
+    reviews: [],
+    forumPosts: [],
+    forumComments: [],
+    feedbacks: [],
+    userRoles: [],
+    jwt: '',
+    isAdministrator: false
+}
+
 export const RegisterUserRequest = {
-    UserDTO: {
+    userDTO: {
         username: '',
         password: '',
         repeatPassword: '',
@@ -19,3 +47,10 @@ export const LoginUserRequest = {
 export const GetUserRequest = {
     userID: 0
 }
+
+export const SaveGenreRequest ={
+    genreDTO:{
+        name: ''
+    }
+}
+

@@ -32,8 +32,13 @@ namespace AllAboutGames.Handlers
                 return GatewayResult.FromErrorMessage("The username or password are incorect.");
             }
 
+            var response = new LoginUserResponse();
             var jwt = this.AuthService.GenerateJwtToken(user.UserID);
-            return GatewayResult.SuccessfulResult(new LoginUserResponse() { Jwt = jwt });
+            response.UserDTO = this.Mapper.Map<UserDTO>(user);
+            response.UserDTO.Roles = this.Mapper.Map<List<RoleDTO>>(user.UsersRoles.Select(x => x.Role));
+            response.UserDTO.Jwt = jwt;
+
+            return GatewayResult.SuccessfulResult(response);
         }
 
         [BindRequest(typeof(RegisterUserRequest), typeof(RegisterUserResponse))]
@@ -74,7 +79,7 @@ namespace AllAboutGames.Handlers
 
     public class LoginUserResponse
     {
-        public string Jwt { get; set; }
+        public UserDTO UserDTO { get; set; }
     }
 
     public class RegisterUserRequest

@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 #nullable disable
 
 namespace AllAboutGames.Core.Middlewares.Gateway
@@ -43,7 +44,8 @@ namespace AllAboutGames.Core.Middlewares.Gateway
                 JsonValue = JsonConvert.SerializeObject(obj, Formatting.None,
                         new JsonSerializerSettings()
                         {
-                            ReferenceLoopHandling = ReferenceLoopHandling.Ignore
+                            ReferenceLoopHandling = ReferenceLoopHandling.Ignore,
+                            ContractResolver = new CamelCasePropertyNamesContractResolver()
                         })
             };
         }

@@ -15,6 +15,8 @@ namespace AllAboutGames.Services
         {
             return this.Db.ApplicationUsers
                 .Include(x => x.Country)
+                .Include(x => x.UsersRoles)
+                .ThenInclude(x => x.Role)
                 .Where(predicate)
                 .FirstOrDefault();
         }

@@ -8,6 +8,7 @@ import {Header} from "./Infrastructure/Header";
 import {ToastContainer} from "react-toastify";
 import {AuthProvider} from "./Infrastructure/AuthContext";
 import {RenderRouteTable} from "./Infrastructure/RenderRouteTable";
+import 'font-awesome/css/font-awesome.min.css';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

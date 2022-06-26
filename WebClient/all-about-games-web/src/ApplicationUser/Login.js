@@ -7,11 +7,15 @@ import {LoginUserRequest, RegisterUserRequest} from "../Infrastructure/Dto";
 import {SendRequest} from "../Infrastructure/Server";
 import {notify} from "../Infrastructure/Notify";
 import {useAuthContext} from '../Infrastructure/AuthContext';
+// noinspection ES6CheckImport
+import {useNavigate} from "react-router-dom";
+import {LoadingSpinner} from "../Infrastructure/LoadingSpinner";
 
 export function LoginUser() {
 
     const [state, setState] = useState({model: LoginUserRequest, isLoading: false, stateErrors: []});
     const {login} = useAuthContext();
+    const navigate = useNavigate();
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
@@ -19,7 +23,6 @@ export function LoginUser() {
         if (hasRegistered) {
             notify('success', "Registration successful.\nLog into you\'r account");
         }
-
     }, [])
 
     LoginUser = async (data) => {
@@ -31,12 +34,9 @@ export function LoginUser() {
             return;
         }
 
-        const {Jwt} = response.model;
-        login(Jwt, data.username);
-
-        setState({...state, isLoading: false})
-
-        window.location.href = '/'
+        const {userDTO} = response.model;
+        login(userDTO);
+        navigate('/')
     }
 
     return (
@@ -73,8 +73,9 @@ export function LoginUser() {
                                         type="submit"
                                         className="btn btn-outline-warning w-50"
                                         disabled={isSubmitting}>
-                                        Login
+                                        {state.isLoading ? <LoadingSpinner/> : 'Login'}
                                     </button>
+
                                 </div>
 
                                 {state.stateErrors.length > 0 && <ErrorMessages apiErrors={state.stateErrors}/>}

@@ -10,7 +10,7 @@ import {useNavigate} from "react-router-dom";
 
 export function RegisterUser() {
 
-    const [state, setState] = useState({model: RegisterUserRequest.UserDTO, countries: [], stateErrors: []});
+    const [state, setState] = useState({model: RegisterUserRequest.userDTO, countries: [], stateErrors: []});
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -21,14 +21,14 @@ export function RegisterUser() {
                 return;
             }
 
-            const {Countries} = response.model;
-            setState({...state, countries: Countries})
+            const {countries} = response.model;
+            setState({...state, countries: countries})
         })();
     }, [])
 
     const HandleSubmit = async (data) => {
         const request = RegisterUserRequest;
-        request.UserDTO = {...data};
+        request.userDTO = {...data};
 
         const response = await SendRequest('RegisterUserRequest', request);
         if (response.isFailed) {

@@ -1,24 +1,28 @@
 import {createContext, useContext, useState} from 'react';
 import useLocalStorage from '../Infrastructure/useLocalStorage';
+import {UserDTO} from "./Dto";
 
 export const AuthContext = createContext(null);
 
-export const AuthProvider = ({ children }) => {
-    const [token, setToken] = useLocalStorage('token', '');
-    const [username, setUsername] = useLocalStorage('');
+export const AuthProvider = ({children}) => {
+    const [user, setUser] = useLocalStorage('user', UserDTO);
 
-    const login = (authData, username) => {
-        setToken(authData);
-        setUsername(username);
+    const login = (authData) => {
+        authData.isAdministrator = authData.roles.some(e => e.name === "Administrator")
+        setUser(authData);
     }
 
     const logout = () => {
-        setToken('');
-        setUsername('');
+        setUser(UserDTO);
     };
 
     return (
-        <AuthContext.Provider value={{ token, login, logout, isAuthenticated: !!token, username }}>
+        <AuthContext.Provider value={{
+            user,
+            login,
+            logout,
+            isAuthenticated: user.userID > 0,
+        }}>
             {children}
         </AuthContext.Provider>
     );

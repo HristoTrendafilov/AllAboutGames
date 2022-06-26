@@ -49,14 +49,14 @@ export const SelectField = ({label, options, customClassName, ...props}) => {
 
     let resultObj = {};
     for (let i = 0; i < options.length; i++) {
-        const {OptionsName, OptionsValue} = options[i];
-        let firstChar = OptionsName[0].toUpperCase();
+        const {optionsName, optionsValue} = options[i];
+        let firstChar = optionsName[0].toUpperCase();
         let innerArr = [];
         if (resultObj[firstChar] === undefined) {
-            innerArr.push({OptionsName, OptionsValue});
+            innerArr.push({optionsName, optionsValue});
             resultObj[firstChar] = innerArr
         } else {
-            resultObj[firstChar].push({OptionsName, OptionsValue})
+            resultObj[firstChar].push({optionsName, optionsValue})
         }
     }
 
@@ -66,12 +66,12 @@ export const SelectField = ({label, options, customClassName, ...props}) => {
             <select
                 className={`form-select ${meta.touched && meta.error ? "border-danger" : "border-info"}`} {...field} {...props}>
                 <option value={0}>---</option>
-                { Object.keys(resultObj).map((keyName, i) => (
+                {Object.keys(resultObj).map((keyName, i) => (
                     <optgroup key={keyName} label={keyName}>
                         {
                             resultObj[keyName].map((arrayObject) => (
-                                <option key={arrayObject.OptionsValue} value={arrayObject.OptionsValue}>
-                                    {arrayObject.OptionsName}
+                                <option key={arrayObject.optionsValue} value={arrayObject.optionsValue}>
+                                    {arrayObject.optionsName}
                                 </option>
                             ))
                         }

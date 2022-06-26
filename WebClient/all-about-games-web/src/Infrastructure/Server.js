@@ -8,6 +8,7 @@ export const SendRequest = async (messageType, messageJson) => {
     }
 
     const gatewayRequest = JSON.stringify(gatewayMessage);
+    console.log(gatewayRequest);
 
     const gatewayResponse = {
         model: {},
@@ -15,12 +16,12 @@ export const SendRequest = async (messageType, messageJson) => {
         isFailed: false
     }
 
-    let token = localStorage.getItem('token') || '';
+    let user = localStorage.getItem('user') || '';
 
     await axios.post('http://localhost:6002/api/gateway', gatewayRequest, {
         headers:{
             "Content-Type": "application/json",
-            "Authorization":`Jwt ${token}`
+            "Authorization":`Jwt ${user.jwt}`
         }
     })
         .then(resp => {

@@ -1,11 +1,11 @@
 import React from 'react';
-import {Container, Nav, Navbar} from "react-bootstrap";
+import {Container, Dropdown, Nav, Navbar} from "react-bootstrap";
 import {useAuthContext} from './AuthContext';
 // noinspection ES6CheckImport
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export function Header() {
-    const {isAuthenticated, logout, username} = useAuthContext();
+    const {isAuthenticated, logout, user} = useAuthContext();
     const navigate = useNavigate();
 
     return (
@@ -20,12 +20,23 @@ export function Header() {
                         </>
                         :
                         <>
-                            <Nav.Link href="/user/profile">{username}</Nav.Link>
-                            <Nav.Link onClick={() => {
-                                logout();
-                                navigate('/');
-                            }}>Logout
-                            </Nav.Link>
+                            <Dropdown>
+                                <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                                    {user.username}
+                                </Dropdown.Toggle>
+
+                                <Dropdown.Menu variant="dark">
+                                    <Dropdown.Item href="/user/profile/:id">Profile</Dropdown.Item>
+                                    {user.isAdministrator &&
+                                        <Dropdown.Item href="/user/admin/add-utilities">Add utilities</Dropdown.Item>
+                                    }
+                                    <Dropdown.Divider />
+                                    <Dropdown.Item onClick={ () =>{
+                                        logout();
+                                        navigate('/');
+                                    }}>Logout</Dropdown.Item>
+                                </Dropdown.Menu>
+                            </Dropdown>
                         </>
                     }
                 </Nav>

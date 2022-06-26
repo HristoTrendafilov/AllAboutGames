@@ -31,6 +31,8 @@ namespace AllAboutGames.Data.DTO
 
         public DateTime? DeletedOn { get; set; }
 
+        public string Jwt { get; set; }
+
         public long CountryID { get; set; }
 
         public Country Country { get; set; }
@@ -45,6 +47,6 @@ namespace AllAboutGames.Data.DTO
 
         public virtual List<FeedBack> FeedBacks { get; set; } = new List<FeedBack>();
 
-        public virtual List<ApplicationUserRole> UsersRoles { get; set; } = new List<ApplicationUserRole>();
+        public virtual List<RoleDTO> Roles { get; set; } = new List<RoleDTO>();
     }
 }
