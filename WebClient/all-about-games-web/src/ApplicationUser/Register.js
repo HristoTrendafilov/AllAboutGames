@@ -7,6 +7,7 @@ import {ErrorMessages} from "../Infrastructure/ErrorMessages";
 import {DateField, SelectField, TextField} from "../Infrastructure/CutomFormikFields";
 // noinspection ES6CheckImport
 import {useNavigate} from "react-router-dom";
+import Select from "react-select";
 
 export function RegisterUser() {
 

@@ -8,7 +8,6 @@ export const SendRequest = async (messageType, messageJson) => {
     }
 
     const gatewayRequest = JSON.stringify(gatewayMessage);
-    console.log(gatewayRequest);
 
     const gatewayResponse = {
         model: {},

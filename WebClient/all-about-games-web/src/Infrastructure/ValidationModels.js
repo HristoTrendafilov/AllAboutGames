@@ -30,5 +30,15 @@ export const LoginUserValidationSchema = Yup.object().shape({
 export const AddGameGenreValidationSchema = Yup.object().shape({
     name: Yup.string()
         .min(2, 'category name should have at least 2 characters')
+        .max(100, 'category name should have 100 characters max')
         .required('category is required'),
+});
+
+export const AddCountryValidationSchema = Yup.object().shape({
+    name: Yup.string()
+        .min(2, 'country name should have at least 2 characters')
+        .max(100, 'country name should have 100 characters max')
+        .required('country is required'),
+    iso: Yup.string()
+        .required('country short name is required')
 });

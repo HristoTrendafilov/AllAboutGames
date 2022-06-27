@@ -54,3 +54,7 @@ export const SaveGenreRequest ={
     }
 }
 
+export const SaveCountryRequest = {
+    countryDTO: CountryDTO
+}
+

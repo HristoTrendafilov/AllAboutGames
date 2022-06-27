@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 import {Header} from "./Infrastructure/Header";
 import {ToastContainer} from "react-toastify";
 import {AuthProvider} from "./Infrastructure/AuthContext";
