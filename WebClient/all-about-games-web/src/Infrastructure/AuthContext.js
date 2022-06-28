@@ -1,11 +1,27 @@
-import {createContext, useContext, useState} from 'react';
+import {createContext, useContext} from 'react';
 import useLocalStorage from '../Infrastructure/useLocalStorage';
-import {UserDTO} from "./Dto";
 
 export const AuthContext = createContext(null);
 
+const initialValue = {
+    username: '',
+    password: '',
+    dateOfBirth: '',
+    email: '',
+    profilePicture: '',
+    createdOn: '',
+    jwt: '',
+    country: {},
+    ratings: [],
+    reviews: [],
+    forumPosts: [],
+    forumComments: [],
+    feedBacks: [],
+    roles: []
+}
+
 export const AuthProvider = ({children}) => {
-    const [user, setUser] = useLocalStorage('user', UserDTO);
+    const [user, setUser] = useLocalStorage('user', initialValue);
 
     const login = (authData) => {
         authData.isAdministrator = authData.roles.some(e => e.name === "Administrator")
@@ -13,7 +29,7 @@ export const AuthProvider = ({children}) => {
     }
 
     const logout = () => {
-        setUser(UserDTO);
+        setUser(initialValue);
     };
 
     return (

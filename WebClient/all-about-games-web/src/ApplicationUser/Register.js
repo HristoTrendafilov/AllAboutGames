@@ -1,17 +1,44 @@
 import {Form, Formik} from 'formik';
 import React, {useEffect, useState} from 'react';
-import * as Validations from '../Infrastructure/ValidationModels';
 import {SendRequest} from '../Infrastructure/Server';
-import {RegisterUserRequest} from '../Infrastructure/Dto'
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
-import {DateField, SelectField, SelectMultiField, TextField} from "../Infrastructure/CutomFormikFields";
+import {DateField, SelectField, TextField} from "../Infrastructure/CutomFormikFields";
 // noinspection ES6CheckImport
 import {useNavigate} from "react-router-dom";
-import Select from "react-select";
+import * as Yup from "yup";
+
+const initialValues = {
+    username: '',
+    password: '',
+    repeatPassword: '',
+    dateOfBirth: '',
+    countryID: 0,
+    email: '',
+}
+
+const ValidationSchema = Yup.object().shape({
+    username: Yup.string()
+        .min(3, 'Username must be between 3 and 50 characters long.')
+        .max(50, 'Username must be between 3 and 50 characters long.')
+        .required('username is required'),
+    password: Yup.string()
+        .min(5, "Your password must be longer than 5 characters.")
+        .required('Password is required'),
+    repeatPassword: Yup.string()
+        .required('Repeat the password.')
+        .oneOf([Yup.ref('password'), null], 'Passwords do not match!'),
+    dateOfBirth: Yup.date()
+        .required('birth date is required'),
+    countryID: Yup.number()
+        .min(1, 'country is required.')
+        .required('country is required.'),
+    email: Yup.string()
+        .required('email is required.'),
+});
 
 export function RegisterUser() {
 
-    const [state, setState] = useState({model: RegisterUserRequest.userDTO, countries: [], stateErrors: []});
+    const [state, setState] = useState({countries: [], stateErrors: []});
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -28,8 +55,9 @@ export function RegisterUser() {
     }, [])
 
     const HandleSubmit = async (data) => {
-        const request = RegisterUserRequest;
-        request.userDTO = {...data};
+        const request = {
+            userDTO: data
+        }
 
         const response = await SendRequest('RegisterUserRequest', request);
         if (response.isFailed) {
@@ -47,11 +75,11 @@ export function RegisterUser() {
                 <div className="card-body pb-0">
 
                     <Formik
-                        initialValues={{...state.model}}
+                        initialValues={{...initialValues}}
                         onSubmit={async (values) => {
                             await HandleSubmit(values)
                         }}
-                        validationSchema={Validations.RegisterUserValidationSchema}
+                        validationSchema={ValidationSchema}
                     >
                         {({isSubmitting}) => (
                             <Form className="row">

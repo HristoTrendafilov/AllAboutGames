@@ -1,19 +1,30 @@
 import React, {useEffect, useState} from "react";
 import {Form, Formik} from "formik";
-import * as Validations from "../Infrastructure/ValidationModels";
 import {TextField} from "../Infrastructure/CutomFormikFields";
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
-import {LoginUserRequest, RegisterUserRequest} from "../Infrastructure/Dto";
 import {SendRequest} from "../Infrastructure/Server";
 import {notify} from "../Infrastructure/Notify";
 import {useAuthContext} from '../Infrastructure/AuthContext';
 // noinspection ES6CheckImport
 import {useNavigate} from "react-router-dom";
 import {LoadingSpinner} from "../Infrastructure/LoadingSpinner";
+import * as Yup from "yup";
+
+const initialValues = {
+    username: '',
+    password: '',
+}
+
+const ValidationSchema = Yup.object().shape({
+    username: Yup.string()
+        .required('username is required'),
+    password: Yup.string()
+        .required('password is required')
+});
 
 export function LoginUser() {
 
-    const [state, setState] = useState({model: LoginUserRequest, isLoading: false, stateErrors: []});
+    const [state, setState] = useState({isLoading: false, stateErrors: []});
     const {login} = useAuthContext();
     const navigate = useNavigate();
 
@@ -46,11 +57,11 @@ export function LoginUser() {
                 <div className="card-body pb-0">
 
                     <Formik
-                        initialValues={{...state.model}}
+                        initialValues={{...initialValues}}
                         onSubmit={async (values) => {
                             await LoginUser(values)
                         }}
-                        validationSchema={Validations.LoginUserValidationSchema}
+                        validationSchema={ValidationSchema}
                     >
                         {({isSubmitting}) => (
                             <Form className="row">

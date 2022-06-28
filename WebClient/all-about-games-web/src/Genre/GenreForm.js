@@ -1,13 +1,23 @@
 import React, {useState} from 'react';
 import {Card} from "react-bootstrap";
 import {Form, Formik} from "formik";
-import * as Validations from "../Infrastructure/ValidationModels";
 import {TextField} from "../Infrastructure/CutomFormikFields";
 import {LoadingSpinner} from "../Infrastructure/LoadingSpinner";
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
-import {SaveGenreRequest} from "../Infrastructure/Dto";
 import {SendRequest} from "../Infrastructure/Server";
 import {notify} from "../Infrastructure/Notify";
+import * as Yup from "yup";
+
+const initialValues = {
+    name: '',
+}
+
+const ValidationSchema = Yup.object().shape({
+    name: Yup.string()
+        .min(2, 'category name should have at least 2 characters')
+        .max(100, 'category name should have 100 characters max')
+        .required('category is required'),
+});
 
 export function GenreForm(){
 
@@ -16,9 +26,7 @@ export function GenreForm(){
     async function AddGameGenre(values) {
         setState({...state, isLoading: true})
 
-        const request = SaveGenreRequest;
-        request.genreDTO = {...values};
-
+        const request = { genreDTO: values };
         const response = await SendRequest('SaveGenreRequest', request);
         if (response.isFailed) {
             setState({...state, isLoading: false, stateErrors: response.errors});
@@ -34,11 +42,11 @@ export function GenreForm(){
             <Card.Header className="text-warning border-3 border-info">Game genre</Card.Header>
             <Card.Body>
                 <Formik
-                    initialValues={{name: ''}}
+                    initialValues={{...initialValues}}
                     onSubmit={async (values) => {
                         await AddGameGenre(values)
                     }}
-                    validationSchema={Validations.AddGameGenreValidationSchema}
+                    validationSchema={ValidationSchema}
                 >
                     {({isSubmitting}) => (
                         <Form className="row">

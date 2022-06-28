@@ -1,13 +1,16 @@
 import React, {useEffect, useState} from 'react';
 import {Card} from "react-bootstrap";
 import {Form, Formik} from "formik";
-import * as Validations from "../../Infrastructure/ValidationModels";
 import {SelectField, TextField} from "../../Infrastructure/CutomFormikFields";
 import {LoadingSpinner} from "../../Infrastructure/LoadingSpinner";
 import {ErrorMessages} from "../../Infrastructure/ErrorMessages";
-import {SaveGenreRequest} from "../../Infrastructure/Dto";
 import {SendRequest} from "../../Infrastructure/Server";
 import {notify} from "../../Infrastructure/Notify";
+
+const initialValues = {
+    userID: 0,
+    roles: [],
+}
 
 export function AddRolesToUserForm() {
 
@@ -56,7 +59,7 @@ export function AddRolesToUserForm() {
             <Card.Header className="text-warning border-3 border-info">Add roles to user</Card.Header>
             <Card.Body>
                 <Formik
-                    initialValues={{userID: 0, roles: []}}
+                    initialValues={{...initialValues}}
                     onSubmit={async (values) => {
                         await AddRolesToUser(values)
                     }}
