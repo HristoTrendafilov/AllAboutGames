@@ -17,5 +17,9 @@ namespace AllAboutGames.Data.DTO
 
         [Required(ErrorMessage = "Valid to is required.")]
         public DateTime ValidTo { get; set; }
+
+        public long OptionsValue => this.RoleID;
+
+        public string OptionsName => this.Name;
     }
 }

@@ -37,6 +37,10 @@ namespace AllAboutGames.Data.DTO
 
         public Country Country { get; set; }
 
+        public long OptionsValue => this.UserID;
+
+        public string OptionsName => this.Username;
+
         public virtual List<Rating> Ratings { get; set; } = new List<Rating>();
 
         public virtual List<Review> Reviews { get; set; } = new List<Review>();

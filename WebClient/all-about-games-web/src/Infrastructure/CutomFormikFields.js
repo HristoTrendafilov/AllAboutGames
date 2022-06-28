@@ -68,7 +68,7 @@ export const SelectField = ({label, isMulti, placeholder, options, customClassNa
         }
 
         const selectOptions = [...resultArr].sort((a, b) =>
-            a.name > b.name ? 1 : -1,
+            a.label > b.label ? 1 : -1,
         );
 
         setSelectOptions(selectOptions);
@@ -102,7 +102,7 @@ export const SelectField = ({label, isMulti, placeholder, options, customClassNa
                 onChange={onChange}
                 onBlur={setTouched}
                 isClearable={true}
-                closeMenuOnSelect={false}
+                closeMenuOnSelect={!isMulti}
                 isLoading={isLoading}
             />
             {meta.touched && meta.error &&
