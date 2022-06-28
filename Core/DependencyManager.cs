@@ -1,7 +1,7 @@
 ﻿using AllAboutGames.Core.Handlers;
 using AllAboutGames.Core.Middlewares;
 using AllAboutGames.Core.Middlewares.Gateway;
-using AllAboutGames.Data.ViewModels;
+using AllAboutGames.Data.DTO;
 using AllAboutGames.Services;
 using System.Reflection;
 
@@ -23,9 +23,6 @@ namespace AllAboutGames.Core
             builder.Services.AddTransient<GameService>();
             builder.Services.AddTransient<UserService>();
             builder.Services.AddTransient<AuthService>();
-            builder.Services.AddTransient<CountryService>();
-            builder.Services.AddTransient<GenreService>();
-            builder.Services.AddTransient<RoleService>();
 
             // Middlewares
             builder.Services.AddTransient<AuthMiddleware>();
@@ -34,7 +31,7 @@ namespace AllAboutGames.Core
             // Other
             builder.Services.AddTransient(provider => new GatewayProtocol(handlers, provider));
 
-            builder.Services.AddAutoMapper(typeof(GameViewModel));
+            builder.Services.AddAutoMapper(typeof(GameDTO));
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
             builder.Services.AddSwaggerGen();

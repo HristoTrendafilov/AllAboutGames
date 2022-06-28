@@ -1,5 +1,4 @@
 ﻿using AllAboutGames.Core.CustomMapper;
-using AllAboutGames.Data.ViewModels;
 using AutoMapper;
 using System.Reflection;
 #nullable disable

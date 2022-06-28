@@ -81,6 +81,74 @@ namespace AllAboutGames.Handlers
             var usersDto = this.Mapper.Map(users, new List<UserDTO>());
             return GatewayResult.SuccessfulResult(new GetUsersResponse { UsersDTO = usersDto});
         }
+
+        [BindRequest(typeof(GetRolesRequest), typeof(GetRolesResponse))]
+        public GetRolesResponse GetRoles(GetRolesRequest req)
+        {
+            var predicate = PredicateBuilder.True<Role>();
+            if (req.UserID > 0)
+            {
+                predicate = predicate.And(x => x.UsersRoles.Any(x => x.UserID == req.UserID));
+            }
+
+            var roles = this.UserService.GetRoles(predicate);
+            var rolesDTO = this.Mapper.Map(roles, new List<RoleDTO>());
+
+            return new GetRolesResponse { RolesDTO = rolesDTO };
+        }
+
+        [BindRequest(typeof(GetCountriesRequest), typeof(GetCountriesResponse))]
+        public GetCountriesResponse GetCountries(GetCountriesRequest req)
+        {
+            var countries = this.UserService.GetCountries(x => true);
+
+            var countriesDto = this.Mapper.Map(countries, new List<CountryDTO>());
+            return new GetCountriesResponse() { Countries = countriesDto };
+        }
+
+        [BindRequest(typeof(SaveCountryRequest), typeof(SaveCountryResponse))]
+        public async Task<GatewayResult> SaveCountry(SaveCountryRequest req)
+        {
+            var country = this.UserService.GetCountries(x => x.Name == req.CountryDTO.Name).FirstOrDefault();
+            if (country != null)
+            {
+                return GatewayResult.FromErrorMessage($"Country: {country.Name} already exists.");
+            }
+
+            await this.UserService.SaveEntityAsync<Country>(req.CountryDTO);
+            await this.UserService.SaveChangesAsync();
+
+            return GatewayResult.SuccessfulResult();
+        }
+    }
+
+    public class SaveCountryRequest
+    {
+        public CountryDTO CountryDTO { get; set; }
+    }
+
+    public class SaveCountryResponse
+    {
+
+    }
+
+    public class GetCountriesResponse
+    {
+        public List<CountryDTO> Countries { get; set; }
+    }
+
+    public class GetCountriesRequest
+    {
+    }
+
+    public class GetRolesRequest
+    {
+        public int UserID { get; set; }
+    }
+
+    public class GetRolesResponse
+    {
+        public List<RoleDTO> RolesDTO { get; set; }
     }
 
     public class GetUsersRequest

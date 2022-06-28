@@ -18,5 +18,12 @@ namespace AllAboutGames.Services
                 .Where(predicate)
                 .FirstOrDefault();
         }
+
+        public List<Genre> GetGenres(Expression<Func<Genre, bool>> predicate)
+        {
+            return this.Db.Genres
+                .Where(predicate)
+                .ToList();
+        }
     }
 }

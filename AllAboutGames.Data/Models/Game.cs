@@ -1,5 +1,4 @@
-﻿using AllAboutGames.Data.Attributes;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace AllAboutGames.Data.Models
@@ -35,7 +34,6 @@ namespace AllAboutGames.Data.Models
         [ForeignKey(nameof(Developer))]
         public long? DeveloperID { get; set; }
 
-        [IncludeInQuery]
         public virtual Developer Developer { get; set; }
 
         public virtual List<Review> Reviews { get; set; } = new List<Review>();

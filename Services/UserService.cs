@@ -25,5 +25,19 @@ namespace AllAboutGames.Services
                 .Where(predicate)
                 .ToList();
         }
+
+        public List<Role> GetRoles(Expression<Func<Role, bool>> predicate)
+        {
+            return this.Db.Roles
+                .Where(predicate)
+                .ToList();
+        }
+
+        public List<Country> GetCountries(Expression<Func<Country, bool>> predicate)
+        {
+            return this.Db.Countries
+                .Where(predicate)
+                .ToList();
+        }
     }
 }

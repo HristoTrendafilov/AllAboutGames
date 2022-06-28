@@ -1,5 +1,4 @@
 ﻿using AllAboutGames.Core;
-using AllAboutGames.Data.Attributes;
 using AllAboutGames.Data.DataContext;
 using AutoMapper;
 using Microsoft.EntityFrameworkCore;
