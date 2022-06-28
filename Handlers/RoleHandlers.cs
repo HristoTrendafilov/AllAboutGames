@@ -28,7 +28,6 @@ namespace AllAboutGames.Handlers
                 predicate = predicate.And(x => x.UsersRoles.Any(x => x.UserID == req.UserID));
             }
 
-
             var roles = this.RoleService.GetRoles(predicate);
             var rolesDTO = this.Mapper.Map(roles, new List<RoleDTO>());
 

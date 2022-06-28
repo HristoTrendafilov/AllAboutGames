@@ -79,7 +79,7 @@ namespace AllAboutGames.Handlers
             }
 
             var usersDto = this.Mapper.Map(users, new List<UserDTO>());
-            return GatewayResult.SuccessfulResult(userDto);
+            return GatewayResult.SuccessfulResult(new GetUsersResponse { UsersDTO = usersDto});
         }
     }
 
@@ -90,7 +90,7 @@ namespace AllAboutGames.Handlers
 
     public class GetUsersResponse
     {
-        public UserDTO UserDTO { get; set; }
+        public List<UserDTO> UsersDTO { get; set; }
     }
 
     public class LoginUserRequest
