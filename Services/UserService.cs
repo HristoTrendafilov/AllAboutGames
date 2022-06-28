@@ -13,12 +13,17 @@ namespace AllAboutGames.Services
 
         public ApplicationUser GetUser(Expression<Func<ApplicationUser, bool>> predicate)
         {
+            return this.GetUsers(predicate).FirstOrDefault();
+        }
+
+        public List<ApplicationUser> GetUsers(Expression<Func<ApplicationUser, bool>> predicate)
+        {
             return this.Db.ApplicationUsers
                 .Include(x => x.Country)
                 .Include(x => x.UsersRoles)
                 .ThenInclude(x => x.Role)
                 .Where(predicate)
-                .FirstOrDefault();
+                .ToList();
         }
     }
 }

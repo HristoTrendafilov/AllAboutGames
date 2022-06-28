@@ -68,6 +68,29 @@ namespace AllAboutGames.Handlers
             var userDto = this.Mapper.Map(user, new UserDTO());
             return GatewayResult.SuccessfulResult(userDto);
         }
+
+        [BindRequest(typeof(GetUsersRequest), typeof(GetUsersResponse))]
+        public GatewayResult GetUsers(GetUsersRequest request)
+        {
+            var users = this.UserService.GetUsers(x => true);
+            if (users == null || users.Count == 0)
+            {
+                return GatewayResult.FromErrorMessage("No users found.");
+            }
+
+            var usersDto = this.Mapper.Map(users, new List<UserDTO>());
+            return GatewayResult.SuccessfulResult(userDto);
+        }
+    }
+
+    public class GetUsersRequest
+    {
+
+    }
+
+    public class GetUsersResponse
+    {
+        public UserDTO UserDTO { get; set; }
     }
 
     public class LoginUserRequest
