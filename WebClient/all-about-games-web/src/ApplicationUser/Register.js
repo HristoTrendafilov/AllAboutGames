@@ -93,6 +93,7 @@ export function RegisterUser() {
                                     customClassName="mb-3 col-xl-6"
                                     name='countryID'
                                     label='Country'
+                                    placeholder='Select country'
                                     options={state.countries}
                                 />
 

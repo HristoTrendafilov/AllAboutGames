@@ -28,7 +28,7 @@ export function Header() {
                                 <Dropdown.Menu variant="dark">
                                     <Dropdown.Item href="/user/profile/:id">Profile</Dropdown.Item>
                                     {user.isAdministrator &&
-                                        <Dropdown.Item href="/user/admin/add-utilities">Add utilities</Dropdown.Item>
+                                        <Dropdown.Item href="/user/admin-panel">Admin panel</Dropdown.Item>
                                     }
                                     <Dropdown.Divider />
                                     <Dropdown.Item onClick={ () =>{

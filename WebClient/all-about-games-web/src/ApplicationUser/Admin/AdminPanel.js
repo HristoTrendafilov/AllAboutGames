@@ -9,7 +9,7 @@ import {SendRequest} from "../../Infrastructure/Server";
 import {LoadingSpinner} from "../../Infrastructure/LoadingSpinner";
 import {SaveCountryRequest, SaveGenreRequest} from "../../Infrastructure/Dto";
 
-export function Utilities() {
+export function AdminPanel() {
 
     const [state, setState] = useState({isLoading: false, stateErrors: []});
 

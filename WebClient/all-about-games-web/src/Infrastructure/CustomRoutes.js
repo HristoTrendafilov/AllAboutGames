@@ -2,7 +2,7 @@ import React from 'react';
 import {RegisterUser} from "../ApplicationUser/Register";
 import {LoginUser} from "../ApplicationUser/Login";
 import {Home} from "../Home/Home";
-import {Utilities} from "../ApplicationUser/Admin/Utilities";
+import {AdminPanel} from "../ApplicationUser/Admin/AdminPanel";
 
 export const CustomRoutes = [
     {
@@ -18,7 +18,7 @@ export const CustomRoutes = [
         element: <Home/>
     },
     {
-        path: '/user/admin/add-utilities',
-        element: <Utilities/>
+        path: '/user/admin-panel',
+        element: <AdminPanel/>
     }
 ]
