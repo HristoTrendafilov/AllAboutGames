@@ -17,7 +17,7 @@ export const RegisterUserValidationSchema = Yup.object().shape({
         .min(1, 'country is required.')
         .required('country is required.'),
     email: Yup.string()
-        .required('email is required.')
+        .required('email is required.'),
 });
 
 export const LoginUserValidationSchema = Yup.object().shape({

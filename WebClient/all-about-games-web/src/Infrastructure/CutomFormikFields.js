@@ -45,15 +45,13 @@ export const CheckboxField = ({label, children, customClassName, ...props}) => {
     );
 };
 
-export const SelectField = ({label, placeholder, options, customClassName, ...props}) => {
+export const SelectField = ({label, isMulti, placeholder, options, customClassName, ...props}) => {
     const [field, meta, {setValue, setTouched}] = useField(props);
     const [selectedValue, setSelectedValue] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
     const [selectOptions, setSelectOptions] = useState([]);
 
     useEffect(() => {
-        setIsLoading(true);
-
         let resultArr = [];
         for (let i = 0; i < options.length; i++) {
             const {optionsName, optionsValue} = options[i];
@@ -79,7 +77,13 @@ export const SelectField = ({label, placeholder, options, customClassName, ...pr
 
 
     const onChange = (option) => {
-        setValue(option.value);
+        if(isMulti){
+            setValue(option.map(x => x.value))
+        }
+        else{
+            setValue(option.value);
+        }
+
         setSelectedValue(option)
     };
 
@@ -90,12 +94,15 @@ export const SelectField = ({label, placeholder, options, customClassName, ...pr
             <Select
                 {...field} {...props}
                 name={field.name}
+                isMulti={isMulti || false}
                 placeholder={placeholder}
                 value={selectedValue}
                 defaultValue={selectOptions.find((option) => option.value === field.value)}
                 options={selectOptions}
                 onChange={onChange}
                 onBlur={setTouched}
+                isClearable={true}
+                closeMenuOnSelect={false}
                 isLoading={isLoading}
             />
             {meta.touched && meta.error &&

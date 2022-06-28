@@ -4,7 +4,7 @@ import * as Validations from '../Infrastructure/ValidationModels';
 import {SendRequest} from '../Infrastructure/Server';
 import {RegisterUserRequest} from '../Infrastructure/Dto'
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
-import {DateField, SelectField, TextField} from "../Infrastructure/CutomFormikFields";
+import {DateField, SelectField, SelectMultiField, TextField} from "../Infrastructure/CutomFormikFields";
 // noinspection ES6CheckImport
 import {useNavigate} from "react-router-dom";
 import Select from "react-select";

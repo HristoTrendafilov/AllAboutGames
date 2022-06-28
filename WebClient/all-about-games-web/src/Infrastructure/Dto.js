@@ -36,6 +36,7 @@ export const RegisterUserRequest = {
         dateOfBirth: '',
         countryID: 0,
         email: '',
+        countries:[]
     }
 }
 
