@@ -39,5 +39,18 @@ namespace AllAboutGames.Services
                 .Where(predicate)
                 .ToList();
         }
+
+        public List<ApplicationUserRole> GetUserRoles(Expression<Func<ApplicationUserRole, bool>> predicate)
+        {
+            return this.Db.ApplicationUsersRoles
+                .Where(predicate)
+                .ToList();
+        }
+
+        public void DeleteUserRole(long userID, long roleID)
+        {
+            var dbEntity = this.Db.ApplicationUsersRoles.Where(x => x.UserID == userID && x.RoleID == roleID).FirstOrDefault();
+            this.Db.ApplicationUsersRoles.Remove(dbEntity);
+        }
     }
 }

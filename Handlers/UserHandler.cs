@@ -82,6 +82,50 @@ namespace AllAboutGames.Handlers
             return GatewayResult.SuccessfulResult(new GetUsersResponse { UsersDTO = usersDto});
         }
 
+        [BindRequest(typeof(AddUserRolesRequest), typeof(AddUserRolesResponse))]
+        public async Task<GatewayResult> AddUserRoles(AddUserRolesRequest request)
+        {
+            var userRoles = this.UserService.GetUserRoles(x => x.UserID == request.UserID);
+            var rolesToAdd = request.Roles.Where(p => !userRoles.Any(l => p == l.RoleID)).ToList();
+            if (rolesToAdd.Count == 0)
+            {
+                return GatewayResult.FromErrorMessage("The user already has the selected roles.");
+            }
+
+            foreach (var roleID in rolesToAdd)
+            {
+                var userRole = new ApplicationUserRole
+                {
+                    UserID = request.UserID,
+                    RoleID = roleID
+                };
+
+                await this.UserService.SaveEntityAsync<ApplicationUserRole>(userRole);
+            }
+
+            await this.UserService.SaveChangesAsync();
+            return GatewayResult.SuccessfulResult();
+        }
+
+        [BindRequest(typeof(DeleteUserRolesRequest), typeof(DeleteUserRolesResponse))]
+        public async Task<GatewayResult> DeleteUserRoles(DeleteUserRolesRequest request)
+        {
+            var userRoles = this.UserService.GetUserRoles(x => x.UserID == request.UserID);
+            var rolesToDelete = request.Roles.Where(p => userRoles.Any(l => p == l.RoleID)).ToList();
+            if (rolesToDelete.Count == 0)
+            {
+                return GatewayResult.FromErrorMessage("The user doesn't have any of the selected roles to delete.");
+            }
+
+            foreach (var roleID in rolesToDelete)
+            {
+                this.UserService.DeleteUserRole(request.UserID, roleID);
+            }
+
+            await this.UserService.SaveChangesAsync();
+            return GatewayResult.SuccessfulResult();
+        }
+
         [BindRequest(typeof(GetRolesRequest), typeof(GetRolesResponse))]
         public GetRolesResponse GetRoles(GetRolesRequest req)
         {
@@ -120,6 +164,28 @@ namespace AllAboutGames.Handlers
 
             return GatewayResult.SuccessfulResult();
         }
+    }
+
+    public class DeleteUserRolesRequest
+    {
+        public long UserID { get; set; }
+
+        public List<long> Roles { get; set; }
+    }
+
+    public class DeleteUserRolesResponse
+    {
+    }
+
+    public class AddUserRolesRequest
+    {
+        public long UserID { get; set; }
+
+        public List<long> Roles { get; set; }
+    }
+
+    public class AddUserRolesResponse
+    {
     }
 
     public class SaveCountryRequest

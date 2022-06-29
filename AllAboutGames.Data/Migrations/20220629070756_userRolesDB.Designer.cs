@@ -3,6 +3,7 @@ using System;
 using AllAboutGames.Data.DataContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AllAboutGames.Data.Migrations
 {
     [DbContext(typeof(AllAboutGamesDataContext))]
-    partial class AllAboutGamesDataContextModelSnapshot : ModelSnapshot
+    [Migration("20220629070756_userRolesDB")]
+    partial class userRolesDB
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -36,7 +38,7 @@ namespace AllAboutGames.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp without time zone")
-                        .HasDefaultValue(new DateTime(2022, 6, 29, 10, 10, 39, 237, DateTimeKind.Local).AddTicks(1486));
+                        .HasDefaultValue(new DateTime(2022, 6, 29, 10, 7, 56, 130, DateTimeKind.Local).AddTicks(4544));
 
                     b.Property<DateTime>("DateOfBirth")
                         .HasColumnType("date");
@@ -93,7 +95,7 @@ namespace AllAboutGames.Data.Migrations
 
                     b.HasIndex("UserID");
 
-                    b.ToTable("ApplicationUsersRoles");
+                    b.ToTable("ApplicationUserRoles");
                 });
 
             modelBuilder.Entity("AllAboutGames.Data.Models.Country", b =>

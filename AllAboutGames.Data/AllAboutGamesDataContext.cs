@@ -20,6 +20,7 @@ namespace AllAboutGames.Data.DataContext
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ApplicationUserRole> ApplicationUsersRoles { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Developer> Developers { get; set; }
         public DbSet<Game> Games { get; set; }

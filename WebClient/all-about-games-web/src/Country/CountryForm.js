@@ -42,7 +42,7 @@ export function CountryForm(){
 
     return(
         <Card className="border-info border-3 bg-dark">
-            <Card.Header className="text-warning border-3 border-info">Country</Card.Header>
+            <Card.Header className="text-warning border-3 border-info">Add country</Card.Header>
             <Card.Body>
                 <Formik
                     initialValues={{...initialValues}}
@@ -54,17 +54,19 @@ export function CountryForm(){
                     {({isSubmitting}) => (
                         <Form className="row">
 
-                            <TextField
-                                customClassName="mb-3 col-xl-8"
-                                label="Name"
-                                name="name"
-                            />
+                            <div className="mb-2 col-xl-8">
+                                <TextField
+                                    label="Name"
+                                    name="name"
+                                />
+                            </div>
 
-                            <TextField
-                                customClassName="mb-3 col-xl-4"
-                                label="Short name"
-                                name="iso"
-                            />
+                            <div className="mb-2 col-xl-4">
+                                <TextField
+                                    label="Short name"
+                                    name="iso"
+                                />
+                            </div>
 
                             <div className="col-xl-12 text-center">
                                 <button

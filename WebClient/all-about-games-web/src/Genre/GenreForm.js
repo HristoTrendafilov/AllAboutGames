@@ -39,7 +39,7 @@ export function GenreForm(){
 
     return(
         <Card className="border-info border-3 bg-dark">
-            <Card.Header className="text-warning border-3 border-info">Game genre</Card.Header>
+            <Card.Header className="text-warning border-3 border-info">Add game genre</Card.Header>
             <Card.Body>
                 <Formik
                     initialValues={{...initialValues}}
@@ -51,11 +51,12 @@ export function GenreForm(){
                     {({isSubmitting}) => (
                         <Form className="row">
 
-                            <TextField
-                                customClassName="mb-3 col-xl-12"
-                                label="Name"
-                                name="name"
-                            />
+                            <div className="mb-2 col-xl-12">
+                                <TextField
+                                    label="Name"
+                                    name="name"
+                                />
+                            </div>
 
                             <div className="col-xl-12 text-center">
                                 <button

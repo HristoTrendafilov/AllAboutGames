@@ -66,18 +66,20 @@ export function LoginUser() {
                         {({isSubmitting}) => (
                             <Form className="row">
 
-                                <TextField
-                                    customClassName="mb-3 col-xl-12"
-                                    label="Username"
-                                    name="username"
-                                />
+                                <div className="mb-2 col-xl-12">
+                                    <TextField
+                                        label="Username"
+                                        name="username"
+                                    />
+                                </div>
 
-                                <TextField
-                                    customClassName="mb-3 col-xl-12"
-                                    label="Password"
-                                    name="password"
-                                    type="password"
-                                />
+                                <div className="mb-2 col-xl-12">
+                                    <TextField
+                                        label="Password"
+                                        name="password"
+                                        type="password"
+                                    />
+                                </div>
 
                                 <div className="col-xl-12 text-center mb-3">
                                     <button

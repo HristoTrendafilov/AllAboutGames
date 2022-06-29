@@ -2,50 +2,50 @@ import React, {useEffect, useState} from 'react';
 import {useField} from 'formik';
 import Select from "react-select";
 
-export const TextField = ({label, customClassName, ...props}) => {
+export const TextField = ({label, ...props}) => {
     const [field, meta] = useField(props);
 
     return (
-        <div className={customClassName}>
+        <>
             {label && <label className="form-label justify-content-center d-flex fw-bold text-info">{label}</label>}
             <input
                 className={`form-control ${meta.touched && meta.error ? "border-danger" : "border-info"}`} {...field} {...props} />
             {meta.touched && meta.error &&
             <div className="text-danger justify-content-center d-flex">{meta.error}</div>}
-        </div>
+        </>
     );
 };
 
-export const DateField = ({label, customClassName, ...props}) => {
+export const DateField = ({label, ...props}) => {
     const [field, meta] = useField(props);
 
     return (
-        <div className={customClassName}>
+        <>
             {label && <label className="form-label justify-content-center d-flex fw-bold text-info">{label}</label>}
             <input className={`form-control ${meta.touched && meta.error ? "border-danger" : "border-info"}`}
                    type="date" {...field} {...props} />
             {meta.touched && meta.error &&
             <div className="text-danger justify-content-center d-flex">{meta.error}</div>}
-        </div>
+        </>
     );
 };
 
-export const CheckboxField = ({label, children, customClassName, ...props}) => {
+export const CheckboxField = ({label, children, ...props}) => {
     const [field, meta] = useField({...props});
 
     return (
-        <div className={customClassName}>
+        <>
             <input className="form-check-input" type="checkbox" {...field} {...props}/>
             <label className="form-check-label p-lg-2">
                 {label}
             </label>
             {meta.touched && meta.error &&
             <div className="text-danger justify-content-center d-flex">{meta.error}</div>}
-        </div>
+        </>
     );
 };
 
-export const SelectField = ({label, isMulti, placeholder, options, customClassName, ...props}) => {
+export const SelectField = ({label, isMulti, placeholder, options, ...props}) => {
     const [field, meta, {setValue, setTouched}] = useField(props);
     const [selectedValue, setSelectedValue] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
@@ -77,10 +77,9 @@ export const SelectField = ({label, isMulti, placeholder, options, customClassNa
 
 
     const onChange = (option) => {
-        if(isMulti){
+        if (isMulti) {
             setValue(option.map(x => x.value))
-        }
-        else{
+        } else {
             setValue(option.value);
         }
 
@@ -88,7 +87,7 @@ export const SelectField = ({label, isMulti, placeholder, options, customClassNa
     };
 
     return (
-        <div className={customClassName}>
+        <>
             {label && <label className="form-label justify-content-center d-flex fw-bold text-info">{label}</label>}
 
             <Select
@@ -107,6 +106,6 @@ export const SelectField = ({label, isMulti, placeholder, options, customClassNa
             />
             {meta.touched && meta.error &&
             <div className="text-danger justify-content-center d-flex">{meta.error}</div>}
-        </div>
+        </>
     );
 };

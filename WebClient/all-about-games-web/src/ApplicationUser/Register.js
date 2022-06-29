@@ -84,46 +84,52 @@ export function RegisterUser() {
                         {({isSubmitting}) => (
                             <Form className="row">
 
-                                <TextField
-                                    customClassName="mb-3 col-xl-12"
-                                    label="Username"
-                                    name="username"
-                                />
+                                <div className="mb-2 col-xl-12">
+                                    <TextField
+                                        label="Username"
+                                        name="username"
+                                    />
+                                </div>
 
-                                <TextField
-                                    customClassName="mb-3 col-xl-6"
-                                    label="Password"
-                                    name="password"
-                                    type="password"
-                                />
+                                <div className="col-xl-6">
+                                    <TextField
+                                        label="Password"
+                                        name="password"
+                                        type="password"
+                                    />
+                                </div>
 
-                                <TextField
-                                    customClassName="mb-3 col-xl-6"
-                                    label="Repeat password"
-                                    name="repeatPassword"
-                                    type="password"
-                                />
+                                <div className="mb-2 col-xl-6">
+                                    <TextField
+                                        label="Repeat password"
+                                        name="repeatPassword"
+                                        type="password"
+                                    />
+                                </div>
 
-                                <TextField
-                                    customClassName="mb-3 col-xl-12"
-                                    label="Email"
-                                    name="email"
-                                    type="email"
-                                />
+                                <div className="mb-2 col-xl-12">
+                                    <TextField
+                                        label="Email"
+                                        name="email"
+                                        type="email"
+                                    />
+                                </div>
 
-                                <DateField
-                                    customClassName="mb-3 col-xl-6"
-                                    label="Date of birth"
-                                    name="dateOfBirth"
-                                />
+                                <div className="col-xl-6">
+                                    <DateField
+                                        label="Date of birth"
+                                        name="dateOfBirth"
+                                    />
+                                </div>
 
-                                <SelectField
-                                    customClassName="mb-3 col-xl-6"
-                                    name='countryID'
-                                    label='Country'
-                                    placeholder='Select country'
-                                    options={state.countries}
-                                />
+                                <div className="mb-2 col-xl-6">
+                                    <SelectField
+                                        name='countryID'
+                                        label='Country'
+                                        placeholder='Select country'
+                                        options={state.countries}
+                                    />
+                                </div>
 
                                 <div className="col-xl-12 text-center mb-3">
                                     <button
