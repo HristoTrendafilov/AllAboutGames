@@ -5,7 +5,7 @@ import {TextField} from "../Infrastructure/CutomFormikFields";
 import {LoadingSpinner} from "../Infrastructure/LoadingSpinner";
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
 import {SendRequest} from "../Infrastructure/Server";
-import {notify} from "../Infrastructure/Notify";
+import {NotifySuccess} from '../Infrastructure/Notify'
 import * as Yup from "yup";
 
 const initialValues = {
@@ -14,9 +14,9 @@ const initialValues = {
 
 const ValidationSchema = Yup.object().shape({
     name: Yup.string()
-        .min(2, 'category name should have at least 2 characters')
-        .max(100, 'category name should have 100 characters max')
-        .required('category is required'),
+        .min(2, 'genre name should have at least 2 characters')
+        .max(100, 'genre name should have 100 characters max')
+        .required('genre is required'),
 });
 
 export function GenreForm(){
@@ -34,7 +34,7 @@ export function GenreForm(){
         }
 
         setState({...state, isLoading: false, stateErrors: []})
-        notify('success', `Successfully added game genre: ${values.name}`);
+        NotifySuccess(`Successfully added game genre: ${values.name}`);
     }
 
     return(

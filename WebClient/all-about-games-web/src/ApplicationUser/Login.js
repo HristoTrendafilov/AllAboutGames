@@ -3,7 +3,7 @@ import {Form, Formik} from "formik";
 import {TextField} from "../Infrastructure/CutomFormikFields";
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
 import {SendRequest} from "../Infrastructure/Server";
-import {notify} from "../Infrastructure/Notify";
+import {NotifySuccess} from "../Infrastructure/Notify";
 import {useAuthContext} from '../Infrastructure/AuthContext';
 // noinspection ES6CheckImport
 import {useNavigate} from "react-router-dom";
@@ -32,7 +32,7 @@ export function LoginUser() {
         const params = new URLSearchParams(window.location.search);
         const hasRegistered = params.get('hasRegistered');
         if (hasRegistered) {
-            notify('success', "Registration successful.\nLog into you\'r account");
+            NotifySuccess("Registration successful.\nLog into you\'r account");
         }
     }, [])
 
@@ -46,6 +46,7 @@ export function LoginUser() {
         }
 
         const {userDTO} = response.model;
+
         login(userDTO);
         navigate('/')
     }

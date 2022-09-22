@@ -5,7 +5,7 @@ import {TextField} from "../Infrastructure/CutomFormikFields";
 import {LoadingSpinner} from "../Infrastructure/LoadingSpinner";
 import {ErrorMessages} from "../Infrastructure/ErrorMessages";
 import {SendRequest} from "../Infrastructure/Server";
-import {notify} from "../Infrastructure/Notify";
+import {NotifySuccess} from "../Infrastructure/Notify";
 import * as Yup from "yup";
 
 const initialValues = {
@@ -37,7 +37,7 @@ export function CountryForm(){
         }
 
         setState({...state, isLoading: false, stateErrors: []})
-        notify('success', `Successfully added country: ${values.name}`);
+        NotifySuccess(`Successfully added country: ${values.name}`);
     }
 
     return(

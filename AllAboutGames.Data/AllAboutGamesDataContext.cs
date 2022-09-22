@@ -1,7 +1,6 @@
 ﻿using AllAboutGames.Data.Models;
 using AllAboutGames.Data.Models.Forum;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.ChangeTracking;
 
 #nullable disable
 

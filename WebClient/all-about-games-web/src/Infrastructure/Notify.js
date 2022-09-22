@@ -1,17 +1,18 @@
 import {toast} from 'react-toastify';
 import React from 'react';
 
-export const notify = (type, message, autoClose) => {
-    switch (type) {
-        case 'warning':
-            return toast.warn(<div>{message}</div>, {autoClose, position: 'top-right'});
-        case 'error':
-            return toast.error(<div>{message}</div>, {autoClose});
-        case 'success':
-            return toast.success(<div style={{whiteSpace: "pre-wrap"}}>{message}</div>, {autoClose});
-        case 'info':
-            return toast.info(<div>{message}</div>, {autoClose});
-        default:
-            return toast(message);
-    }
-};
+export function NotifySuccess(message, autoClose){
+    return toast.success(<div style={{whiteSpace: "pre-wrap"}}>{message}</div>, {autoClose});
+}
+
+export function NotifyInfo(message, autoClose){
+    return toast.info(<div style={{whiteSpace: "pre-wrap"}}>{message}</div>, {autoClose});
+}
+
+export function NotifyWarning(message, autoClose){
+    return toast.success(<div style={{whiteSpace: "pre-wrap"}}>{message}</div>, {autoClose});
+}
+
+export function NotifyError(message, autoClose){
+    return toast.error(<div style={{whiteSpace: "pre-wrap"}}>{message}</div>, {autoClose});
+}

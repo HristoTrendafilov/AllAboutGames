@@ -25,7 +25,7 @@ export const AuthProvider = ({children}) => {
 
     const login = (authData) => {
         authData.isAdministrator = authData.roles.some(e => e.name === "Administrator")
-        setUser(authData);
+            setUser(authData);
     }
 
     const logout = () => {

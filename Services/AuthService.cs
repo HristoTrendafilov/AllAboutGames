@@ -1,5 +1,4 @@
 ﻿using AllAboutGames.Core;
-using AllAboutGames.Data.Models;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -16,7 +15,7 @@ namespace AllAboutGames.Services
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new[] { new Claim("userID", id.ToString()) }),
-                Expires = DateTime.UtcNow.AddDays(1),
+                Expires = DateTime.Now.AddMinutes(1),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
 
@@ -39,6 +38,11 @@ namespace AllAboutGames.Services
                 }, out SecurityToken validatedToken);
 
                 var jwtToken = (JwtSecurityToken)validatedToken;
+                if (jwtToken.ValidTo <= DateTime.Now)
+                {
+                    return 0;
+                }
+
                 var userID = long.Parse(jwtToken.Claims.First(x => x.Type == "userID").Value);
                 return userID;
             }

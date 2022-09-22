@@ -50,7 +50,7 @@ var app = builder.Build();
 app.UseCors(options =>
 {
     options
-    .WithOrigins("http://localhost", "http://localhost:3001")
+    .WithOrigins("http://localhost", "http://localhost:3000")
     .AllowAnyHeader()
     .AllowCredentials();
 });

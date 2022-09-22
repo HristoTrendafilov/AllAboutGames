@@ -15,7 +15,7 @@ export const SendRequest = async (messageType, messageJson) => {
         isFailed: false
     }
 
-    let user = localStorage.getItem('user') || '';
+    let user = JSON.parse(localStorage.getItem('user') || '');
 
     await axios.post('http://localhost:6002/api/gateway', gatewayRequest, {
         headers:{
