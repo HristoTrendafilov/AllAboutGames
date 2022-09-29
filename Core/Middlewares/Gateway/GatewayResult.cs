@@ -11,6 +11,8 @@ namespace AllAboutGames.Core.Middlewares.Gateway
             this.Details = new List<GatewayResultDetail>();
         }
 
+        public string ResponseType { get; set; }
+
         public string JsonValue { get; set; }
 
         public List<GatewayResultDetail> Details { get; set; }

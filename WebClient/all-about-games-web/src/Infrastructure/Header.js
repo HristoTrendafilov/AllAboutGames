@@ -2,7 +2,7 @@ import React from 'react';
 import {Container, Dropdown, Nav, Navbar} from "react-bootstrap";
 import {useAuthContext} from './AuthContext';
 // noinspection ES6CheckImport
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 
 export function Header() {
     const {isAuthenticated, logout, user} = useAuthContext();

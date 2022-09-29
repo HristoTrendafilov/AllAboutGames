@@ -195,7 +195,6 @@ namespace AllAboutGames.Handlers
 
     public class SaveCountryResponse
     {
-
     }
 
     public class GetCountriesResponse
@@ -219,7 +218,6 @@ namespace AllAboutGames.Handlers
 
     public class GetUsersRequest
     {
-
     }
 
     public class GetUsersResponse
@@ -246,7 +244,6 @@ namespace AllAboutGames.Handlers
 
     public class RegisterUserResponse
     {
-
     }
 
     public class GetUserRequest
@@ -257,5 +254,13 @@ namespace AllAboutGames.Handlers
     public class GetUserResponse
     {
         public UserDTO UserDTO { get; set; }
+    }
+
+    public class LogoutUserRequest
+    {
+    }
+
+    public class LogoutUserResponse
+    {
     }
 }

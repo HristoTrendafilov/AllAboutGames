@@ -40,7 +40,7 @@ namespace AllAboutGames.Services
                 var jwtToken = (JwtSecurityToken)validatedToken;
                 if (jwtToken.ValidTo <= DateTime.Now)
                 {
-                    return 0;
+                    return -1;
                 }
 
                 var userID = long.Parse(jwtToken.Claims.First(x => x.Type == "userID").Value);

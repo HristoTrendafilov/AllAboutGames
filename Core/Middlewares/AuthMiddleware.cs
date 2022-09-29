@@ -1,6 +1,10 @@
-﻿using AllAboutGames.Data.Models;
+﻿using AllAboutGames.Core.Middlewares.Gateway;
+using AllAboutGames.Data.Models;
+using AllAboutGames.Handlers;
 using AllAboutGames.Services;
+using Newtonsoft.Json;
 using Serilog;
+using System.Text;
 #nullable disable
 
 namespace AllAboutGames.Core.Middlewares
@@ -19,7 +23,27 @@ namespace AllAboutGames.Core.Middlewares
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
             var jwt = context.Request.Headers["Authorization"].FirstOrDefault();
+
             var authResult = Authenticate(jwt);
+            if(authResult.Type == AuthType.JwtExpired)
+            {
+                var gatewayResult = new GatewayResult()
+                {
+                    JsonValue = JsonConvert.SerializeObject(new LogoutUserResponse()),
+                    ResponseType = typeof(LogoutUserResponse).Name
+                };
+
+                var response = context.Response;
+                response.StatusCode = 200;
+                response.Headers["Content-Type"] = "application/json";
+                response.Headers["Access-Control-Allow-Origin"] = "*";
+
+                await using var writer = new StreamWriter(response.Body, new UTF8Encoding(false));
+                await writer.WriteAsync(JsonConvert.SerializeObject(gatewayResult));
+
+                return;
+            }
+
             context.SetRequestAuth(authResult);
 
             await next(context);
@@ -53,6 +77,11 @@ namespace AllAboutGames.Core.Middlewares
                 if (scheme.ToLower() == "jwt")
                 {
                     var userID = this.AuthService.DecodeJwtTokent(token);
+                    if (userID == -1)
+                    {
+                        return new AuthResult(AuthType.JwtExpired);
+                    }
+
                     var user = this.UserService.GetUser(x => x.UserID == userID);
                     if (user == null)
                     {
@@ -95,6 +124,7 @@ namespace AllAboutGames.Core.Middlewares
     {
         None = 0,
         Jwt = 1,
+        JwtExpired = 2
     }
 
     public static class RequestExtensions
